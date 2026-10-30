@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_harvest_小麥",
+  "label": "小麥",
+  "file": "小麥.png",
+  "rel_dir": "knowledge/templates/gather_skill/harvest",
+  "need_ui": "角色-生活技能-收割 右栏列表，不要点寻找附近，套住图标+物名「小麥」",
+  "client_px": {
+    "x": 1080,
+    "y": 886,
+    "w": 211,
+    "h": 107
+  },
+  "role": "page_anchor"
+}

@@ -1,0 +1,25 @@
+{
+  "label": "咻咻蘑菇",
+  "role": "page_anchor",
+  "coordinate_source": "2026-10-10 retained game_frame; fully visible icon and complete row name",
+  "source_original": "logs/life_fail_shots/item_not_visible_20261010T085526Z.png",
+  "source_frame": "tests/fixtures/process_stance/herb_middle_failed_20261010.png",
+  "source_sha256": "085370f3338791207bf457fbc5a24c2611c80f49907be32fe9ab3d4b208f4dc5",
+  "template_sha256": "1dbe1d4d9cb0d7efa1f91078c55dd223ec8b68298cb25a98307a07d6dee5afec",
+  "source_size": [
+    1920,
+    1440
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1440
+  ],
+  "crop_client_px": [
+    1083,
+    1116,
+    290,
+    100
+  ]
+}

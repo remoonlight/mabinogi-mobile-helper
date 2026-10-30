@@ -1,0 +1,13 @@
+{
+  "id": "item_herb_新芽蘑菇",
+  "label": "新芽蘑菇",
+  "file": "新芽蘑菇.png",
+  "rel_dir": "knowledge/templates/items/herb",
+  "need_ui": "请打开「采集药草」详情右栏，套住「新芽蘑菇」",
+  "client_px": {
+    "x": 1083,
+    "y": 821,
+    "w": 95,
+    "h": 87
+  }
+}

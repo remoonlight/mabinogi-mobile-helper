@@ -1,0 +1,444 @@
+{
+  "continent": "歐拉大陸",
+  "region_id": "ulara",
+  "width": 1834,
+  "height": 1670,
+  "origin_shift": [
+    67.0,
+    448.0
+  ],
+  "places": [
+    {
+      "canon": "莱比地下城",
+      "text": "莱比地下城",
+      "ax": 830.32,
+      "ay": 631.19,
+      "score": 8.831
+    },
+    {
+      "canon": "杜巴頓北門",
+      "text": "杜巴頔北門",
+      "ax": 494.93,
+      "ay": 856.96,
+      "score": 8.808
+    },
+    {
+      "canon": "堤爾克那南部",
+      "text": "堤爾克那南部",
+      "ax": 1766.54,
+      "ay": 1442.31,
+      "score": 8.781
+    },
+    {
+      "canon": "堤爾克那",
+      "text": "堤爾克那",
+      "ax": 1252.32,
+      "ay": 1222.19,
+      "score": 8.666
+    },
+    {
+      "canon": "杜巴頓",
+      "text": "杜巴頓",
+      "ax": 659.29,
+      "ay": 879.22,
+      "score": 20.0,
+      "source": "castle_icon_pin",
+      "calibration": {
+        "source": "tests/fixtures/process_stance/continent_laerte_update.png",
+        "source_center": [
+          610.487845766974,
+          1271.523051131601
+        ],
+        "source_roi": [
+          520,
+          1190,
+          710,
+          1320
+        ]
+      }
+    },
+    {
+      "canon": "希德斯特雪原",
+      "text": "希德斯特雪原",
+      "ax": 546.36,
+      "ay": 984.47,
+      "score": 5.852
+    },
+    {
+      "canon": "杜加德走廊",
+      "text": "杜加德走廊",
+      "ax": 1476.04,
+      "ay": 938.31,
+      "score": 5.831
+    },
+    {
+      "canon": "狼之森林狩",
+      "text": "狼之森林狩",
+      "ax": 1035.68,
+      "ay": 1297.37,
+      "score": 5.821
+    },
+    {
+      "canon": "艾菲菲地下城",
+      "text": "艾菲菲地下城",
+      "ax": 884.68,
+      "ay": 1018.37,
+      "score": 5.815
+    },
+    {
+      "canon": "狼之森林",
+      "text": "狼之森林",
+      "ax": 954.36,
+      "ay": 1326.97,
+      "score": 5.797
+    },
+    {
+      "canon": "冰霜峡谷狩",
+      "text": "冰霜峡谷狩",
+      "ax": 1730.74,
+      "ay": 1461.43,
+      "score": 5.786
+    },
+    {
+      "canon": "冰霜峡谷",
+      "text": "冰霜峡谷",
+      "ax": 695.38,
+      "ay": 1119.17,
+      "score": 5.783
+    },
+    {
+      "canon": "女神庭園",
+      "text": "女神庭園",
+      "ax": 1091.04,
+      "ay": 944.31,
+      "score": 5.776
+    },
+    {
+      "canon": "女神庭圆狩",
+      "text": "女神庭圆狩",
+      "ax": 554.43,
+      "ay": 1283.46,
+      "score": 5.76
+    },
+    {
+      "canon": "瑪斯地下城",
+      "text": "瑪斯地下城",
+      "ax": 441.82,
+      "ay": 628.19,
+      "score": 5.76
+    },
+    {
+      "canon": "伐木場",
+      "text": "伐木場",
+      "ax": 444.18,
+      "ay": 958.37,
+      "score": 5.735
+    },
+    {
+      "canon": "女神庭圜狩",
+      "text": "女神庭圜狩",
+      "ax": 1288.04,
+      "ay": 967.31,
+      "score": 5.728
+    },
+    {
+      "canon": "南方广墟",
+      "text": "南方广墟",
+      "ax": 1525.88,
+      "ay": 1223.67,
+      "score": 5.699
+    },
+    {
+      "canon": "女神庭園狩",
+      "text": "女神庭園狩",
+      "ax": 717.32,
+      "ay": 947.69,
+      "score": 5.686
+    },
+    {
+      "canon": "漢南部",
+      "text": "漢南部",
+      "ax": 1385.36,
+      "ay": 1303.4299999999998,
+      "score": 5.682
+    },
+    {
+      "canon": "漢北部",
+      "text": "漢北部",
+      "ax": 1593.82,
+      "ay": 1257.3,
+      "score": 5.665
+    },
+    {
+      "canon": "雉爾地下城",
+      "text": "雉爾地下城",
+      "ax": 947.68,
+      "ay": 1384.87,
+      "score": 5.642
+    },
+    {
+      "canon": "伐木广場",
+      "text": "伐木广場",
+      "ax": 936.32,
+      "ay": 1055.19,
+      "score": 5.638
+    },
+    {
+      "canon": "城三",
+      "text": "城三",
+      "ax": 754.24,
+      "ay": 1259.9299999999998,
+      "score": 5.637
+    },
+    {
+      "canon": "赛維地下城",
+      "text": "赛維地下城",
+      "ax": 1377.32,
+      "ay": 1448.69,
+      "score": 5.636
+    },
+    {
+      "canon": "南方魔墟",
+      "text": "南方魔墟",
+      "ax": 1526.86,
+      "ay": 1214.4299999999998,
+      "score": 5.632
+    },
+    {
+      "canon": "下城三",
+      "text": "下城三",
+      "ax": 434.82,
+      "ay": 577.19,
+      "score": 5.626
+    },
+    {
+      "canon": "赛雉爾地下城",
+      "text": "赛雉爾地下城",
+      "ax": 1439.82,
+      "ay": 1480.69,
+      "score": 5.581
+    },
+    {
+      "canon": "库漢北部",
+      "text": "库漢北部",
+      "ax": 1291.86,
+      "ay": 1011.43,
+      "score": 5.542
+    }
+  ],
+  "tile_count": 10,
+  "method": "B",
+  "stitch_method": "pose_graph",
+  "suppress_selection_green": true,
+  "feather_px": 36,
+  "session": "logs/coach_ulara_atlas_session.json",
+  "note": "方法 B 歐拉大陸；stitch=pose_graph | 2026-08-05: png对齐json尺寸; 杜巴頓锚=城标图标 | 2026-10-03: 方法B新增北部萊爾特丘陵/雲海曠野，地形注册扩图，旧城标随坐标原点平移 | 2026-10-03: 方法B再补班克爾/巴里礦區，原点向下平移256",
+  "pose_graph": {
+    "edges": {
+      "tried": 45,
+      "accepted": 37,
+      "rejected_weak": 8,
+      "rejected_inconsistent": 0
+    },
+    "components": [
+      {
+        "nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "edges": 37,
+        "root": 0,
+        "span": [
+          167.3,
+          124.6
+        ]
+      }
+    ],
+    "poses": [
+      {
+        "ox": 478.36,
+        "oy": 178.43
+      },
+      {
+        "ox": 445.36,
+        "oy": 129.47
+      },
+      {
+        "ox": 479.88,
+        "oy": 142.67
+      },
+      {
+        "ox": 442.18,
+        "oy": 126.87
+      },
+      {
+        "ox": 442.32,
+        "oy": 126.69
+      },
+      {
+        "ox": 469.93,
+        "oy": 137.46
+      },
+      {
+        "ox": 427.74,
+        "oy": 125.93
+      },
+      {
+        "ox": 445.54,
+        "oy": 129.31
+      },
+      {
+        "ox": 395.82,
+        "oy": 90.8
+      },
+      {
+        "ox": 448.05,
+        "oy": 131.62
+      }
+    ],
+    "n_edges_used": 37,
+    "zncc_mean": 0.7151,
+    "zncc_worst": [
+      {
+        "i": 5,
+        "j": 8,
+        "zncc": 0.6082,
+        "area": 1332852
+      },
+      {
+        "i": 0,
+        "j": 4,
+        "zncc": 0.6104,
+        "area": 1364844
+      },
+      {
+        "i": 1,
+        "j": 8,
+        "zncc": 0.6126,
+        "area": 1367964
+      }
+    ]
+  },
+  "anchors": [],
+  "facilities": [],
+  "recenter": {
+    "ox_add": 0.0,
+    "oy_add": 0.0,
+    "town_center": [
+      917,
+      637
+    ],
+    "center_source": "roof",
+    "content_bbox_before": [
+      330,
+      40,
+      1794,
+      1191
+    ]
+  },
+  "recenter_info": {
+    "town_center_before": [
+      917.1,
+      637.2
+    ],
+    "center_source": "roof",
+    "ok": true,
+    "size_before": [
+      1834,
+      1274
+    ],
+    "size_after": [
+      1834,
+      1274
+    ],
+    "shift": [
+      0.0,
+      0.0
+    ],
+    "town_center_after": [
+      917,
+      637
+    ]
+  },
+  "updated": "2026-10-03T14:32:07",
+  "atlas_png": "ulara_atlas.png",
+  "preview": "ulara_atlas_preview.jpg",
+  "atlas_update": {
+    "source": "tests/fixtures/process_stance/continent_laerte_update.png",
+    "source_sha256": "c860073e220eba3dad57294e380e9b7702c9f4aaa0c18ae6a5dafdec7649dafe",
+    "method": "B",
+    "baseline_size": [
+      1834,
+      1274
+    ],
+    "coordinate_scale": 1.0,
+    "coordinate_shift": [
+      0,
+      396
+    ],
+    "source_to_atlas": [
+      [
+        0.546909112852823,
+        0.0,
+        325.41092214742963
+      ],
+      [
+        0.0,
+        0.546909112852823,
+        183.80799710342737
+      ]
+    ],
+    "registration_inliers": 593,
+    "registration_matches": 684,
+    "residual_p95": 1.190897822380066,
+    "fresh_source": "tests/fixtures/process_stance/continent_north_current.png",
+    "fresh_source_sha256": "2f7cc0286b1d9d15a61448e408936c7278e3930372e70cf7bde24018f6d904e6",
+    "fresh_source_to_atlas": [
+      [
+        0.546909112852823,
+        0.0,
+        290.9556480377018
+      ],
+      [
+        0.0,
+        0.546909112852823,
+        297.56509257681455
+      ]
+    ],
+    "fresh_registration_inliers": 854,
+    "coverage": "Only captured north terrain added, including Bankor and Barri mines; unobserved area stays black.",
+    "upper_source": "tests/fixtures/process_stance/continent_bankor_upper.png",
+    "upper_source_sha256": "82360d325452eeb7e01f61e8a5e03a4d7d490816e4a3afc048efff6edd72a8b8",
+    "upper_source_to_atlas": [
+      [
+        0.5473052902408512,
+        0.0,
+        489.26385498046875
+      ],
+      [
+        0.0,
+        0.5473052902408512,
+        -64.21737670898438
+      ]
+    ],
+    "upper_registration_inliers": 534,
+    "upper_registration_matches": 681,
+    "upper_residual_p95": 0.5045779347419739,
+    "upper_baseline_size": [
+      1834,
+      1414
+    ],
+    "upper_coordinate_shift": [
+      0,
+      256
+    ]
+  }
+}

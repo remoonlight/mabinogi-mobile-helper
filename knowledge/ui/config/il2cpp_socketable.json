@@ -1,0 +1,42 @@
+{
+  "module": "GameAssembly.dll",
+  "typeinfo_rva": {
+    "SocketableInventoryComponent": "0x7AF9908",
+    "SocketableStack": "0x7AFCFC8",
+    "SocketableSheetData": "0x7AFBB40",
+    "RuneSheetData": "0x7947740",
+    "JewelSheetData": "0x7A4F898",
+    "SystemContainers": "0x79AC6C8"
+  },
+  "offsets": {
+    "SystemContainers.SocketableInventoryComponent": "0x3070",
+    "SocketableInventoryComponent.SocketableStacks": "0x10",
+    "SocketableInventoryComponent.SocketableStacksInAccountStorage": "0x18",
+    "SocketableInventoryComponent.SocketableStacksInCharacterStorage": "0x20",
+    "SocketableStack.Id": "0x10",
+    "SocketableStack.Key": "0x18",
+    "SocketableStack.Count": "0x48",
+    "SocketableStack.IsJunked": "0x50",
+    "SocketableStack.IsLocked": "0x51",
+    "SocketableStack.SheetData": "0x58",
+    "SocketableStackKey.sheetId": "0x0",
+    "SocketableStackKey.canTrade": "0x4",
+    "SocketableStackKey.canTradeCount": "0x8",
+    "SocketableStackKey.stride": "0x28",
+    "SocketableSheetData.Id": "0x10",
+    "SocketableSheetData.DisplayName": "0x18",
+    "SocketableSheetData.SocketableType": "0x28",
+    "SocketableSheetData.RuneSheetId": "0x54",
+    "SocketableSheetData.JewelSheetId": "0x58",
+    "MMDictionary.keys": "0x10",
+    "MMDictionary.values": "0x18",
+    "MMDictionary.count": "0x34"
+  },
+  "socketable_type": {
+    "0": "Invalid",
+    "1": "Rune",
+    "2": "Jewel",
+    "3": "None"
+  },
+  "note": "背包符文/宝石：主路径堆扫 SocketableInventoryComponent + dict@0x10（key_stride=0x28）。SC+0x3070 仅次选。"
+}

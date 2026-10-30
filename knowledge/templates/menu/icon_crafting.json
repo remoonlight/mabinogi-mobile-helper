@@ -1,0 +1,13 @@
+{
+  "id": "craft",
+  "label": "制作",
+  "file": "icon_crafting.png",
+  "rel_dir": "knowledge/templates/menu",
+  "need_ui": "请打开系统菜单",
+  "client_px": {
+    "x": 1546,
+    "y": 207,
+    "w": 56,
+    "h": 64
+  }
+}

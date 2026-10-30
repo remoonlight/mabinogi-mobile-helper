@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_shear_羊",
+  "label": "羊",
+  "file": "羊.png",
+  "rel_dir": "knowledge/templates/gather_skill/shear",
+  "need_ui": "角色-生活技能-剪羊毛 右栏列表，不要点寻找附近，套住图标+物名「羊」",
+  "client_px": {
+    "x": 1083,
+    "y": 890,
+    "w": 173,
+    "h": 101
+  },
+  "role": "page_anchor"
+}

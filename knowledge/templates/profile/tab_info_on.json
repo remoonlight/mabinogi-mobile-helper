@@ -1,0 +1,13 @@
+{
+  "id": "profile_tab_info_on",
+  "label": "角色-我的资讯Tab选中",
+  "file": "tab_info_on.png",
+  "rel_dir": "knowledge/templates/profile",
+  "need_ui": "人物界面开着，左侧「我的资讯」Tab 为选中亮态",
+  "client_px": {
+    "x": 56,
+    "y": 591,
+    "w": 80,
+    "h": 80
+  }
+}

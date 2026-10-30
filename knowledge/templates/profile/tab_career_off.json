@@ -1,0 +1,13 @@
+{
+  "id": "profile_tab_career_off",
+  "label": "角色-职业Tab灰态",
+  "file": "tab_career_off.png",
+  "rel_dir": "knowledge/templates/profile",
+  "need_ui": "人物界面开着，该 Tab 未选中。仅辅助确认角色壳，禁止单独定当前 Tab",
+  "client_px": {
+    "x": 56,
+    "y": 831,
+    "w": 80,
+    "h": 80
+  }
+}

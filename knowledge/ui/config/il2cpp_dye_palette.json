@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "module": "GameAssembly.dll",
+  "note": "染色 DyePalette 只读。TypeInfo 自 script.json Address；偏移自 dump.cs。usable_claim 恒 false。Holder.palettes 多为 System.Dictionary，材质扫可能空，以 Fragment/堆扫为主。",
+  "typeinfo_rva": {
+    "DyePalette": "0x7AEB740",
+    "DyeMaterialColorPaletteHolder": "0x7AEA990",
+    "DyeingPaletteFragmentData": "0x7AF6FE8",
+    "DyeingPaletteColorPickerColorControlData": "0x7AF5EC8",
+    "DyeingColorItemControlData": "0x7AF24A0"
+  },
+  "offsets": {
+    "DyePalette.Width": "0x10",
+    "DyePalette.Height": "0x14",
+    "DyePalette.Channels": "0x18",
+    "DyePalette.Data": "0x20",
+    "DyeMaterialColorPaletteHolder.palettes": "0x18",
+    "DyeMaterialColorPaletteHolder.Resolution": "0x20",
+    "DyeingPaletteFragmentData.Palette": "0x10",
+    "DyeingPaletteFragmentData.Texture": "0x18",
+    "DyeingPaletteFragmentData.NormalizedPositionY": "0x20",
+    "DyeingPaletteColorPickerColorControlData.PickColors": "0x10",
+    "DyeingColorItemControlData.Selected": "0x10",
+    "DyeingColorItemControlData.Color": "0x14",
+    "Il2CppArray.max_length": "0x18",
+    "Il2CppArray.vector": "0x20",
+    "MMReadOnlyList._items": "0x10",
+    "MMReadOnlyList._size": "0x18",
+    "MMDictionary.keys": "0x10",
+    "MMDictionary.values": "0x18",
+    "MMDictionary.count": "0x34"
+  },
+  "limits": {
+    "min_side": 32,
+    "max_side": 4096,
+    "max_bytes": 67108864,
+    "scan_max": 64
+  }
+}

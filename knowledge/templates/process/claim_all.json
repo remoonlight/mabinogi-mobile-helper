@@ -1,0 +1,16 @@
+{
+  "id": "claim_all",
+  "label": "全部領取",
+  "file": "claim_all.png",
+  "rel_dir": "knowledge/templates/process",
+  "need_ui": "设施页左下「全部領取」；在/不在设施前画面相同，只采一张",
+  "client_px": {
+    "x": 136,
+    "y": 1203,
+    "w": 102,
+    "h": 32
+  },
+  "pending_review": false,
+  "at_facility_ui_same": true,
+  "note": "在/不在设施前 UI 无差"
+}

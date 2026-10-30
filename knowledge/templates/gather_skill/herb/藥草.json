@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_herb_藥草",
+  "label": "藥草",
+  "file": "藥草.png",
+  "rel_dir": "knowledge/templates/gather_skill/herb",
+  "need_ui": "角色-生活技能-採集藥草 右栏列表，不要点寻找附近，套住图标+物名「藥草」",
+  "client_px": {
+    "x": 1080,
+    "y": 892,
+    "w": 209,
+    "h": 99
+  },
+  "role": "page_anchor"
+}

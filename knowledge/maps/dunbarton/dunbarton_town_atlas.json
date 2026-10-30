@@ -1,0 +1,626 @@
+{
+  "region": "杜巴頓",
+  "region_id": "dunbarton",
+  "width": 4004,
+  "height": 4096,
+  "origin_shift": [
+    0,
+    0
+  ],
+  "places": [
+    {
+      "canon": "莱比地下城",
+      "text": "莱比地下城",
+      "ax": 3531.02,
+      "ay": 3378.14,
+      "score": 8.8
+    },
+    {
+      "canon": "杜巴頓北門",
+      "text": "杜巴北門",
+      "ax": 1610.09,
+      "ay": 1300.82,
+      "score": 8.782
+    },
+    {
+      "canon": "瑪斯地下城",
+      "text": "瑪斯地下城",
+      "ax": 1063.49,
+      "ay": 3430.36,
+      "score": 5.821
+    },
+    {
+      "canon": "女神庭圆狩",
+      "text": "女神庭圆狩",
+      "ax": 1802.19,
+      "ay": 3322.56,
+      "score": 5.748
+    },
+    {
+      "canon": "照相亭",
+      "text": "照相亭",
+      "ax": 2310.08,
+      "ay": 2290.35,
+      "score": 5.729
+    },
+    {
+      "canon": "乳牛牧場",
+      "text": "乳牛牧場",
+      "ax": 1514.03,
+      "ay": 1457.94,
+      "score": 5.724
+    },
+    {
+      "canon": "食品店",
+      "text": "食品店",
+      "ax": 2326.5,
+      "ay": 2192.6,
+      "score": 5.721
+    },
+    {
+      "canon": "皮革加亚工",
+      "text": "皮革加亚工",
+      "ax": 1665.73,
+      "ay": 1741.4,
+      "score": 5.686
+    },
+    {
+      "canon": "多用途艺作",
+      "text": "多用途艺作",
+      "ax": 1690.25,
+      "ay": 1680.47,
+      "score": 5.655
+    },
+    {
+      "canon": "商人",
+      "text": "商人",
+      "ax": 2609.85,
+      "ay": 1710.58,
+      "score": 5.654
+    },
+    {
+      "canon": "木材加",
+      "text": "木材加",
+      "ax": 1704.71,
+      "ay": 1647.43,
+      "score": 5.653
+    },
+    {
+      "canon": "書店",
+      "text": "書店",
+      "ax": 1958.97,
+      "ay": 2242.65,
+      "score": 5.652
+    },
+    {
+      "canon": "巢穴",
+      "text": "巢穴",
+      "ax": 3136.9,
+      "ay": 1972.93,
+      "score": 5.634
+    },
+    {
+      "canon": "藥草",
+      "text": "藥草",
+      "ax": 2635.66,
+      "ay": 3220.97,
+      "score": 5.617
+    },
+    {
+      "canon": "官廳",
+      "text": "官廳",
+      "ax": 2205.29,
+      "ay": 2277.06,
+      "score": 5.612
+    },
+    {
+      "canon": "果園",
+      "text": "果園",
+      "ax": 1640.71,
+      "ay": 2845.95,
+      "score": 5.604
+    },
+    {
+      "canon": "钓魚場",
+      "text": "钓魚場",
+      "ax": 2910.91,
+      "ay": 2270.47,
+      "score": 5.589
+    },
+    {
+      "canon": "木材加节",
+      "text": "木材加节",
+      "ax": 1704.05,
+      "ay": 1647.56,
+      "score": 5.587
+    },
+    {
+      "canon": "广場",
+      "text": "广場",
+      "ax": 2195.91,
+      "ay": 2134.74,
+      "score": 5.585
+    },
+    {
+      "canon": "鐵匠铺",
+      "text": "鐵匠铺",
+      "ax": 1836.2,
+      "ay": 1712.47,
+      "score": 5.578
+    },
+    {
+      "canon": "學校",
+      "text": "學校",
+      "ax": 1886.64,
+      "ay": 2042.85,
+      "score": 5.575
+    },
+    {
+      "canon": "貨店",
+      "text": "貨店",
+      "ax": 2323.76,
+      "ay": 2133.17,
+      "score": 5.527
+    }
+  ],
+  "anchors": [
+    {
+      "canon": "奈麗絲",
+      "kind": "npc_avatar",
+      "text": "奈麗絲",
+      "ax": 1832.46,
+      "ay": 1666.51,
+      "score": 20.0,
+      "source": "pin_job_cursor"
+    }
+  ],
+  "facilities": [
+    {
+      "canon": "莱比地下城",
+      "text": "莱比地下城",
+      "ax": 4515.5,
+      "ay": 4320.0,
+      "score": 8.8,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "杜巴頓北門",
+      "text": "杜巴北門",
+      "ax": 2059.0,
+      "ay": 1663.5,
+      "score": 8.782,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "瑪斯地下城",
+      "text": "瑪斯地下城",
+      "ax": 1360.0,
+      "ay": 4386.77,
+      "score": 5.821,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "女神庭圆狩",
+      "text": "女神庭圆狩",
+      "ax": 2304.65,
+      "ay": 4248.92,
+      "score": 5.748,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "照相亭",
+      "text": "照相亭",
+      "ax": 2954.15,
+      "ay": 2928.92,
+      "score": 5.729,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "乳牛牧場",
+      "text": "乳牛牧場",
+      "ax": 1936.15,
+      "ay": 1864.42,
+      "score": 5.724,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "食品店",
+      "text": "食品店",
+      "ax": 2975.15,
+      "ay": 2803.92,
+      "score": 5.721,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "皮革加亚工",
+      "text": "皮革加亚工",
+      "ax": 2130.15,
+      "ay": 2226.92,
+      "score": 5.686,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "多用途艺作",
+      "text": "多用途艺作",
+      "ax": 2161.5,
+      "ay": 2149.0,
+      "score": 5.655,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "商人",
+      "text": "商人",
+      "ax": 3337.5,
+      "ay": 2187.5,
+      "score": 5.654,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "木材加",
+      "text": "木材加",
+      "ax": 2180.0,
+      "ay": 2106.75,
+      "score": 5.653,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "書店",
+      "text": "書店",
+      "ax": 2505.15,
+      "ay": 2867.92,
+      "score": 5.652,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "巢穴",
+      "text": "巢穴",
+      "ax": 4011.5,
+      "ay": 2523.0,
+      "score": 5.634,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "藥草",
+      "text": "藥草",
+      "ax": 3370.5,
+      "ay": 4119.0,
+      "score": 5.617,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "官廳",
+      "text": "官廳",
+      "ax": 2820.15,
+      "ay": 2911.92,
+      "score": 5.612,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "果園",
+      "text": "果園",
+      "ax": 2098.15,
+      "ay": 3639.42,
+      "score": 5.604,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "钓魚場",
+      "text": "钓魚場",
+      "ax": 3722.5,
+      "ay": 2903.5,
+      "score": 5.589,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "木材加节",
+      "text": "木材加节",
+      "ax": 2179.15,
+      "ay": 2106.92,
+      "score": 5.587,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "广場",
+      "text": "广場",
+      "ax": 2808.15,
+      "ay": 2729.92,
+      "score": 5.585,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "鐵匠铺",
+      "text": "鐵匠铺",
+      "ax": 2348.15,
+      "ay": 2189.92,
+      "score": 5.578,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "學校",
+      "text": "學校",
+      "ax": 2412.65,
+      "ay": 2612.42,
+      "score": 5.575,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "貨店",
+      "text": "貨店",
+      "ax": 2971.65,
+      "ay": 2727.92,
+      "score": 5.527,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    }
+  ],
+  "stitch_method": "pose_graph",
+  "pose_graph": {
+    "edges": {
+      "tried": 465,
+      "accepted": 62,
+      "rejected_weak": 403,
+      "rejected_inconsistent": 0
+    },
+    "components": [
+      {
+        "nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "edges": 62,
+        "root": 0,
+        "span": [
+          3249.0,
+          3960.3
+        ]
+      }
+    ],
+    "poses": [
+      {
+        "ox": 1752.15,
+        "oy": 1646.92
+      },
+      {
+        "ox": 2603.15,
+        "oy": 1675.92
+      },
+      {
+        "ox": 2548.15,
+        "oy": 2213.92
+      },
+      {
+        "ox": 2563.15,
+        "oy": 2839.92
+      },
+      {
+        "ox": 1731.15,
+        "oy": 1995.92
+      },
+      {
+        "ox": 1675.15,
+        "oy": 2629.92
+      },
+      {
+        "ox": 1714.15,
+        "oy": 3134.92
+      },
+      {
+        "ox": 2123.15,
+        "oy": 3420.92
+      },
+      {
+        "ox": 2061.15,
+        "oy": 3991.92
+      },
+      {
+        "ox": 1090.15,
+        "oy": 3663.27
+      },
+      {
+        "ox": 895.15,
+        "oy": 4220.27
+      },
+      {
+        "ox": 718.0,
+        "oy": 4220.27
+      },
+      {
+        "ox": 718.0,
+        "oy": 3444.28
+      },
+      {
+        "ox": 718.0,
+        "oy": 2716.28
+      },
+      {
+        "ox": 718.0,
+        "oy": 2063.28
+      },
+      {
+        "ox": 718.0,
+        "oy": 1267.28
+      },
+      {
+        "ox": 718.0,
+        "oy": 830.0
+      },
+      {
+        "ox": 718.0,
+        "oy": 260.0
+      },
+      {
+        "ox": 1609.0,
+        "oy": 1184.0
+      },
+      {
+        "ox": 1976.0,
+        "oy": 634.0
+      },
+      {
+        "ox": 1237.0,
+        "oy": 260.0
+      },
+      {
+        "ox": 2066.0,
+        "oy": 260.0
+      },
+      {
+        "ox": 2885.0,
+        "oy": 1334.0
+      },
+      {
+        "ox": 2176.0,
+        "oy": 1135.0
+      },
+      {
+        "ox": 3258.0,
+        "oy": 1930.0
+      },
+      {
+        "ox": 3217.0,
+        "oy": 2650.0
+      },
+      {
+        "ox": 3087.0,
+        "oy": 802.0
+      },
+      {
+        "ox": 3450.0,
+        "oy": 1602.0
+      },
+      {
+        "ox": 3139.0,
+        "oy": 3263.0
+      },
+      {
+        "ox": 3967.0,
+        "oy": 3800.0
+      },
+      {
+        "ox": 2606.0,
+        "oy": 3578.01
+      }
+    ],
+    "n_edges_used": 62,
+    "zncc_mean": 0.998,
+    "zncc_worst": [
+      {
+        "i": 4,
+        "j": 14,
+        "zncc": 0.9777,
+        "area": 92112
+      },
+      {
+        "i": 5,
+        "j": 13,
+        "zncc": 0.98,
+        "area": 140201
+      },
+      {
+        "i": 8,
+        "j": 9,
+        "zncc": 0.9875,
+        "area": 92950
+      }
+    ]
+  },
+  "feather_px": 36,
+  "note": "方法 B 人手拖；stitch=pose_graph",
+  "tile_count": 31,
+  "method": "B",
+  "recenter": {
+    "ox_add": 0.0,
+    "oy_add": 0.0,
+    "town_center": [
+      2560,
+      2619
+    ],
+    "center_source": "places_mean_n=4",
+    "content_bbox_before": [
+      719,
+      261,
+      5080,
+      5198
+    ]
+  },
+  "recenter_info": {
+    "town_center_before": [
+      2560.3,
+      2618.5
+    ],
+    "center_source": "places_mean_n=4",
+    "ok": true,
+    "size_before": [
+      5120,
+      5238
+    ],
+    "size_after": [
+      5120,
+      5238
+    ],
+    "shift": [
+      0.0,
+      0.0
+    ],
+    "town_center_after": [
+      2560,
+      2619
+    ]
+  },
+  "session": "logs/coach_town_atlas_session.json",
+  "write_scale": 0.7819778541428026,
+  "updated": "2026-08-01T15:28:19",
+  "atlas_png": "dunbarton_town_atlas.png",
+  "preview": "dunbarton_town_atlas_preview.jpg",
+  "source": "method_B"
+}

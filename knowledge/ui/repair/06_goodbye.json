@@ -1,0 +1,28 @@
+{
+  "template": "knowledge/ui/repair/06_goodbye.png",
+  "roi": [
+    0.28,
+    0.02,
+    0.44,
+    0.28
+  ],
+  "threshold": 0.85,
+  "min_margin": 0.05,
+  "click_in_template": [
+    0.5,
+    0.5
+  ],
+  "source": "tests/fixtures/repair/nerys_after_end_dialog.png",
+  "source_sha256": "82df725fff65029b2f758b14781c4dd1545405c88f0fac58c79aa8dfb2460886",
+  "source_size": [
+    1912,
+    1442
+  ],
+  "crop_box": [
+    705,
+    101,
+    1210,
+    334
+  ],
+  "coordinate_source": "Original Nerys goodbye bubble; click inside the matched bubble body."
+}

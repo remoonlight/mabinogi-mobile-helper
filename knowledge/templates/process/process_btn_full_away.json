@@ -1,0 +1,19 @@
+{
+  "id": "process_btn_full_away",
+  "label": "前往加工",
+  "file": "process_btn_full_away.png",
+  "rel_dir": "knowledge/templates/process",
+  "need_ui": "明细已开：材料已齐、角色不在加工设施前，套住「前往加工」",
+  "client_px": {
+    "x": 1424,
+    "y": 1333,
+    "w": 139,
+    "h": 42
+  },
+  "pending_review": false,
+  "variant_id": "process_btn_full_away",
+  "at_facility": false,
+  "materials_ok": true,
+  "locate_src": "ocr_cht",
+  "note": "人摆态：不在设施前、齐料、前往加工；未点钮"
+}

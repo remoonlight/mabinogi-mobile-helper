@@ -1,0 +1,21 @@
+window:
+  title_substr: "瑪奇"
+  client_size: [1920, 1440]
+  dpi_aware: true
+  background: true
+  capture_method: auto
+  input_method: unity_hook
+  input_trace: true
+
+paths:
+  knowledge: knowledge
+  labels: knowledge/schema/labels.json
+  templates: knowledge/templates
+  captures: knowledge/captures
+  exports: exports
+  logs: logs
+
+read_only_only: true
+
+# 测试阶段保留未走完的已发动作计划；后续运行按用户要求切换为 skip。
+incomplete_plan_policy: pause

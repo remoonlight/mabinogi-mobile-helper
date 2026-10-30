@@ -1,0 +1,13 @@
+{
+  "id": "close_x",
+  "label": "右上X",
+  "file": "icon_close_x.png",
+  "rel_dir": "knowledge/templates/menu",
+  "need_ui": "请打开系统菜单",
+  "client_px": {
+    "x": 1825,
+    "y": 51,
+    "w": 80,
+    "h": 80
+  }
+}

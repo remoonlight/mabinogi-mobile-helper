@@ -1,0 +1,13 @@
+{
+  "id": "profile_info_combat_power",
+  "label": "角色-我的资讯-战斗力",
+  "file": "info_combat_power.png",
+  "rel_dir": "knowledge/templates/profile",
+  "need_ui": "人物界面开着且当前为「我的资讯」Tab",
+  "client_px": {
+    "x": 230,
+    "y": 370,
+    "w": 170,
+    "h": 75
+  }
+}

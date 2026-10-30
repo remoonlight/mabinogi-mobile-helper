@@ -1,0 +1,13 @@
+{
+  "id": "item_mine_白銅礦脈",
+  "label": "白銅礦脈",
+  "file": "白銅礦脈.png",
+  "rel_dir": "knowledge/templates/items/mine",
+  "need_ui": "请打开「采矿」详情右栏，套住「白銅礦脈」",
+  "client_px": {
+    "x": 1086,
+    "y": 1294,
+    "w": 91,
+    "h": 94
+  }
+}

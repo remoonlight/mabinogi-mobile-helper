@@ -1,0 +1,119 @@
+{
+  "schema": "transition_accept_manifest.v1",
+  "updated": "2026-08-24",
+  "suite": "gather_plus_menu",
+  "default_skill": "woodcut",
+  "notes": "方法 A 专用验收 harness。打开采集详情=点九门格+再点 tiers 第一个详情物；详情页以尋找附近/问号为据。人物只走菜单→角色。生活技能与我的資訊为人物壳平级 Tab，共用右上 X 回主界面。enough 永不因本清单为真。",
+  "max_stage_fail": 2,
+  "order": [
+    "main_hud_menu_system_menu",
+    "system_menu_role_profile",
+    "profile_life_tab_life_grid",
+    "life_grid_skill_gather_detail",
+    "gather_detail_close_life_grid",
+    "life_grid_close_main_hud",
+    "main_hud_menu_system_menu",
+    "system_menu_bag_inventory",
+    "inventory_close_main_hud",
+    "main_hud_bag_inventory",
+    "system_menu_x_main_hud"
+  ],
+  "recover": {
+    "to_main_hud": [
+      "inventory_close_main_hud",
+      "system_menu_x_main_hud",
+      "gather_detail_close_life_grid",
+      "life_grid_close_main_hud",
+      "profile_close_main_hud"
+    ]
+  },
+  "edges": {
+    "main_hud_menu_system_menu": {
+      "locator": { "kind": "hud_entry", "entry_id": "menu" },
+      "required_templates": ["knowledge/templates/menu/icon_close_x.png"]
+    },
+    "system_menu_x_main_hud": {
+      "locator": {
+        "kind": "template",
+        "template": "knowledge/templates/menu/icon_close_x.png",
+        "threshold": 0.78,
+        "roi": [0.88, 0.0, 0.12, 0.14]
+      },
+      "required_templates": ["knowledge/templates/hud_entries/menu.png"]
+    },
+    "system_menu_role_profile": {
+      "locator": {
+        "kind": "template",
+        "template": "knowledge/templates/menu/icon_character.png",
+        "threshold": 0.62,
+        "roi": [0.66, 0.08, 0.14, 0.28]
+      },
+      "required_templates": ["knowledge/templates/profile/close.png"]
+    },
+    "system_menu_bag_inventory": {
+      "locator": {
+        "kind": "template",
+        "template": "knowledge/templates/menu/icon_inventory.png",
+        "threshold": 0.62,
+        "roi": [0.68, 0.08, 0.28, 0.36]
+      },
+      "required_templates": ["knowledge/templates/inventory/close.png"]
+    },
+    "main_hud_bag_inventory": {
+      "locator": { "kind": "hud_entry", "entry_id": "bag" },
+      "required_templates": ["knowledge/templates/inventory/close.png"]
+    },
+    "inventory_close_main_hud": {
+      "locator": {
+        "kind": "template",
+        "template": "knowledge/templates/inventory/close.png",
+        "threshold": 0.78
+      },
+      "required_templates": ["knowledge/templates/hud_entries/menu.png"]
+    },
+    "profile_life_tab_life_grid": {
+      "locator": {
+        "kind": "template",
+        "template": "knowledge/templates/profile/life_tab.png",
+        "threshold": 0.78
+      },
+      "required_templates": [
+        "knowledge/templates/life_grid/{skill}.png"
+      ]
+    },
+    "life_grid_skill_gather_detail": {
+      "locator": {
+        "kind": "skill_cell",
+        "template": "knowledge/templates/life_grid/{skill}.png",
+        "threshold": 0.78
+      },
+      "required_templates": []
+    },
+    "gather_detail_close_life_grid": {
+      "locator": {
+        "kind": "template",
+        "template": "knowledge/templates/gather_detail/close.png",
+        "threshold": 0.78
+      },
+      "required_templates": [
+        "knowledge/templates/life_grid/{skill}.png"
+      ]
+    },
+    "life_grid_close_main_hud": {
+      "locator": {
+        "kind": "template",
+        "template": "knowledge/templates/profile/close.png",
+        "threshold": 0.78
+      },
+      "required_templates": ["knowledge/templates/hud_entries/menu.png"]
+    },
+    "profile_close_main_hud": {
+      "locator": {
+        "kind": "template",
+        "template": "knowledge/templates/profile/close.png",
+        "threshold": 0.78
+      },
+      "required_templates": ["knowledge/templates/hud_entries/menu.png"]
+    }
+  }
+}

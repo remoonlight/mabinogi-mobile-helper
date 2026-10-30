@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_daily_水井",
+  "label": "水井",
+  "file": "水井.png",
+  "rel_dir": "knowledge/templates/gather_skill/daily",
+  "need_ui": "角色-生活技能-日常採集右栏：图标+物名首字",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1079,
+    "y": 1185,
+    "w": 200,
+    "h": 117
+  }
+}

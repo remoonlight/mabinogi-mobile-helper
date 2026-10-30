@@ -1,0 +1,280 @@
+{
+  "schema": "process_sense_catalog_v1",
+  "sheet_id": "knowledge/archive/life_loop/process_catalog.md",
+  "note": "只指针，不重写配方数值。可见即 locate ≠ 投料成功。不识别「鐵錠(礦石)」。",
+  "targets": [
+    "合金鋼錠",
+    "高級木材",
+    "高級布料",
+    "淨淨蘑菇汁液",
+    "增幅蘑菇汁液"
+  ],
+  "facility_titles": {
+    "roi": [
+      0.0,
+      0.0,
+      0.36,
+      0.09
+    ],
+    "variants": {
+      "wood": [
+        "title_wood_standalone.png"
+      ],
+      "metal": [
+        "title_metal_standalone.png"
+      ],
+      "medicine": [
+        "title_medicine_standalone.png"
+      ],
+      "cloth": [
+        "title_cloth_20261020.png"
+      ]
+    }
+  },
+  "facilities": {
+    "metal": [
+      {
+        "id": "process_metal_合金鋼錠",
+        "name": "合金鋼錠",
+        "label": "合金鋼錠",
+        "variant": "鋼錠",
+        "target": true,
+        "file": "合金鋼錠.png",
+        "rel_dir": "knowledge/templates/process/metal"
+      },
+      {
+        "id": "process_metal_鋼錠",
+        "name": "鋼錠",
+        "label": "鋼錠",
+        "file": "鋼錠.png",
+        "rel_dir": "knowledge/templates/process/metal"
+      },
+      {
+        "id": "process_metal_鐵錠_iron_ore",
+        "name": "鐵錠",
+        "label": "鐵錠(鐵礦石)",
+        "variant": "iron_ore",
+        "file": "鐵錠_iron_ore.png",
+        "rel_dir": "knowledge/templates/process/metal",
+        "ocr_needles": [
+          "鐵錠(鐵礦石)",
+          "鐵礦石"
+        ]
+      }
+    ],
+    "wood": [
+      {
+        "id": "process_wood_高級木材",
+        "name": "高級木材",
+        "label": "高級木材",
+        "target": true,
+        "file": "高級木材.png",
+        "rel_dir": "knowledge/templates/process/wood"
+      },
+      {
+        "id": "process_wood_木材+",
+        "name": "木材+",
+        "label": "木材+",
+        "file": "木材+.png",
+        "rel_dir": "knowledge/templates/process/wood"
+      },
+      {
+        "id": "process_wood_木材",
+        "name": "木材",
+        "label": "木材",
+        "file": "木材.png",
+        "rel_dir": "knowledge/templates/process/wood"
+      }
+    ],
+    "cloth": [
+      {
+        "id": "process_cloth_高級布料",
+        "name": "高級布料",
+        "label": "高級布料",
+        "target": true,
+        "file": "高級布料.png",
+        "rel_dir": "knowledge/templates/process/cloth"
+      },
+      {
+        "id": "process_cloth_布料+",
+        "name": "布料+",
+        "label": "布料+",
+        "file": "布料+.png",
+        "rel_dir": "knowledge/templates/process/cloth"
+      },
+      {
+        "id": "process_cloth_布料",
+        "name": "布料",
+        "label": "布料",
+        "file": "布料.png",
+        "rel_dir": "knowledge/templates/process/cloth"
+      }
+    ],
+    "medicine": [
+      {
+        "id": "process_medicine_淨淨蘑菇汁液",
+        "threshold": 0.94,
+        "name": "淨淨蘑菇汁液",
+        "label": "淨淨蘑菇汁液",
+        "target": true,
+        "file": "淨淨蘑菇汁液.png",
+        "rel_dir": "knowledge/templates/process/medicine",
+        "ocr_needles": [
+          "淨淨蘑菇汁液",
+          "凈淨蘑菇汁液",
+          "凈浮蘑菇汁液",
+          "净净蘑菇汁液"
+        ]
+      },
+      {
+        "id": "process_medicine_淨淨蘑菇孢子",
+        "name": "淨淨蘑菇孢子",
+        "label": "淨淨蘑菇孢子",
+        "file": "淨淨蘑菇孢子.png",
+        "rel_dir": "knowledge/templates/process/medicine",
+        "ocr_needles": [
+          "淨淨蘑菇孢子",
+          "凈淨蘑菇孢子",
+          "凈浮蘑菇孢子",
+          "净净蘑菇孢子"
+        ]
+      },
+      {
+        "id": "process_medicine_咻咻蘑菇孢子",
+        "name": "咻咻蘑菇孢子",
+        "label": "咻咻蘑菇孢子",
+        "file": "咻咻蘑菇孢子.png",
+        "rel_dir": "knowledge/templates/process/medicine",
+        "ocr_needles": [
+          "咻咻蘑菇孢子"
+        ],
+        "threshold": 0.97
+      },
+      {
+        "id": "process_medicine_咻咻蘑菇汁液",
+        "name": "咻咻蘑菇汁液",
+        "label": "咻咻蘑菇汁液",
+        "file": "咻咻蘑菇汁液.png",
+        "rel_dir": "knowledge/templates/process/medicine",
+        "ocr_needles": [
+          "咻咻蘑菇汁液"
+        ],
+        "threshold": 0.97,
+        "template_variants": [
+          "咻咻蘑菇汁液_1920.png"
+        ]
+      },
+      {
+        "id": "process_medicine_增幅蘑菇孢子",
+        "name": "增幅蘑菇孢子",
+        "label": "增幅蘑菇孢子",
+        "file": "增幅蘑菇孢子.png",
+        "rel_dir": "knowledge/templates/process/medicine",
+        "ocr_needles": [
+          "增幅蘑菇孢子"
+        ],
+        "threshold": 0.97
+      },
+      {
+        "id": "process_medicine_增幅蘑菇汁液",
+        "name": "增幅蘑菇汁液",
+        "label": "增幅蘑菇汁液",
+        "file": "增幅蘑菇汁液.png",
+        "rel_dir": "knowledge/templates/process/medicine",
+        "ocr_needles": [
+          "增幅蘑菇汁液"
+        ],
+        "threshold": 0.97,
+        "target": true
+      }
+    ]
+  },
+  "material_reuse": {
+    "銅礦石": {
+      "kind": "reuse",
+      "path": "knowledge/templates/items/mine/銅礦脈.png",
+      "note": "采集节点铜矿脉，不是锭"
+    },
+    "煤炭": {
+      "kind": "reuse",
+      "path": "knowledge/templates/items/mine/煤炭礦脈.png",
+      "note": "采集节点煤炭矿脉"
+    },
+    "鐵礦石": {
+      "kind": "reuse",
+      "path": "knowledge/templates/items/mine/鐵礦脈.png",
+      "note": "采集节点铁矿脉，不是锭"
+    },
+    "礦石": {
+      "kind": "reuse",
+      "path": "knowledge/templates/items/mine/礦脈.png",
+      "note": "采集节点矿脉"
+    },
+    "原木": {
+      "kind": "gap",
+      "reason": "items 只有樹等采集物，不重裁"
+    },
+    "樹液": {
+      "kind": "gap",
+      "reason": "items 无独立树液模板"
+    },
+    "羊毛": {
+      "kind": "gap",
+      "reason": "items 只有羊等采集物，不重裁"
+    },
+    "高級原木": {
+      "kind": "gap",
+      "reason": "items 无高级原木加工材料图"
+    },
+    "高級羊毛": {
+      "kind": "gap",
+      "reason": "items 无高级羊毛加工材料图"
+    }
+  },
+  "actions": {
+    "note": "点配方文字后出明细。不在设施前点「前往加工」会走路，到设施后再弹菜单。禁止把点钮当投料成功。全部領取在/不在设施前 UI 无差。",
+    "process_btn": [
+      {
+        "id": "process_btn_short_away",
+        "file": "process_btn_short_away.png",
+        "label": "前往加工",
+        "at_facility": false,
+        "materials_ok": false,
+        "need_ui": "明细已开：材料不全、角色不在加工设施前，套住「前往加工」"
+      },
+      {
+        "id": "process_btn_full_away",
+        "file": "process_btn_full_away.png",
+        "label": "前往加工",
+        "at_facility": false,
+        "materials_ok": true,
+        "need_ui": "明细已开：材料已齐、角色不在加工设施前，套住「前往加工」"
+      },
+      {
+        "id": "process_btn_short_here",
+        "file": "process_btn_short_here.png",
+        "label": "加工",
+        "at_facility": true,
+        "materials_ok": false,
+        "need_ui": "明细已开：材料不全、角色已在加工设施前，套住行动钮（多半是「加工」）"
+      },
+      {
+        "id": "process_btn_full_here",
+        "file": "process_btn_full_here.png",
+        "label": "加工",
+        "at_facility": true,
+        "materials_ok": true,
+        "need_ui": "明细已开：材料已齐、角色已在加工设施前，套住行动钮（多半是「加工」）"
+      }
+    ],
+    "claim_all": [
+      {
+        "id": "claim_all",
+        "file": "claim_all.png",
+        "label": "全部領取",
+        "at_facility_ui_same": true,
+        "need_ui": "设施页左下「全部領取」；在/不在设施前画面相同，只采一张"
+      }
+    ]
+  }
+}

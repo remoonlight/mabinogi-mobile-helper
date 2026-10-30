@@ -1,0 +1,13 @@
+{
+  "id": "item_insect_雪原光群",
+  "label": "雪原光群",
+  "file": "雪原光群.png",
+  "rel_dir": "knowledge/templates/items/insect",
+  "need_ui": "请打开「昆虫采集」详情右栏，套住「雪原光群」",
+  "client_px": {
+    "x": 1083,
+    "y": 1027,
+    "w": 100,
+    "h": 109
+  }
+}

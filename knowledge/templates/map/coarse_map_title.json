@@ -1,0 +1,66 @@
+{
+  "watch_pid": 5588,
+  "life_run_started_at": 1791778765.25891,
+  "plan_id": "p51",
+  "source_original": "logs/life_fail_shots/continent_region_stuck_20261012T052849Z.png",
+  "source_frame": "tests/fixtures/process_stance/laert_repair_stuck_20261012.png",
+  "source_sha256": "9cbacc7766136349fdd2fcf298c9294a533c97eee3a029e39bbf816fbc34dc1c",
+  "source_size": [
+    1920,
+    1440
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1440
+  ],
+  "coordinate_source": "current failed repair original; full continent breadcrumb, identifies coarse map only",
+  "template": "knowledge/templates/map/coarse_map_title.png",
+  "template_sha256": "133b4fa408f88e454f847924c1ee5b72302e16287e688177898ffd668b4442e9",
+  "crop_client_px": [
+    87,
+    38,
+    118,
+    45
+  ],
+  "roi": [
+    0,
+    0.01,
+    0.18,
+    0.085
+  ],
+  "threshold": 0.97,
+  "min_margin": 0.02,
+  "transform": "exact native client crop; no resize; no tier inference",
+  "template_variants": [
+    {
+      "template": "knowledge/templates/map/coarse_map_title_20261013.png",
+      "template_sha256": "ab92eacdc57c41a0306e6da712769273d2f45549537e9af725c65935c537f190",
+      "source_original": "logs/life_fail_shots/continent_region_stuck_20261012T200513Z.png",
+      "source_frame": "tests/fixtures/process_stance/continent_region_stuck_20261012T200513Z.png",
+      "source_sha256": "6763480856a7e645e100e9934e07a417c5a947befab5a844ead44ad65eedcc29",
+      "source_size": [
+        1920,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        87,
+        38,
+        118,
+        45
+      ],
+      "watch_pid": 21852,
+      "life_run_started_at": 1791822811.7972996,
+      "plan_id": "p151",
+      "coordinate_source": "retained failed map original; same complete breadcrumb crop and native pixels",
+      "transform": "exact native crop; same threshold/ROI/margin as original; coarse map only"
+    }
+  ]
+}

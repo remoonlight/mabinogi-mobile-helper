@@ -1,0 +1,13 @@
+{
+  "id": "inventory",
+  "label": "背包",
+  "file": "icon_inventory.png",
+  "rel_dir": "knowledge/templates/menu",
+  "need_ui": "请打开系统菜单",
+  "client_px": {
+    "x": 1423,
+    "y": 202,
+    "w": 59,
+    "h": 70
+  }
+}

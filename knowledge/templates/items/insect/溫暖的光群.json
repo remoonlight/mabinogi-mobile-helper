@@ -1,0 +1,13 @@
+{
+  "id": "item_insect_溫暖的光群",
+  "label": "溫暖的光群",
+  "file": "溫暖的光群.png",
+  "rel_dir": "knowledge/templates/items/insect",
+  "need_ui": "请打开「昆虫采集」详情右栏，套住「溫暖的光群」",
+  "client_px": {
+    "x": 1085,
+    "y": 1139,
+    "w": 94,
+    "h": 101
+  }
+}

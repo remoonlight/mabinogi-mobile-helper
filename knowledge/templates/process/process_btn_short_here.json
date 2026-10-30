@@ -1,0 +1,19 @@
+{
+  "id": "process_btn_short_here",
+  "label": "加工",
+  "file": "process_btn_short_here.png",
+  "rel_dir": "knowledge/templates/process",
+  "need_ui": "明细已开：材料不全、角色已在加工设施前，套住行动钮（多半是「加工」）",
+  "client_px": {
+    "x": 1453,
+    "y": 1331,
+    "w": 80,
+    "h": 45
+  },
+  "pending_review": false,
+  "variant_id": "process_btn_short_here",
+  "at_facility": true,
+  "materials_ok": false,
+  "locate_src": "ocr_cht",
+  "note": "人摆态：在设施前、缺料、加工；未点钮"
+}

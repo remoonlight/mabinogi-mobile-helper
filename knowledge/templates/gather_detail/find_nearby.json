@@ -1,0 +1,13 @@
+{
+  "id": "gather_detail_find_nearby",
+  "label": "寻找附近",
+  "file": "find_nearby.png",
+  "rel_dir": "knowledge/templates/gather_detail",
+  "need_ui": "技能详情已选详情物，套住「尋找附近位置」按钮",
+  "client_px": {
+    "x": 679,
+    "y": 783,
+    "w": 151,
+    "h": 37
+  }
+}

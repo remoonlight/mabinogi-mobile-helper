@@ -1,0 +1,13 @@
+{
+  "id": "map_close_x",
+  "label": "地图右上X",
+  "file": "close_x.png",
+  "rel_dir": "knowledge/templates/map",
+  "need_ui": "请打开杜巴顿区域地图，套住右上 X",
+  "client_px": {
+    "x": 1824,
+    "y": 18,
+    "w": 80,
+    "h": 80
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "facility_title_metal",
+  "label": "金屬加工·标题",
+  "file": "title_metal.png",
+  "rel_dir": "knowledge/templates/facility",
+  "need_ui": "已进「金屬加工」设施页；红框只套左上标题「金屬加工」（不要套六卡、不要套配方列表）",
+  "client_px": {
+    "x": 28,
+    "y": 20,
+    "w": 256,
+    "h": 79
+  },
+  "role": "page_anchor"
+}

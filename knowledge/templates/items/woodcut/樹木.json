@@ -1,0 +1,13 @@
+{
+  "id": "item_woodcut_樹木",
+  "label": "樹木",
+  "file": "樹木.png",
+  "rel_dir": "knowledge/templates/items/woodcut",
+  "need_ui": "请打开「伐木」详情右栏，套住「樹木」",
+  "client_px": {
+    "x": 1085,
+    "y": 890,
+    "w": 97,
+    "h": 99
+  }
+}

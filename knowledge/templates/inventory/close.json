@@ -1,0 +1,13 @@
+{
+  "id": "inventory_close",
+  "label": "关闭背包",
+  "file": "close.png",
+  "rel_dir": "knowledge/templates/inventory",
+  "need_ui": "请打开背包，套住关闭钮",
+  "client_px": {
+    "x": 1821,
+    "y": 17,
+    "w": 80,
+    "h": 80
+  }
+}

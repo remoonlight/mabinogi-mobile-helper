@@ -1,0 +1,18 @@
+{
+  "id": "process_btn_short_away",
+  "label": "前往加工",
+  "file": "process_btn_short_away.png",
+  "rel_dir": "knowledge/templates/process",
+  "need_ui": "明细已开：材料不全、角色不在加工设施前，套住「前往加工」",
+  "client_px": {
+    "x": 1423,
+    "y": 1333,
+    "w": 141,
+    "h": 42
+  },
+  "pending_review": false,
+  "variant_id": "process_btn_short_away",
+  "at_facility": false,
+  "materials_ok": false,
+  "locate_src": "ocr_cht"
+}

@@ -1,0 +1,27 @@
+{
+  "module": "GameAssembly.dll",
+  "product": "I2",
+  "official_name": "交易所物品名旁路",
+  "note": "不点交易所。按 sheet 堆扫 DisplayName：消耗品/生活工具=UniqueString@0x18；符文 SocketableSheetData.DisplayName 是 System.String@0x18（dump）。接到 MarketItemKindId（type@48|itemType@32|sheet 低32）。工具表上次全堆扫曾 0 条，本读口允许诚实 0。",
+  "typeinfo_rva": {
+    "ConsumableSheetData": "0x7B25AD8",
+    "SocketableSheetData": "0x7AFBB40",
+    "EquipmentToolSheetData": "0x7965BE8",
+    "EquipmentTool": "0x7962200"
+  },
+  "offsets": {
+    "ConsumableSheetData.Id": "0x10",
+    "ConsumableSheetData.DisplayName": "0x18",
+    "SocketableSheetData.Id": "0x10",
+    "SocketableSheetData.DisplayName": "0x18",
+    "EquipmentToolSheetData.Id": "0x10",
+    "EquipmentToolSheetData.DisplayName": "0x18",
+    "EquipmentTool.sheetData": "0xB0",
+    "UniqueString.actualString": "0x0"
+  },
+  "name_kind": {
+    "consumable": "unique",
+    "rune": "string",
+    "tool": "unique"
+  }
+}

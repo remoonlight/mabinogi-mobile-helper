@@ -1,0 +1,13 @@
+{
+  "id": "shear",
+  "label": "剪羊毛",
+  "file": "shear.png",
+  "rel_dir": "knowledge/templates/life_grid",
+  "need_ui": "生活技能大格仍开着，套住「剪羊毛」格",
+  "client_px": {
+    "x": 1108,
+    "y": 196,
+    "w": 88,
+    "h": 90
+  }
+}

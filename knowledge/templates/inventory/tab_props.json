@@ -1,0 +1,25 @@
+{
+  "id": "inventory_props_tab",
+  "label": "道具",
+  "file": "tab_props.png",
+  "selected_file": "tab_props_selected.png",
+  "selected_source": "tests/fixtures/process_stance/sap_inventory_props_selected.png",
+  "selected_hsv_min": [5, 120, 130],
+  "selected_hsv_max": [28, 255, 255],
+  "selected_min_color_fraction": 0.15,
+  "source": "tests/fixtures/process_stance/sap_inventory_equipment.png",
+  "client_px": {
+    "x": 1401,
+    "y": 1363,
+    "w": 66,
+    "h": 37
+  },
+  "roi": [
+    0.69,
+    0.91,
+    0.14,
+    0.08
+  ],
+  "threshold": 0.88,
+  "min_margin": 0.05
+}

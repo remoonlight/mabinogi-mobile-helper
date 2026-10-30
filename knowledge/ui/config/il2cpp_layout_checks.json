@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "note": "Explicit aliases from retained dump.cs. Diagnostic sample coverage only, not full reader schema or build approval. Generic type strings are compared exactly in dump audits; runtime audits only check class full names and field names/offsets. No guessed alias or auto-written offset.",
+  "checks": [
+    {"config":"il2cpp_consumable.json","key":"ConsumableInventoryComponent.ConsumableStacks","typeinfo_key":"ConsumableInventoryComponent","type":"MM.Client.Game.Logic.Components.ConsumableInventoryComponent","field":"<ConsumableStacks>k__BackingField","field_type":"MMReadOnlyDictionary<ConsumableStackKey, ConsumableStack>"},
+    {"config":"il2cpp_equip.json","key":"EquipmentToolInventoryComponent.equipmentToolSlots","typeinfo_key":"EquipmentToolInventoryComponent","type":"MM.Client.Game.Logic.Components.EquipmentToolInventoryComponent","field":"equipmentToolSlots","field_type":"MMDictionary<EquipmentToolTypeSheetId, EquipmentTool>"},
+    {"config":"il2cpp_facility.json","key":"AlteringComponent.EntireAlteringStatusData","typeinfo_key":"AlteringComponent","type":"MM.Client.Game.Logic.Components.AlteringComponent","field":"<EntireAlteringStatusData>k__BackingField","field_type":"EntireAlteringStatus"},
+    {"config":"il2cpp_living_skill.json","key":"CharacterLivingSkillComponent.LivingSkillState","typeinfo_key":"CharacterLivingSkillComponent","type":"MM.Client.Game.Logic.Components.CharacterLivingSkillComponent","field":"<LivingSkillState>k__BackingField","field_type":"MMReadOnlyDictionary<LivingSkillSheetId, LivingSkillData>"}
+  ]
+}

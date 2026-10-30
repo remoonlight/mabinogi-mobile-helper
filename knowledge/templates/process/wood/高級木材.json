@@ -1,0 +1,15 @@
+{
+  "id": "process_wood_高級木材",
+  "label": "高級木材",
+  "file": "高級木材.png",
+  "rel_dir": "knowledge/templates/process/wood",
+  "need_ui": "请打开木材加工设施页，列表可见目标行时套住该行（左侧列表，不是详情右栏）：高級木材",
+  "client_px": {
+    "x": 1225,
+    "y": 335,
+    "w": 103,
+    "h": 118
+  },
+  "pending_review": false,
+  "locate_src": "ocr_cht"
+}

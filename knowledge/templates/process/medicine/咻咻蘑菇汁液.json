@@ -1,0 +1,22 @@
+{
+  "id": "process_medicine_咻咻蘑菇汁液",
+  "name": "咻咻蘑菇汁液",
+  "label": "咻咻蘑菇汁液",
+  "file": "咻咻蘑菇汁液.png",
+  "rel_dir": "knowledge/templates/process/medicine",
+  "source_frame": "tests/fixtures/process_stance/medicine_standalone.png",
+  "source_sha256": "668b50043de7177791982e9b257b20dfe1011a7aa9cbd4a0ee5ccbcc190b9618",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "crop_client_px": [
+    1198,
+    454,
+    150,
+    30
+  ],
+  "transform": "exact crop; no resize",
+  "coordinate_source": "inspected original game_frame recipe label bounds",
+  "template_sha256": "b820941a51c76c24e540d1694d2e2dce486007dfd29cd4c42f82eba8513b1315"
+}

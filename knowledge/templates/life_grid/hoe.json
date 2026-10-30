@@ -1,0 +1,13 @@
+{
+  "id": "hoe",
+  "label": "鋤地",
+  "file": "hoe.png",
+  "rel_dir": "knowledge/templates/life_grid",
+  "need_ui": "生活技能大格仍开着，套住「鋤地」格",
+  "client_px": {
+    "x": 1526,
+    "y": 203,
+    "w": 80,
+    "h": 80
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "item_fish_小釣魚場",
+  "label": "小釣魚場",
+  "file": "小釣魚場.png",
+  "rel_dir": "knowledge/templates/items/fish",
+  "need_ui": "请打开「钓鱼」详情右栏，套住「小釣魚場」",
+  "client_px": {
+    "x": 1084,
+    "y": 892,
+    "w": 97,
+    "h": 91
+  }
+}

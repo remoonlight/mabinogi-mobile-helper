@@ -1,0 +1,25 @@
+{
+  "source": "logs\\life_fail_shots\\鐐规法娣ㄨ槕鑿囨眮娑瞋20261024T013352Z.png",
+  "source_sha256": "7da510040c425a9583bebbedfd39656f98ca74427575fc8a92403601d8dd2ee7",
+  "fixture": "tests\\fixtures\\life_faults_20261024\\medicine_juice_list.png",
+  "fixture_sha256": "7da510040c425a9583bebbedfd39656f98ca74427575fc8a92403601d8dd2ee7",
+  "client_size": [
+    1919,
+    1440
+  ],
+  "crop_xywh": [
+    1194,
+    998,
+    166,
+    47
+  ],
+  "transform": "native pixels; no resize, repaint or OCR reconstruction",
+  "template": "knowledge\\templates\\process\\medicine\\淨淨蘑菇汁液.png",
+  "template_sha256": "6d7e0b8d84877f3859fef96ea0566a19bebcdc9cc285c1403e4556f028724c9a",
+  "name": "淨淨蘑菇汁液",
+  "watch_pid": 80196,
+  "run_started_at": 1792805422.8012445,
+  "recognition_threshold": 0.94,
+  "margin": 0.02,
+  "coordinate_source": "complete caption bounds in retained raw frame, checked against OCR bounds and independent visual inspection"
+}

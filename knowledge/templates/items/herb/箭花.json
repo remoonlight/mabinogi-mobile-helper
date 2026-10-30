@@ -1,0 +1,13 @@
+{
+  "id": "item_herb_箭花",
+  "label": "箭花",
+  "file": "箭花.png",
+  "rel_dir": "knowledge/templates/items/herb",
+  "need_ui": "请打开「采集药草」详情右栏，套住「箭花」",
+  "client_px": {
+    "x": 1080,
+    "y": 1179,
+    "w": 96,
+    "h": 100
+  }
+}

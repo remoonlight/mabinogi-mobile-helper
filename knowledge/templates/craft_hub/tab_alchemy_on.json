@@ -1,0 +1,14 @@
+{
+  "id": "craft_tab_alchemy_on",
+  "label": "鍊金術·选中(青)",
+  "file": "tab_alchemy_on.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "製作已开；先点「鍊金術」让这一栏变青、其它变灰；红框只套这一栏图标+栏名（不要套到右边内容）；加工若有红点仍整套；不要点六卡、不要进设施。套住「鍊金術」选中(青)",
+  "client_px": {
+    "x": 41,
+    "y": 968,
+    "w": 115,
+    "h": 123
+  },
+  "role": "tab_on"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "item_woodcut_成材樹",
+  "label": "成材樹",
+  "file": "成材樹.png",
+  "rel_dir": "knowledge/templates/items/woodcut",
+  "need_ui": "请打开「伐木」详情右栏，套住「成材樹」",
+  "client_px": {
+    "x": 1083,
+    "y": 1138,
+    "w": 96,
+    "h": 104
+  }
+}

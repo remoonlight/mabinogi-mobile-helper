@@ -1,0 +1,4937 @@
+{
+  "schema": "altering_process_catalog.v1",
+  "source": "il2cpp_AlteringSheetData",
+  "observed_at": "2026-07-27T09:26:36Z",
+  "recipe_count": 88,
+  "by_facility": {
+    "metal": [
+      {
+        "altering_sheet_id": 332636885,
+        "facility_type": 0,
+        "facility_lv": 1,
+        "display_name": "鋼錠",
+        "result_id": 332636885,
+        "result_name": "鋼錠",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1156816717,
+            "amount": 3,
+            "name": "鐵錠"
+          },
+          {
+            "sheet_id": 384237528,
+            "amount": 4,
+            "name": "煤炭"
+          }
+        ],
+        "variant_hint": "鐵錠",
+        "is_main": false,
+        "display_order": 1100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1156816717,
+        "facility_type": 0,
+        "facility_lv": 1,
+        "display_name": "鐵錠(鐵礦石)",
+        "result_id": 1156816717,
+        "result_name": "鐵錠",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 198875762,
+            "amount": 10,
+            "name": "鐵礦石"
+          }
+        ],
+        "variant_hint": "鐵礦石",
+        "is_main": true,
+        "display_order": 1100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1779380371,
+        "facility_type": 0,
+        "facility_lv": 1,
+        "display_name": "鐵錠(礦石)",
+        "result_id": 1156816717,
+        "result_name": "鐵錠",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 981681071,
+            "amount": 20,
+            "name": "礦石"
+          }
+        ],
+        "variant_hint": "礦石",
+        "is_main": false,
+        "display_order": 1100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 962391520,
+        "facility_type": 0,
+        "facility_lv": 2,
+        "display_name": "焦油",
+        "result_id": 962391520,
+        "result_name": "焦油",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 518458318,
+            "amount": 50,
+            "name": "原木"
+          },
+          {
+            "sheet_id": 545807217,
+            "amount": 25,
+            "name": "黏土"
+          }
+        ],
+        "variant_hint": "原木",
+        "is_main": false,
+        "display_order": 1200,
+        "display_type": "Show",
+        "feature_switch": 460269496,
+        "tw_status": "feature_pending",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1793283870,
+        "facility_type": 0,
+        "facility_lv": 2,
+        "display_name": "合金鋼錠",
+        "result_id": 1793283870,
+        "result_name": "合金鋼錠",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 332636885,
+            "amount": 3,
+            "name": "鋼錠"
+          },
+          {
+            "sheet_id": 1652781561,
+            "amount": 15,
+            "name": "銅礦石"
+          },
+          {
+            "sheet_id": 384237528,
+            "amount": 8,
+            "name": "煤炭"
+          }
+        ],
+        "variant_hint": "鋼錠",
+        "is_main": true,
+        "display_order": 1200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 44807784,
+        "facility_type": 0,
+        "facility_lv": 3,
+        "display_name": "特殊鋼錠",
+        "result_id": 44807784,
+        "result_name": "特殊鋼錠",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1793283870,
+            "amount": 4,
+            "name": "合金鋼錠"
+          },
+          {
+            "sheet_id": 2083106069,
+            "amount": 20,
+            "name": "白銅礦石"
+          },
+          {
+            "sheet_id": 384237528,
+            "amount": 12,
+            "name": "煤炭"
+          }
+        ],
+        "variant_hint": "合金鋼錠",
+        "is_main": true,
+        "display_order": 1300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1545476620,
+        "facility_type": 0,
+        "facility_lv": 4,
+        "display_name": "銀合金錠",
+        "result_id": 1545476620,
+        "result_name": "銀合金錠",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 44807784,
+            "amount": 5,
+            "name": "特殊鋼錠"
+          },
+          {
+            "sheet_id": 1672456814,
+            "amount": 20,
+            "name": "銀礦石"
+          },
+          {
+            "sheet_id": 384237528,
+            "amount": 16,
+            "name": "煤炭"
+          }
+        ],
+        "variant_hint": "特殊鋼錠",
+        "is_main": true,
+        "display_order": 1400,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1065332144,
+        "facility_type": 0,
+        "facility_lv": 5,
+        "display_name": "隕鐵錠",
+        "result_id": 1065332144,
+        "result_name": "隕鐵錠",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1545476620,
+            "amount": 5,
+            "name": "銀合金錠"
+          },
+          {
+            "sheet_id": 1419753959,
+            "amount": 20,
+            "name": "隕鐵礦石"
+          },
+          {
+            "sheet_id": 384237528,
+            "amount": 20,
+            "name": "煤炭"
+          }
+        ],
+        "variant_hint": "銀合金錠",
+        "is_main": false,
+        "display_order": 1500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 491329529,
+        "facility_type": 0,
+        "facility_lv": 6,
+        "display_name": "백금강괴",
+        "result_id": 491329529,
+        "result_name": "백금강괴",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1065332144,
+            "amount": 5,
+            "name": "隕鐵錠"
+          },
+          {
+            "sheet_id": 1698150806,
+            "amount": 20,
+            "name": "백금 광석"
+          },
+          {
+            "sheet_id": 384237528,
+            "amount": 20,
+            "name": "煤炭"
+          }
+        ],
+        "variant_hint": "隕鐵錠",
+        "is_main": false,
+        "display_order": 1600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      }
+    ],
+    "wood": [
+      {
+        "altering_sheet_id": 824750738,
+        "facility_type": 1,
+        "facility_lv": 1,
+        "display_name": "木材",
+        "result_id": 824750738,
+        "result_name": "木材",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 518458318,
+            "amount": 10,
+            "name": "原木"
+          }
+        ],
+        "variant_hint": "原木",
+        "is_main": true,
+        "display_order": 2100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1458660129,
+        "facility_type": 1,
+        "facility_lv": 1,
+        "display_name": "木材+",
+        "result_id": 1458660129,
+        "result_name": "木材+",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 824750738,
+            "amount": 3,
+            "name": "木材"
+          },
+          {
+            "sheet_id": 1644179994,
+            "amount": 4,
+            "name": "樹液"
+          }
+        ],
+        "variant_hint": "木材",
+        "is_main": false,
+        "display_order": 2100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 819043159,
+        "facility_type": 1,
+        "facility_lv": 2,
+        "display_name": "高級木材",
+        "result_id": 819043159,
+        "result_name": "高級木材",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1458660129,
+            "amount": 3,
+            "name": "木材+"
+          },
+          {
+            "sheet_id": 303057424,
+            "amount": 15,
+            "name": "高級原木"
+          },
+          {
+            "sheet_id": 1644179994,
+            "amount": 8,
+            "name": "樹液"
+          }
+        ],
+        "variant_hint": "木材+",
+        "is_main": true,
+        "display_order": 2200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 901469748,
+        "facility_type": 1,
+        "facility_lv": 3,
+        "display_name": "高級木材+",
+        "result_id": 901469748,
+        "result_name": "高級木材+",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 819043159,
+            "amount": 4,
+            "name": "高級木材"
+          },
+          {
+            "sheet_id": 612255730,
+            "amount": 20,
+            "name": "高級原木+"
+          },
+          {
+            "sheet_id": 1644179994,
+            "amount": 12,
+            "name": "樹液"
+          }
+        ],
+        "variant_hint": "高級木材",
+        "is_main": true,
+        "display_order": 2300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 587423787,
+        "facility_type": 1,
+        "facility_lv": 3,
+        "display_name": "柔軟木材",
+        "result_id": 587423787,
+        "result_name": "柔軟木材",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 901469748,
+            "amount": 15,
+            "name": "高級木材+"
+          },
+          {
+            "sheet_id": 1581920793,
+            "amount": 30,
+            "name": "柔軟原木"
+          },
+          {
+            "sheet_id": 1644179994,
+            "amount": 30,
+            "name": "樹液"
+          }
+        ],
+        "variant_hint": "高級木材+",
+        "is_main": false,
+        "display_order": 2301,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 114221322,
+        "facility_type": 1,
+        "facility_lv": 3,
+        "display_name": "堅硬木材",
+        "result_id": 114221322,
+        "result_name": "堅硬木材",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 901469748,
+            "amount": 15,
+            "name": "高級木材+"
+          },
+          {
+            "sheet_id": 1128414187,
+            "amount": 30,
+            "name": "堅硬原木"
+          },
+          {
+            "sheet_id": 1644179994,
+            "amount": 30,
+            "name": "樹液"
+          }
+        ],
+        "variant_hint": "高級木材+",
+        "is_main": false,
+        "display_order": 2302,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 23601394,
+        "facility_type": 1,
+        "facility_lv": 4,
+        "display_name": "最高級木材",
+        "result_id": 23601394,
+        "result_name": "最高級木材",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 901469748,
+            "amount": 5,
+            "name": "高級木材+"
+          },
+          {
+            "sheet_id": 814221571,
+            "amount": 20,
+            "name": "最高級原木"
+          },
+          {
+            "sheet_id": 1644179994,
+            "amount": 16,
+            "name": "樹液"
+          }
+        ],
+        "variant_hint": "高級木材+",
+        "is_main": true,
+        "display_order": 2400,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 858054326,
+        "facility_type": 1,
+        "facility_lv": 5,
+        "display_name": "最高級木材+",
+        "result_id": 858054326,
+        "result_name": "最高級木材+",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 23601394,
+            "amount": 5,
+            "name": "最高級木材"
+          },
+          {
+            "sheet_id": 255786887,
+            "amount": 20,
+            "name": "最高級原木+"
+          },
+          {
+            "sheet_id": 1644179994,
+            "amount": 20,
+            "name": "樹液"
+          }
+        ],
+        "variant_hint": "最高級木材",
+        "is_main": false,
+        "display_order": 2500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 775097523,
+        "facility_type": 1,
+        "facility_lv": 5,
+        "display_name": "雲紋棍",
+        "result_id": 775097523,
+        "result_name": "雲紋棍",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 587423787,
+            "amount": 2,
+            "name": "柔軟木材"
+          },
+          {
+            "sheet_id": 252911533,
+            "amount": 30,
+            "name": "幻影粉末"
+          },
+          {
+            "sheet_id": 1762731356,
+            "amount": 50,
+            "name": "變化之核"
+          },
+          {
+            "sheet_id": 2134190110,
+            "amount": 10,
+            "name": "砂紙"
+          }
+        ],
+        "variant_hint": "柔軟木材",
+        "is_main": false,
+        "display_order": 2501,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 510403159,
+        "facility_type": 1,
+        "facility_lv": 6,
+        "display_name": "특급 목재",
+        "result_id": 510403159,
+        "result_name": "특급 목재",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 858054326,
+            "amount": 5,
+            "name": "最高級木材+"
+          },
+          {
+            "sheet_id": 813250535,
+            "amount": 20,
+            "name": "특급 통나무"
+          },
+          {
+            "sheet_id": 1644179994,
+            "amount": 20,
+            "name": "樹液"
+          }
+        ],
+        "variant_hint": "最高級木材+",
+        "is_main": false,
+        "display_order": 2600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      }
+    ],
+    "cloth": [
+      {
+        "altering_sheet_id": 1553586563,
+        "facility_type": 2,
+        "facility_lv": 1,
+        "display_name": "布料",
+        "result_id": 1553586563,
+        "result_name": "布料",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 714851857,
+            "amount": 10,
+            "name": "羊毛"
+          }
+        ],
+        "variant_hint": "羊毛",
+        "is_main": true,
+        "display_order": 3100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1952032774,
+        "facility_type": 2,
+        "facility_lv": 1,
+        "display_name": "絲綢",
+        "result_id": 1952032774,
+        "result_name": "絲綢",
+        "result_amount": 2,
+        "ingredients": [
+          {
+            "sheet_id": 898995834,
+            "amount": 10,
+            "name": "蜘蛛網"
+          }
+        ],
+        "variant_hint": "蜘蛛網",
+        "is_main": false,
+        "display_order": 3101,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 445753894,
+        "facility_type": 2,
+        "facility_lv": 1,
+        "display_name": "布料+",
+        "result_id": 445753894,
+        "result_name": "布料+",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1553586563,
+            "amount": 3,
+            "name": "布料"
+          },
+          {
+            "sheet_id": 714851857,
+            "amount": 4,
+            "name": "羊毛"
+          }
+        ],
+        "variant_hint": "布料",
+        "is_main": false,
+        "display_order": 3102,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 424609249,
+        "facility_type": 2,
+        "facility_lv": 2,
+        "display_name": "高級布料",
+        "result_id": 424609249,
+        "result_name": "高級布料",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 445753894,
+            "amount": 3,
+            "name": "布料+"
+          },
+          {
+            "sheet_id": 962165362,
+            "amount": 15,
+            "name": "高級羊毛"
+          },
+          {
+            "sheet_id": 714851857,
+            "amount": 8,
+            "name": "羊毛"
+          }
+        ],
+        "variant_hint": "布料+",
+        "is_main": true,
+        "display_order": 3200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1826881561,
+        "facility_type": 2,
+        "facility_lv": 2,
+        "display_name": "厚布料",
+        "result_id": 1826881561,
+        "result_name": "厚布料",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 639212127,
+            "amount": 50,
+            "name": "厚實羊毛"
+          },
+          {
+            "sheet_id": 962165362,
+            "amount": 100,
+            "name": "高級羊毛"
+          },
+          {
+            "sheet_id": 565427660,
+            "amount": 2,
+            "name": "蜂蠟"
+          }
+        ],
+        "variant_hint": "厚實羊毛",
+        "is_main": false,
+        "display_order": 3201,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 2112757029,
+        "facility_type": 2,
+        "facility_lv": 2,
+        "display_name": "高級絲綢",
+        "result_id": 2112757029,
+        "result_name": "高級絲綢",
+        "result_amount": 2,
+        "ingredients": [
+          {
+            "sheet_id": 1952032774,
+            "amount": 4,
+            "name": "絲綢"
+          },
+          {
+            "sheet_id": 1315811139,
+            "amount": 8,
+            "name": "壯壯蘑菇汁液"
+          }
+        ],
+        "variant_hint": "絲綢",
+        "is_main": false,
+        "display_order": 3202,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1427452351,
+        "facility_type": 2,
+        "facility_lv": 3,
+        "display_name": "高級布料+",
+        "result_id": 1427452351,
+        "result_name": "高級布料+",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 424609249,
+            "amount": 4,
+            "name": "高級布料"
+          },
+          {
+            "sheet_id": 729657329,
+            "amount": 20,
+            "name": "高級羊毛+"
+          },
+          {
+            "sheet_id": 714851857,
+            "amount": 12,
+            "name": "羊毛"
+          }
+        ],
+        "variant_hint": "高級布料",
+        "is_main": true,
+        "display_order": 3300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 165937923,
+        "facility_type": 2,
+        "facility_lv": 3,
+        "display_name": "植物纖維",
+        "result_id": 165937923,
+        "result_name": "植物纖維",
+        "result_amount": 10,
+        "ingredients": [
+          {
+            "sheet_id": 1613211689,
+            "amount": 150,
+            "name": "長莖稈"
+          }
+        ],
+        "variant_hint": "長莖稈",
+        "is_main": false,
+        "display_order": 3301,
+        "display_type": "Show",
+        "feature_switch": 460269496,
+        "tw_status": "feature_pending",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 117600250,
+        "facility_type": 2,
+        "facility_lv": 3,
+        "display_name": "繩索",
+        "result_id": 117600250,
+        "result_name": "繩索",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 165937923,
+            "amount": 45,
+            "name": "植物纖維"
+          },
+          {
+            "sheet_id": 565427660,
+            "amount": 4,
+            "name": "蜂蠟"
+          }
+        ],
+        "variant_hint": "植物纖維",
+        "is_main": false,
+        "display_order": 3302,
+        "display_type": "Show",
+        "feature_switch": 460269496,
+        "tw_status": "feature_pending",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 28400012,
+        "facility_type": 2,
+        "facility_lv": 4,
+        "display_name": "最高級布料",
+        "result_id": 28400012,
+        "result_name": "最高級布料",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1427452351,
+            "amount": 5,
+            "name": "高級布料+"
+          },
+          {
+            "sheet_id": 1241970565,
+            "amount": 20,
+            "name": "最高級羊毛"
+          },
+          {
+            "sheet_id": 714851857,
+            "amount": 16,
+            "name": "羊毛"
+          }
+        ],
+        "variant_hint": "高級布料+",
+        "is_main": true,
+        "display_order": 3400,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 742209409,
+        "facility_type": 2,
+        "facility_lv": 4,
+        "display_name": "最高級絲綢",
+        "result_id": 742209409,
+        "result_name": "最高級絲綢",
+        "result_amount": 2,
+        "ingredients": [
+          {
+            "sheet_id": 2112757029,
+            "amount": 4,
+            "name": "高級絲綢"
+          },
+          {
+            "sheet_id": 2061877585,
+            "amount": 20,
+            "name": "最高級蜘蛛網"
+          },
+          {
+            "sheet_id": 1315811139,
+            "amount": 16,
+            "name": "壯壯蘑菇汁液"
+          }
+        ],
+        "variant_hint": "高級絲綢",
+        "is_main": false,
+        "display_order": 3401,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1702092112,
+        "facility_type": 2,
+        "facility_lv": 4,
+        "display_name": "結實的繩索",
+        "result_id": 1702092112,
+        "result_name": "結實的繩索",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 117600250,
+            "amount": 6,
+            "name": "繩索"
+          },
+          {
+            "sheet_id": 165937923,
+            "amount": 90,
+            "name": "植物纖維"
+          },
+          {
+            "sheet_id": 565427660,
+            "amount": 8,
+            "name": "蜂蠟"
+          },
+          {
+            "sheet_id": 962391520,
+            "amount": 3,
+            "name": "焦油"
+          }
+        ],
+        "variant_hint": "繩索",
+        "is_main": false,
+        "display_order": 3402,
+        "display_type": "Show",
+        "feature_switch": 460269496,
+        "tw_status": "feature_pending",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 516085130,
+        "facility_type": 2,
+        "facility_lv": 5,
+        "display_name": "最高級布料+",
+        "result_id": 516085130,
+        "result_name": "最高級布料+",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 28400012,
+            "amount": 5,
+            "name": "最高級布料"
+          },
+          {
+            "sheet_id": 1253884620,
+            "amount": 20,
+            "name": "最高級羊毛+"
+          },
+          {
+            "sheet_id": 714851857,
+            "amount": 20,
+            "name": "羊毛"
+          }
+        ],
+        "variant_hint": "最高級布料",
+        "is_main": false,
+        "display_order": 3500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 93229368,
+        "facility_type": 2,
+        "facility_lv": 5,
+        "display_name": "특급 실크",
+        "result_id": 93229368,
+        "result_name": "특급 실크",
+        "result_amount": 2,
+        "ingredients": [
+          {
+            "sheet_id": 742209409,
+            "amount": 4,
+            "name": "最高級絲綢"
+          },
+          {
+            "sheet_id": 2036765659,
+            "amount": 20,
+            "name": "특급 거미줄"
+          },
+          {
+            "sheet_id": 1315811139,
+            "amount": 20,
+            "name": "壯壯蘑菇汁液"
+          }
+        ],
+        "variant_hint": "最高級絲綢",
+        "is_main": false,
+        "display_order": 3601,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 904061195,
+        "facility_type": 2,
+        "facility_lv": 6,
+        "display_name": "특급 옷감",
+        "result_id": 904061195,
+        "result_name": "특급 옷감",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 516085130,
+            "amount": 5,
+            "name": "最高級布料+"
+          },
+          {
+            "sheet_id": 1804382783,
+            "amount": 20,
+            "name": "특급 양털"
+          },
+          {
+            "sheet_id": 714851857,
+            "amount": 20,
+            "name": "羊毛"
+          }
+        ],
+        "variant_hint": "最高級布料+",
+        "is_main": false,
+        "display_order": 3600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      }
+    ],
+    "leather": [
+      {
+        "altering_sheet_id": 503309746,
+        "facility_type": 3,
+        "facility_lv": 1,
+        "display_name": "皮革+",
+        "result_id": 503309746,
+        "result_name": "皮革+",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1804591185,
+            "amount": 3,
+            "name": "皮革"
+          },
+          {
+            "sheet_id": 1635910675,
+            "amount": 4,
+            "name": "單寧粉末"
+          }
+        ],
+        "variant_hint": "皮革",
+        "is_main": false,
+        "display_order": 4100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1804591185,
+        "facility_type": 3,
+        "facility_lv": 1,
+        "display_name": "皮革",
+        "result_id": 1804591185,
+        "result_name": "皮革",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 598603709,
+            "amount": 10,
+            "name": "生皮"
+          }
+        ],
+        "variant_hint": "生皮",
+        "is_main": true,
+        "display_order": 4100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 72701016,
+        "facility_type": 3,
+        "facility_lv": 2,
+        "display_name": "高級皮革",
+        "result_id": 72701016,
+        "result_name": "高級皮革",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 503309746,
+            "amount": 3,
+            "name": "皮革+"
+          },
+          {
+            "sheet_id": 580126530,
+            "amount": 15,
+            "name": "高級生皮"
+          },
+          {
+            "sheet_id": 1635910675,
+            "amount": 8,
+            "name": "單寧粉末"
+          }
+        ],
+        "variant_hint": "皮革+",
+        "is_main": true,
+        "display_order": 4200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 406209798,
+        "facility_type": 3,
+        "facility_lv": 3,
+        "display_name": "高級皮革+",
+        "result_id": 406209798,
+        "result_name": "高級皮革+",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 72701016,
+            "amount": 4,
+            "name": "高級皮革"
+          },
+          {
+            "sheet_id": 1473884120,
+            "amount": 20,
+            "name": "高級生皮+"
+          },
+          {
+            "sheet_id": 1635910675,
+            "amount": 12,
+            "name": "單寧粉末"
+          }
+        ],
+        "variant_hint": "高級皮革",
+        "is_main": true,
+        "display_order": 4300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1741334734,
+        "facility_type": 3,
+        "facility_lv": 4,
+        "display_name": "最高級皮革",
+        "result_id": 1741334734,
+        "result_name": "最高級皮革",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 406209798,
+            "amount": 5,
+            "name": "高級皮革+"
+          },
+          {
+            "sheet_id": 2003405808,
+            "amount": 20,
+            "name": "最高級生皮"
+          },
+          {
+            "sheet_id": 1635910675,
+            "amount": 16,
+            "name": "單寧粉末"
+          }
+        ],
+        "variant_hint": "高級皮革+",
+        "is_main": true,
+        "display_order": 4400,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1495313869,
+        "facility_type": 3,
+        "facility_lv": 5,
+        "display_name": "最高級皮革+",
+        "result_id": 1495313869,
+        "result_name": "最高級皮革+",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1741334734,
+            "amount": 5,
+            "name": "最高級皮革"
+          },
+          {
+            "sheet_id": 982835388,
+            "amount": 20,
+            "name": "最高級生皮+"
+          },
+          {
+            "sheet_id": 1635910675,
+            "amount": 20,
+            "name": "單寧粉末"
+          }
+        ],
+        "variant_hint": "最高級皮革",
+        "is_main": false,
+        "display_order": 4500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 31770246,
+        "facility_type": 3,
+        "facility_lv": 6,
+        "display_name": "특급 가죽",
+        "result_id": 31770246,
+        "result_name": "특급 가죽",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1495313869,
+            "amount": 5,
+            "name": "最高級皮革+"
+          },
+          {
+            "sheet_id": 1837310990,
+            "amount": 20,
+            "name": "특급 생가죽"
+          },
+          {
+            "sheet_id": 1635910675,
+            "amount": 20,
+            "name": "單寧粉末"
+          }
+        ],
+        "variant_hint": "最高級皮革+",
+        "is_main": false,
+        "display_order": 4600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      }
+    ],
+    "herb": [
+      {
+        "altering_sheet_id": 294717747,
+        "facility_type": 4,
+        "facility_lv": 1,
+        "display_name": "新芽蘑菇汁液",
+        "result_id": 294717747,
+        "result_name": "新芽蘑菇汁液",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 1199841900,
+            "amount": 10,
+            "name": "新芽蘑菇孢子"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 1,
+            "name": "裝水的瓶子"
+          }
+        ],
+        "variant_hint": "新芽蘑菇孢子",
+        "is_main": true,
+        "display_order": 5100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 599175142,
+        "facility_type": 4,
+        "facility_lv": 1,
+        "display_name": "壯壯蘑菇粉末",
+        "result_id": 599175142,
+        "result_name": "壯壯蘑菇粉末",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 164492686,
+            "amount": 20,
+            "name": "壯壯蘑菇"
+          }
+        ],
+        "variant_hint": "壯壯蘑菇",
+        "is_main": false,
+        "display_order": 5100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1315811139,
+        "facility_type": 4,
+        "facility_lv": 1,
+        "display_name": "壯壯蘑菇汁液",
+        "result_id": 1315811139,
+        "result_name": "壯壯蘑菇汁液",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 401640121,
+            "amount": 10,
+            "name": "壯壯蘑菇孢子"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 1,
+            "name": "裝水的瓶子"
+          }
+        ],
+        "variant_hint": "壯壯蘑菇孢子",
+        "is_main": false,
+        "display_order": 5100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1972350094,
+        "facility_type": 4,
+        "facility_lv": 1,
+        "display_name": "光輝結晶(幽靈螢火蟲)",
+        "result_id": 2019168353,
+        "result_name": "光輝結晶",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 400134122,
+            "amount": 3,
+            "name": "幽靈螢火蟲"
+          },
+          {
+            "sheet_id": 851218173,
+            "amount": 10,
+            "name": "魔力藥草"
+          },
+          {
+            "sheet_id": 545807217,
+            "amount": 3,
+            "name": "黏土"
+          }
+        ],
+        "variant_hint": "幽靈螢火蟲",
+        "is_main": false,
+        "display_order": 5100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 401640121,
+        "facility_type": 4,
+        "facility_lv": 2,
+        "display_name": "壯壯蘑菇孢子",
+        "result_id": 401640121,
+        "result_name": "壯壯蘑菇孢子",
+        "result_amount": 15,
+        "ingredients": [
+          {
+            "sheet_id": 164492686,
+            "amount": 30,
+            "name": "壯壯蘑菇"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 3,
+            "name": "紙"
+          }
+        ],
+        "variant_hint": "壯壯蘑菇",
+        "is_main": false,
+        "display_order": 5200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 403020325,
+        "facility_type": 4,
+        "facility_lv": 2,
+        "display_name": "咻咻蘑菇孢子",
+        "result_id": 403020325,
+        "result_name": "咻咻蘑菇孢子",
+        "result_amount": 15,
+        "ingredients": [
+          {
+            "sheet_id": 615758160,
+            "amount": 30,
+            "name": "咻咻蘑菇"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 3,
+            "name": "紙"
+          }
+        ],
+        "variant_hint": "咻咻蘑菇",
+        "is_main": false,
+        "display_order": 5200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 898758418,
+        "facility_type": 4,
+        "facility_lv": 2,
+        "display_name": "膠水",
+        "result_id": 898758418,
+        "result_name": "膠水",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 580126530,
+            "amount": 30,
+            "name": "高級生皮"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 10,
+            "name": "裝水的瓶子"
+          }
+        ],
+        "variant_hint": "高級生皮",
+        "is_main": false,
+        "display_order": 5200,
+        "display_type": "Show",
+        "feature_switch": 460269496,
+        "tw_status": "feature_pending",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1027664724,
+        "facility_type": 4,
+        "facility_lv": 2,
+        "display_name": "咻咻蘑菇汁液",
+        "result_id": 1027664724,
+        "result_name": "咻咻蘑菇汁液",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 403020325,
+            "amount": 10,
+            "name": "咻咻蘑菇孢子"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 1,
+            "name": "裝水的瓶子"
+          }
+        ],
+        "variant_hint": "咻咻蘑菇孢子",
+        "is_main": true,
+        "display_order": 5200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1199841900,
+        "facility_type": 4,
+        "facility_lv": 2,
+        "display_name": "新芽蘑菇孢子",
+        "result_id": 1199841900,
+        "result_name": "新芽蘑菇孢子",
+        "result_amount": 15,
+        "ingredients": [
+          {
+            "sheet_id": 16921337,
+            "amount": 30,
+            "name": "新芽蘑菇"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 3,
+            "name": "紙"
+          }
+        ],
+        "variant_hint": "新芽蘑菇",
+        "is_main": false,
+        "display_order": 5200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1502788363,
+        "facility_type": 4,
+        "facility_lv": 2,
+        "display_name": "火苗結晶(夕陽蝴蝶)",
+        "result_id": 1953925395,
+        "result_name": "火苗結晶",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1894071275,
+            "amount": 3,
+            "name": "夕陽蝴蝶"
+          },
+          {
+            "sheet_id": 851218173,
+            "amount": 10,
+            "name": "魔力藥草"
+          },
+          {
+            "sheet_id": 545807217,
+            "amount": 3,
+            "name": "黏土"
+          }
+        ],
+        "variant_hint": "夕陽蝴蝶",
+        "is_main": false,
+        "display_order": 5200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 2049639717,
+        "facility_type": 4,
+        "facility_lv": 2,
+        "display_name": "石墨棒",
+        "result_id": 2049639717,
+        "result_name": "石墨棒",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 705646179,
+            "amount": 10,
+            "name": "石墨"
+          },
+          {
+            "sheet_id": 545807217,
+            "amount": 10,
+            "name": "黏土"
+          }
+        ],
+        "variant_hint": "石墨",
+        "is_main": false,
+        "display_order": 5200,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 393824971,
+        "facility_type": 4,
+        "facility_lv": 3,
+        "display_name": "淨淨蘑菇汁液",
+        "result_id": 393824971,
+        "result_name": "淨淨蘑菇汁液",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 1345278556,
+            "amount": 10,
+            "name": "淨淨蘑菇孢子"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 1,
+            "name": "裝水的瓶子"
+          }
+        ],
+        "variant_hint": "淨淨蘑菇孢子",
+        "is_main": true,
+        "display_order": 5300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1319700955,
+        "facility_type": 4,
+        "facility_lv": 3,
+        "display_name": "躲躲花粉末",
+        "result_id": 1319700955,
+        "result_name": "躲躲花粉末",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 1016378562,
+            "amount": 20,
+            "name": "躲躲花"
+          }
+        ],
+        "variant_hint": "躲躲花",
+        "is_main": false,
+        "display_order": 5300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1345278556,
+        "facility_type": 4,
+        "facility_lv": 3,
+        "display_name": "淨淨蘑菇孢子",
+        "result_id": 1345278556,
+        "result_name": "淨淨蘑菇孢子",
+        "result_amount": 15,
+        "ingredients": [
+          {
+            "sheet_id": 1526680639,
+            "amount": 30,
+            "name": "淨淨蘑菇"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 3,
+            "name": "紙"
+          }
+        ],
+        "variant_hint": "淨淨蘑菇",
+        "is_main": false,
+        "display_order": 5300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1442808337,
+        "facility_type": 4,
+        "facility_lv": 3,
+        "display_name": "冰霜結晶(白霜金龜子)",
+        "result_id": 550210735,
+        "result_name": "冰霜結晶",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 485899507,
+            "amount": 3,
+            "name": "白霜金龜子"
+          },
+          {
+            "sheet_id": 851218173,
+            "amount": 10,
+            "name": "魔力藥草"
+          },
+          {
+            "sheet_id": 545807217,
+            "amount": 3,
+            "name": "黏土"
+          }
+        ],
+        "variant_hint": "白霜金龜子",
+        "is_main": false,
+        "display_order": 5300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 21860868,
+        "facility_type": 4,
+        "facility_lv": 3,
+        "display_name": "魔力起爆劑",
+        "result_id": 21860868,
+        "result_name": "魔力起爆劑",
+        "result_amount": 10,
+        "ingredients": [
+          {
+            "sheet_id": 1718990288,
+            "amount": 50,
+            "name": "蘊含魔力的石頭"
+          },
+          {
+            "sheet_id": 851218173,
+            "amount": 50,
+            "name": "魔力藥草"
+          },
+          {
+            "sheet_id": 181811078,
+            "amount": 25,
+            "name": "閃閃發亮的苔蘚"
+          }
+        ],
+        "variant_hint": "蘊含魔力的石頭",
+        "is_main": false,
+        "display_order": 5301,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 64857730,
+        "facility_type": 4,
+        "facility_lv": 3,
+        "display_name": "封印的憤怒碎片",
+        "result_id": 64857730,
+        "result_name": "封印的憤怒碎片",
+        "result_amount": 1,
+        "ingredients": [
+          {
+            "sheet_id": 679734366,
+            "amount": 10,
+            "name": "憤怒的碎片"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 10,
+            "name": "紙"
+          },
+          {
+            "sheet_id": 1389865893,
+            "amount": 5,
+            "name": "封印結晶"
+          }
+        ],
+        "variant_hint": "憤怒的碎片",
+        "is_main": false,
+        "display_order": 5302,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1175741324,
+        "facility_type": 4,
+        "facility_lv": 3,
+        "display_name": "封印的遺忘碎片",
+        "result_id": 1175741324,
+        "result_name": "封印的遺忘碎片",
+        "result_amount": 1,
+        "ingredients": [
+          {
+            "sheet_id": 997547546,
+            "amount": 10,
+            "name": "遺忘的碎片"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 10,
+            "name": "紙"
+          },
+          {
+            "sheet_id": 1389865893,
+            "amount": 5,
+            "name": "封印結晶"
+          }
+        ],
+        "variant_hint": "遺忘的碎片",
+        "is_main": false,
+        "display_order": 5302,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1303157400,
+        "facility_type": 4,
+        "facility_lv": 3,
+        "display_name": "封印的野性碎片",
+        "result_id": 1303157400,
+        "result_name": "封印的野性碎片",
+        "result_amount": 1,
+        "ingredients": [
+          {
+            "sheet_id": 1563660414,
+            "amount": 10,
+            "name": "野性的碎片"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 10,
+            "name": "紙"
+          },
+          {
+            "sheet_id": 1389865893,
+            "amount": 5,
+            "name": "封印結晶"
+          }
+        ],
+        "variant_hint": "野性的碎片",
+        "is_main": false,
+        "display_order": 5302,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 708379439,
+        "facility_type": 4,
+        "facility_lv": 4,
+        "display_name": "傷痕花粉末",
+        "result_id": 708379439,
+        "result_name": "傷痕花粉末",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 521244471,
+            "amount": 20,
+            "name": "傷痕花"
+          }
+        ],
+        "variant_hint": "傷痕花",
+        "is_main": false,
+        "display_order": 5400,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 826686065,
+        "facility_type": 4,
+        "facility_lv": 4,
+        "display_name": "增幅蘑菇汁液",
+        "result_id": 826686065,
+        "result_name": "增幅蘑菇汁液",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 1125390553,
+            "amount": 10,
+            "name": "增幅蘑菇孢子"
+          },
+          {
+            "sheet_id": 1027664724,
+            "amount": 10,
+            "name": "咻咻蘑菇汁液"
+          }
+        ],
+        "variant_hint": "增幅蘑菇孢子",
+        "is_main": true,
+        "display_order": 5400,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 854947101,
+        "facility_type": 4,
+        "facility_lv": 4,
+        "display_name": "電氣結晶(落葉蛾)",
+        "result_id": 970350386,
+        "result_name": "電氣結晶",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 241676704,
+            "amount": 3,
+            "name": "落葉蛾"
+          },
+          {
+            "sheet_id": 851218173,
+            "amount": 10,
+            "name": "魔力藥草"
+          },
+          {
+            "sheet_id": 545807217,
+            "amount": 3,
+            "name": "黏土"
+          }
+        ],
+        "variant_hint": "落葉蛾",
+        "is_main": false,
+        "display_order": 5400,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1125390553,
+        "facility_type": 4,
+        "facility_lv": 4,
+        "display_name": "增幅蘑菇孢子",
+        "result_id": 1125390553,
+        "result_name": "增幅蘑菇孢子",
+        "result_amount": 15,
+        "ingredients": [
+          {
+            "sheet_id": 457735307,
+            "amount": 30,
+            "name": "增幅蘑菇"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 3,
+            "name": "紙"
+          }
+        ],
+        "variant_hint": "增幅蘑菇",
+        "is_main": false,
+        "display_order": 5400,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 252911533,
+        "facility_type": 4,
+        "facility_lv": 5,
+        "display_name": "幻影粉末",
+        "result_id": 252911533,
+        "result_name": "幻影粉末",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 594837889,
+            "amount": 20,
+            "name": "遭雷擊的樹枝"
+          },
+          {
+            "sheet_id": 1783674287,
+            "amount": 10,
+            "name": "蝴蝶蜻蜓"
+          }
+        ],
+        "variant_hint": "遭雷擊的樹枝",
+        "is_main": false,
+        "display_order": 5500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 608197062,
+        "facility_type": 4,
+        "facility_lv": 5,
+        "display_name": "鎮靜草粉末",
+        "result_id": 608197062,
+        "result_name": "鎮靜草粉末",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 562861836,
+            "amount": 20,
+            "name": "鎮靜草"
+          }
+        ],
+        "variant_hint": "鎮靜草",
+        "is_main": false,
+        "display_order": 5500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1285208049,
+        "facility_type": 4,
+        "facility_lv": 5,
+        "display_name": "柔柔蘑菇孢子",
+        "result_id": 1285208049,
+        "result_name": "柔柔蘑菇孢子",
+        "result_amount": 15,
+        "ingredients": [
+          {
+            "sheet_id": 1185106338,
+            "amount": 30,
+            "name": "柔柔蘑菇"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 3,
+            "name": "紙"
+          }
+        ],
+        "variant_hint": "柔柔蘑菇",
+        "is_main": false,
+        "display_order": 5500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1389865893,
+        "facility_type": 4,
+        "facility_lv": 5,
+        "display_name": "封印結晶(黃昏蜻蜓)",
+        "result_id": 1389865893,
+        "result_name": "封印結晶",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1762360031,
+            "amount": 3,
+            "name": "黃昏蜻蜓"
+          },
+          {
+            "sheet_id": 851218173,
+            "amount": 10,
+            "name": "魔力藥草"
+          },
+          {
+            "sheet_id": 545807217,
+            "amount": 3,
+            "name": "黏土"
+          }
+        ],
+        "variant_hint": "黃昏蜻蜓",
+        "is_main": false,
+        "display_order": 5500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 2052072185,
+        "facility_type": 4,
+        "facility_lv": 5,
+        "display_name": "柔柔蘑菇汁液",
+        "result_id": 2052072185,
+        "result_name": "柔柔蘑菇汁液",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 1285208049,
+            "amount": 10,
+            "name": "柔柔蘑菇孢子"
+          },
+          {
+            "sheet_id": 294717747,
+            "amount": 10,
+            "name": "新芽蘑菇汁液"
+          }
+        ],
+        "variant_hint": "柔柔蘑菇孢子",
+        "is_main": false,
+        "display_order": 5500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 165393701,
+        "facility_type": 4,
+        "facility_lv": 6,
+        "display_name": "끈적 풀 가루",
+        "result_id": 165393701,
+        "result_name": "끈적 풀 가루",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 803788494,
+            "amount": 20,
+            "name": "끈적 풀"
+          }
+        ],
+        "variant_hint": "끈적 풀",
+        "is_main": false,
+        "display_order": 5600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 708754702,
+        "facility_type": 4,
+        "facility_lv": 6,
+        "display_name": "산뜻 버섯 포자",
+        "result_id": 708754702,
+        "result_name": "산뜻 버섯 포자",
+        "result_amount": 15,
+        "ingredients": [
+          {
+            "sheet_id": 506349749,
+            "amount": 30,
+            "name": "산뜻 버섯"
+          },
+          {
+            "sheet_id": 1934593251,
+            "amount": 3,
+            "name": "紙"
+          }
+        ],
+        "variant_hint": "산뜻 버섯",
+        "is_main": false,
+        "display_order": 5600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1166996177,
+        "facility_type": 4,
+        "facility_lv": 6,
+        "display_name": "산뜻 버섯 진액",
+        "result_id": 1166996177,
+        "result_name": "산뜻 버섯 진액",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 708754702,
+            "amount": 10,
+            "name": "산뜻 버섯 포자"
+          },
+          {
+            "sheet_id": 393824971,
+            "amount": 10,
+            "name": "淨淨蘑菇汁液"
+          }
+        ],
+        "variant_hint": "산뜻 버섯 포자",
+        "is_main": false,
+        "display_order": 5600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1270353184,
+        "facility_type": 4,
+        "facility_lv": 6,
+        "display_name": "광휘의 결정(달무늬 사슴벌레)",
+        "result_id": 2019168353,
+        "result_name": "光輝結晶",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 2094891175,
+            "amount": 3,
+            "name": "달무늬 사슴벌레"
+          },
+          {
+            "sheet_id": 851218173,
+            "amount": 10,
+            "name": "魔力藥草"
+          },
+          {
+            "sheet_id": 545807217,
+            "amount": 3,
+            "name": "黏土"
+          }
+        ],
+        "variant_hint": "달무늬 사슴벌레",
+        "is_main": false,
+        "display_order": 5600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      }
+    ],
+    "food": [
+      {
+        "altering_sheet_id": 904722003,
+        "facility_type": 5,
+        "facility_lv": 1,
+        "display_name": "美乃滋",
+        "result_id": 904722003,
+        "result_name": "美乃滋",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 962376720,
+            "amount": 10,
+            "name": "雞蛋"
+          },
+          {
+            "sheet_id": 67699553,
+            "amount": 2,
+            "name": "食用油"
+          }
+        ],
+        "variant_hint": "雞蛋",
+        "is_main": true,
+        "display_order": 6100,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 549140153,
+        "facility_type": 5,
+        "facility_lv": 2,
+        "display_name": "麵粉",
+        "result_id": 549140153,
+        "result_name": "麵粉",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1108200128,
+            "amount": 15,
+            "name": "小麥"
+          }
+        ],
+        "variant_hint": "小麥",
+        "is_main": false,
+        "display_order": 6200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1380486719,
+        "facility_type": 5,
+        "facility_lv": 2,
+        "display_name": "起司",
+        "result_id": 1380486719,
+        "result_name": "起司",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1283411388,
+            "amount": 6,
+            "name": "牛奶"
+          },
+          {
+            "sheet_id": 1668081642,
+            "amount": 1,
+            "name": "鹽"
+          }
+        ],
+        "variant_hint": "牛奶",
+        "is_main": true,
+        "display_order": 6200,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 364202266,
+        "facility_type": 5,
+        "facility_lv": 3,
+        "display_name": "鮮奶油",
+        "result_id": 364202266,
+        "result_name": "鮮奶油",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1283411388,
+            "amount": 12,
+            "name": "牛奶"
+          },
+          {
+            "sheet_id": 962376720,
+            "amount": 6,
+            "name": "雞蛋"
+          },
+          {
+            "sheet_id": 1290670861,
+            "amount": 2,
+            "name": "糖"
+          }
+        ],
+        "variant_hint": "牛奶",
+        "is_main": true,
+        "display_order": 6300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 972233435,
+        "facility_type": 5,
+        "facility_lv": 3,
+        "display_name": "麵",
+        "result_id": 972233435,
+        "result_name": "麵",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 549140153,
+            "amount": 3,
+            "name": "麵粉"
+          },
+          {
+            "sheet_id": 962376720,
+            "amount": 5,
+            "name": "雞蛋"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 1,
+            "name": "裝水的瓶子"
+          }
+        ],
+        "variant_hint": "麵粉",
+        "is_main": false,
+        "display_order": 6300,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1576983048,
+        "facility_type": 5,
+        "facility_lv": 4,
+        "display_name": "泡水的豆子",
+        "result_id": 1576983048,
+        "result_name": "泡水的豆子",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 1210798147,
+            "amount": 30,
+            "name": "黃豆"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 3,
+            "name": "裝水的瓶子"
+          }
+        ],
+        "variant_hint": "黃豆",
+        "is_main": false,
+        "display_order": 6400,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1589594369,
+        "facility_type": 5,
+        "facility_lv": 4,
+        "display_name": "豆乳",
+        "result_id": 1589594369,
+        "result_name": "豆乳",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1576983048,
+            "amount": 3,
+            "name": "泡水的豆子"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 3,
+            "name": "裝水的瓶子"
+          },
+          {
+            "sheet_id": 1668081642,
+            "amount": 1,
+            "name": "鹽"
+          },
+          {
+            "sheet_id": 67699553,
+            "amount": 1,
+            "name": "食用油"
+          }
+        ],
+        "variant_hint": "泡水的豆子",
+        "is_main": false,
+        "display_order": 6401,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1675925233,
+        "facility_type": 5,
+        "facility_lv": 4,
+        "display_name": "豆腐",
+        "result_id": 1675925233,
+        "result_name": "豆腐",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1576983048,
+            "amount": 3,
+            "name": "泡水的豆子"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 3,
+            "name": "裝水的瓶子"
+          },
+          {
+            "sheet_id": 1668081642,
+            "amount": 2,
+            "name": "鹽"
+          },
+          {
+            "sheet_id": 1553586563,
+            "amount": 3,
+            "name": "布料"
+          }
+        ],
+        "variant_hint": "泡水的豆子",
+        "is_main": true,
+        "display_order": 6401,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1539532856,
+        "facility_type": 5,
+        "facility_lv": 4,
+        "display_name": "熟成的大塊肉",
+        "result_id": 1539532856,
+        "result_name": "熟成的大塊肉",
+        "result_amount": 1,
+        "ingredients": [
+          {
+            "sheet_id": 1961002722,
+            "amount": 1,
+            "name": "大塊肉"
+          },
+          {
+            "sheet_id": 651358256,
+            "amount": 6,
+            "name": "藥草"
+          },
+          {
+            "sheet_id": 115582255,
+            "amount": 2,
+            "name": "大蒜"
+          },
+          {
+            "sheet_id": 1668081642,
+            "amount": 2,
+            "name": "鹽"
+          },
+          {
+            "sheet_id": 1911144489,
+            "amount": 1,
+            "name": "胡椒"
+          }
+        ],
+        "variant_hint": "大塊肉",
+        "is_main": false,
+        "display_order": 6402,
+        "display_type": "Show",
+        "feature_switch": 1471658456,
+        "tw_status": "released",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1038804998,
+        "facility_type": 5,
+        "facility_lv": 5,
+        "display_name": "泡水的米",
+        "result_id": 1038804998,
+        "result_name": "泡水的米",
+        "result_amount": 5,
+        "ingredients": [
+          {
+            "sheet_id": 855408511,
+            "amount": 30,
+            "name": "稻米"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 6,
+            "name": "裝水的瓶子"
+          }
+        ],
+        "variant_hint": "稻米",
+        "is_main": false,
+        "display_order": 6500,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1807094144,
+        "facility_type": 5,
+        "facility_lv": 5,
+        "display_name": "飯",
+        "result_id": 1807094144,
+        "result_name": "飯",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1038804998,
+            "amount": 8,
+            "name": "泡水的米"
+          },
+          {
+            "sheet_id": 1837785241,
+            "amount": 2,
+            "name": "裝水的瓶子"
+          }
+        ],
+        "variant_hint": "泡水的米",
+        "is_main": false,
+        "display_order": 6501,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1980303565,
+        "facility_type": 5,
+        "facility_lv": 5,
+        "display_name": "乾燥茶葉",
+        "result_id": 1980303565,
+        "result_name": "乾燥茶葉",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 197117666,
+            "amount": 30,
+            "name": "茶葉"
+          }
+        ],
+        "variant_hint": "茶葉",
+        "is_main": false,
+        "display_order": 6502,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 67609561,
+        "facility_type": 5,
+        "facility_lv": 5,
+        "display_name": "發酵茶葉",
+        "result_id": 67609561,
+        "result_name": "發酵茶葉",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 1980303565,
+            "amount": 5,
+            "name": "乾燥茶葉"
+          },
+          {
+            "sheet_id": 1553586563,
+            "amount": 1,
+            "name": "布料"
+          }
+        ],
+        "variant_hint": "乾燥茶葉",
+        "is_main": false,
+        "display_order": 6503,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1755664475,
+        "facility_type": 5,
+        "facility_lv": 6,
+        "display_name": "헤이즐넛 오일",
+        "result_id": 1755664475,
+        "result_name": "헤이즐넛 오일",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 151451608,
+            "amount": 15,
+            "name": "헤이즐넛"
+          },
+          {
+            "sheet_id": 445753894,
+            "amount": 1,
+            "name": "布料+"
+          }
+        ],
+        "variant_hint": "헤이즐넛",
+        "is_main": false,
+        "display_order": 6600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      },
+      {
+        "altering_sheet_id": 1865642059,
+        "facility_type": 5,
+        "facility_lv": 6,
+        "display_name": "오트밀",
+        "result_id": 1865642059,
+        "result_name": "오트밀",
+        "result_amount": 3,
+        "ingredients": [
+          {
+            "sheet_id": 30004216,
+            "amount": 30,
+            "name": "귀리"
+          }
+        ],
+        "variant_hint": "귀리",
+        "is_main": false,
+        "display_order": 6600,
+        "display_type": "Hide",
+        "feature_switch": 1471658456,
+        "tw_status": "hidden",
+        "availability_source": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json"
+      }
+    ]
+  },
+  "recipes": [
+    {
+      "altering_sheet_id": 332636885,
+      "facility_type": 0,
+      "facility_lv": 1,
+      "display_name": "鋼錠",
+      "result_id": 332636885,
+      "result_name": "鋼錠",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1156816717,
+          "amount": 3,
+          "name": "鐵錠"
+        },
+        {
+          "sheet_id": 384237528,
+          "amount": 4,
+          "name": "煤炭"
+        }
+      ],
+      "variant_hint": "鐵錠",
+      "is_main": false,
+      "display_order": 1100
+    },
+    {
+      "altering_sheet_id": 1156816717,
+      "facility_type": 0,
+      "facility_lv": 1,
+      "display_name": "鐵錠(鐵礦石)",
+      "result_id": 1156816717,
+      "result_name": "鐵錠",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 198875762,
+          "amount": 10,
+          "name": "鐵礦石"
+        }
+      ],
+      "variant_hint": "鐵礦石",
+      "is_main": true,
+      "display_order": 1100
+    },
+    {
+      "altering_sheet_id": 1779380371,
+      "facility_type": 0,
+      "facility_lv": 1,
+      "display_name": "鐵錠(礦石)",
+      "result_id": 1156816717,
+      "result_name": "鐵錠",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 981681071,
+          "amount": 20,
+          "name": "礦石"
+        }
+      ],
+      "variant_hint": "礦石",
+      "is_main": false,
+      "display_order": 1100
+    },
+    {
+      "altering_sheet_id": 962391520,
+      "facility_type": 0,
+      "facility_lv": 2,
+      "display_name": "焦油",
+      "result_id": 962391520,
+      "result_name": "焦油",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 518458318,
+          "amount": 50,
+          "name": "原木"
+        },
+        {
+          "sheet_id": 545807217,
+          "amount": 25,
+          "name": "黏土"
+        }
+      ],
+      "variant_hint": "原木",
+      "is_main": false,
+      "display_order": 1200
+    },
+    {
+      "altering_sheet_id": 1793283870,
+      "facility_type": 0,
+      "facility_lv": 2,
+      "display_name": "合金鋼錠",
+      "result_id": 1793283870,
+      "result_name": "合金鋼錠",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 332636885,
+          "amount": 3,
+          "name": "鋼錠"
+        },
+        {
+          "sheet_id": 1652781561,
+          "amount": 15,
+          "name": "銅礦石"
+        },
+        {
+          "sheet_id": 384237528,
+          "amount": 8,
+          "name": "煤炭"
+        }
+      ],
+      "variant_hint": "鋼錠",
+      "is_main": true,
+      "display_order": 1200
+    },
+    {
+      "altering_sheet_id": 44807784,
+      "facility_type": 0,
+      "facility_lv": 3,
+      "display_name": "特殊鋼錠",
+      "result_id": 44807784,
+      "result_name": "特殊鋼錠",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1793283870,
+          "amount": 4,
+          "name": "合金鋼錠"
+        },
+        {
+          "sheet_id": 2083106069,
+          "amount": 20,
+          "name": "白銅礦石"
+        },
+        {
+          "sheet_id": 384237528,
+          "amount": 12,
+          "name": "煤炭"
+        }
+      ],
+      "variant_hint": "合金鋼錠",
+      "is_main": true,
+      "display_order": 1300
+    },
+    {
+      "altering_sheet_id": 1545476620,
+      "facility_type": 0,
+      "facility_lv": 4,
+      "display_name": "銀合金錠",
+      "result_id": 1545476620,
+      "result_name": "銀合金錠",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 44807784,
+          "amount": 5,
+          "name": "特殊鋼錠"
+        },
+        {
+          "sheet_id": 1672456814,
+          "amount": 20,
+          "name": "銀礦石"
+        },
+        {
+          "sheet_id": 384237528,
+          "amount": 16,
+          "name": "煤炭"
+        }
+      ],
+      "variant_hint": "特殊鋼錠",
+      "is_main": true,
+      "display_order": 1400
+    },
+    {
+      "altering_sheet_id": 1065332144,
+      "facility_type": 0,
+      "facility_lv": 5,
+      "display_name": "隕鐵錠",
+      "result_id": 1065332144,
+      "result_name": "隕鐵錠",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1545476620,
+          "amount": 5,
+          "name": "銀合金錠"
+        },
+        {
+          "sheet_id": 1419753959,
+          "amount": 20,
+          "name": "隕鐵礦石"
+        },
+        {
+          "sheet_id": 384237528,
+          "amount": 20,
+          "name": "煤炭"
+        }
+      ],
+      "variant_hint": "銀合金錠",
+      "is_main": false,
+      "display_order": 1500
+    },
+    {
+      "altering_sheet_id": 491329529,
+      "facility_type": 0,
+      "facility_lv": 6,
+      "display_name": "백금강괴",
+      "result_id": 491329529,
+      "result_name": "백금강괴",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1065332144,
+          "amount": 5,
+          "name": "隕鐵錠"
+        },
+        {
+          "sheet_id": 1698150806,
+          "amount": 20,
+          "name": "백금 광석"
+        },
+        {
+          "sheet_id": 384237528,
+          "amount": 20,
+          "name": "煤炭"
+        }
+      ],
+      "variant_hint": "隕鐵錠",
+      "is_main": false,
+      "display_order": 1600
+    },
+    {
+      "altering_sheet_id": 824750738,
+      "facility_type": 1,
+      "facility_lv": 1,
+      "display_name": "木材",
+      "result_id": 824750738,
+      "result_name": "木材",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 518458318,
+          "amount": 10,
+          "name": "原木"
+        }
+      ],
+      "variant_hint": "原木",
+      "is_main": true,
+      "display_order": 2100
+    },
+    {
+      "altering_sheet_id": 1458660129,
+      "facility_type": 1,
+      "facility_lv": 1,
+      "display_name": "木材+",
+      "result_id": 1458660129,
+      "result_name": "木材+",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 824750738,
+          "amount": 3,
+          "name": "木材"
+        },
+        {
+          "sheet_id": 1644179994,
+          "amount": 4,
+          "name": "樹液"
+        }
+      ],
+      "variant_hint": "木材",
+      "is_main": false,
+      "display_order": 2100
+    },
+    {
+      "altering_sheet_id": 819043159,
+      "facility_type": 1,
+      "facility_lv": 2,
+      "display_name": "高級木材",
+      "result_id": 819043159,
+      "result_name": "高級木材",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1458660129,
+          "amount": 3,
+          "name": "木材+"
+        },
+        {
+          "sheet_id": 303057424,
+          "amount": 15,
+          "name": "高級原木"
+        },
+        {
+          "sheet_id": 1644179994,
+          "amount": 8,
+          "name": "樹液"
+        }
+      ],
+      "variant_hint": "木材+",
+      "is_main": true,
+      "display_order": 2200
+    },
+    {
+      "altering_sheet_id": 901469748,
+      "facility_type": 1,
+      "facility_lv": 3,
+      "display_name": "高級木材+",
+      "result_id": 901469748,
+      "result_name": "高級木材+",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 819043159,
+          "amount": 4,
+          "name": "高級木材"
+        },
+        {
+          "sheet_id": 612255730,
+          "amount": 20,
+          "name": "高級原木+"
+        },
+        {
+          "sheet_id": 1644179994,
+          "amount": 12,
+          "name": "樹液"
+        }
+      ],
+      "variant_hint": "高級木材",
+      "is_main": true,
+      "display_order": 2300
+    },
+    {
+      "altering_sheet_id": 587423787,
+      "facility_type": 1,
+      "facility_lv": 3,
+      "display_name": "柔軟木材",
+      "result_id": 587423787,
+      "result_name": "柔軟木材",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 901469748,
+          "amount": 15,
+          "name": "高級木材+"
+        },
+        {
+          "sheet_id": 1581920793,
+          "amount": 30,
+          "name": "柔軟原木"
+        },
+        {
+          "sheet_id": 1644179994,
+          "amount": 30,
+          "name": "樹液"
+        }
+      ],
+      "variant_hint": "高級木材+",
+      "is_main": false,
+      "display_order": 2301
+    },
+    {
+      "altering_sheet_id": 114221322,
+      "facility_type": 1,
+      "facility_lv": 3,
+      "display_name": "堅硬木材",
+      "result_id": 114221322,
+      "result_name": "堅硬木材",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 901469748,
+          "amount": 15,
+          "name": "高級木材+"
+        },
+        {
+          "sheet_id": 1128414187,
+          "amount": 30,
+          "name": "堅硬原木"
+        },
+        {
+          "sheet_id": 1644179994,
+          "amount": 30,
+          "name": "樹液"
+        }
+      ],
+      "variant_hint": "高級木材+",
+      "is_main": false,
+      "display_order": 2302
+    },
+    {
+      "altering_sheet_id": 23601394,
+      "facility_type": 1,
+      "facility_lv": 4,
+      "display_name": "最高級木材",
+      "result_id": 23601394,
+      "result_name": "最高級木材",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 901469748,
+          "amount": 5,
+          "name": "高級木材+"
+        },
+        {
+          "sheet_id": 814221571,
+          "amount": 20,
+          "name": "最高級原木"
+        },
+        {
+          "sheet_id": 1644179994,
+          "amount": 16,
+          "name": "樹液"
+        }
+      ],
+      "variant_hint": "高級木材+",
+      "is_main": true,
+      "display_order": 2400
+    },
+    {
+      "altering_sheet_id": 858054326,
+      "facility_type": 1,
+      "facility_lv": 5,
+      "display_name": "最高級木材+",
+      "result_id": 858054326,
+      "result_name": "最高級木材+",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 23601394,
+          "amount": 5,
+          "name": "最高級木材"
+        },
+        {
+          "sheet_id": 255786887,
+          "amount": 20,
+          "name": "最高級原木+"
+        },
+        {
+          "sheet_id": 1644179994,
+          "amount": 20,
+          "name": "樹液"
+        }
+      ],
+      "variant_hint": "最高級木材",
+      "is_main": false,
+      "display_order": 2500
+    },
+    {
+      "altering_sheet_id": 775097523,
+      "facility_type": 1,
+      "facility_lv": 5,
+      "display_name": "雲紋棍",
+      "result_id": 775097523,
+      "result_name": "雲紋棍",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 587423787,
+          "amount": 2,
+          "name": "柔軟木材"
+        },
+        {
+          "sheet_id": 252911533,
+          "amount": 30,
+          "name": "幻影粉末"
+        },
+        {
+          "sheet_id": 1762731356,
+          "amount": 50,
+          "name": "變化之核"
+        },
+        {
+          "sheet_id": 2134190110,
+          "amount": 10,
+          "name": "砂紙"
+        }
+      ],
+      "variant_hint": "柔軟木材",
+      "is_main": false,
+      "display_order": 2501
+    },
+    {
+      "altering_sheet_id": 510403159,
+      "facility_type": 1,
+      "facility_lv": 6,
+      "display_name": "특급 목재",
+      "result_id": 510403159,
+      "result_name": "특급 목재",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 858054326,
+          "amount": 5,
+          "name": "最高級木材+"
+        },
+        {
+          "sheet_id": 813250535,
+          "amount": 20,
+          "name": "특급 통나무"
+        },
+        {
+          "sheet_id": 1644179994,
+          "amount": 20,
+          "name": "樹液"
+        }
+      ],
+      "variant_hint": "最高級木材+",
+      "is_main": false,
+      "display_order": 2600
+    },
+    {
+      "altering_sheet_id": 1553586563,
+      "facility_type": 2,
+      "facility_lv": 1,
+      "display_name": "布料",
+      "result_id": 1553586563,
+      "result_name": "布料",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 714851857,
+          "amount": 10,
+          "name": "羊毛"
+        }
+      ],
+      "variant_hint": "羊毛",
+      "is_main": true,
+      "display_order": 3100
+    },
+    {
+      "altering_sheet_id": 1952032774,
+      "facility_type": 2,
+      "facility_lv": 1,
+      "display_name": "絲綢",
+      "result_id": 1952032774,
+      "result_name": "絲綢",
+      "result_amount": 2,
+      "ingredients": [
+        {
+          "sheet_id": 898995834,
+          "amount": 10,
+          "name": "蜘蛛網"
+        }
+      ],
+      "variant_hint": "蜘蛛網",
+      "is_main": false,
+      "display_order": 3101
+    },
+    {
+      "altering_sheet_id": 445753894,
+      "facility_type": 2,
+      "facility_lv": 1,
+      "display_name": "布料+",
+      "result_id": 445753894,
+      "result_name": "布料+",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1553586563,
+          "amount": 3,
+          "name": "布料"
+        },
+        {
+          "sheet_id": 714851857,
+          "amount": 4,
+          "name": "羊毛"
+        }
+      ],
+      "variant_hint": "布料",
+      "is_main": false,
+      "display_order": 3102
+    },
+    {
+      "altering_sheet_id": 424609249,
+      "facility_type": 2,
+      "facility_lv": 2,
+      "display_name": "高級布料",
+      "result_id": 424609249,
+      "result_name": "高級布料",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 445753894,
+          "amount": 3,
+          "name": "布料+"
+        },
+        {
+          "sheet_id": 962165362,
+          "amount": 15,
+          "name": "高級羊毛"
+        },
+        {
+          "sheet_id": 714851857,
+          "amount": 8,
+          "name": "羊毛"
+        }
+      ],
+      "variant_hint": "布料+",
+      "is_main": true,
+      "display_order": 3200
+    },
+    {
+      "altering_sheet_id": 1826881561,
+      "facility_type": 2,
+      "facility_lv": 2,
+      "display_name": "厚布料",
+      "result_id": 1826881561,
+      "result_name": "厚布料",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 639212127,
+          "amount": 50,
+          "name": "厚實羊毛"
+        },
+        {
+          "sheet_id": 962165362,
+          "amount": 100,
+          "name": "高級羊毛"
+        },
+        {
+          "sheet_id": 565427660,
+          "amount": 2,
+          "name": "蜂蠟"
+        }
+      ],
+      "variant_hint": "厚實羊毛",
+      "is_main": false,
+      "display_order": 3201
+    },
+    {
+      "altering_sheet_id": 2112757029,
+      "facility_type": 2,
+      "facility_lv": 2,
+      "display_name": "高級絲綢",
+      "result_id": 2112757029,
+      "result_name": "高級絲綢",
+      "result_amount": 2,
+      "ingredients": [
+        {
+          "sheet_id": 1952032774,
+          "amount": 4,
+          "name": "絲綢"
+        },
+        {
+          "sheet_id": 1315811139,
+          "amount": 8,
+          "name": "壯壯蘑菇汁液"
+        }
+      ],
+      "variant_hint": "絲綢",
+      "is_main": false,
+      "display_order": 3202
+    },
+    {
+      "altering_sheet_id": 1427452351,
+      "facility_type": 2,
+      "facility_lv": 3,
+      "display_name": "高級布料+",
+      "result_id": 1427452351,
+      "result_name": "高級布料+",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 424609249,
+          "amount": 4,
+          "name": "高級布料"
+        },
+        {
+          "sheet_id": 729657329,
+          "amount": 20,
+          "name": "高級羊毛+"
+        },
+        {
+          "sheet_id": 714851857,
+          "amount": 12,
+          "name": "羊毛"
+        }
+      ],
+      "variant_hint": "高級布料",
+      "is_main": true,
+      "display_order": 3300
+    },
+    {
+      "altering_sheet_id": 165937923,
+      "facility_type": 2,
+      "facility_lv": 3,
+      "display_name": "植物纖維",
+      "result_id": 165937923,
+      "result_name": "植物纖維",
+      "result_amount": 10,
+      "ingredients": [
+        {
+          "sheet_id": 1613211689,
+          "amount": 150,
+          "name": "長莖稈"
+        }
+      ],
+      "variant_hint": "長莖稈",
+      "is_main": false,
+      "display_order": 3301
+    },
+    {
+      "altering_sheet_id": 117600250,
+      "facility_type": 2,
+      "facility_lv": 3,
+      "display_name": "繩索",
+      "result_id": 117600250,
+      "result_name": "繩索",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 165937923,
+          "amount": 45,
+          "name": "植物纖維"
+        },
+        {
+          "sheet_id": 565427660,
+          "amount": 4,
+          "name": "蜂蠟"
+        }
+      ],
+      "variant_hint": "植物纖維",
+      "is_main": false,
+      "display_order": 3302
+    },
+    {
+      "altering_sheet_id": 28400012,
+      "facility_type": 2,
+      "facility_lv": 4,
+      "display_name": "最高級布料",
+      "result_id": 28400012,
+      "result_name": "最高級布料",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1427452351,
+          "amount": 5,
+          "name": "高級布料+"
+        },
+        {
+          "sheet_id": 1241970565,
+          "amount": 20,
+          "name": "最高級羊毛"
+        },
+        {
+          "sheet_id": 714851857,
+          "amount": 16,
+          "name": "羊毛"
+        }
+      ],
+      "variant_hint": "高級布料+",
+      "is_main": true,
+      "display_order": 3400
+    },
+    {
+      "altering_sheet_id": 742209409,
+      "facility_type": 2,
+      "facility_lv": 4,
+      "display_name": "最高級絲綢",
+      "result_id": 742209409,
+      "result_name": "最高級絲綢",
+      "result_amount": 2,
+      "ingredients": [
+        {
+          "sheet_id": 2112757029,
+          "amount": 4,
+          "name": "高級絲綢"
+        },
+        {
+          "sheet_id": 2061877585,
+          "amount": 20,
+          "name": "最高級蜘蛛網"
+        },
+        {
+          "sheet_id": 1315811139,
+          "amount": 16,
+          "name": "壯壯蘑菇汁液"
+        }
+      ],
+      "variant_hint": "高級絲綢",
+      "is_main": false,
+      "display_order": 3401
+    },
+    {
+      "altering_sheet_id": 1702092112,
+      "facility_type": 2,
+      "facility_lv": 4,
+      "display_name": "結實的繩索",
+      "result_id": 1702092112,
+      "result_name": "結實的繩索",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 117600250,
+          "amount": 6,
+          "name": "繩索"
+        },
+        {
+          "sheet_id": 165937923,
+          "amount": 90,
+          "name": "植物纖維"
+        },
+        {
+          "sheet_id": 565427660,
+          "amount": 8,
+          "name": "蜂蠟"
+        },
+        {
+          "sheet_id": 962391520,
+          "amount": 3,
+          "name": "焦油"
+        }
+      ],
+      "variant_hint": "繩索",
+      "is_main": false,
+      "display_order": 3402
+    },
+    {
+      "altering_sheet_id": 516085130,
+      "facility_type": 2,
+      "facility_lv": 5,
+      "display_name": "最高級布料+",
+      "result_id": 516085130,
+      "result_name": "最高級布料+",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 28400012,
+          "amount": 5,
+          "name": "最高級布料"
+        },
+        {
+          "sheet_id": 1253884620,
+          "amount": 20,
+          "name": "最高級羊毛+"
+        },
+        {
+          "sheet_id": 714851857,
+          "amount": 20,
+          "name": "羊毛"
+        }
+      ],
+      "variant_hint": "最高級布料",
+      "is_main": false,
+      "display_order": 3500
+    },
+    {
+      "altering_sheet_id": 93229368,
+      "facility_type": 2,
+      "facility_lv": 5,
+      "display_name": "특급 실크",
+      "result_id": 93229368,
+      "result_name": "특급 실크",
+      "result_amount": 2,
+      "ingredients": [
+        {
+          "sheet_id": 742209409,
+          "amount": 4,
+          "name": "最高級絲綢"
+        },
+        {
+          "sheet_id": 2036765659,
+          "amount": 20,
+          "name": "특급 거미줄"
+        },
+        {
+          "sheet_id": 1315811139,
+          "amount": 20,
+          "name": "壯壯蘑菇汁液"
+        }
+      ],
+      "variant_hint": "最高級絲綢",
+      "is_main": false,
+      "display_order": 3601
+    },
+    {
+      "altering_sheet_id": 904061195,
+      "facility_type": 2,
+      "facility_lv": 6,
+      "display_name": "특급 옷감",
+      "result_id": 904061195,
+      "result_name": "특급 옷감",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 516085130,
+          "amount": 5,
+          "name": "最高級布料+"
+        },
+        {
+          "sheet_id": 1804382783,
+          "amount": 20,
+          "name": "특급 양털"
+        },
+        {
+          "sheet_id": 714851857,
+          "amount": 20,
+          "name": "羊毛"
+        }
+      ],
+      "variant_hint": "最高級布料+",
+      "is_main": false,
+      "display_order": 3600
+    },
+    {
+      "altering_sheet_id": 503309746,
+      "facility_type": 3,
+      "facility_lv": 1,
+      "display_name": "皮革+",
+      "result_id": 503309746,
+      "result_name": "皮革+",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1804591185,
+          "amount": 3,
+          "name": "皮革"
+        },
+        {
+          "sheet_id": 1635910675,
+          "amount": 4,
+          "name": "單寧粉末"
+        }
+      ],
+      "variant_hint": "皮革",
+      "is_main": false,
+      "display_order": 4100
+    },
+    {
+      "altering_sheet_id": 1804591185,
+      "facility_type": 3,
+      "facility_lv": 1,
+      "display_name": "皮革",
+      "result_id": 1804591185,
+      "result_name": "皮革",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 598603709,
+          "amount": 10,
+          "name": "生皮"
+        }
+      ],
+      "variant_hint": "生皮",
+      "is_main": true,
+      "display_order": 4100
+    },
+    {
+      "altering_sheet_id": 72701016,
+      "facility_type": 3,
+      "facility_lv": 2,
+      "display_name": "高級皮革",
+      "result_id": 72701016,
+      "result_name": "高級皮革",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 503309746,
+          "amount": 3,
+          "name": "皮革+"
+        },
+        {
+          "sheet_id": 580126530,
+          "amount": 15,
+          "name": "高級生皮"
+        },
+        {
+          "sheet_id": 1635910675,
+          "amount": 8,
+          "name": "單寧粉末"
+        }
+      ],
+      "variant_hint": "皮革+",
+      "is_main": true,
+      "display_order": 4200
+    },
+    {
+      "altering_sheet_id": 406209798,
+      "facility_type": 3,
+      "facility_lv": 3,
+      "display_name": "高級皮革+",
+      "result_id": 406209798,
+      "result_name": "高級皮革+",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 72701016,
+          "amount": 4,
+          "name": "高級皮革"
+        },
+        {
+          "sheet_id": 1473884120,
+          "amount": 20,
+          "name": "高級生皮+"
+        },
+        {
+          "sheet_id": 1635910675,
+          "amount": 12,
+          "name": "單寧粉末"
+        }
+      ],
+      "variant_hint": "高級皮革",
+      "is_main": true,
+      "display_order": 4300
+    },
+    {
+      "altering_sheet_id": 1741334734,
+      "facility_type": 3,
+      "facility_lv": 4,
+      "display_name": "最高級皮革",
+      "result_id": 1741334734,
+      "result_name": "最高級皮革",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 406209798,
+          "amount": 5,
+          "name": "高級皮革+"
+        },
+        {
+          "sheet_id": 2003405808,
+          "amount": 20,
+          "name": "最高級生皮"
+        },
+        {
+          "sheet_id": 1635910675,
+          "amount": 16,
+          "name": "單寧粉末"
+        }
+      ],
+      "variant_hint": "高級皮革+",
+      "is_main": true,
+      "display_order": 4400
+    },
+    {
+      "altering_sheet_id": 1495313869,
+      "facility_type": 3,
+      "facility_lv": 5,
+      "display_name": "最高級皮革+",
+      "result_id": 1495313869,
+      "result_name": "最高級皮革+",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1741334734,
+          "amount": 5,
+          "name": "最高級皮革"
+        },
+        {
+          "sheet_id": 982835388,
+          "amount": 20,
+          "name": "最高級生皮+"
+        },
+        {
+          "sheet_id": 1635910675,
+          "amount": 20,
+          "name": "單寧粉末"
+        }
+      ],
+      "variant_hint": "最高級皮革",
+      "is_main": false,
+      "display_order": 4500
+    },
+    {
+      "altering_sheet_id": 31770246,
+      "facility_type": 3,
+      "facility_lv": 6,
+      "display_name": "특급 가죽",
+      "result_id": 31770246,
+      "result_name": "특급 가죽",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1495313869,
+          "amount": 5,
+          "name": "最高級皮革+"
+        },
+        {
+          "sheet_id": 1837310990,
+          "amount": 20,
+          "name": "특급 생가죽"
+        },
+        {
+          "sheet_id": 1635910675,
+          "amount": 20,
+          "name": "單寧粉末"
+        }
+      ],
+      "variant_hint": "最高級皮革+",
+      "is_main": false,
+      "display_order": 4600
+    },
+    {
+      "altering_sheet_id": 294717747,
+      "facility_type": 4,
+      "facility_lv": 1,
+      "display_name": "新芽蘑菇汁液",
+      "result_id": 294717747,
+      "result_name": "新芽蘑菇汁液",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 1199841900,
+          "amount": 10,
+          "name": "新芽蘑菇孢子"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 1,
+          "name": "裝水的瓶子"
+        }
+      ],
+      "variant_hint": "新芽蘑菇孢子",
+      "is_main": true,
+      "display_order": 5100
+    },
+    {
+      "altering_sheet_id": 599175142,
+      "facility_type": 4,
+      "facility_lv": 1,
+      "display_name": "壯壯蘑菇粉末",
+      "result_id": 599175142,
+      "result_name": "壯壯蘑菇粉末",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 164492686,
+          "amount": 20,
+          "name": "壯壯蘑菇"
+        }
+      ],
+      "variant_hint": "壯壯蘑菇",
+      "is_main": false,
+      "display_order": 5100
+    },
+    {
+      "altering_sheet_id": 1315811139,
+      "facility_type": 4,
+      "facility_lv": 1,
+      "display_name": "壯壯蘑菇汁液",
+      "result_id": 1315811139,
+      "result_name": "壯壯蘑菇汁液",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 401640121,
+          "amount": 10,
+          "name": "壯壯蘑菇孢子"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 1,
+          "name": "裝水的瓶子"
+        }
+      ],
+      "variant_hint": "壯壯蘑菇孢子",
+      "is_main": false,
+      "display_order": 5100
+    },
+    {
+      "altering_sheet_id": 1972350094,
+      "facility_type": 4,
+      "facility_lv": 1,
+      "display_name": "光輝結晶(幽靈螢火蟲)",
+      "result_id": 2019168353,
+      "result_name": "光輝結晶",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 400134122,
+          "amount": 3,
+          "name": "幽靈螢火蟲"
+        },
+        {
+          "sheet_id": 851218173,
+          "amount": 10,
+          "name": "魔力藥草"
+        },
+        {
+          "sheet_id": 545807217,
+          "amount": 3,
+          "name": "黏土"
+        }
+      ],
+      "variant_hint": "幽靈螢火蟲",
+      "is_main": false,
+      "display_order": 5100
+    },
+    {
+      "altering_sheet_id": 401640121,
+      "facility_type": 4,
+      "facility_lv": 2,
+      "display_name": "壯壯蘑菇孢子",
+      "result_id": 401640121,
+      "result_name": "壯壯蘑菇孢子",
+      "result_amount": 15,
+      "ingredients": [
+        {
+          "sheet_id": 164492686,
+          "amount": 30,
+          "name": "壯壯蘑菇"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 3,
+          "name": "紙"
+        }
+      ],
+      "variant_hint": "壯壯蘑菇",
+      "is_main": false,
+      "display_order": 5200
+    },
+    {
+      "altering_sheet_id": 403020325,
+      "facility_type": 4,
+      "facility_lv": 2,
+      "display_name": "咻咻蘑菇孢子",
+      "result_id": 403020325,
+      "result_name": "咻咻蘑菇孢子",
+      "result_amount": 15,
+      "ingredients": [
+        {
+          "sheet_id": 615758160,
+          "amount": 30,
+          "name": "咻咻蘑菇"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 3,
+          "name": "紙"
+        }
+      ],
+      "variant_hint": "咻咻蘑菇",
+      "is_main": false,
+      "display_order": 5200
+    },
+    {
+      "altering_sheet_id": 898758418,
+      "facility_type": 4,
+      "facility_lv": 2,
+      "display_name": "膠水",
+      "result_id": 898758418,
+      "result_name": "膠水",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 580126530,
+          "amount": 30,
+          "name": "高級生皮"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 10,
+          "name": "裝水的瓶子"
+        }
+      ],
+      "variant_hint": "高級生皮",
+      "is_main": false,
+      "display_order": 5200
+    },
+    {
+      "altering_sheet_id": 1027664724,
+      "facility_type": 4,
+      "facility_lv": 2,
+      "display_name": "咻咻蘑菇汁液",
+      "result_id": 1027664724,
+      "result_name": "咻咻蘑菇汁液",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 403020325,
+          "amount": 10,
+          "name": "咻咻蘑菇孢子"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 1,
+          "name": "裝水的瓶子"
+        }
+      ],
+      "variant_hint": "咻咻蘑菇孢子",
+      "is_main": true,
+      "display_order": 5200
+    },
+    {
+      "altering_sheet_id": 1199841900,
+      "facility_type": 4,
+      "facility_lv": 2,
+      "display_name": "新芽蘑菇孢子",
+      "result_id": 1199841900,
+      "result_name": "新芽蘑菇孢子",
+      "result_amount": 15,
+      "ingredients": [
+        {
+          "sheet_id": 16921337,
+          "amount": 30,
+          "name": "新芽蘑菇"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 3,
+          "name": "紙"
+        }
+      ],
+      "variant_hint": "新芽蘑菇",
+      "is_main": false,
+      "display_order": 5200
+    },
+    {
+      "altering_sheet_id": 1502788363,
+      "facility_type": 4,
+      "facility_lv": 2,
+      "display_name": "火苗結晶(夕陽蝴蝶)",
+      "result_id": 1953925395,
+      "result_name": "火苗結晶",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1894071275,
+          "amount": 3,
+          "name": "夕陽蝴蝶"
+        },
+        {
+          "sheet_id": 851218173,
+          "amount": 10,
+          "name": "魔力藥草"
+        },
+        {
+          "sheet_id": 545807217,
+          "amount": 3,
+          "name": "黏土"
+        }
+      ],
+      "variant_hint": "夕陽蝴蝶",
+      "is_main": false,
+      "display_order": 5200
+    },
+    {
+      "altering_sheet_id": 2049639717,
+      "facility_type": 4,
+      "facility_lv": 2,
+      "display_name": "石墨棒",
+      "result_id": 2049639717,
+      "result_name": "石墨棒",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 705646179,
+          "amount": 10,
+          "name": "石墨"
+        },
+        {
+          "sheet_id": 545807217,
+          "amount": 10,
+          "name": "黏土"
+        }
+      ],
+      "variant_hint": "石墨",
+      "is_main": false,
+      "display_order": 5200
+    },
+    {
+      "altering_sheet_id": 393824971,
+      "facility_type": 4,
+      "facility_lv": 3,
+      "display_name": "淨淨蘑菇汁液",
+      "result_id": 393824971,
+      "result_name": "淨淨蘑菇汁液",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 1345278556,
+          "amount": 10,
+          "name": "淨淨蘑菇孢子"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 1,
+          "name": "裝水的瓶子"
+        }
+      ],
+      "variant_hint": "淨淨蘑菇孢子",
+      "is_main": true,
+      "display_order": 5300
+    },
+    {
+      "altering_sheet_id": 1319700955,
+      "facility_type": 4,
+      "facility_lv": 3,
+      "display_name": "躲躲花粉末",
+      "result_id": 1319700955,
+      "result_name": "躲躲花粉末",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 1016378562,
+          "amount": 20,
+          "name": "躲躲花"
+        }
+      ],
+      "variant_hint": "躲躲花",
+      "is_main": false,
+      "display_order": 5300
+    },
+    {
+      "altering_sheet_id": 1345278556,
+      "facility_type": 4,
+      "facility_lv": 3,
+      "display_name": "淨淨蘑菇孢子",
+      "result_id": 1345278556,
+      "result_name": "淨淨蘑菇孢子",
+      "result_amount": 15,
+      "ingredients": [
+        {
+          "sheet_id": 1526680639,
+          "amount": 30,
+          "name": "淨淨蘑菇"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 3,
+          "name": "紙"
+        }
+      ],
+      "variant_hint": "淨淨蘑菇",
+      "is_main": false,
+      "display_order": 5300
+    },
+    {
+      "altering_sheet_id": 1442808337,
+      "facility_type": 4,
+      "facility_lv": 3,
+      "display_name": "冰霜結晶(白霜金龜子)",
+      "result_id": 550210735,
+      "result_name": "冰霜結晶",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 485899507,
+          "amount": 3,
+          "name": "白霜金龜子"
+        },
+        {
+          "sheet_id": 851218173,
+          "amount": 10,
+          "name": "魔力藥草"
+        },
+        {
+          "sheet_id": 545807217,
+          "amount": 3,
+          "name": "黏土"
+        }
+      ],
+      "variant_hint": "白霜金龜子",
+      "is_main": false,
+      "display_order": 5300
+    },
+    {
+      "altering_sheet_id": 21860868,
+      "facility_type": 4,
+      "facility_lv": 3,
+      "display_name": "魔力起爆劑",
+      "result_id": 21860868,
+      "result_name": "魔力起爆劑",
+      "result_amount": 10,
+      "ingredients": [
+        {
+          "sheet_id": 1718990288,
+          "amount": 50,
+          "name": "蘊含魔力的石頭"
+        },
+        {
+          "sheet_id": 851218173,
+          "amount": 50,
+          "name": "魔力藥草"
+        },
+        {
+          "sheet_id": 181811078,
+          "amount": 25,
+          "name": "閃閃發亮的苔蘚"
+        }
+      ],
+      "variant_hint": "蘊含魔力的石頭",
+      "is_main": false,
+      "display_order": 5301
+    },
+    {
+      "altering_sheet_id": 64857730,
+      "facility_type": 4,
+      "facility_lv": 3,
+      "display_name": "封印的憤怒碎片",
+      "result_id": 64857730,
+      "result_name": "封印的憤怒碎片",
+      "result_amount": 1,
+      "ingredients": [
+        {
+          "sheet_id": 679734366,
+          "amount": 10,
+          "name": "憤怒的碎片"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 10,
+          "name": "紙"
+        },
+        {
+          "sheet_id": 1389865893,
+          "amount": 5,
+          "name": "封印結晶"
+        }
+      ],
+      "variant_hint": "憤怒的碎片",
+      "is_main": false,
+      "display_order": 5302
+    },
+    {
+      "altering_sheet_id": 1175741324,
+      "facility_type": 4,
+      "facility_lv": 3,
+      "display_name": "封印的遺忘碎片",
+      "result_id": 1175741324,
+      "result_name": "封印的遺忘碎片",
+      "result_amount": 1,
+      "ingredients": [
+        {
+          "sheet_id": 997547546,
+          "amount": 10,
+          "name": "遺忘的碎片"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 10,
+          "name": "紙"
+        },
+        {
+          "sheet_id": 1389865893,
+          "amount": 5,
+          "name": "封印結晶"
+        }
+      ],
+      "variant_hint": "遺忘的碎片",
+      "is_main": false,
+      "display_order": 5302
+    },
+    {
+      "altering_sheet_id": 1303157400,
+      "facility_type": 4,
+      "facility_lv": 3,
+      "display_name": "封印的野性碎片",
+      "result_id": 1303157400,
+      "result_name": "封印的野性碎片",
+      "result_amount": 1,
+      "ingredients": [
+        {
+          "sheet_id": 1563660414,
+          "amount": 10,
+          "name": "野性的碎片"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 10,
+          "name": "紙"
+        },
+        {
+          "sheet_id": 1389865893,
+          "amount": 5,
+          "name": "封印結晶"
+        }
+      ],
+      "variant_hint": "野性的碎片",
+      "is_main": false,
+      "display_order": 5302
+    },
+    {
+      "altering_sheet_id": 708379439,
+      "facility_type": 4,
+      "facility_lv": 4,
+      "display_name": "傷痕花粉末",
+      "result_id": 708379439,
+      "result_name": "傷痕花粉末",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 521244471,
+          "amount": 20,
+          "name": "傷痕花"
+        }
+      ],
+      "variant_hint": "傷痕花",
+      "is_main": false,
+      "display_order": 5400
+    },
+    {
+      "altering_sheet_id": 826686065,
+      "facility_type": 4,
+      "facility_lv": 4,
+      "display_name": "增幅蘑菇汁液",
+      "result_id": 826686065,
+      "result_name": "增幅蘑菇汁液",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 1125390553,
+          "amount": 10,
+          "name": "增幅蘑菇孢子"
+        },
+        {
+          "sheet_id": 1027664724,
+          "amount": 10,
+          "name": "咻咻蘑菇汁液"
+        }
+      ],
+      "variant_hint": "增幅蘑菇孢子",
+      "is_main": true,
+      "display_order": 5400
+    },
+    {
+      "altering_sheet_id": 854947101,
+      "facility_type": 4,
+      "facility_lv": 4,
+      "display_name": "電氣結晶(落葉蛾)",
+      "result_id": 970350386,
+      "result_name": "電氣結晶",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 241676704,
+          "amount": 3,
+          "name": "落葉蛾"
+        },
+        {
+          "sheet_id": 851218173,
+          "amount": 10,
+          "name": "魔力藥草"
+        },
+        {
+          "sheet_id": 545807217,
+          "amount": 3,
+          "name": "黏土"
+        }
+      ],
+      "variant_hint": "落葉蛾",
+      "is_main": false,
+      "display_order": 5400
+    },
+    {
+      "altering_sheet_id": 1125390553,
+      "facility_type": 4,
+      "facility_lv": 4,
+      "display_name": "增幅蘑菇孢子",
+      "result_id": 1125390553,
+      "result_name": "增幅蘑菇孢子",
+      "result_amount": 15,
+      "ingredients": [
+        {
+          "sheet_id": 457735307,
+          "amount": 30,
+          "name": "增幅蘑菇"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 3,
+          "name": "紙"
+        }
+      ],
+      "variant_hint": "增幅蘑菇",
+      "is_main": false,
+      "display_order": 5400
+    },
+    {
+      "altering_sheet_id": 252911533,
+      "facility_type": 4,
+      "facility_lv": 5,
+      "display_name": "幻影粉末",
+      "result_id": 252911533,
+      "result_name": "幻影粉末",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 594837889,
+          "amount": 20,
+          "name": "遭雷擊的樹枝"
+        },
+        {
+          "sheet_id": 1783674287,
+          "amount": 10,
+          "name": "蝴蝶蜻蜓"
+        }
+      ],
+      "variant_hint": "遭雷擊的樹枝",
+      "is_main": false,
+      "display_order": 5500
+    },
+    {
+      "altering_sheet_id": 608197062,
+      "facility_type": 4,
+      "facility_lv": 5,
+      "display_name": "鎮靜草粉末",
+      "result_id": 608197062,
+      "result_name": "鎮靜草粉末",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 562861836,
+          "amount": 20,
+          "name": "鎮靜草"
+        }
+      ],
+      "variant_hint": "鎮靜草",
+      "is_main": false,
+      "display_order": 5500
+    },
+    {
+      "altering_sheet_id": 1285208049,
+      "facility_type": 4,
+      "facility_lv": 5,
+      "display_name": "柔柔蘑菇孢子",
+      "result_id": 1285208049,
+      "result_name": "柔柔蘑菇孢子",
+      "result_amount": 15,
+      "ingredients": [
+        {
+          "sheet_id": 1185106338,
+          "amount": 30,
+          "name": "柔柔蘑菇"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 3,
+          "name": "紙"
+        }
+      ],
+      "variant_hint": "柔柔蘑菇",
+      "is_main": false,
+      "display_order": 5500
+    },
+    {
+      "altering_sheet_id": 1389865893,
+      "facility_type": 4,
+      "facility_lv": 5,
+      "display_name": "封印結晶(黃昏蜻蜓)",
+      "result_id": 1389865893,
+      "result_name": "封印結晶",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1762360031,
+          "amount": 3,
+          "name": "黃昏蜻蜓"
+        },
+        {
+          "sheet_id": 851218173,
+          "amount": 10,
+          "name": "魔力藥草"
+        },
+        {
+          "sheet_id": 545807217,
+          "amount": 3,
+          "name": "黏土"
+        }
+      ],
+      "variant_hint": "黃昏蜻蜓",
+      "is_main": false,
+      "display_order": 5500
+    },
+    {
+      "altering_sheet_id": 2052072185,
+      "facility_type": 4,
+      "facility_lv": 5,
+      "display_name": "柔柔蘑菇汁液",
+      "result_id": 2052072185,
+      "result_name": "柔柔蘑菇汁液",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 1285208049,
+          "amount": 10,
+          "name": "柔柔蘑菇孢子"
+        },
+        {
+          "sheet_id": 294717747,
+          "amount": 10,
+          "name": "新芽蘑菇汁液"
+        }
+      ],
+      "variant_hint": "柔柔蘑菇孢子",
+      "is_main": false,
+      "display_order": 5500
+    },
+    {
+      "altering_sheet_id": 165393701,
+      "facility_type": 4,
+      "facility_lv": 6,
+      "display_name": "끈적 풀 가루",
+      "result_id": 165393701,
+      "result_name": "끈적 풀 가루",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 803788494,
+          "amount": 20,
+          "name": "끈적 풀"
+        }
+      ],
+      "variant_hint": "끈적 풀",
+      "is_main": false,
+      "display_order": 5600
+    },
+    {
+      "altering_sheet_id": 708754702,
+      "facility_type": 4,
+      "facility_lv": 6,
+      "display_name": "산뜻 버섯 포자",
+      "result_id": 708754702,
+      "result_name": "산뜻 버섯 포자",
+      "result_amount": 15,
+      "ingredients": [
+        {
+          "sheet_id": 506349749,
+          "amount": 30,
+          "name": "산뜻 버섯"
+        },
+        {
+          "sheet_id": 1934593251,
+          "amount": 3,
+          "name": "紙"
+        }
+      ],
+      "variant_hint": "산뜻 버섯",
+      "is_main": false,
+      "display_order": 5600
+    },
+    {
+      "altering_sheet_id": 1166996177,
+      "facility_type": 4,
+      "facility_lv": 6,
+      "display_name": "산뜻 버섯 진액",
+      "result_id": 1166996177,
+      "result_name": "산뜻 버섯 진액",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 708754702,
+          "amount": 10,
+          "name": "산뜻 버섯 포자"
+        },
+        {
+          "sheet_id": 393824971,
+          "amount": 10,
+          "name": "淨淨蘑菇汁液"
+        }
+      ],
+      "variant_hint": "산뜻 버섯 포자",
+      "is_main": false,
+      "display_order": 5600
+    },
+    {
+      "altering_sheet_id": 1270353184,
+      "facility_type": 4,
+      "facility_lv": 6,
+      "display_name": "광휘의 결정(달무늬 사슴벌레)",
+      "result_id": 2019168353,
+      "result_name": "光輝結晶",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 2094891175,
+          "amount": 3,
+          "name": "달무늬 사슴벌레"
+        },
+        {
+          "sheet_id": 851218173,
+          "amount": 10,
+          "name": "魔力藥草"
+        },
+        {
+          "sheet_id": 545807217,
+          "amount": 3,
+          "name": "黏土"
+        }
+      ],
+      "variant_hint": "달무늬 사슴벌레",
+      "is_main": false,
+      "display_order": 5600
+    },
+    {
+      "altering_sheet_id": 904722003,
+      "facility_type": 5,
+      "facility_lv": 1,
+      "display_name": "美乃滋",
+      "result_id": 904722003,
+      "result_name": "美乃滋",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 962376720,
+          "amount": 10,
+          "name": "雞蛋"
+        },
+        {
+          "sheet_id": 67699553,
+          "amount": 2,
+          "name": "食用油"
+        }
+      ],
+      "variant_hint": "雞蛋",
+      "is_main": true,
+      "display_order": 6100
+    },
+    {
+      "altering_sheet_id": 549140153,
+      "facility_type": 5,
+      "facility_lv": 2,
+      "display_name": "麵粉",
+      "result_id": 549140153,
+      "result_name": "麵粉",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1108200128,
+          "amount": 15,
+          "name": "小麥"
+        }
+      ],
+      "variant_hint": "小麥",
+      "is_main": false,
+      "display_order": 6200
+    },
+    {
+      "altering_sheet_id": 1380486719,
+      "facility_type": 5,
+      "facility_lv": 2,
+      "display_name": "起司",
+      "result_id": 1380486719,
+      "result_name": "起司",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1283411388,
+          "amount": 6,
+          "name": "牛奶"
+        },
+        {
+          "sheet_id": 1668081642,
+          "amount": 1,
+          "name": "鹽"
+        }
+      ],
+      "variant_hint": "牛奶",
+      "is_main": true,
+      "display_order": 6200
+    },
+    {
+      "altering_sheet_id": 364202266,
+      "facility_type": 5,
+      "facility_lv": 3,
+      "display_name": "鮮奶油",
+      "result_id": 364202266,
+      "result_name": "鮮奶油",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1283411388,
+          "amount": 12,
+          "name": "牛奶"
+        },
+        {
+          "sheet_id": 962376720,
+          "amount": 6,
+          "name": "雞蛋"
+        },
+        {
+          "sheet_id": 1290670861,
+          "amount": 2,
+          "name": "糖"
+        }
+      ],
+      "variant_hint": "牛奶",
+      "is_main": true,
+      "display_order": 6300
+    },
+    {
+      "altering_sheet_id": 972233435,
+      "facility_type": 5,
+      "facility_lv": 3,
+      "display_name": "棉",
+      "result_id": 972233435,
+      "result_name": "棉",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 549140153,
+          "amount": 3,
+          "name": "麵粉"
+        },
+        {
+          "sheet_id": 962376720,
+          "amount": 5,
+          "name": "雞蛋"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 1,
+          "name": "裝水的瓶子"
+        }
+      ],
+      "variant_hint": "麵粉",
+      "is_main": false,
+      "display_order": 6300
+    },
+    {
+      "altering_sheet_id": 1576983048,
+      "facility_type": 5,
+      "facility_lv": 4,
+      "display_name": "泡水的豆子",
+      "result_id": 1576983048,
+      "result_name": "泡水的豆子",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 1210798147,
+          "amount": 30,
+          "name": "黃豆"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 3,
+          "name": "裝水的瓶子"
+        }
+      ],
+      "variant_hint": "黃豆",
+      "is_main": false,
+      "display_order": 6400
+    },
+    {
+      "altering_sheet_id": 1589594369,
+      "facility_type": 5,
+      "facility_lv": 4,
+      "display_name": "豆乳",
+      "result_id": 1589594369,
+      "result_name": "豆乳",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1576983048,
+          "amount": 3,
+          "name": "泡水的豆子"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 3,
+          "name": "裝水的瓶子"
+        },
+        {
+          "sheet_id": 1668081642,
+          "amount": 1,
+          "name": "鹽"
+        },
+        {
+          "sheet_id": 67699553,
+          "amount": 1,
+          "name": "食用油"
+        }
+      ],
+      "variant_hint": "泡水的豆子",
+      "is_main": false,
+      "display_order": 6401
+    },
+    {
+      "altering_sheet_id": 1675925233,
+      "facility_type": 5,
+      "facility_lv": 4,
+      "display_name": "豆腐",
+      "result_id": 1675925233,
+      "result_name": "豆腐",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1576983048,
+          "amount": 3,
+          "name": "泡水的豆子"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 3,
+          "name": "裝水的瓶子"
+        },
+        {
+          "sheet_id": 1668081642,
+          "amount": 2,
+          "name": "鹽"
+        },
+        {
+          "sheet_id": 1553586563,
+          "amount": 3,
+          "name": "布料"
+        }
+      ],
+      "variant_hint": "泡水的豆子",
+      "is_main": true,
+      "display_order": 6401
+    },
+    {
+      "altering_sheet_id": 1539532856,
+      "facility_type": 5,
+      "facility_lv": 4,
+      "display_name": "熟成的大塊肉",
+      "result_id": 1539532856,
+      "result_name": "熟成的大塊肉",
+      "result_amount": 1,
+      "ingredients": [
+        {
+          "sheet_id": 1961002722,
+          "amount": 1,
+          "name": "大塊肉"
+        },
+        {
+          "sheet_id": 651358256,
+          "amount": 6,
+          "name": "藥草"
+        },
+        {
+          "sheet_id": 115582255,
+          "amount": 2,
+          "name": "大蒜"
+        },
+        {
+          "sheet_id": 1668081642,
+          "amount": 2,
+          "name": "鹽"
+        },
+        {
+          "sheet_id": 1911144489,
+          "amount": 1,
+          "name": "胡椒"
+        }
+      ],
+      "variant_hint": "大塊肉",
+      "is_main": false,
+      "display_order": 6402
+    },
+    {
+      "altering_sheet_id": 1038804998,
+      "facility_type": 5,
+      "facility_lv": 5,
+      "display_name": "泡水的米",
+      "result_id": 1038804998,
+      "result_name": "泡水的米",
+      "result_amount": 5,
+      "ingredients": [
+        {
+          "sheet_id": 855408511,
+          "amount": 30,
+          "name": "稻米"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 6,
+          "name": "裝水的瓶子"
+        }
+      ],
+      "variant_hint": "稻米",
+      "is_main": false,
+      "display_order": 6500
+    },
+    {
+      "altering_sheet_id": 1807094144,
+      "facility_type": 5,
+      "facility_lv": 5,
+      "display_name": "飯",
+      "result_id": 1807094144,
+      "result_name": "飯",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1038804998,
+          "amount": 8,
+          "name": "泡水的米"
+        },
+        {
+          "sheet_id": 1837785241,
+          "amount": 2,
+          "name": "裝水的瓶子"
+        }
+      ],
+      "variant_hint": "泡水的米",
+      "is_main": false,
+      "display_order": 6501
+    },
+    {
+      "altering_sheet_id": 1980303565,
+      "facility_type": 5,
+      "facility_lv": 5,
+      "display_name": "乾燥茶葉",
+      "result_id": 1980303565,
+      "result_name": "乾燥茶葉",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 197117666,
+          "amount": 30,
+          "name": "茶葉"
+        }
+      ],
+      "variant_hint": "茶葉",
+      "is_main": false,
+      "display_order": 6502
+    },
+    {
+      "altering_sheet_id": 67609561,
+      "facility_type": 5,
+      "facility_lv": 5,
+      "display_name": "發酵茶葉",
+      "result_id": 67609561,
+      "result_name": "發酵茶葉",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 1980303565,
+          "amount": 5,
+          "name": "乾燥茶葉"
+        },
+        {
+          "sheet_id": 1553586563,
+          "amount": 1,
+          "name": "布料"
+        }
+      ],
+      "variant_hint": "乾燥茶葉",
+      "is_main": false,
+      "display_order": 6503
+    },
+    {
+      "altering_sheet_id": 1755664475,
+      "facility_type": 5,
+      "facility_lv": 6,
+      "display_name": "헤이즐넛 오일",
+      "result_id": 1755664475,
+      "result_name": "헤이즐넛 오일",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 151451608,
+          "amount": 15,
+          "name": "헤이즐넛"
+        },
+        {
+          "sheet_id": 445753894,
+          "amount": 1,
+          "name": "布料+"
+        }
+      ],
+      "variant_hint": "헤이즐넛",
+      "is_main": false,
+      "display_order": 6600
+    },
+    {
+      "altering_sheet_id": 1865642059,
+      "facility_type": 5,
+      "facility_lv": 6,
+      "display_name": "오트밀",
+      "result_id": 1865642059,
+      "result_name": "오트밀",
+      "result_amount": 3,
+      "ingredients": [
+        {
+          "sheet_id": 30004216,
+          "amount": 30,
+          "name": "귀리"
+        }
+      ],
+      "variant_hint": "귀리",
+      "is_main": false,
+      "display_order": 6600
+    }
+  ],
+  "updated_at": "2026-10-21",
+  "rechecked_at": "2026-10-06T05:26:53.916831+00:00",
+  "recipe_evidence": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json",
+  "name_evidence": "logs/shop_value_20261006/expanded_snapshot.json",
+  "tw_released_count": 57,
+  "tw_hidden_count": 26,
+  "tw_feature_pending_count": 5,
+  "availability_rule": "Show + 既有加工功能开关1471658456；另一个开关460269496的5条单列待验证，不能仅因Show当台服已开放。",
+  "limits": "仅更新带日期的资料；未重采当前游戏，未修改任何配方材料数值；公开资料冲突保留台服缓存数值。"
+}

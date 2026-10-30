@@ -1,0 +1,11 @@
+{
+  "id": "item_daily_水井",
+  "label": "水井",
+  "file": "水井.png",
+  "rel_dir": "knowledge/templates/items/daily",
+  "need_ui": "日常採集详情右栏「水井」图标（用户提供裁切，非整窗坐标）",
+  "client_px": {
+    "w": 99,
+    "h": 113
+  }
+}

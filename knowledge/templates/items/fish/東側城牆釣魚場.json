@@ -1,0 +1,13 @@
+{
+  "id": "item_fish_東側城牆釣魚場",
+  "label": "東側城牆釣魚場",
+  "file": "東側城牆釣魚場.png",
+  "rel_dir": "knowledge/templates/items/fish",
+  "need_ui": "请打开「钓鱼」详情右栏，套住「東側城牆釣魚場」",
+  "client_px": {
+    "x": 1084,
+    "y": 1002,
+    "w": 95,
+    "h": 94
+  }
+}

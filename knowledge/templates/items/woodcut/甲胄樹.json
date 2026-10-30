@@ -1,0 +1,13 @@
+{
+  "id": "item_woodcut_甲胄樹",
+  "label": "甲胄樹",
+  "file": "甲胄樹.png",
+  "rel_dir": "knowledge/templates/items/woodcut",
+  "need_ui": "请打开「伐木」详情右栏，套住「甲胄樹」",
+  "client_px": {
+    "x": 1082,
+    "y": 1286,
+    "w": 96,
+    "h": 100
+  }
+}

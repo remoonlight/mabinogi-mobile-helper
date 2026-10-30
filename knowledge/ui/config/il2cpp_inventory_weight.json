@@ -1,0 +1,17 @@
+{
+  "module": "GameAssembly.dll",
+  "typeinfo_rva": {
+    "InventoryWeightComponent": "0x79fe558",
+    "SystemContainers": "0x79AC6C8"
+  },
+  "offsets": {
+    "SystemContainers.InventoryWeightComponent": "0x2D08",
+    "InventoryWeightComponent.MaxInventoryWeight": "0x10",
+    "InventoryWeightComponent.CurrentInventoryWeight": "0x14"
+  },
+  "gate": {
+    "near_full_ratio": 0.9,
+    "note": "ratio>=near_full_ratio 或 remaining 不足一轮 → 停采"
+  },
+  "note": "背包负重：Max@0x10 float · Current@0x14 float；主路径 SC+0x2D08；堆扫次选。dump: InventoryWeightComponent。"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "item_hoe_馬鈴薯",
+  "label": "馬鈴薯",
+  "file": "馬鈴薯.png",
+  "rel_dir": "knowledge/templates/items/hoe",
+  "need_ui": "请打开「锄地」详情右栏，套住「馬鈴薯」",
+  "client_px": {
+    "x": 1082,
+    "y": 898,
+    "w": 98,
+    "h": 94
+  }
+}

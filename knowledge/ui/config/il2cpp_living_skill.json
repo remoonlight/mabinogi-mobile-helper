@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "module": "GameAssembly.dll",
+    "note": "生活技能等级：CharacterLivingSkillComponent.LivingSkillState → LivingSkillData(+0x4 等级)。表名：LivingSkillSheetData.DisplayName。堆扫须过滤无短名表行与 count 异常的幽灵组件。",
+  "typeinfo_rva": {
+    "CharacterLivingSkillComponent": "0x10823838",
+    "LivingSkillSheetData": "0x106F1108"
+  },
+  "offsets": {
+    "CharacterLivingSkillComponent.levelDirtySource": "0x10",
+    "CharacterLivingSkillComponent.expDirtySource": "0x18",
+    "CharacterLivingSkillComponent.LivingSkillState": "0x20",
+    "LivingSkillData.LivingSkillSheetId": "0x0",
+    "LivingSkillData.LivingSkillGrowth": "0x4",
+    "LivingSkillData.Exp": "0x8",
+    "LivingSkillData.BonusExpressionExp": "0x10",
+    "LivingSkillData.stride": "0x18",
+    "LivingSkillSheetData.Id": "0x10",
+    "LivingSkillSheetData.DisplayName": "0x18",
+    "LivingSkillSheetData.FlavorText": "0x20",
+    "LivingSkillSheetData.LivingSkillType": "0x28",
+    "LivingSkillSheetData.LimitLevel": "0x30",
+    "MMDictionary.keys": "0x10",
+    "MMDictionary.values": "0x18",
+    "MMDictionary.count": "0x34",
+    "Il2CppArray.max_length": "0x18",
+    "Il2CppArray.vector": "0x20"
+  }
+}

@@ -1,0 +1,610 @@
+{
+  "region": "堤爾克那",
+  "region_id": "tirchonaill",
+  "width": 4096,
+  "height": 3038,
+  "origin_shift": [
+    -501,
+    -1139
+  ],
+  "places": [
+    {
+      "canon": "堤爾克那南部",
+      "text": "堤爾克那南部",
+      "ax": 2137.99,
+      "ay": 2140.42,
+      "score": 8.763
+    },
+    {
+      "canon": "希德斯特雪原",
+      "text": "通往希德斯",
+      "ax": 2635.19,
+      "ay": 311.89,
+      "score": 5.832
+    },
+    {
+      "canon": "阿德莉亞平原",
+      "text": "阿德莉亞平原",
+      "ax": 2132.07,
+      "ay": 1992.44,
+      "score": 5.826
+    },
+    {
+      "canon": "艾菲地下城",
+      "text": "艾菲地下城",
+      "ax": 2822.78,
+      "ay": 575.06,
+      "score": 5.818
+    },
+    {
+      "canon": "狼之森林狩",
+      "text": "狼之森林狩",
+      "ax": 3737.68,
+      "ay": 2348.96,
+      "score": 5.813
+    },
+    {
+      "canon": "灰色谷地",
+      "text": "灰色谷地",
+      "ax": 3631.59,
+      "ay": 2481.91,
+      "score": 5.796
+    },
+    {
+      "canon": "草地牧場",
+      "text": "草地牧場",
+      "ax": 3028.29,
+      "ay": 1449.26,
+      "score": 5.789
+    },
+    {
+      "canon": "通往杜加德",
+      "text": "通往杜加德",
+      "ax": 1469.13,
+      "ay": 408.42,
+      "score": 5.781
+    },
+    {
+      "canon": "食品店",
+      "text": "食品店",
+      "ax": 2046.18,
+      "ay": 1299.46,
+      "score": 5.748
+    },
+    {
+      "canon": "赛維地下城",
+      "text": "赛維地下城",
+      "ax": 3170.81,
+      "ay": 2710.48,
+      "score": 5.734
+    },
+    {
+      "canon": "村長家",
+      "text": "村長家",
+      "ax": 2428.64,
+      "ay": 1237.09,
+      "score": 5.722
+    },
+    {
+      "canon": "赛雉地下城",
+      "text": "赛雉地下城",
+      "ax": 2982.59,
+      "ay": 2436.37,
+      "score": 5.708
+    },
+    {
+      "canon": "赛雅爾地下城",
+      "text": "赛雅爾地下城",
+      "ax": 2981.68,
+      "ay": 2435.46,
+      "score": 5.689
+    },
+    {
+      "canon": "墓地",
+      "text": "墓地",
+      "ax": 2479.93,
+      "ay": 672.5,
+      "score": 5.666
+    },
+    {
+      "canon": "工坊",
+      "text": "工坊",
+      "ax": 1488.71,
+      "ay": 1682.37,
+      "score": 5.665
+    },
+    {
+      "canon": "鐵匠鋪",
+      "text": "鐵匠鋪",
+      "ax": 2268.66,
+      "ay": 1886.35,
+      "score": 5.662
+    },
+    {
+      "canon": "巢穴",
+      "text": "巢穴",
+      "ax": 1849.03,
+      "ay": 1250.75,
+      "score": 5.659
+    },
+    {
+      "canon": "赛爾地下城",
+      "text": "赛爾地下城",
+      "ax": 3171.27,
+      "ay": 2710.94,
+      "score": 5.65
+    },
+    {
+      "canon": "磨坊",
+      "text": "磨坊",
+      "ax": 2457.78,
+      "ay": 1620.46,
+      "score": 5.629
+    },
+    {
+      "canon": "蜘蛛網",
+      "text": "蜘蛛網",
+      "ax": 2533.2,
+      "ay": 762.19,
+      "score": 5.624
+    },
+    {
+      "canon": "學校",
+      "text": "學校",
+      "ax": 1703.16,
+      "ay": 1519.84,
+      "score": 5.623
+    },
+    {
+      "canon": "群牧場",
+      "text": "群牧場",
+      "ax": 3112.52,
+      "ay": 1394.17,
+      "score": 5.605
+    },
+    {
+      "canon": "藥草",
+      "text": "藥草",
+      "ax": 1960.87,
+      "ay": 2017.94,
+      "score": 5.604
+    },
+    {
+      "canon": "雜貨店",
+      "text": "雜貨店",
+      "ax": 2175.49,
+      "ay": 1371.86,
+      "score": 5.592
+    },
+    {
+      "canon": "金加",
+      "text": "金加",
+      "ax": 1358.49,
+      "ay": 1559.89,
+      "score": 5.586
+    },
+    {
+      "canon": "金鹰加",
+      "text": "金鹰加",
+      "ax": 1358.95,
+      "ay": 1559.9,
+      "score": 5.579
+    },
+    {
+      "canon": "蜘蛛稠",
+      "text": "蜘蛛稠",
+      "ax": 2533.2,
+      "ay": 760.83,
+      "score": 5.568
+    },
+    {
+      "canon": "钓魚場",
+      "text": "钓魚場",
+      "ax": 1990.92,
+      "ay": 1716.98,
+      "score": 5.551
+    },
+    {
+      "canon": "广坦",
+      "text": "广坦",
+      "ax": 2137.53,
+      "ay": 1232.53,
+      "score": 5.545
+    },
+    {
+      "canon": "展挚台",
+      "text": "展挚台",
+      "ax": 2028.71,
+      "ay": 468.52,
+      "score": 5.521
+    },
+    {
+      "canon": "晨田",
+      "text": "晨田",
+      "ax": 1678.12,
+      "ay": 1768.88,
+      "score": 5.52
+    },
+    {
+      "canon": "菜园",
+      "text": "菜园",
+      "ax": 1888.64,
+      "ay": 1365.94,
+      "score": 5.517
+    },
+    {
+      "canon": "学火",
+      "text": "学火",
+      "ax": 2160.46,
+      "ay": 1319.95,
+      "score": 5.515
+    },
+    {
+      "canon": "防具",
+      "text": "防具",
+      "ax": 1278.81,
+      "ay": 1691.94,
+      "score": 5.509
+    }
+  ],
+  "anchors": [],
+  "facilities": [
+    {
+      "canon": "堤爾克那南部",
+      "text": "堤爾克那南部",
+      "ax": 2347.82,
+      "ay": 2350.49,
+      "score": 8.763,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "希德斯特雪原",
+      "text": "通往希德斯",
+      "ax": 2893.82,
+      "ay": 342.5,
+      "score": 5.832,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "阿德莉亞平原",
+      "text": "阿德莉亞平原",
+      "ax": 2341.32,
+      "ay": 2187.99,
+      "score": 5.826,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "艾菲地下城",
+      "text": "艾菲地下城",
+      "ax": 3099.82,
+      "ay": 631.5,
+      "score": 5.818,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "狼之森林狩",
+      "text": "狼之森林狩",
+      "ax": 4104.51,
+      "ay": 2579.5,
+      "score": 5.813,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "灰色谷地",
+      "text": "灰色谷地",
+      "ax": 3988.01,
+      "ay": 2725.5,
+      "score": 5.796,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "草地牧場",
+      "text": "草地牧場",
+      "ax": 3325.5,
+      "ay": 1591.5,
+      "score": 5.789,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "通往杜加德",
+      "text": "通往杜加德",
+      "ax": 1613.32,
+      "ay": 448.5,
+      "score": 5.781,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "食品店",
+      "text": "食品店",
+      "ax": 2247.0,
+      "ay": 1427.0,
+      "score": 5.748,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "赛維地下城",
+      "text": "赛維地下城",
+      "ax": 3482.01,
+      "ay": 2976.5,
+      "score": 5.734,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "村長家",
+      "text": "村長家",
+      "ax": 2667.0,
+      "ay": 1358.5,
+      "score": 5.722,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "赛雉地下城",
+      "text": "赛雉地下城",
+      "ax": 3275.32,
+      "ay": 2675.49,
+      "score": 5.708,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "赛雅爾地下城",
+      "text": "赛雅爾地下城",
+      "ax": 3274.32,
+      "ay": 2674.49,
+      "score": 5.689,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "墓地",
+      "text": "墓地",
+      "ax": 2723.32,
+      "ay": 738.5,
+      "score": 5.666,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "工坊",
+      "text": "工坊",
+      "ax": 1634.82,
+      "ay": 1847.49,
+      "score": 5.665,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "鐵匠鋪",
+      "text": "鐵匠鋪",
+      "ax": 2491.32,
+      "ay": 2071.49,
+      "score": 5.662,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "巢穴",
+      "text": "巢穴",
+      "ax": 2030.5,
+      "ay": 1373.5,
+      "score": 5.659,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "赛爾地下城",
+      "text": "赛爾地下城",
+      "ax": 3482.51,
+      "ay": 2977.0,
+      "score": 5.65,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "磨坊",
+      "text": "磨坊",
+      "ax": 2699.0,
+      "ay": 1779.5,
+      "score": 5.629,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "蜘蛛網",
+      "text": "蜘蛛網",
+      "ax": 2781.82,
+      "ay": 837.0,
+      "score": 5.624,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "學校",
+      "text": "學校",
+      "ax": 1870.32,
+      "ay": 1669.0,
+      "score": 5.623,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "群牧場",
+      "text": "群牧場",
+      "ax": 3418.0,
+      "ay": 1531.0,
+      "score": 5.605,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "藥草",
+      "text": "藥草",
+      "ax": 2153.32,
+      "ay": 2215.99,
+      "score": 5.604,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "雜貨店",
+      "text": "雜貨店",
+      "ax": 2389.0,
+      "ay": 1506.5,
+      "score": 5.592,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "金加",
+      "text": "金加",
+      "ax": 1491.82,
+      "ay": 1712.99,
+      "score": 5.586,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "金鹰加",
+      "text": "金鹰加",
+      "ax": 1492.32,
+      "ay": 1713.0,
+      "score": 5.579,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "蜘蛛稠",
+      "text": "蜘蛛稠",
+      "ax": 2781.82,
+      "ay": 835.5,
+      "score": 5.568,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "钓魚場",
+      "text": "钓魚場",
+      "ax": 2186.32,
+      "ay": 1885.49,
+      "score": 5.551,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "广坦",
+      "text": "广坦",
+      "ax": 2347.32,
+      "ay": 1353.5,
+      "score": 5.545,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "展挚台",
+      "text": "展挚台",
+      "ax": 2227.82,
+      "ay": 514.5,
+      "score": 5.521,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "晨田",
+      "text": "晨田",
+      "ax": 1842.82,
+      "ay": 1942.49,
+      "score": 5.52,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "菜园",
+      "text": "菜园",
+      "ax": 2074.0,
+      "ay": 1500.0,
+      "score": 5.517,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "学火",
+      "text": "学火",
+      "ax": 2372.5,
+      "ay": 1449.5,
+      "score": 5.515,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    },
+    {
+      "canon": "防具",
+      "text": "防具",
+      "ax": 1404.32,
+      "ay": 1858.0,
+      "score": 5.509,
+      "source": "stitch_ocr",
+      "kind": "facility"
+    }
+  ],
+  "stitch_method": "session_offsets_live",
+  "pose_graph": null,
+  "feather_px": 36,
+  "note": "方法 B 逐帧 live 拼接（会话 ox/oy + 抑绿）",
+  "tile_count": 16,
+  "method": "B",
+  "session": "logs/coach_town_atlas_session_tirchonaill.json",
+  "recenter": {
+    "ox_add": 1242.0,
+    "oy_add": 51.0,
+    "town_center": [
+      2249,
+      1668
+    ],
+    "center_source": "places_mean_n=4",
+    "content_bbox_before": [
+      1,
+      1,
+      3216,
+      3245
+    ]
+  },
+  "recenter_info": {
+    "town_center_before": [
+      1007.4,
+      1617.5
+    ],
+    "center_source": "places_mean_n=4",
+    "ok": true,
+    "size_before": [
+      3217,
+      3246
+    ],
+    "size_after": [
+      4498,
+      3336
+    ],
+    "shift": [
+      1242.0,
+      51.0
+    ],
+    "town_center_after": [
+      2249,
+      1668
+    ]
+  },
+  "write_scale": 0.9106269453090262,
+  "updated": "2026-08-03T23:22:36",
+  "atlas_png": "tirchonaill_town_atlas.png",
+  "preview": "tirchonaill_town_atlas_preview.jpg",
+  "source": "method_B"
+}

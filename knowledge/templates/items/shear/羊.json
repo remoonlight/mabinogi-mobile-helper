@@ -1,0 +1,13 @@
+{
+  "id": "item_shear_羊",
+  "label": "羊",
+  "file": "羊.png",
+  "rel_dir": "knowledge/templates/items/shear",
+  "need_ui": "请打开「剪羊毛」详情右栏，套住「羊」",
+  "client_px": {
+    "x": 1083,
+    "y": 895,
+    "w": 98,
+    "h": 96
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "facility_title_wood_standalone",
+  "label": "木材加工·独立设施标题",
+  "file": "title_wood_standalone.png",
+  "rel_dir": "knowledge/templates/facility",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 24,
+    "y": 20,
+    "w": 212,
+    "h": 76
+  },
+  "source": "tests/fixtures/process_stance/wood_standalone.png",
+  "need_ui": "木材加工独立设施页；左上无返回箭头，标题不含帮助按钮",
+  "run_id": "run_20261001T122723"
+}

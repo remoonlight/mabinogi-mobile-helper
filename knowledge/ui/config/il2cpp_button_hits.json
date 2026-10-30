@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "note": "按钮触发框只读扫描：ButtonControl / Tweening* → Graphic → RectTransform",
+  "typeinfo_rva": {
+    "ButtonControl": "0x7a12980",
+    "TweeningButtonControl": "0x7acd2a8",
+    "TweeningToggleButtonControl": "0x7acd980"
+  },
+  "offsets": {
+    "ButtonControl.uiSlot": "0x38",
+    "ButtonControl.RaycastTarget": "0x68",
+    "ButtonControl.interactable": "0x84",
+    "ButtonControl.enabled": "0x85",
+    "UISlot.Raw": "0x28",
+    "ButtonSlot.RaycastTarget": "0x18",
+    "ButtonSlot.Content": "0x28",
+    "UnityObject.m_CachedPtr": "0x10",
+    "UIBehaviour.rectTransformCached": "0x20",
+    "Graphic.m_RaycastTarget": "0x4A",
+    "Graphic.m_RectTransform": "0x60",
+    "Graphic.m_Canvas": "0x70",
+    "MaskableGraphic.previousClipRect": "0xC4",
+    "MaskableGraphic.previousValidRect": "0xD4",
+    "TweeningButtonControl.raycastTargetRect": "0x4C",
+    "TweeningButtonControl.Interactable": "0x68",
+    "TweeningToggleButtonControl.buttonRect": "0x64",
+    "TweeningToggleButtonControl.interactable": "0x74"
+  },
+  "native_rect_probe_offsets": [
+    184
+  ],
+  "native_local_rect_offset": "0xB8",
+  "max_hits": 512
+}

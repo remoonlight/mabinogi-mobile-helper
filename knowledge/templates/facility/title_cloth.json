@@ -1,0 +1,14 @@
+{
+  "id": "facility_title_cloth",
+  "label": "布料加工·标题",
+  "file": "title_cloth.png",
+  "rel_dir": "knowledge/templates/facility",
+  "need_ui": "已进「布料加工」设施页；红框只套左上标题「布料加工」（不要套六卡、不要套配方列表）",
+  "client_px": {
+    "x": 22,
+    "y": 16,
+    "w": 260,
+    "h": 83
+  },
+  "role": "page_anchor"
+}

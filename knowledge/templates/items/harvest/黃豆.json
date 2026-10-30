@@ -1,0 +1,17 @@
+{
+  "id": "item_harvest_黃豆",
+  "label": "黃豆",
+  "file": "黃豆.png",
+  "rel_dir": "knowledge/templates/items/harvest",
+  "need_ui": "角色 → 生活技能 → 收割，黃豆整行可见",
+  "client_px": {
+    "x": 1080,
+    "y": 1187,
+    "w": 104,
+    "h": 92
+  },
+  "source": "logs/soybean_20261003/harvest_list_original.png",
+  "method": "B",
+  "captured_at": 1791037634.888434,
+  "watch_pid": 28640
+}

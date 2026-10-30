@@ -1,0 +1,22 @@
+{
+  "id": "process_medicine_咻咻蘑菇孢子",
+  "name": "咻咻蘑菇孢子",
+  "label": "咻咻蘑菇孢子",
+  "file": "咻咻蘑菇孢子.png",
+  "rel_dir": "knowledge/templates/process/medicine",
+  "source_frame": "tests/fixtures/process_stance/medicine_standalone.png",
+  "source_sha256": "668b50043de7177791982e9b257b20dfe1011a7aa9cbd4a0ee5ccbcc190b9618",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "crop_client_px": [
+    992,
+    454,
+    147,
+    30
+  ],
+  "transform": "exact crop; no resize",
+  "coordinate_source": "inspected original game_frame recipe label bounds",
+  "template_sha256": "6721a7a02fbc6e2f3ec12f6a4f0a9df900c8744b805536875ff74ef069d7971b"
+}

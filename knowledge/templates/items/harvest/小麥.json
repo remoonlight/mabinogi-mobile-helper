@@ -1,0 +1,13 @@
+{
+  "id": "item_harvest_小麥",
+  "label": "小麥",
+  "file": "小麥.png",
+  "rel_dir": "knowledge/templates/items/harvest",
+  "need_ui": "请打开「收割」详情右栏，套住「小麥」",
+  "client_px": {
+    "x": 1083,
+    "y": 890,
+    "w": 97,
+    "h": 101
+  }
+}

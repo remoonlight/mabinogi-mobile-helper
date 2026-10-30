@@ -1,0 +1,13 @@
+{
+  "id": "profile_tab_life_on",
+  "label": "角色-生活技能Tab选中",
+  "file": "tab_life_on.png",
+  "rel_dir": "knowledge/templates/profile",
+  "need_ui": "人物界面开着，左侧「生活技能」Tab 为选中亮态（九宫格同一层）",
+  "client_px": {
+    "x": 56,
+    "y": 751,
+    "w": 80,
+    "h": 80
+  }
+}

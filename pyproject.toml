@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mm-assist"
+version = "0.1.0"
+description = "Mabinogi Mobile TW PC assist: readonly perception + method B capture"
+requires-python = ">=3.11"
+dependencies = [
+  "opencv-python-headless>=4.8",
+  "numpy>=1.24",
+  "mss>=9.0",
+  "Pillow>=10.0",
+  "pywin32>=306",
+  "rapidocr>=3.4",
+  "rapidocr-onnxruntime>=1.2",
+  "PyYAML>=6.0",
+  "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+benchmark = [
+  "dxcam>=0.3",
+  "easyocr>=1.7",
+  "pytesseract>=0.3",
+]
+
+[project.scripts]
+mm-assist = "mm_assist.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

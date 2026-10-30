@@ -1,0 +1,17 @@
+{
+  "id": "gather_skill_hoe_防風草",
+  "label": "防風草",
+  "file": "防風草.png",
+  "rel_dir": "knowledge/templates/gather_skill/hoe",
+  "need_ui": "角色 → 生活技能 → 鋤地，防風草整行可见",
+  "client_px": {
+    "x": 1080,
+    "y": 1297,
+    "w": 250,
+    "h": 92
+  },
+  "source": "logs/soybean_20261003/hoe_original.png",
+  "method": "B",
+  "captured_at": 1791037957.7990718,
+  "watch_pid": 28640
+}

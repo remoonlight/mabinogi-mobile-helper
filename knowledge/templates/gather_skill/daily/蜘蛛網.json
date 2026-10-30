@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_daily_蜘蛛網",
+  "label": "蜘蛛網",
+  "file": "蜘蛛網.png",
+  "rel_dir": "knowledge/templates/gather_skill/daily",
+  "need_ui": "角色-生活技能-日常採集右栏：图标+物名首字",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1083,
+    "y": 913,
+    "w": 215,
+    "h": 99
+  }
+}

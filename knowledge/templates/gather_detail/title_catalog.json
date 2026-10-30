@@ -1,0 +1,215 @@
+{
+  "schema": "gather_detail_titles.v1",
+  "threshold": 0.97,
+  "search_roi": [
+    0.32,
+    0.26,
+    0.18,
+    0.08
+  ],
+  "coordinate_source": "2026-10-08 current-run client captures; full popup heading only, excludes underlying list",
+  "titles": [
+    {
+      "name": "捲毛羊",
+      "template": "knowledge/templates/gather_detail/title_捲毛羊.png",
+      "source_original": "logs/life_fail_shots/wrong_gather_detail_20261008T080621Z.png",
+      "source_frame": "tests/fixtures/process_stance/sheep_detail_20261008.png",
+      "source_sha256": "bcac26143a78a9801ed6b65e4f190225df1767f9ed1cba96dac3b382161cee92",
+      "template_sha256": "dcb3436921b21fe67f88cb75ad625e7719b4e5226d923050e7d27350f885c7e6",
+      "source_size": [
+        1920,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        677,
+        411,
+        127,
+        44
+      ]
+    },
+    {
+      "name": "咻咻蘑菇",
+      "template": "knowledge/templates/gather_detail/title_咻咻蘑菇.png",
+      "source_original": "logs/life_fail_shots/wrong_gather_detail_20261008T075542Z.png",
+      "source_frame": "tests/fixtures/process_stance/mushroom_detail_20261008.png",
+      "source_sha256": "991e1c9dc98dd8efd6a2f7464ac5c84c1e10b318f9aea9f1909d97c64e7b63ad",
+      "template_sha256": "57d0a19f5d34b8053f78c5582cb7effba05d79d268e095ddfc567ea08781cb45",
+      "source_size": [
+        1920,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        677,
+        393,
+        166,
+        44
+      ]
+    },
+    {
+      "name": "鐵礦脈",
+      "template": "knowledge/templates/gather_detail/title_鐵礦脈.png",
+      "source_original": "logs/life_fail_shots/wrong_gather_detail_20261010T084844Z.png",
+      "source_frame": "tests/fixtures/process_stance/iron_detail_failed_20261010.png",
+      "source_sha256": "00f81149710e83aa8b2043ae672360cd58ca36cf65f2b058d2d45e369a6c375f",
+      "template_sha256": "6426432e8c49bbc73a3d01e01d8a9da494e1877e55caf68be1a95c52aaf461dd",
+      "source_size": [
+        1920,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        677,
+        393,
+        128,
+        52
+      ]
+    },
+    {
+      "source_original": "logs/life_fail_shots/wrong_gather_detail_20261011T114303Z.png",
+      "source_frame": "tests/fixtures/process_stance/copper_detail_20261011.png",
+      "source_sha256": "420ec93d0fb4d48d22178873350b55c954737a12a745998683735d44558c93b7",
+      "source_size": [
+        1920,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "name": "銅礦脈",
+      "template": "knowledge/templates/gather_detail/title_銅礦脈.png",
+      "template_sha256": "4ac433abc3f604d736e54b661a5694fab24efea44b3f6d2436b010878554eb15",
+      "crop_client_px": [
+        677,
+        415,
+        128,
+        44
+      ]
+    },
+    {
+      "name": "淨淨蘑菇",
+      "template": "knowledge/templates/gather_detail/title_淨淨蘑菇_20261020.png",
+      "source_original": "logs/life_fail_shots/wrong_gather_detail_20261020T090602Z.png",
+      "source_frame": "tests/fixtures/process_stance/herb_detail_20261020.png",
+      "source_sha256": "546a4a456330cda961a32c1576a4a4a1b16504658728e813069e7d3ac952b1e4",
+      "template_sha256": "fd927a39451c1fcb1c583aa870b9e8238748d4c8c160bc7cd63e20a260690d5d",
+      "source_size": [
+        1920,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        676,
+        411,
+        166,
+        50
+      ],
+      "transform": "exact lossless game_frame crop; no resize",
+      "coordinate_source": "Debug watch35228 run1792486821.8303642 p7 actual popup; inspected full blue 淨淨蘑菇 title above 採集物. Existing popup-title ROI and .97 threshold retained."
+    },
+    {
+      "name": "鐵礦脈",
+      "template": "knowledge/templates/gather_detail/title_iron_20261023.png",
+      "source_original": "logs/life_fail_shots/wrong_gather_detail_20261023T041856Z.png",
+      "source_frame": "tests/fixtures/life_faults_20261023/iron_detail.png",
+      "source_sha256": "24ab43977869bf56e4f12629fbdc714fcfe6c147d9a1dc049f6cee13ffaf42eb",
+      "template_sha256": "deef2094587e27b7ac88f28f6b0426448c6ebbf601a0e6b6c3291056af960a05",
+      "source_size": [
+        1919,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1919,
+        1440
+      ],
+      "crop_client_px": [
+        677,
+        393,
+        128,
+        52
+      ],
+      "transform": "identity crop; no scale, recolor or text synthesis",
+      "corroborating_readonly_capture": "logs/life_verify_20261001/memory_efficiency/detonator_debug_iron_detail_paused_20261023_capture.json"
+    },
+    {
+      "name": "煤炭礦脈",
+      "template": "knowledge/templates/gather_detail/title_coal_20261024.png",
+      "source_original": "logs/life_fail_shots/wrong_gather_detail_20261023T172308Z.png",
+      "source_frame": "tests/fixtures/life_faults_20261024/coal_detail.png",
+      "source_sha256": "f65129bb321b6460cedc86f2145366106e6d2538a48a00681a76e8f3a2e5d41a",
+      "template_sha256": "f3510e6690bd298675e5660113ad16dc9ba97e2d9da1c67a36b09f11d913c480",
+      "source_size": [
+        1919,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1919,
+        1440
+      ],
+      "crop_client_px": [
+        677,
+        393,
+        166,
+        52
+      ],
+      "transform": "identity full-heading crop; no resize or recolor",
+      "coordinate_source": "2026-10-24 watch78788/run1792775757.8213878 p9 actual failed coal-vein detail; independent post-capture ready skill-card stack in debug_20261024_audit.json. Original .97 title threshold and nearby control gate unchanged.",
+      "corroborating_capture": "logs/life_verify_20261001/memory_efficiency/debug_20261024_coal_detail_paused_20261023T172513Z.png",
+      "corroborating_same_pixels": true
+    },
+    {
+      "name": "煤炭礦脈",
+      "template": "knowledge/templates/gather_detail/title_coal_20261028.png",
+      "source_original": "logs/life_fail_shots/wrong_gather_detail_20261028T000704Z.png",
+      "source_frame": "tests/fixtures/process_stance/coal_detail_20261028.png",
+      "source_sha256": "e1d499bff4aba48a531dfa7d2cefcc8ba58d00c6f25ace5e5f784b3c860c1e6f",
+      "template_sha256": "65ffa5675ecfb84efbc293b4f905172ef4df960a2a244d780cfa89c84e4d8232",
+      "source_size": [
+        1920,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        677,
+        393,
+        166,
+        52
+      ],
+      "transform": "identity lossless full-heading crop; no resize or recolor",
+      "coordinate_source": "2026-10-28 watch33116 run1793145947.1696117 p1 wrong_gather_detail; inspected complete popup heading above 採集物. Existing .97 threshold and title ROI retained. Old 1919px coal title scores .96242 on this 1920px frame; nearby independently matches .99999."
+    }
+  ]
+}

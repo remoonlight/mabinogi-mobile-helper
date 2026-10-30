@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_herb_淨淨蘑菇",
+  "label": "淨淨蘑菇",
+  "file": "淨淨蘑菇.png",
+  "rel_dir": "knowledge/templates/gather_skill/herb",
+  "need_ui": "角色-生活技能-採集藥草 右栏列表，不要点寻找附近，套住图标+物名「淨淨蘑菇」",
+  "client_px": {
+    "x": 1083,
+    "y": 1287,
+    "w": 273,
+    "h": 102
+  },
+  "role": "page_anchor"
+}

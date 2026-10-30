@@ -1,0 +1,188 @@
+{
+
+  "version": 3,
+
+  "module": "GameAssembly.dll",
+
+  "typeinfo_rva": {
+
+    "SystemContainers": "0x10600E78",
+
+    "Equipment": "0x10780820",
+
+    "EquipmentTool": "0x107D0A58",
+
+    "EquipmentSlotComponent": "0x107BCDA0",
+
+    "EquipmentToolInventoryComponent": "0x107D36F0",
+
+    "EquipmentInventoryComponent": "0x1079F228",
+
+    "EquipmentSheetData": "0x107BAFE8",
+
+    "EquipmentToolSheetData": "0x107D6878",
+
+    "MagicEffectSheetData": "0x1079C0A8",
+
+    "SocketableSheetData": "0x107C3FA0",
+
+    "RuneSheetData": "0x1088B9E8",
+
+    "JewelSheetData": "0x106590C8",
+
+    "RuneOptionSheetData": "0x1087FE48",
+
+    "MagicEffectRuneParameterSheetData": "0x1079ACD8",
+
+    "MagicEffectJewelParameterSheetData": "0x10798F28",
+
+    "ConstParameter": "0x7B0A2B8",
+
+    "JewelTableParameter": "0x7A509C8",
+
+    "RuneTableParameter": "0x794A020",
+
+    "ClientActionParameter_ModifyParameter": "0x105ACC60"
+
+  },
+
+  "offsets": {
+
+    "SystemContainers.EquipmentSlotComponent": "0x2C60",
+
+    "SystemContainers.EquipmentToolInventoryComponent": "0x2C70",
+
+    "EquipmentSlotComponent.equipmentSlots": "0x10",
+
+    "EquipmentToolInventoryComponent.equipmentToolSlots": "0x28",
+
+    "MMDictionary.keys": "0x10",
+
+    "MMDictionary.values": "0x18",
+
+    "MMDictionary.hashBuckets": "0x20",
+
+    "MMDictionary.hashNext": "0x28",
+
+    "MMDictionary.version": "0x30",
+
+    "MMDictionary.count": "0x34",
+
+    "Il2CppArray.max_length": "0x18",
+
+    "Il2CppArray.vector": "0x20",
+
+    "Equipment.Id": "0x10",
+
+    "Equipment.Durability": "0x20",
+
+    "Equipment.BaseMainAttributeValue": "0x4C",
+
+    "Equipment.MainAttributeValue": "0x50",
+
+    "Equipment.AdditionalAttackPower": "0x58",
+
+    "Equipment.SocketSlotCount": "0x60",
+
+    "Equipment.CarvingRuneEnhanceLevel": "0xF8",
+
+    "Equipment.CarvingRuneEnhanceExp": "0x100",
+
+    "Equipment.EnchantScrollConsumableSheetId": "0x130",
+
+    "Equipment.EnchantScrollRandomBonus1": "0x138",
+
+    "Equipment.EnchantScrollRandomBonus2": "0x148",
+
+    "Equipment.IsCursed": "0x188",
+
+    "Equipment.IsJunked": "0x189",
+
+    "Equipment.IsLocked": "0x18A",
+
+    "Equipment.sheetData": "0x190",
+
+    "Equipment.carvedRune": "0x1A8",
+
+    "EquipmentTool.Id": "0x10",
+
+    "EquipmentTool.Durability": "0x20",
+
+    "EquipmentTool.BasicAttributeValue": "0x4C",
+
+    "EquipmentTool.BaseAttributeValue": "0x50",
+
+    "EquipmentTool.MagicEffectSheetData1": "0x58",
+
+    "EquipmentTool.sheetData": "0xB0",
+
+    "EquipmentSheetData.Id": "0x10",
+
+    "EquipmentSheetData.DisplayName": "0x18",
+
+    "EquipmentSheetData.MainAttributeType": "0x60",
+
+    "EquipmentSheetData.MainAttributeMinValue": "0x64",
+
+    "EquipmentSheetData.MainAttributeMaxValue": "0x68",
+
+    "EquipmentSheetData.MaxDurability": "0x84",
+
+    "EquipmentToolSheetData.Id": "0x10",
+
+    "EquipmentToolSheetData.DisplayName": "0x18",
+
+    "EquipmentToolSheetData.MaxDurability": "0x50",
+
+    "UniqueString.actualString": "0x0",
+
+    "MagicEffectWithValue.sheetId": "0x0",
+
+    "MagicEffectWithValue.fixedPoint": "0x8",
+
+    "MagicEffectSheetData.Id": "0x10",
+
+    "MagicEffectSheetData.GroupName": "0x18",
+
+    "MagicEffectSheetData.Tier": "0x20",
+
+    "MagicEffectSheetData.Action": "0x38",
+
+    "MagicEffectSheetData.Tooltip": "0x48",
+
+    "MagicEffectSheetData.Grade": "0x50"
+
+  },
+
+  "equipment_slot_type": {
+
+    "0": "Invalid",
+
+    "101": "MainHand",
+
+    "102": "Head",
+
+    "103": "Legs",
+
+    "104": "Body",
+
+    "105": "Waist",
+
+    "106": "Hands",
+
+    "107": "Feet",
+
+    "108": "LeftFinger",
+
+    "109": "RightFinger",
+
+    "110": "OtherPart",
+
+    "111": "Emblem"
+
+  },
+
+  "note": "已穿戴 Tip：满值差/刻印/镶孔；效果 {0} 经 Action→Const/Rune/JewelTableParameter 填入。TypeInfo 用 Client 命名空间（非 Shared.GameLogic）"
+
+}
+

@@ -1,0 +1,14 @@
+{
+  "id": "craft_tab_quick_off",
+  "label": "快速製作·未选(灰)",
+  "file": "tab_quick_off.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "製作已开；先点别的栏，让「快速製作」变灰；红框只套这一栏图标+栏名（不要套到右边内容）；不要点六卡、不要进设施。套住「快速製作」未选(灰)",
+  "client_px": {
+    "x": 34,
+    "y": 438,
+    "w": 127,
+    "h": 120
+  },
+  "role": "tab_off"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "item_shear_烏雲羊",
+  "label": "烏雲羊",
+  "file": "烏雲羊.png",
+  "rel_dir": "knowledge/templates/items/shear",
+  "min_level": 25,
+  "status": "ready",
+  "client_px": {
+    "x": 1082,
+    "y": 1178,
+    "w": 96,
+    "h": 100
+  },
+  "source_frame": "tests/fixtures/process_stance/shear_list_updated_20261005.png",
+  "source_sha256": "45c35bc93f3559d2ce336b659a148d87cf91730f1b2201f003dcb298f1d4517b",
+  "template_sha256": "e5aa9ebdda4dba2b7e8a1b4442be622587888d090770189fb32ff7d687e6adb8",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "transform": "exact crop; no resize/registration transform",
+  "coordinate_source": "current full game_frame icon bounds; original inspected before cropping",
+  "evidence": "logs/soybean_20261003/training_20261005_shear.json"
+}

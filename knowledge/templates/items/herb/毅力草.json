@@ -1,0 +1,13 @@
+{
+  "id": "item_herb_毅力草",
+  "label": "毅力草",
+  "file": "毅力草.png",
+  "rel_dir": "knowledge/templates/items/herb",
+  "need_ui": "请打开「采集药草」详情右栏，套住「毅力草」",
+  "client_px": {
+    "x": 1083,
+    "y": 857,
+    "w": 95,
+    "h": 97
+  }
+}

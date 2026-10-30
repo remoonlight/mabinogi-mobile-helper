@@ -1,0 +1,22 @@
+{
+  "id": "process_medicine_增幅蘑菇孢子",
+  "name": "增幅蘑菇孢子",
+  "label": "增幅蘑菇孢子",
+  "file": "增幅蘑菇孢子.png",
+  "rel_dir": "knowledge/templates/process/medicine",
+  "source_frame": "tests/fixtures/process_stance/medicine_standalone.png",
+  "source_sha256": "668b50043de7177791982e9b257b20dfe1011a7aa9cbd4a0ee5ccbcc190b9618",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "crop_client_px": [
+    1438,
+    1035,
+    155,
+    32
+  ],
+  "transform": "exact crop; no resize",
+  "coordinate_source": "inspected original game_frame recipe label bounds",
+  "template_sha256": "8535a57b369b336de8defe9c9985a70e73c6a9f4ebdb4e023331803888ddbfc0"
+}

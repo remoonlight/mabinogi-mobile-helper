@@ -1,0 +1,177 @@
+{
+  "schema": "main_hud_entry_capture.v1",
+  "updated": "2026-08-24",
+  "notes": "方法 B 只读。程序不点。图像定位器给出客户区点击点；maturity=calibration 不得通过最终验收。enough 永不因本清单为真。",
+  "source": {
+    "id": "main_hud",
+    "need_ui": "清主界面：menu=0 inv=0 dlg=0；非战斗静止基线优先；勿停菜单/背包/对话/製作/地圖",
+    "signals": {
+      "menu_open": false,
+      "inventory_open": false,
+      "dialog_active": false,
+      "map_open": false,
+      "profile_open": false
+    }
+  },
+  "entries": [
+    {
+      "id": "menu",
+      "label": "菜单",
+      "kind": "page_entry",
+      "order": 1,
+      "edge_id": "main_hud_menu_system_menu",
+      "icon_key": "menu_esc",
+      "roi_id": "hud.menu_esc",
+      "locator": {
+        "detector": "template",
+        "template": "knowledge/templates/hud_entries/menu.png",
+        "roi": [0.83, 0.0, 0.12, 0.12],
+        "threshold": 0.44,
+        "min_margin": 0.0,
+        "match": "fuzzy",
+        "maturity": "calibration"
+      },
+      "target": {
+        "id": "system_menu",
+        "need_ui": "已开系统菜单：可见角色/背包/製作等；menu=1；勿停製作壳或背包",
+        "signals": { "menu_open": true, "inventory_open": false, "dialog_active": false }
+      }
+    },
+    {
+      "id": "bag",
+      "label": "背包",
+      "kind": "page_entry",
+      "order": 2,
+      "edge_id": "main_hud_bag_inventory",
+      "icon_key": "inventory",
+      "roi_id": null,
+      "locator": {
+        "detector": "template",
+        "template": "knowledge/templates/hud_entries/bag.png",
+        "roi": [0.78, 0.86, 0.14, 0.14],
+        "threshold": 0.50,
+        "min_margin": 0.0,
+        "match": "fuzzy",
+        "maturity": "calibration"
+      },
+      "target": {
+        "id": "inventory",
+        "need_ui": "背包已开：inv=1 且 menu=1；可见背包界面",
+        "signals": { "inventory_open": true, "menu_open": true }
+      }
+    },
+    {
+      "id": "avatar",
+      "label": "头像",
+      "kind": "observe_only",
+      "order": 3,
+      "edge_id": null,
+      "icon_key": null,
+      "roi_id": "hud.portrait",
+      "notes": "主界面头像不作为人物页入口；人物须菜单→角色（见 ui_transition_graph main_hud_avatar_profile forbidden）",
+      "locator": {
+        "detector": "template",
+        "template": "knowledge/templates/hud_entries/avatar.png",
+        "roi": [0.0078, 0.0056, 0.1458, 0.1389],
+        "threshold": 0.78,
+        "min_margin": 0.02,
+        "maturity": "calibration"
+      },
+      "target": {
+        "id": "main_hud",
+        "need_ui": "仍在主界面；头像仅作感知标定，不触发人物页切换",
+        "signals": { "menu_open": false, "profile_open": false }
+      }
+    },
+    {
+      "id": "craft",
+      "label": "制作",
+      "kind": "page_entry",
+      "order": 4,
+      "edge_id": "main_hud_craft_craft_hub",
+      "icon_key": "left_bottom",
+      "roi_id": null,
+      "locator": {
+        "detector": "template",
+        "template": "knowledge/templates/hud_entries/craft.png",
+        "roi": [0.0120, 0.8120, 0.0780, 0.1000],
+        "threshold": 0.78,
+        "min_margin": 0.02,
+        "maturity": "calibration"
+      },
+      "target": {
+        "id": "craft_hub",
+        "need_ui": "已开製作界面；menu=1；勿停菜单根/背包/地图",
+        "signals": { "menu_open": true, "inventory_open": false, "map_open": false, "craft_open": true }
+      }
+    },
+    {
+      "id": "map",
+      "label": "地图",
+      "kind": "page_entry",
+      "order": 5,
+      "edge_id": "main_hud_map_dunbarton",
+      "icon_key": null,
+      "roi_id": "hud.minimap",
+      "locator": {
+        "detector": "template",
+        "template": "knowledge/templates/hud_entries/map.png",
+        "roi": [0.8700, 0.0014, 0.1280, 0.1910],
+        "threshold": 0.78,
+        "min_margin": 0.02,
+        "maturity": "calibration"
+      },
+      "target": {
+        "id": "map_dunbarton",
+        "need_ui": "已开杜巴顿区域地图；可见地图画布。本轮不验奈丽丝头像模板",
+        "signals": { "map_open": true, "menu_open": true, "profile_open": false, "map_type": 2 }
+      }
+    },
+    {
+      "id": "combat",
+      "label": "战斗图标",
+      "kind": "state_control",
+      "order": 6,
+      "edge_id": null,
+      "icon_key": null,
+      "roi_id": null,
+      "click_if": "interactable",
+      "observe": ["combat"],
+      "locator": {
+        "detector": "template",
+        "template": "knowledge/templates/hud_entries/combat.png",
+        "roi": [0.70, 0.55, 0.30, 0.45],
+        "threshold": 0.78,
+        "min_margin": 0.02,
+        "maturity": "calibration"
+      },
+      "target": {
+        "id": "main_hud",
+        "need_ui": "仍在主界面；记录战斗图标点击后的真实结果，不预设页面跳转",
+        "signals": { "menu_open": false }
+      }
+    },
+    {
+      "id": "stop",
+      "label": "停止图标",
+      "kind": "state_control",
+      "order": 7,
+      "edge_id": null,
+      "icon_key": "stop",
+      "roi_id": "hud.travel",
+      "click_if": "interactable",
+      "observe": ["moving"],
+      "locator": {
+        "detector": "template",
+        "template": "knowledge/templates/hud_entries/stop.png",
+        "roi": [0.8995, 0.8667, 0.0833, 0.1090],
+        "maturity": "calibration"
+      },
+      "target": {
+        "id": "main_hud",
+        "need_ui": "仍在主界面；停止图标消失且 moving=0",
+        "signals": { "menu_open": false, "stop_visible": false }
+      }
+    }
+  ]
+}

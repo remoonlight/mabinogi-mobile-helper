@@ -1,0 +1,47 @@
+{
+  "id": "item_mine_銀礦脈",
+  "label": "銀礦脈",
+  "file": "銀礦脈.png",
+  "rel_dir": "knowledge/templates/items/mine",
+  "min_level": 25,
+  "status": "ready",
+  "client_px": {
+    "x": 1082,
+    "y": 1298,
+    "w": 96,
+    "h": 79
+  },
+  "source_frame": "tests/fixtures/process_stance/mine_list_updated_20261006.png",
+  "source_sha256": "384da3300767c9bec5fb0b45b3e2fb5da7e2a345a23cdec858946d8ce100255e",
+  "template_sha256": "bdd83b4308381db32bc37cfbed54babfbfda0cd1eb29951bd29239b446270eed",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "source_window": "tests/fixtures/process_stance/mine_list_updated_20261006_window.png",
+  "source_window_sha256": "185f796ebce414e24c382140031086afdc9a88b54ff25ec72ce269e8f7a93d0b",
+  "source_window_dimensions": [
+    1916,
+    1502
+  ],
+  "client_from_window_px": [
+    2,
+    58,
+    1912,
+    1442
+  ],
+  "transform": "window -> client crop [2,58,1912,1442] -> exact icon crop; no resize",
+  "coordinate_source": "user supplied 2026-10-06 full window; inspected unlocked Lv.25 row; client bounds agree with game_frame dimensions",
+  "evidence": "user attachment codex-clipboard-c3286976-022f-49b1-a335-1d7f7b74d424.png; offline registration only, no live input",
+  "prior_gray_source_frame": "tests/fixtures/process_stance/mine_list_updated_20261005.png",
+  "registration_refinement": {
+    "initial_crop_px": [
+      1082,
+      1298,
+      96,
+      100
+    ],
+    "reason": "initial 100px crop included empty row background below icon and reached protected list edge; retain source icon through row 78, remove background only; no threshold or page guard change",
+    "foreground_last_row_in_initial_crop": 78
+  }
+}

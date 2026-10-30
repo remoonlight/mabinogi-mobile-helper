@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_hoe_馬鈴薯",
+  "label": "馬鈴薯",
+  "file": "馬鈴薯.png",
+  "rel_dir": "knowledge/templates/gather_skill/hoe",
+  "need_ui": "角色-生活技能-鋤地 右栏列表，不要点寻找附近，套住图标+物名「馬鈴薯」",
+  "client_px": {
+    "x": 1080,
+    "y": 892,
+    "w": 239,
+    "h": 102
+  },
+  "role": "page_anchor"
+}

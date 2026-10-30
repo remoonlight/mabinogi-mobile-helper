@@ -1,0 +1,13 @@
+{
+  "id": "profile_tab_career_on",
+  "label": "角色-职业Tab选中",
+  "file": "tab_career_on.png",
+  "rel_dir": "knowledge/templates/profile",
+  "need_ui": "人物界面开着，左侧「职业」Tab 为选中亮态",
+  "client_px": {
+    "x": 56,
+    "y": 831,
+    "w": 80,
+    "h": 80
+  }
+}

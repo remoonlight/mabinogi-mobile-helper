@@ -1,0 +1,13 @@
+{
+  "id": "item_woodcut_粗壮樹",
+  "label": "粗壮樹",
+  "file": "粗壮樹.png",
+  "rel_dir": "knowledge/templates/items/woodcut",
+  "need_ui": "请打开「伐木」详情右栏，套住「粗壮樹」",
+  "client_px": {
+    "x": 1083,
+    "y": 1175,
+    "w": 95,
+    "h": 104
+  }
+}

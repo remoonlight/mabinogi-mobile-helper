@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "insect_items_list_down": {
+    "x": 0.68,
+    "start_y": 0.70,
+    "end_y": 0.36,
+    "list_roi": [0.38, 0.27, 0.59, 0.72],
+    "coordinate_space": "normalized game_frame client area",
+    "source_frame": "tests/fixtures/insect_obtain/items_failed_20261014.png",
+    "source_sha256": "8f99b6de84f2384f0bcda6ec665faa8fa894a03627044d669becb03b502f23d3",
+    "source_dimensions": [1920, 1440],
+    "coordinate_source": "Existing recipe_list_down vertical segment; both endpoints lie inside the observed items grid. Recovery header and high-bandage row prove this first viewport; moved bandage verifies the gesture. Offline layout, live result separately checked.",
+    "direction_source": "2026-10-14 user confirms potion below the first viewport; bottom-to-top gesture pages down",
+    "max_drags": 3,
+    "lower_view_frame": "tests/fixtures/process_stance/craft_process_tab_failed_20261014.png",
+    "progress_source": "Retained lower viewport has 卓越繃帶 before 強化 and full potion labels. Every gesture must independently move its visible pre-target landmark before another is allowed."
+  },
+  "gather_list_down": {
+    "x": 0.78,
+    "start_y": 0.778,
+    "end_y": 0.4672,
+    "second_end_y": 0.60706,
+    "coordinate_space": "normalized game_frame client area",
+    "coordinate_source": "Unchanged existing ITEM_LIST_ROI drag calculation; 2026-10-10 retained client confirms both endpoints inside the right list",
+    "source_frame": "tests/fixtures/process_stance/herb_middle_failed_20261010.png",
+    "source_dimensions": [1920, 1440],
+    "direction_source": "bottom to top to page down; second drag keeps the existing shorter distance"
+  },
+  "recipe_list_down": {
+    "x": 0.68,
+    "start_y": 0.70,
+    "end_y": 0.36,
+    "coordinate_space": "normalized game_frame client area",
+    "source_frame": "tests/fixtures/process_stance/medicine_standalone.png",
+    "source_sha256": "668b50043de7177791982e9b257b20dfe1011a7aa9cbd4a0ee5ccbcc190b9618",
+    "source_dimensions": [1912, 1442],
+    "coordinate_source": "vertical segment inside the observed right recipe grid and FACILITY_LIST_ROI; offline layout inspection, not live drag calibration",
+    "direction_source": "2026-10-09 user: recipe list pages vertically; drag bottom to top to page down"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "continent": "歐拉大陸",
+  "npcs": [
+    {
+      "region": "杜巴頓",
+      "region_aliases": ["杜巴顿", "Dunbarton"],
+      "name": "奈麗絲",
+      "aliases": ["奈丽丝", "Nerys"],
+      "facility_aliases": ["鐵匠铺", "鐵匠鋪", "铁匠铺", "截匠铺", "截匠鋪", "武器店"],
+      "purpose": "repair"
+    }
+  ]
+}

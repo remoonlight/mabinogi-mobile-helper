@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_insect_溫暖的光群",
+  "label": "溫暖的光群",
+  "file": "溫暖的光群.png",
+  "rel_dir": "knowledge/templates/gather_skill/insect",
+  "need_ui": "角色-生活技能-昆蟲採集 右栏列表，不要点寻找附近，套住图标+物名「溫暖的光群」",
+  "client_px": {
+    "x": 1079,
+    "y": 1138,
+    "w": 305,
+    "h": 104
+  },
+  "role": "page_anchor"
+}

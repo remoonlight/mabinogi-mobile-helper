@@ -1,0 +1,15 @@
+{
+  "id": "item_herb_咻咻蘑菇",
+  "label": "咻咻蘑菇",
+  "file": "咻咻蘑菇.png",
+  "rel_dir": "knowledge/templates/items/herb",
+  "need_ui": "请打开「采集药草」详情右栏，套住「咻咻蘑菇」",
+  "client_px": {
+    "x": 1082,
+    "y": 1009,
+    "w": 96,
+    "h": 89
+  },
+  "row_name_template": "咻咻蘑菇_name.png",
+  "image_only": true
+}

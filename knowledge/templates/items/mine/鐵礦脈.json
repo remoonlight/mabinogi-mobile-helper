@@ -1,0 +1,32 @@
+{
+  "id": "item_mine_鐵礦脈",
+  "label": "鐵礦脈",
+  "file": "鐵礦脈.png",
+  "rel_dir": "knowledge/templates/items/mine",
+  "need_ui": "请打开「采矿」详情右栏，套住「鐵礦脈」",
+  "client_px": {
+    "x": 1085,
+    "y": 1042,
+    "w": 96,
+    "h": 95
+  },
+  "row_name_template": "iron_name_20261023.png",
+  "row_name_registration": {
+    "source": "tests/fixtures/life_faults_20261023/mine_list.png",
+    "source_sha256": "810939972ecf0fe73c5e923e6abcfe73b089b1db1578d7a27e4718cc96f6f54a",
+    "source_size": [
+      1919,
+      1440
+    ],
+    "client_px": {
+      "x": 1206,
+      "y": 1062,
+      "w": 132,
+      "h": 50
+    },
+    "transform": "identity crop; no scale, recolor or text synthesis",
+    "template_sha256": "1f9411e9b3f630cd7028309d52aec73913a7c2a52617aa8156f6cadfde0cedac",
+    "capture_manifest": "logs/life_verify_20261001/memory_efficiency/detonator_debug_mine_paused_20261023_capture.json",
+    "runtime_identity": "fresh ready mine stack plus registered icon and full name; existing thresholds unchanged"
+  }
+}

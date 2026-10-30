@@ -1,0 +1,13 @@
+{
+  "id": "item_insect_光群",
+  "label": "光群",
+  "file": "光群.png",
+  "rel_dir": "knowledge/templates/items/insect",
+  "need_ui": "请打开「昆虫采集」详情右栏，套住「光群」",
+  "client_px": {
+    "x": 1082,
+    "y": 889,
+    "w": 99,
+    "h": 98
+  }
+}

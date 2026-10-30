@@ -1,0 +1,25 @@
+{
+  "source_frame": "tests/fixtures/process_stance/herb_list_updated_20261006.png",
+  "source_sha256": "e3c715ae108f63f2ad1f17648cfa4e248e7932f5d4ae7afdb4482ecd3eb5c52f",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "client_px": {
+    "x": 1196,
+    "y": 738,
+    "w": 150,
+    "h": 50
+  },
+  "template_sha256": "fc3fec6d50ea2fffebad27cc6c00012616d79f19499cb90105caf6cba566614c",
+  "source_window": "tests/fixtures/process_stance/herb_list_updated_20261006_window.png",
+  "client_from_window_px": [
+    2,
+    58,
+    1912,
+    1442
+  ],
+  "transform": "source window -> existing client crop -> full name, no resize",
+  "coordinate_source": "retained user original; complete 咻咻蘑菇 text row, distinct from adjacent 躲躲花",
+  "threshold": 0.97
+}

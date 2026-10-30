@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_mine_煤炭礦脈",
+  "label": "煤炭礦脈",
+  "file": "煤炭礦脈.png",
+  "rel_dir": "knowledge/templates/gather_skill/mine",
+  "need_ui": "角色-生活技能-採礦 右栏列表，不要点寻找附近，套住图标+物名「煤炭礦脈」",
+  "client_px": {
+    "x": 1080,
+    "y": 998,
+    "w": 273,
+    "h": 104
+  },
+  "role": "page_anchor"
+}

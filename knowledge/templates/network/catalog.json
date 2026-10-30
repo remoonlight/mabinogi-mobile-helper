@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "label": "網路不穩定。",
+  "source": "logs\\life_fail_shots\\nav_verify_timeout_20261023T234440Z.png",
+  "source_sha256": "63c53820142435e8d1e449c82f7e759567c8905f0ab61d21a44bb5c7307a36c7",
+  "source_size": [
+    1919,
+    1440
+  ],
+  "fixture": "tests\\fixtures\\game_stop\\network_unstable_20261024.png",
+  "fixture_sha256": "63c53820142435e8d1e449c82f7e759567c8905f0ab61d21a44bb5c7307a36c7",
+  "template": "unstable_text.png",
+  "template_sha256": "6abc51c3a1fda008ac7efe918b6fcee3b867837e391fee2d3e04ae6f6981c926",
+  "crop_xywh": [
+    888,
+    140,
+    195,
+    40
+  ],
+  "search_xyxy": [
+    790,
+    112,
+    1140,
+    215
+  ],
+  "anchor": "top center, scaled by client height",
+  "threshold": 0.94,
+  "min_margin": 0.02,
+  "poll_interval_s": 2.0,
+  "transform": "native caption crop; no repaint or OCR reconstruction"
+}

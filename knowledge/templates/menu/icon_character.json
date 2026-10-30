@@ -1,0 +1,13 @@
+{
+  "id": "character",
+  "label": "角色",
+  "file": "icon_character.png",
+  "rel_dir": "knowledge/templates/menu",
+  "need_ui": "请打开系统菜单",
+  "client_px": {
+    "x": 1306,
+    "y": 205,
+    "w": 54,
+    "h": 61
+  }
+}

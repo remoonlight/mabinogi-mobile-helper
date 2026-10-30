@@ -1,0 +1,13 @@
+{
+  "id": "profile_close",
+  "label": "关闭或X",
+  "file": "close.png",
+  "rel_dir": "knowledge/templates/profile",
+  "need_ui": "请打开人物界面，套住关闭/X",
+  "client_px": {
+    "x": 1821,
+    "y": 18,
+    "w": 80,
+    "h": 80
+  }
+}

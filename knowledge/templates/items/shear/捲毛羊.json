@@ -1,0 +1,15 @@
+{
+  "id": "item_shear_捲毛羊",
+  "label": "捲毛羊",
+  "file": "捲毛羊.png",
+  "rel_dir": "knowledge/templates/items/shear",
+  "need_ui": "请打开「剪羊毛」详情右栏，套住「捲毛羊」",
+  "client_px": {
+    "x": 1084,
+    "y": 1032,
+    "w": 99,
+    "h": 104
+  },
+  "row_name_template": "捲毛羊_name.png",
+  "image_only": true
+}

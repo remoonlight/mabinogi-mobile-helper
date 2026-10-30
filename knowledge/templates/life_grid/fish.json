@@ -1,0 +1,13 @@
+{
+  "id": "fish",
+  "label": "釣魚",
+  "file": "fish.png",
+  "rel_dir": "knowledge/templates/life_grid",
+  "need_ui": "生活技能大格仍开着，套住「釣魚」格",
+  "client_px": {
+    "x": 282,
+    "y": 498,
+    "w": 84,
+    "h": 91
+  }
+}

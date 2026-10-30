@@ -1,0 +1,13 @@
+{
+  "id": "item_mine_煤炭礦脈",
+  "label": "煤炭礦脈",
+  "file": "煤炭礦脈.png",
+  "rel_dir": "knowledge/templates/items/mine",
+  "need_ui": "请打开「采矿」详情右栏，套住「煤炭礦脈」",
+  "client_px": {
+    "x": 1083,
+    "y": 1006,
+    "w": 98,
+    "h": 92
+  }
+}

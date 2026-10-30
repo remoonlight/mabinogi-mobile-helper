@@ -1,0 +1,13 @@
+{
+  "id": "item_herb_壯壯蘑菇",
+  "label": "壯壯蘑菇",
+  "file": "壯壯蘑菇.png",
+  "rel_dir": "knowledge/templates/items/herb",
+  "need_ui": "请打开「采集药草」详情右栏，套住「壯壯蘑菇」",
+  "client_px": {
+    "x": 1082,
+    "y": 961,
+    "w": 100,
+    "h": 91
+  }
+}

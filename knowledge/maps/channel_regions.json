@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "note": "ChannelSheetId→中文地区名；world_place_pin --region 站桩。注意：SheetId 可能跨城镇不变，权威地区名以 DisplayName 为准。",
+  "updated": "2026-07-29T12:41:02",
+  "regions": {
+    "75": {
+      "name": "杜巴頓",
+      "pinned_at": "2026-07-29T12:41:02",
+      "sample_xy": [
+        17,
+        -19
+      ],
+      "source": "map_component",
+      "note": "compound_arrive_2026-07-29"
+    }
+  }
+}

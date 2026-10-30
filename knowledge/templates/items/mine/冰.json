@@ -1,0 +1,13 @@
+{
+  "id": "item_mine_冰",
+  "label": "冰",
+  "file": "冰.png",
+  "rel_dir": "knowledge/templates/items/mine",
+  "need_ui": "请打开「采矿」详情右栏，套住「冰」",
+  "client_px": {
+    "x": 1084,
+    "y": 857,
+    "w": 96,
+    "h": 96
+  }
+}

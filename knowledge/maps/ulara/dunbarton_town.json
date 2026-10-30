@@ -1,0 +1,46 @@
+{
+  "region": "杜巴頓",
+  "design_resolution": [
+    1920,
+    1440
+  ],
+  "updated": "2026-07-26T01:16:18",
+  "note": "scan_dunbarton_town drags=8",
+  "count": 2,
+  "facilities": [
+    {
+      "canon": "鐵匠铺",
+      "text": "截匠铺",
+      "nx": 0.3021,
+      "ny": 0.6427,
+      "px": 580,
+      "py": 926,
+      "score": 5.634,
+      "seen_at": "drag5"
+    },
+    {
+      "canon": "雜貨店",
+      "text": "雜貨店",
+      "nx": 0.4086,
+      "ny": 0.4406,
+      "px": 784,
+      "py": 634,
+      "score": 5.535,
+      "seen_at": "drag_scan_2026-07-26"
+    }
+  ],
+  "avatars": [
+    {
+      "canon": "奈麗絲",
+      "facility": "鐵匠铺",
+      "text": "奈麗絲",
+      "nx": 0.4714,
+      "ny": 0.4472,
+      "px": 905,
+      "py": 644,
+      "source": "pin",
+      "verified_card": true,
+      "score": 30.0
+    }
+  ]
+}

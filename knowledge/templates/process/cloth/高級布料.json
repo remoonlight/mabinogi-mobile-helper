@@ -1,0 +1,15 @@
+{
+  "id": "process_cloth_高級布料",
+  "label": "高級布料",
+  "file": "高級布料.png",
+  "rel_dir": "knowledge/templates/process/cloth",
+  "need_ui": "请打开布料加工设施页，列表可见目标行时套住该行（左侧列表，不是详情右栏）：高級布料",
+  "client_px": {
+    "x": 1431,
+    "y": 338,
+    "w": 105,
+    "h": 118
+  },
+  "pending_review": false,
+  "locate_src": "ocr_cht"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "craft_card_medicine",
+  "label": "藥品卡",
+  "file": "card_medicine.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "套住藥品",
+  "client_px": {
+    "x": 296,
+    "y": 740,
+    "w": 237,
+    "h": 224
+  }
+}

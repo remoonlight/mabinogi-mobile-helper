@@ -1,0 +1,13 @@
+{
+  "id": "item_herb_血紅藥草",
+  "label": "血紅藥草",
+  "file": "血紅藥草.png",
+  "rel_dir": "knowledge/templates/items/herb",
+  "need_ui": "请打开「采集药草」详情右栏，套住「血紅藥草」",
+  "client_px": {
+    "x": 1084,
+    "y": 822,
+    "w": 95,
+    "h": 98
+  }
+}

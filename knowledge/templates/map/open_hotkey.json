@@ -1,0 +1,9 @@
+{
+  "template": "knowledge/templates/map/open_hotkey.png",
+  "roi": [0.93, 0.12, 0.07, 0.06],
+  "threshold": 0.85,
+  "min_margin": 0.05,
+  "source": "knowledge/templates/hud_entries/map.png",
+  "source_crop": [173, 163, 27, 27],
+  "calibration": "2026-10-01: existing M control OCR box [175.5,165.5,197,187.5]; original failed HUD independently matches 0.959, center (1870,204). Terrain is excluded."
+}

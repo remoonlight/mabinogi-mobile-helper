@@ -1,0 +1,15 @@
+{
+  "id": "item_fish_海濱釣魚場",
+  "label": "海濱釣魚場",
+  "file": "海濱釣魚場.png",
+  "rel_dir": "knowledge/templates/items/fish",
+  "need_ui": "请打开「钓鱼」详情右栏，套住「海濱釣魚場」",
+  "status": "deferred_level_gray",
+  "defer_reason": "等级未到，列表图标为灰色；解锁后 method B 重采彩色图再验",
+  "client_px": {
+    "x": 1085,
+    "y": 1146,
+    "w": 93,
+    "h": 92
+  }
+}

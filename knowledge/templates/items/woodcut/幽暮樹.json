@@ -1,0 +1,34 @@
+{
+  "id": "item_woodcut_幽暮樹",
+  "label": "幽暮樹",
+  "file": "幽暮樹.png",
+  "rel_dir": "knowledge/templates/items/woodcut",
+  "min_level": 25,
+  "status": "ready",
+  "client_px": {
+    "x": 1087,
+    "y": 1297,
+    "w": 86,
+    "h": 78
+  },
+  "source_frame": "tests/fixtures/process_stance/woodcut_list_updated_20261005.png",
+  "source_sha256": "d187668ca31380edaf3e2d85f71e4cb4cd504b98914e4b0127bd12653bfd787a",
+  "template_sha256": "83295721997640b08a16db1bba9e73612071e02b3fd48556c9d20bcae3760646",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "transform": "exact crop; no resize/registration transform",
+  "coordinate_source": "current full game_frame icon bounds; original inspected before cropping",
+  "evidence": "logs/soybean_20261003/training_20261005_woodcut.json",
+  "previous_crop": {
+    "client_px": {
+      "x": 1082,
+      "y": 1286,
+      "w": 96,
+      "h": 100
+    },
+    "template_sha256": "d1a9ab8a3d47b32b568cd008f152202d7e5fc253e93f3b792e5f94908c9b410c",
+    "retained_preview": "logs/soybean_20261003/training_20261005_woodcut_crop.png"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "module": "GameAssembly.dll",
+  "process": "MabinogiMobile.exe",
+  "shm_name": "Local\\mm_assist_unity_input_hook",
+  "magic": "MMIH",
+  "coord_space": "client_px_to_unity_bottom_left",
+  "primary": "nxp_input",
+  "hooks": {
+    "nxp_get_mouse_button_down": { "rva": "0x612D0C0", "name": "NPA.InputControl.NXPInput::GetMouseButtonDown" },
+    "nxp_get_mouse_button": { "rva": "0x612D1C0", "name": "NPA.InputControl.NXPInput::GetMouseButton" },
+    "nxp_get_mouse_button_up": { "rva": "0x612D140", "name": "NPA.InputControl.NXPInput::GetMouseButtonUp" },
+    "nxp_get_mouse_position": { "rva": "0x612D750", "name": "NPA.InputControl.NXPInput::get_mousePosition" },
+    "ue_get_mouse_button_down": { "rva": "0x64A2930", "name": "UnityEngine.Input::GetMouseButtonDown" },
+    "ue_get_mouse_button": { "rva": "0x64A29B0", "name": "UnityEngine.Input::GetMouseButton" },
+    "ue_get_mouse_button_up": { "rva": "0x64A2970", "name": "UnityEngine.Input::GetMouseButtonUp" }
+  },
+  "dll_relpath": "native/unity_input_hook/bin/unity_input_hook.dll",
+  "updated": "2026-07-29"
+}

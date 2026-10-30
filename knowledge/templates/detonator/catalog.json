@@ -1,0 +1,1063 @@
+{
+  "schema": "detonator_route_v1",
+  "dimensions": [
+    [
+      1919,
+      1440
+    ]
+  ],
+  "sources": {
+    "recipe_list": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_recipe_list_20261023_20261023T025341Z.png",
+      "sha256": "14918dcd626827a6e07ce0d20f31a6353c6a785c798c6edccb8575dbd5741cd0",
+      "manifest": "logs/life_verify_20261001/memory_efficiency/detonator_recipe_list_20261023_capture.json",
+      "stack": {
+        "names": [
+          "CraftingHubPopupUIInstance",
+          "AlteringFacilityPopupUIInstance"
+        ],
+        "line": "加工设施 > 制作壳",
+        "n": 2,
+        "error": "",
+        "stacking": 1522461368800,
+        "ready": true,
+        "craft_category": null,
+        "craft_current_category": null,
+        "craft_identity": null,
+        "profile_category": null,
+        "profile_identity": null,
+        "map_identity": null,
+        "map_view": null,
+        "sampled_ts": 1792724021.8860607,
+        "empty_confirmed": false,
+        "cost_ms": {
+          "cached": 0.0,
+          "ensure_ms": 0.0,
+          "ensure_stacks_ms": 0.0,
+          "state_ms": 0.0,
+          "players_ms": 2.5,
+          "overlay_rescan_ms": 0.0,
+          "inner_ms": 5.1,
+          "lock_wait_ms": 0.0,
+          "total_ms": 241.9
+        },
+        "process_identity": {
+          "pid": 58268,
+          "birth": 134371904004742725,
+          "module_base": 140715610931200,
+          "build_id": "tw-20260930-1675c213",
+          "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+          "module_paths": {
+            "GameAssembly.dll": [
+              140715610931200,
+              "<client_dir>\\GameAssembly.dll"
+            ],
+            "UnityPlayer.dll": [
+              140717007765504,
+              "<client_dir>\\UnityPlayer.dll"
+            ]
+          },
+          "files": {
+            "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+            "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+            "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+          },
+          "verified": true,
+          "reason": "verified"
+        }
+      },
+      "dimensions": [
+        1919,
+        1440
+      ]
+    },
+    "recipe": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_recipe_20261023_20261023T023643Z.png",
+      "sha256": "0c4cc1269fd96bd2cf2651f8709f332812a4afe7476fa6db0a6c749f85268964",
+      "manifest": "logs/life_verify_20261001/memory_efficiency/detonator_route_20261023_capture.json",
+      "stack": {
+        "names": [
+          "CraftingHubPopupUIInstance",
+          "AlteringFacilityPopupUIInstance",
+          "AlteringPanelPopupUIInstance"
+        ],
+        "line": "加工配方 > 加工设施 > 制作壳",
+        "n": 3,
+        "error": "",
+        "stacking": 1522461368800,
+        "ready": true,
+        "craft_category": null,
+        "craft_current_category": null,
+        "craft_identity": null,
+        "profile_category": null,
+        "profile_identity": null,
+        "map_identity": null,
+        "map_view": null,
+        "sampled_ts": 1792723004.0914059,
+        "empty_confirmed": false,
+        "cost_ms": {
+          "cached": 0.0,
+          "ensure_ms": 0.0,
+          "ensure_stacks_ms": 0.0,
+          "state_ms": 0.0,
+          "players_ms": 2.8,
+          "overlay_rescan_ms": 0.0,
+          "inner_ms": 8.0,
+          "lock_wait_ms": 0.0,
+          "total_ms": 273.5
+        },
+        "process_identity": {
+          "pid": 58268,
+          "birth": 134371904004742725,
+          "module_base": 140715610931200,
+          "build_id": "tw-20260930-1675c213",
+          "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+          "module_paths": {
+            "GameAssembly.dll": [
+              140715610931200,
+              "<client_dir>\\GameAssembly.dll"
+            ],
+            "UnityPlayer.dll": [
+              140717007765504,
+              "<client_dir>\\UnityPlayer.dll"
+            ]
+          },
+          "files": {
+            "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+            "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+            "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+          },
+          "verified": true,
+          "reason": "verified"
+        }
+      },
+      "dimensions": [
+        1919,
+        1440
+      ]
+    },
+    "herb_card": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_herb_card_20261023_20261023T024138Z.png",
+      "sha256": "d997f508316400e6a9156397b2774cbee73a5795f229de0b125bd2fad5e688e9",
+      "manifest": "logs/life_verify_20261001/memory_efficiency/detonator_herb_card_20261023_capture.json",
+      "stack": {
+        "names": [
+          "CraftingHubPopupUIInstance",
+          "AlteringFacilityPopupUIInstance",
+          "AlteringPanelPopupUIInstance",
+          "DetailCardUIInstance"
+        ],
+        "line": "物品详情 > 加工配方 > 加工设施 > 制作壳",
+        "n": 4,
+        "error": "",
+        "stacking": 1522461368800,
+        "ready": true,
+        "craft_category": null,
+        "craft_current_category": null,
+        "craft_identity": null,
+        "profile_category": null,
+        "profile_identity": null,
+        "map_identity": null,
+        "map_view": null,
+        "sampled_ts": 1792723298.467826,
+        "empty_confirmed": false,
+        "cost_ms": {
+          "cached": 0.0,
+          "ensure_ms": 0.0,
+          "ensure_stacks_ms": 0.0,
+          "state_ms": 0.0,
+          "players_ms": 3.1,
+          "overlay_rescan_ms": 0.0,
+          "inner_ms": 8.9,
+          "lock_wait_ms": 0.0,
+          "total_ms": 265.1
+        },
+        "process_identity": {
+          "pid": 58268,
+          "birth": 134371904004742725,
+          "module_base": 140715610931200,
+          "build_id": "tw-20260930-1675c213",
+          "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+          "module_paths": {
+            "GameAssembly.dll": [
+              140715610931200,
+              "<client_dir>\\GameAssembly.dll"
+            ],
+            "UnityPlayer.dll": [
+              140717007765504,
+              "<client_dir>\\UnityPlayer.dll"
+            ]
+          },
+          "files": {
+            "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+            "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+            "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+          },
+          "verified": true,
+          "reason": "verified"
+        }
+      },
+      "dimensions": [
+        1919,
+        1440
+      ]
+    },
+    "herb_obtain": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_herb_obtain_20261023_20261023T024321Z.png",
+      "sha256": "b44b048fe2e84f5f38bf34c2c4bb7089d9d5cb14e3bf1168617e3722af2573ae",
+      "manifest": "logs/life_verify_20261001/memory_efficiency/detonator_herb_obtain_20261023_capture.json",
+      "stack": {
+        "names": [
+          "CraftingHubPopupUIInstance",
+          "AlteringFacilityPopupUIInstance",
+          "AlteringPanelPopupUIInstance",
+          "DetailCardUIInstance",
+          "HowToGetSelectUIInstance"
+        ],
+        "line": "HowToGetSelectUIInstance > 物品详情 > 加工配方 > 加工设施 > 制作壳",
+        "n": 5,
+        "error": "",
+        "stacking": 1522461368800,
+        "ready": true,
+        "craft_category": null,
+        "craft_current_category": null,
+        "craft_identity": null,
+        "profile_category": null,
+        "profile_identity": null,
+        "map_identity": null,
+        "map_view": null,
+        "sampled_ts": 1792723401.95627,
+        "empty_confirmed": false,
+        "cost_ms": {
+          "cached": 0.0,
+          "ensure_ms": 0.0,
+          "ensure_stacks_ms": 0.0,
+          "state_ms": 0.0,
+          "players_ms": 3.3,
+          "overlay_rescan_ms": 0.0,
+          "inner_ms": 6.7,
+          "lock_wait_ms": 0.0,
+          "total_ms": 235.6
+        },
+        "process_identity": {
+          "pid": 58268,
+          "birth": 134371904004742725,
+          "module_base": 140715610931200,
+          "build_id": "tw-20260930-1675c213",
+          "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+          "module_paths": {
+            "GameAssembly.dll": [
+              140715610931200,
+              "<client_dir>\\GameAssembly.dll"
+            ],
+            "UnityPlayer.dll": [
+              140717007765504,
+              "<client_dir>\\UnityPlayer.dll"
+            ]
+          },
+          "files": {
+            "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+            "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+            "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+          },
+          "verified": true,
+          "reason": "verified"
+        }
+      },
+      "dimensions": [
+        1919,
+        1440
+      ]
+    },
+    "stone_card": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_stone_card_20261023_20261023T024414Z.png",
+      "sha256": "46d7de90a1571280f44a0c9483fb6017803476d96f6fcd5d4a44f9b361ee1a39",
+      "manifest": "logs/life_verify_20261001/memory_efficiency/detonator_stone_card_20261023_capture.json",
+      "stack": {
+        "names": [
+          "CraftingHubPopupUIInstance",
+          "AlteringFacilityPopupUIInstance",
+          "AlteringPanelPopupUIInstance",
+          "DetailCardUIInstance"
+        ],
+        "line": "物品详情 > 加工配方 > 加工设施 > 制作壳",
+        "n": 4,
+        "error": "",
+        "stacking": 1522461368800,
+        "ready": true,
+        "craft_category": null,
+        "craft_current_category": null,
+        "craft_identity": null,
+        "profile_category": null,
+        "profile_identity": null,
+        "map_identity": null,
+        "map_view": null,
+        "sampled_ts": 1792723454.4084938,
+        "empty_confirmed": false,
+        "cost_ms": {
+          "cached": 0.0,
+          "ensure_ms": 0.0,
+          "ensure_stacks_ms": 0.0,
+          "state_ms": 0.0,
+          "players_ms": 2.8,
+          "overlay_rescan_ms": 0.0,
+          "inner_ms": 9.1,
+          "lock_wait_ms": 0.0,
+          "total_ms": 251.9
+        },
+        "process_identity": {
+          "pid": 58268,
+          "birth": 134371904004742725,
+          "module_base": 140715610931200,
+          "build_id": "tw-20260930-1675c213",
+          "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+          "module_paths": {
+            "GameAssembly.dll": [
+              140715610931200,
+              "<client_dir>\\GameAssembly.dll"
+            ],
+            "UnityPlayer.dll": [
+              140717007765504,
+              "<client_dir>\\UnityPlayer.dll"
+            ]
+          },
+          "files": {
+            "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+            "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+            "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+          },
+          "verified": true,
+          "reason": "verified"
+        }
+      },
+      "dimensions": [
+        1919,
+        1440
+      ]
+    },
+    "stone_obtain": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_stone_obtain_20261023_20261023T024545Z.png",
+      "sha256": "531f1cf0ac33babff0975f55f57b107f6b85a76119c20a1563f71169abdb9d69",
+      "manifest": "logs/life_verify_20261001/memory_efficiency/detonator_stone_obtain_20261023_capture.json",
+      "stack": {
+        "names": [
+          "CraftingHubPopupUIInstance",
+          "AlteringFacilityPopupUIInstance",
+          "AlteringPanelPopupUIInstance",
+          "DetailCardUIInstance",
+          "HowToGetSelectUIInstance"
+        ],
+        "line": "HowToGetSelectUIInstance > 物品详情 > 加工配方 > 加工设施 > 制作壳",
+        "n": 5,
+        "error": "",
+        "stacking": 1522461368800,
+        "ready": true,
+        "craft_category": null,
+        "craft_current_category": null,
+        "craft_identity": null,
+        "profile_category": null,
+        "profile_identity": null,
+        "map_identity": null,
+        "map_view": null,
+        "sampled_ts": 1792723545.2294314,
+        "empty_confirmed": false,
+        "cost_ms": {
+          "cached": 0.0,
+          "ensure_ms": 0.0,
+          "ensure_stacks_ms": 0.0,
+          "state_ms": 0.0,
+          "players_ms": 4.8,
+          "overlay_rescan_ms": 0.0,
+          "inner_ms": 10.3,
+          "lock_wait_ms": 0.0,
+          "total_ms": 282.6
+        },
+        "process_identity": {
+          "pid": 58268,
+          "birth": 134371904004742725,
+          "module_base": 140715610931200,
+          "build_id": "tw-20260930-1675c213",
+          "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+          "module_paths": {
+            "GameAssembly.dll": [
+              140715610931200,
+              "<client_dir>\\GameAssembly.dll"
+            ],
+            "UnityPlayer.dll": [
+              140717007765504,
+              "<client_dir>\\UnityPlayer.dll"
+            ]
+          },
+          "files": {
+            "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+            "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+            "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+          },
+          "verified": true,
+          "reason": "verified"
+        }
+      },
+      "dimensions": [
+        1919,
+        1440
+      ]
+    },
+    "moss_card": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_moss_card_20261023_20261023T024817Z.png",
+      "sha256": "d8775966799fdd673ab10e6e25df59f063a5dd1ae9eed3f7d8775352554b45f9",
+      "manifest": "logs/life_verify_20261001/memory_efficiency/detonator_moss_card_20261023_capture.json",
+      "stack": {
+        "names": [
+          "CraftingHubPopupUIInstance",
+          "AlteringFacilityPopupUIInstance",
+          "AlteringPanelPopupUIInstance",
+          "DetailCardUIInstance"
+        ],
+        "line": "物品详情 > 加工配方 > 加工设施 > 制作壳",
+        "n": 4,
+        "error": "",
+        "stacking": 1522461368800,
+        "ready": true,
+        "craft_category": null,
+        "craft_current_category": null,
+        "craft_identity": null,
+        "profile_category": null,
+        "profile_identity": null,
+        "map_identity": null,
+        "map_view": null,
+        "sampled_ts": 1792723698.023802,
+        "empty_confirmed": false,
+        "cost_ms": {
+          "cached": 0.0,
+          "ensure_ms": 0.0,
+          "ensure_stacks_ms": 0.0,
+          "state_ms": 0.0,
+          "players_ms": 6.4,
+          "overlay_rescan_ms": 0.0,
+          "inner_ms": 12.7,
+          "lock_wait_ms": 0.0,
+          "total_ms": 238.8
+        },
+        "process_identity": {
+          "pid": 58268,
+          "birth": 134371904004742725,
+          "module_base": 140715610931200,
+          "build_id": "tw-20260930-1675c213",
+          "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+          "module_paths": {
+            "GameAssembly.dll": [
+              140715610931200,
+              "<client_dir>\\GameAssembly.dll"
+            ],
+            "UnityPlayer.dll": [
+              140717007765504,
+              "<client_dir>\\UnityPlayer.dll"
+            ]
+          },
+          "files": {
+            "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+            "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+            "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+          },
+          "verified": true,
+          "reason": "verified"
+        }
+      },
+      "dimensions": [
+        1919,
+        1440
+      ]
+    },
+    "moss_obtain": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_moss_obtain_20261023_20261023T024931Z.png",
+      "sha256": "991d8607e134f4702c778d23215e7c9dfee5b6ce0dffa8e4888d43d8ce0574f3",
+      "manifest": "logs/life_verify_20261001/memory_efficiency/detonator_moss_obtain_20261023_capture.json",
+      "stack": {
+        "names": [
+          "CraftingHubPopupUIInstance",
+          "AlteringFacilityPopupUIInstance",
+          "AlteringPanelPopupUIInstance",
+          "DetailCardUIInstance",
+          "HowToGetSelectUIInstance"
+        ],
+        "line": "HowToGetSelectUIInstance > 物品详情 > 加工配方 > 加工设施 > 制作壳",
+        "n": 5,
+        "error": "",
+        "stacking": 1522461368800,
+        "ready": true,
+        "craft_category": null,
+        "craft_current_category": null,
+        "craft_identity": null,
+        "profile_category": null,
+        "profile_identity": null,
+        "map_identity": null,
+        "map_view": null,
+        "sampled_ts": 1792723771.2654738,
+        "empty_confirmed": false,
+        "cost_ms": {
+          "cached": 0.0,
+          "ensure_ms": 0.0,
+          "ensure_stacks_ms": 0.0,
+          "state_ms": 0.0,
+          "players_ms": 5.5,
+          "overlay_rescan_ms": 0.2,
+          "inner_ms": 6.4,
+          "lock_wait_ms": 0.0,
+          "total_ms": 253.1
+        },
+        "process_identity": {
+          "pid": 58268,
+          "birth": 134371904004742725,
+          "module_base": 140715610931200,
+          "build_id": "tw-20260930-1675c213",
+          "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+          "module_paths": {
+            "GameAssembly.dll": [
+              140715610931200,
+              "<client_dir>\\GameAssembly.dll"
+            ],
+            "UnityPlayer.dll": [
+              140717007765504,
+              "<client_dir>\\UnityPlayer.dll"
+            ]
+          },
+          "files": {
+            "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+            "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+            "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+          },
+          "verified": true,
+          "reason": "verified"
+        }
+      },
+      "dimensions": [
+        1919,
+        1440
+      ]
+    },
+    "recipe_moss_glow_20261023": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_phase_probe_frames_1_20261023T060657Z.png",
+      "sha256": "3a850f7159a655aba520f367827d9cca4e49f78937bef702e1489a5b6c293a88",
+      "probe": "logs/life_verify_20261001/memory_efficiency/debug_detonator_phase_probe_frames_20261023.json",
+      "probe_index": 1,
+      "dimensions": [
+        1919,
+        1440
+      ],
+      "stack": {
+        "names": [
+          "HudUIStepState",
+          "CraftingHubUIState",
+          "TutorialTooltipUIState",
+          "CraftingHubPopupUIInstance",
+          "AlteringFacilityPopupUIInstance",
+          "AlteringPanelPopupUIInstance"
+        ],
+        "ready": true,
+        "sampled_ts": 1792735617.381632
+      },
+      "watch_pid": 73828,
+      "run_started_at": 1792735260.838967,
+      "note": "Readonly paused p3; unchanged raw native frame; current known stack. Retains original icon and matching gates."
+    },
+    "recipe_moss_glow_0_20261023": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_phase_probe_frames_0_20261023T060653Z.png",
+      "sha256": "e6227b207d0f6b1096a0d9c6662b5c62ba348e59b1b0eaaefb250588464831cd",
+      "probe": "logs/life_verify_20261001/memory_efficiency/debug_detonator_phase_probe_frames_20261023.json",
+      "probe_index": 0,
+      "dimensions": [
+        1919,
+        1440
+      ],
+      "stack": {
+        "names": [],
+        "ready": false,
+        "sampled_ts": 0.0
+      },
+      "watch_pid": 73828,
+      "run_started_at": 1792735260.838967,
+      "note": "Readonly paused p3 native image. Cold child stack unready at this sample; pixel registration only, no input readiness inferred. Runtime still requires its own ready fresh parent stack."
+    },
+    "standalone_recipe_20261023": {
+      "file": "logs/life_verify_20261001/memory_efficiency/detonator_standalone_recipe_20261023_20261023_20261023T064204Z.png",
+      "sha256": "578adfe3a5bea3b19ef3d4cb1eb04c2ec64f1218eb928062674dac024e13070f",
+      "manifest": "logs/life_verify_20261001/memory_efficiency/detonator_standalone_recipe_20261023_20261023_capture.json",
+      "stack": {
+        "names": [
+          "AlteringFacilityPopupUIInstance",
+          "AlteringPanelPopupUIInstance"
+        ],
+        "line": "加工配方 > 加工设施",
+        "n": 2,
+        "error": "",
+        "stacking": 1522461368800,
+        "ready": true,
+        "craft_category": null,
+        "craft_current_category": null,
+        "craft_identity": null,
+        "profile_category": null,
+        "profile_identity": null,
+        "map_identity": null,
+        "map_view": null,
+        "sampled_ts": 1792737725.115344,
+        "empty_confirmed": false,
+        "cost_ms": {
+          "cached": 0.0,
+          "ensure_ms": 0.0,
+          "ensure_stacks_ms": 0.0,
+          "state_ms": 0.0,
+          "players_ms": 2.7,
+          "overlay_rescan_ms": 0.0,
+          "inner_ms": 2.8,
+          "lock_wait_ms": 0.0,
+          "total_ms": 219.5
+        },
+        "process_identity": {
+          "pid": 58268,
+          "birth": 134371904004742725,
+          "module_base": 140715610931200,
+          "build_id": "tw-20260930-1675c213",
+          "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+          "module_paths": {
+            "GameAssembly.dll": [
+              140715610931200,
+              "<client_dir>\\GameAssembly.dll"
+            ],
+            "UnityPlayer.dll": [
+              140717007765504,
+              "<client_dir>\\UnityPlayer.dll"
+            ]
+          },
+          "files": {
+            "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+            "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+            "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+          },
+          "verified": true,
+          "reason": "verified"
+        }
+      },
+      "dimensions": [
+        1919,
+        1440
+      ],
+      "watch_pid": 68816,
+      "run_started_at": 1792737373.4248767,
+      "method": "B; user positioned after physical facility navigation pause; raw pixels unchanged"
+    }
+  },
+  "rows": {
+    "recipe_list_label": {
+      "file": "recipe_list_label.png",
+      "source": "recipe_list",
+      "crop": [
+        1626,
+        741,
+        130,
+        30
+      ],
+      "roi": [
+        0.38,
+        0.06,
+        0.6,
+        0.78
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "a04c6410a0081cf323c4406635b855322f088d57d526aad9b7e8b0331ad1004c"
+    },
+    "recipe_title": {
+      "file": "recipe_title.png",
+      "source": "recipe",
+      "crop": [
+        1230,
+        720,
+        180,
+        42
+      ],
+      "roi": [
+        0.62,
+        0.47,
+        0.3,
+        0.09
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "590903d16261d6fce5215b2fff1a1748c9e3a7d387bbef3e0139abf80a49ac5d"
+    },
+    "stone_material": {
+      "file": "stone_material.png",
+      "source": "recipe",
+      "crop": [
+        1275,
+        1050,
+        48,
+        45
+      ],
+      "roi": [
+        0.63,
+        0.72,
+        0.3,
+        0.1
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "195c18268ef0b2bd0464e5fd274b82e234f49c05d751122b43679fa4b22b76c1"
+    },
+    "herb_material": {
+      "file": "herb_material.png",
+      "source": "recipe",
+      "crop": [
+        1426,
+        1050,
+        48,
+        45
+      ],
+      "roi": [
+        0.63,
+        0.72,
+        0.3,
+        0.1
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "110cc65f1ef39bca84f803623ef1de5fd9ccf29d49ed71c799ca4098b4ea24b9"
+    },
+    "moss_material": {
+      "file": "moss_material.png",
+      "source": "recipe",
+      "crop": [
+        1580,
+        1050,
+        48,
+        45
+      ],
+      "roi": [
+        0.63,
+        0.72,
+        0.3,
+        0.1
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "1971783ba02ea4b5b8af90d07dd83f3f414c0938cf23f46e9cbf8a6af5b5f37b",
+      "variants": [
+        {
+          "file": "moss_material_glow_20261023.png",
+          "source": "recipe_moss_glow_20261023",
+          "crop": [
+            1580,
+            1050,
+            48,
+            45
+          ],
+          "sha256": "e87cc0cb5c52b8a0638fb2552e4a097d2464fa239047754bb4a7b2ce7b5d776a"
+        },
+        {
+          "file": "moss_material_glow_0_20261023.png",
+          "source": "recipe_moss_glow_0_20261023",
+          "crop": [
+            1580,
+            1050,
+            48,
+            45
+          ],
+          "sha256": "9bb54a7f0570e4bdadfdb867fc89641be33df392b104efee531c9d5eac81b30a"
+        },
+        {
+          "file": "moss_material_core_20261023.png",
+          "source": "standalone_recipe_20261023",
+          "crop": [
+            1592,
+            1070,
+            24,
+            23
+          ],
+          "sha256": "3b68c625b004ec6369d5e9be469204cd1d86075510623daa4b76b1e4dd4b5cd8",
+          "require_rows": [
+            "moss_material_name"
+          ],
+          "anchor_offset": [
+            0,
+            -9
+          ],
+          "anchor_source": {
+            "row": "moss_material",
+            "point": [
+              1604,
+              1072
+            ],
+            "note": "same retained icon center; core center1604,1081 offset0,-9; name is an additional identity check, never a click point"
+          }
+        }
+      ]
+    },
+    "herb_card_title": {
+      "file": "herb_card_title.png",
+      "source": "herb_card",
+      "crop": [
+        680,
+        469,
+        160,
+        40
+      ],
+      "roi": [
+        0.32,
+        0.26,
+        0.35,
+        0.2
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "cc4cffee6d4ec6af6a8724200482e50319d1b76dbba7fb8ddb807f7bfd5a54ca"
+    },
+    "herb_obtain_button": {
+      "file": "herb_obtain_button.png",
+      "source": "herb_card",
+      "crop": [
+        680,
+        934,
+        135,
+        34
+      ],
+      "roi": [
+        0.34,
+        0.6,
+        0.15,
+        0.13
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "cec5890058fa543a1a0216f4d4c24ff294a2b745f99d414b3dcc39ad9834fbb6"
+    },
+    "obtain_header": {
+      "file": "obtain_header.png",
+      "source": "herb_obtain",
+      "crop": [
+        1062,
+        187,
+        130,
+        36
+      ],
+      "roi": [
+        0.55,
+        0.1,
+        0.2,
+        0.1
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "2759508f0f638e1cbdbe6d6b5cd7c0ccf4c46ae7f2ecf369c1674ffff50deeb8"
+    },
+    "herb_method_title": {
+      "file": "herb_method_title.png",
+      "source": "herb_obtain",
+      "crop": [
+        680,
+        469,
+        160,
+        40
+      ],
+      "roi": [
+        0.32,
+        0.26,
+        0.35,
+        0.2
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "f22e69249caceed57bf70c1eddd54d299a91abbccf67ebdbb315a87637f05b64"
+    },
+    "herb_first": {
+      "file": "herb_first.png",
+      "source": "herb_obtain",
+      "crop": [
+        1162,
+        326,
+        136,
+        36
+      ],
+      "roi": [
+        0.55,
+        0.2,
+        0.38,
+        0.08
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "ab55de71a661d8fef8ef46f14d9f9c6dc522cce7d4246cf7ecbe34d2a823af9d"
+    },
+    "stone_card_title": {
+      "file": "stone_card_title.png",
+      "source": "stone_card",
+      "crop": [
+        680,
+        523,
+        270,
+        42
+      ],
+      "roi": [
+        0.32,
+        0.26,
+        0.35,
+        0.2
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "edf5c63b1c70c494c1f38dd2359f0bd2a62faf942f06f0d35a3396a7621b7f01"
+    },
+    "stone_obtain_button": {
+      "file": "stone_obtain_button.png",
+      "source": "stone_card",
+      "crop": [
+        680,
+        881,
+        135,
+        34
+      ],
+      "roi": [
+        0.34,
+        0.6,
+        0.15,
+        0.13
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "55f78f1e0278f7bb68a6d00f3cbd398e35aa46d58ef90cef01e2626fffb243a5"
+    },
+    "stone_method_title": {
+      "file": "stone_method_title.png",
+      "source": "stone_obtain",
+      "crop": [
+        680,
+        523,
+        270,
+        42
+      ],
+      "roi": [
+        0.32,
+        0.26,
+        0.35,
+        0.2
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "16161c8c49be2e672c786a7041ffaf64ca8dd89aa9255d62b854953f752e156b"
+    },
+    "stone_first": {
+      "file": "stone_first.png",
+      "source": "stone_obtain",
+      "crop": [
+        1162,
+        326,
+        68,
+        36
+      ],
+      "roi": [
+        0.55,
+        0.2,
+        0.38,
+        0.08
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "22cc91caa775c5fd9a5d79ca81c53f76a3674f897f9259a10df1a3ae20598e10"
+    },
+    "moss_card_title": {
+      "file": "moss_card_title.png",
+      "source": "moss_card",
+      "crop": [
+        680,
+        523,
+        300,
+        42
+      ],
+      "roi": [
+        0.32,
+        0.26,
+        0.35,
+        0.2
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "4cf1d9e080ce732872b9b4809f5d979f7c5582c5f3411ec91972abcc7d5cc290"
+    },
+    "moss_obtain_button": {
+      "file": "moss_obtain_button.png",
+      "source": "moss_card",
+      "crop": [
+        680,
+        881,
+        135,
+        34
+      ],
+      "roi": [
+        0.34,
+        0.6,
+        0.15,
+        0.13
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "55f78f1e0278f7bb68a6d00f3cbd398e35aa46d58ef90cef01e2626fffb243a5"
+    },
+    "moss_method_title": {
+      "file": "moss_method_title.png",
+      "source": "moss_obtain",
+      "crop": [
+        680,
+        523,
+        300,
+        42
+      ],
+      "roi": [
+        0.32,
+        0.26,
+        0.35,
+        0.2
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "fa2e7235f706f712c8526c978d582ed9de95bfaf0aec7fa3e31626305c8d0536"
+    },
+    "moss_first": {
+      "file": "moss_first.png",
+      "source": "moss_obtain",
+      "crop": [
+        1162,
+        326,
+        145,
+        36
+      ],
+      "roi": [
+        0.55,
+        0.2,
+        0.38,
+        0.08
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02,
+      "sha256": "3c49767d9a28ece36a02d085be95aec7aeae3c71561c2d98e3b6722f2891f641"
+    },
+    "moss_material_name": {
+      "file": "moss_material_name_20261023.png",
+      "source": "standalone_recipe_20261023",
+      "crop": [
+        1538,
+        1140,
+        135,
+        50
+      ],
+      "sha256": "23bff05ea9ba6e3c5fe02330ea25f06047391fee809339e9d8f3494af0df19c7",
+      "roi": [
+        0.79,
+        0.79,
+        0.12,
+        0.06
+      ],
+      "threshold": 0.94,
+      "min_margin": 0.02
+    }
+  },
+  "note": "Native crops from user-positioned method-B frames; registration is not business acceptance."
+}

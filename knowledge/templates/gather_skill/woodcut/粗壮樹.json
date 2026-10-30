@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_woodcut_粗壮樹",
+  "label": "粗壮樹",
+  "file": "粗壮樹.png",
+  "rel_dir": "knowledge/templates/gather_skill/woodcut",
+  "need_ui": "角色-生活技能-伐木 右栏列表，不要点寻找附近，套住图标+物名「粗壮樹」",
+  "client_px": {
+    "x": 1080,
+    "y": 1172,
+    "w": 239,
+    "h": 108
+  },
+  "role": "page_anchor"
+}

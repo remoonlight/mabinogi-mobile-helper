@@ -1,0 +1,13 @@
+{
+  "id": "craft_hub_close",
+  "label": "枢纽右上X",
+  "file": "close_x.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "请打开制作加工枢纽，套住右上 X",
+  "client_px": {
+    "x": 1822,
+    "y": 16,
+    "w": 80,
+    "h": 80
+  }
+}

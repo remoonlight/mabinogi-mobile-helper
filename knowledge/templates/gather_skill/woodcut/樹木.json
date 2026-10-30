@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_woodcut_樹木",
+  "label": "樹木",
+  "file": "樹木.png",
+  "rel_dir": "knowledge/templates/gather_skill/woodcut",
+  "need_ui": "角色-生活技能-伐木 右栏列表，不要点寻找附近，套住图标+物名「樹木」",
+  "client_px": {
+    "x": 1077,
+    "y": 891,
+    "w": 226,
+    "h": 101
+  },
+  "role": "page_anchor"
+}

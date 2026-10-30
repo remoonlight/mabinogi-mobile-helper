@@ -1,0 +1,13 @@
+{
+  "id": "item_daily_蜘蛛網",
+  "label": "蜘蛛網",
+  "file": "蜘蛛網.png",
+  "rel_dir": "knowledge/templates/items/daily",
+  "need_ui": "请打开「日常採集」详情右栏，套住「蜘蛛網」",
+  "client_px": {
+    "x": 1085,
+    "y": 1039,
+    "w": 92,
+    "h": 95
+  }
+}

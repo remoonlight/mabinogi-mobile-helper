@@ -1,0 +1,24 @@
+{
+  "id": "item_herb_傷痕花",
+  "label": "傷痕花",
+  "file": "傷痕花.png",
+  "rel_dir": "knowledge/templates/items/herb",
+  "min_level": 20,
+  "status": "ready",
+  "client_px": {
+    "x": 1082,
+    "y": 1143,
+    "w": 96,
+    "h": 100
+  },
+  "source_frame": "tests/fixtures/process_stance/herb_list_updated_20261005.png",
+  "source_sha256": "6215e9dbfb5519d62855ff07c7c98aca51fa2fcb90d2e5f38be75c8ae3d663cb",
+  "template_sha256": "e50945883be1d580a065ccace1bad5fd680afad2c9313516d26f9f46469b3036",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "transform": "exact crop; no resize/registration transform",
+  "coordinate_source": "current full game_frame icon bounds; original inspected before cropping",
+  "evidence": "logs/soybean_20261003/training_20261005_herb.json"
+}

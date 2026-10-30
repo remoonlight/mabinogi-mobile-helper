@@ -1,0 +1,13 @@
+{
+  "id": "craft_card_leather",
+  "label": "皮革卡",
+  "file": "card_leather.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "套住皮革",
+  "client_px": {
+    "x": 1127,
+    "y": 135,
+    "w": 240,
+    "h": 236
+  }
+}

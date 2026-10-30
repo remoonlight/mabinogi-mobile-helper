@@ -1,0 +1,13 @@
+{
+  "id": "gather_detail_close",
+  "label": "关闭详情",
+  "file": "close.png",
+  "rel_dir": "knowledge/templates/gather_detail",
+  "need_ui": "请打开某个技能详情，套住关闭详情",
+  "client_px": {
+    "x": 1821,
+    "y": 16,
+    "w": 80,
+    "h": 80
+  }
+}

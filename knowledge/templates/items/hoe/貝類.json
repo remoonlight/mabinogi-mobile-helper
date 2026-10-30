@@ -1,0 +1,13 @@
+{
+  "id": "item_hoe_貝類",
+  "label": "貝類",
+  "file": "貝類.png",
+  "rel_dir": "knowledge/templates/items/hoe",
+  "need_ui": "请打开「锄地」详情右栏，套住「貝類」",
+  "client_px": {
+    "x": 1085,
+    "y": 1201,
+    "w": 92,
+    "h": 80
+  }
+}

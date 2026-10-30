@@ -1,0 +1,14 @@
+{
+  "id": "facility_title_medicine",
+  "label": "藥品加工·标题",
+  "file": "title_medicine.png",
+  "rel_dir": "knowledge/templates/facility",
+  "need_ui": "已进「藥品加工」设施页；红框只套左上标题「藥品加工」（不要套六卡、不要套配方列表）",
+  "client_px": {
+    "x": 23,
+    "y": 17,
+    "w": 264,
+    "h": 84
+  },
+  "role": "page_anchor"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "profile_life_tab",
+  "label": "生活技能Tab",
+  "file": "life_tab.png",
+  "rel_dir": "knowledge/templates/profile",
+  "need_ui": "人物界面仍开着，套住生活技能 Tab",
+  "client_px": {
+    "x": 56,
+    "y": 751,
+    "w": 80,
+    "h": 80
+  }
+}

@@ -1,0 +1,805 @@
+{
+  "client_dimensions": [
+    1912,
+    1442
+  ],
+  "regions": {
+    "inventory_material": [
+      0.55,
+      0.1,
+      0.44,
+      0.78
+    ],
+    "recipe_material": [
+      0.77,
+      0.6,
+      0.1,
+      0.12
+    ],
+    "recipe_labels": [
+      0.38,
+      0.12,
+      0.59,
+      0.88
+    ],
+    "make_categories": [
+      0.08,
+      0.08,
+      0.84,
+      0.8
+    ]
+  },
+  "roi_source": "retained game_frame stage bounds; inventory grid reuses node_inspect._INV_GRID_ROI",
+  "rows": {
+    "items_title": {
+      "file": "items_title.png",
+      "source_frame": "tests/fixtures/insect_obtain/beetle_recipe_window.png",
+      "source_sha256": "b0d38328480fcbed2b955b23251e2edd745505f50f8495eda4a33ad78f64eda2",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        104,
+        34,
+        88,
+        43
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "21388fcbac3be5abc5fee19936311247a20478efcb4c52f881ff5e20e29d78e5",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.02,
+        0.0,
+        0.2,
+        0.1
+      ]
+    },
+    "beetle_recipe_title": {
+      "file": "beetle_recipe_title.png",
+      "source_frame": "tests/fixtures/insect_obtain/beetle_recipe_window.png",
+      "source_sha256": "b0d38328480fcbed2b955b23251e2edd745505f50f8495eda4a33ad78f64eda2",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        1230,
+        636,
+        205,
+        40
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "17c657d81e42121815dd90a8292bfcb6f86543eb56a6c70f8b4e2c56a941ee57",
+      "threshold": 0.98,
+      "min_margin": 0.04,
+      "roi": [
+        0.55,
+        0.34,
+        0.4,
+        0.23
+      ]
+    },
+    "firefly_recipe_title": {
+      "file": "firefly_recipe_title.png",
+      "source_frame": "tests/fixtures/insect_obtain/firefly_recipe_window.png",
+      "source_sha256": "57419cd24bc36726296bc60865c1040ae2bdaf47c1f7bde9d5f3d546ecebaf27",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        1230,
+        636,
+        205,
+        40
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "aaf4af95496a958a93c9b85b479cf87a611118e7ba9f381c71cc8be5232abca2",
+      "threshold": 0.98,
+      "min_margin": 0.04,
+      "roi": [
+        0.55,
+        0.34,
+        0.4,
+        0.23
+      ],
+      "variants": [
+        {
+          "file": "firefly_recipe_title_20261014.png",
+          "source_frame": "tests/fixtures/insect_obtain/firefly_recipe_20261014.png",
+          "source_sha256": "a0a1d385e4459492ac122209292f92688d5c650f26797c3e4eb9ed917149aa1b",
+          "source_dimensions": [
+            1920,
+            1440
+          ],
+          "game_frame_crop": [
+            0,
+            0,
+            1920,
+            1440
+          ],
+          "crop_client_px": [
+            1230,
+            630,
+            216,
+            45
+          ],
+          "transform": "exact lossless client crop; no resize",
+          "coordinate_source": "Actual 2026-10-14 opened recipe; full green name, thresholds unchanged",
+          "template_sha256": "875659642e8e98b4226deb2bd2d163c95a8df89c4006e6a66ef5ac1b4a2eb2e9",
+          "threshold": 0.98,
+          "min_margin": 0.04,
+          "roi": [
+            0.55,
+            0.34,
+            0.4,
+            0.23
+          ]
+        }
+      ]
+    },
+    "beetle_material_icon": {
+      "file": "beetle_material_icon.png",
+      "source_frame": "tests/fixtures/insect_obtain/beetle_recipe_window.png",
+      "source_sha256": "b0d38328480fcbed2b955b23251e2edd745505f50f8495eda4a33ad78f64eda2",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        1478,
+        930,
+        88,
+        48
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "d4771941e25941db51c33d27d27a1a57779a568980373b43b346081b4868988e",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.77,
+        0.6,
+        0.1,
+        0.12
+      ]
+    },
+    "firefly_material_icon": {
+      "file": "firefly_material_icon.png",
+      "source_frame": "tests/fixtures/insect_obtain/firefly_recipe_window.png",
+      "source_sha256": "57419cd24bc36726296bc60865c1040ae2bdaf47c1f7bde9d5f3d546ecebaf27",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        1483,
+        930,
+        83,
+        48
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "3e44e178fb0b2bbd709b8fc62f5b28e7c590eda31f062e07ffaaae996a9ddb51",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.77,
+        0.6,
+        0.1,
+        0.12
+      ]
+    },
+    "beetle_material_name": {
+      "file": "beetle_material_name.png",
+      "source_frame": "tests/fixtures/insect_obtain/beetle_recipe_window.png",
+      "source_sha256": "b0d38328480fcbed2b955b23251e2edd745505f50f8495eda4a33ad78f64eda2",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        1481,
+        1025,
+        96,
+        33
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "59a4307f28e2c0982226cdb6d84645568fae42db3e8f680516e6c49d9036642e",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.77,
+        0.6,
+        0.1,
+        0.12
+      ]
+    },
+    "firefly_material_name": {
+      "file": "firefly_material_name.png",
+      "source_frame": "tests/fixtures/insect_obtain/firefly_recipe_window.png",
+      "source_sha256": "57419cd24bc36726296bc60865c1040ae2bdaf47c1f7bde9d5f3d546ecebaf27",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        1463,
+        1025,
+        126,
+        33
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "1340c872c847e8ada7397c037d74e4bb5187c743bbeeb4fa8efa0c52383f1d59",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.77,
+        0.6,
+        0.1,
+        0.12
+      ]
+    },
+    "beetle_card_title": {
+      "file": "beetle_card_title.png",
+      "source_frame": "tests/fixtures/insect_obtain/beetle_obtain_window.png",
+      "source_sha256": "00ebfd2b3f758b19364dc9ffa89e579077f446ee4e029fefcc777a0c8e33f46b",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        680,
+        440,
+        115,
+        36
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "3d752f9a3e88168800b015db84e2dc2cbf9a278d23fd800c9aba43c415ee5d18",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.28,
+        0.24,
+        0.24,
+        0.2
+      ]
+    },
+    "firefly_card_title": {
+      "file": "firefly_card_title.png",
+      "source_frame": "tests/fixtures/insect_obtain/firefly_obtain_window.png",
+      "source_sha256": "7187541f3196c8e0b339b89dcb40498f9b2046fd84b58f96e4b936df5ac11219",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        678,
+        458,
+        190,
+        38
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "854c9c1c3747d844c77c10b7513a26605b9c14ca8095f738dec8db4ae6894a99",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.28,
+        0.24,
+        0.24,
+        0.2
+      ]
+    },
+    "obtain_button": {
+      "file": "obtain_button.png",
+      "source_frame": "tests/fixtures/insect_obtain/beetle_obtain_window.png",
+      "source_sha256": "00ebfd2b3f758b19364dc9ffa89e579077f446ee4e029fefcc777a0c8e33f46b",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        679,
+        969,
+        124,
+        31
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "f011ddc4569bdfe2c9790539c8b4f277de7880109afeaef5e91c2548fa6c6398",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.28,
+        0.54,
+        0.27,
+        0.24
+      ],
+      "variants": [
+        {
+          "file": "obtain_button_20261020.png",
+          "source_original": "logs/life_fail_shots/insect_refresh_unknown_20261020T072515Z.png",
+          "source_frame": "tests/fixtures/insect_obtain/firefly_card_20261020.png",
+          "source_sha256": "8929e0b8b6fd7e1332553e267ddf6c387653e4754e223dc67f74d57456708d18",
+          "source_dimensions": [
+            1920,
+            1440
+          ],
+          "game_frame_crop": [
+            0,
+            0,
+            1920,
+            1440
+          ],
+          "crop_client_px": [
+            682,
+            952,
+            124,
+            31
+          ],
+          "transform": "exact lossless game_frame crop; no resize",
+          "coordinate_source": "2026-10-20 watch29016 run1792480861.899296 p6 actual material card; inspected full 獲得方法 text and question mark; existing template peak rect verified against original",
+          "template_sha256": "ace6d69dc32affbeb4d16c0600a120178e2684bfdbfc6baf507f2919599cd0ae",
+          "threshold": 0.94,
+          "min_margin": 0.04,
+          "roi": [
+            0.28,
+            0.54,
+            0.27,
+            0.24
+          ]
+        }
+      ]
+    },
+    "obtain_header": {
+      "file": "obtain_header.png",
+      "source_frame": "tests/fixtures/insect_obtain/beetle_obtain_window.png",
+      "source_sha256": "00ebfd2b3f758b19364dc9ffa89e579077f446ee4e029fefcc777a0c8e33f46b",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        1061,
+        181,
+        190,
+        83
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "4d3a937a57bbd40d006b0ecaa875ae7b43cacdcba244bcfc7ce18c0e6eb7f64e",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.5,
+        0.05,
+        0.48,
+        0.22
+      ]
+    },
+    "insect_entry": {
+      "file": "insect_entry.png",
+      "source_frame": "tests/fixtures/insect_obtain/beetle_obtain_window.png",
+      "source_sha256": "00ebfd2b3f758b19364dc9ffa89e579077f446ee4e029fefcc777a0c8e33f46b",
+      "source_dimensions": [
+        1916,
+        1502
+      ],
+      "game_frame_crop": [
+        2,
+        58,
+        1912,
+        1442
+      ],
+      "crop_client_px": [
+        1100,
+        440,
+        191,
+        40
+      ],
+      "transform": "window to client exact crop; no resize",
+      "coordinate_source": "inspected user-supplied original bounds",
+      "template_sha256": "6d3a36dc605f4acc80232db69b097c3a25d7a9296d2ce875a292223a76e8a759",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.52,
+        0.18,
+        0.4,
+        0.28
+      ]
+    },
+    "items_recovery_header": {
+      "file": "items_recovery_header.png",
+      "source_frame": "tests/fixtures/insect_obtain/items_failed_20261014.png",
+      "source_sha256": "8f99b6de84f2384f0bcda6ec665faa8fa894a03627044d669becb03b502f23d3",
+      "source_dimensions": [
+        1920,
+        1440
+      ],
+      "game_frame_crop": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        750,
+        390,
+        75,
+        48
+      ],
+      "transform": "exact lossless client crop; no resize",
+      "coordinate_source": "2026-10-14 failed client pixels; OCR calibration boxes only, runtime template evidence",
+      "template_sha256": "6e289a2761a38f03334961704a9c65b4adcf4f599481af5f2bd4abb4c5b72668",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.38,
+        0.24,
+        0.12,
+        0.12
+      ]
+    },
+    "items_high_bandage": {
+      "file": "items_high_bandage.png",
+      "source_frame": "tests/fixtures/insect_obtain/items_failed_20261014.png",
+      "source_sha256": "8f99b6de84f2384f0bcda6ec665faa8fa894a03627044d669becb03b502f23d3",
+      "source_dimensions": [
+        1920,
+        1440
+      ],
+      "game_frame_crop": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        990,
+        1234,
+        115,
+        48
+      ],
+      "transform": "exact lossless client crop; no resize",
+      "coordinate_source": "2026-10-14 failed client pixels; OCR calibration boxes only, runtime template evidence",
+      "template_sha256": "484cc5bc1d3027df74b20d5ee1a8f8d66f14ff929538c0af052fb2c0bcb7240d",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.49,
+        0.12,
+        0.13,
+        0.85
+      ]
+    },
+    "items_excellent_bandage": {
+      "file": "items_excellent_bandage.png",
+      "source_frame": "tests/fixtures/process_stance/craft_process_tab_failed_20261014.png",
+      "source_sha256": "c1c4ca5089927535d5cab60f3ec7ab174cb7af119ca58b34c8cee603ec13d8d4",
+      "source_dimensions": [
+        1920,
+        1440
+      ],
+      "game_frame_crop": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        783,
+        601,
+        115,
+        42
+      ],
+      "transform": "exact lossless client crop; no resize",
+      "coordinate_source": "Actual lower viewport: 卓越繃帶 precedes 強化 and both full potion labels",
+      "template_sha256": "940524c3899227a974f99f67fb23bb0e5bf1a9ad8b825f959c22ee237bb3a637",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.38,
+        0.12,
+        0.2,
+        0.85
+      ]
+    },
+    "make_items_label": {
+      "file": "make_items_label.png",
+      "source_frame": "tests/fixtures/insect_obtain/make_items_20261020.png",
+      "source_sha256": "72b432e14c653928f7e0cececa5bfe7f871408ec6f0289c26ac3b0356167ec36",
+      "source_dimensions": [
+        1920,
+        1440
+      ],
+      "game_frame_crop": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        378,
+        1006,
+        80,
+        47
+      ],
+      "transform": "exact lossless game_frame crop; no resize",
+      "coordinate_source": "Inspected retained native frame; OCR calibration boxes only, runtime template first then OCR localization fallback; full exact label retained",
+      "template_sha256": "395c655541ea2b2b968f419470b4fac17be01f97e30fa6021004a141cd8f4d65",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.08,
+        0.08,
+        0.84,
+        0.8
+      ]
+    },
+    "firefly_potion_label": {
+      "file": "firefly_potion_label.png",
+      "source_frame": "tests/fixtures/process_stance/craft_process_tab_failed_20261014.png",
+      "source_sha256": "c1c4ca5089927535d5cab60f3ec7ab174cb7af119ca58b34c8cee603ec13d8d4",
+      "source_dimensions": [
+        1920,
+        1440
+      ],
+      "game_frame_crop": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        1587,
+        1267,
+        158,
+        40
+      ],
+      "transform": "exact lossless game_frame crop; no resize",
+      "coordinate_source": "Inspected retained native frame; OCR calibration boxes only, runtime template first then OCR localization fallback; full exact label retained",
+      "template_sha256": "7b30b9ab82f7741ce2e8f95c76a7338ad0c187a9fb976253154692a7d4ec9716",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.38,
+        0.12,
+        0.59,
+        0.88
+      ],
+      "variants": [
+        {
+          "file": "firefly_potion_label_bottom_20261020.png",
+          "source_original": "logs/life_tests/20261020T154546_edcb8dc1/004_20261020T074608Z.png",
+          "source_frame": "tests/fixtures/insect_obtain/items_bottom_20261020.png",
+          "source_sha256": "fea52cfc4253e34ee95375c9b70792a3ab05e96a8ceaace3e43f81b4788435a8",
+          "source_dimensions": [
+            1920,
+            1440
+          ],
+          "game_frame_crop": [
+            0,
+            0,
+            1920,
+            1440
+          ],
+          "crop_client_px": [
+            1587,
+            1359,
+            158,
+            40
+          ],
+          "transform": "exact lossless game_frame crop; no resize",
+          "coordinate_source": "Actual single-scenario failure: full label at lower viewport. Original ROI ended at y1382 and clipped text ending y1394; whole current client retained and inspected. OCR calibration only.",
+          "template_sha256": "0c079830ac8a9e775908a319e816d6ff6139cee9915891b3f7365a1dcc4fc2a8",
+          "threshold": 0.94,
+          "min_margin": 0.04,
+          "roi": [
+            0.38,
+            0.12,
+            0.59,
+            0.88
+          ]
+        }
+      ]
+    },
+    "beetle_potion_label": {
+      "file": "beetle_potion_label.png",
+      "source_frame": "tests/fixtures/process_stance/craft_process_tab_failed_20261014.png",
+      "source_sha256": "c1c4ca5089927535d5cab60f3ec7ab174cb7af119ca58b34c8cee603ec13d8d4",
+      "source_dimensions": [
+        1920,
+        1440
+      ],
+      "game_frame_crop": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        1381,
+        1267,
+        158,
+        40
+      ],
+      "transform": "exact lossless game_frame crop; no resize",
+      "coordinate_source": "Inspected retained native frame; OCR calibration boxes only, runtime template first then OCR localization fallback; full exact label retained",
+      "template_sha256": "22ba70895210471d114bb1ad29ccbe39ca10d1c665382fdbb58950d178f27565",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.38,
+        0.12,
+        0.59,
+        0.88
+      ],
+      "variants": [
+        {
+          "file": "beetle_potion_label_bottom_20261020.png",
+          "source_original": "logs/life_tests/20261020T154546_edcb8dc1/004_20261020T074608Z.png",
+          "source_frame": "tests/fixtures/insect_obtain/items_bottom_20261020.png",
+          "source_sha256": "fea52cfc4253e34ee95375c9b70792a3ab05e96a8ceaace3e43f81b4788435a8",
+          "source_dimensions": [
+            1920,
+            1440
+          ],
+          "game_frame_crop": [
+            0,
+            0,
+            1920,
+            1440
+          ],
+          "crop_client_px": [
+            1381,
+            1359,
+            158,
+            40
+          ],
+          "transform": "exact lossless game_frame crop; no resize",
+          "coordinate_source": "Actual single-scenario failure: full label at lower viewport. Original ROI ended at y1382 and clipped text ending y1394; whole current client retained and inspected. OCR calibration only.",
+          "template_sha256": "64a5467709667e47133df9b921c3e7c6d5afa08ab76d980f37d960feb73930d5",
+          "threshold": 0.94,
+          "min_margin": 0.04,
+          "roi": [
+            0.38,
+            0.12,
+            0.59,
+            0.88
+          ]
+        }
+      ]
+    },
+    "firefly_bag_card_title": {
+      "file": "firefly_bag_card_title_20261021.png",
+      "source_original": "logs/life_fail_shots/insect_refresh_unknown_20261021T054453Z.png",
+      "source_frame": "tests/fixtures/insect_obtain/firefly_bag_card_20261021.png",
+      "source_sha256": "2bf4e82333e96ed31b56d241b4da08f9f0b2d6684b0366c14a3bee289d5e7a25",
+      "source_dimensions": [
+        1920,
+        1440
+      ],
+      "game_frame_crop": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "crop_client_px": [
+        683,
+        339,
+        190,
+        38
+      ],
+      "transform": "exact lossless game_frame crop; no resize",
+      "coordinate_source": "watch43620 run1792559947.498236 p8 native bag detail; full title at existing template peak (683,339,190,38); original crafting ROI clips six top pixels",
+      "template_sha256": "bc633c7c14a18332e94197aa8874a3c9350752ed02a9eb859b7f71a668b6ff4b",
+      "threshold": 0.94,
+      "min_margin": 0.04,
+      "roi": [
+        0.28,
+        0.22,
+        0.24,
+        0.1
+      ]
+    }
+  },
+  "client_variants": [
+    {
+      "source_original": "logs/life_fail_shots/insect_refresh_unknown_20261011T100046Z.png",
+      "source_frame": "tests/fixtures/process_stance/insect_items_20261011.png",
+      "source_sha256": "a1231232c3bfb80b35c425deeb4d5092c62c5b264a15b5e07cc8f6c46d753129",
+      "source_size": [
+        1920,
+        1440
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1440
+      ],
+      "dimensions": [
+        1920,
+        1440
+      ],
+      "transform": "native game_frame; no resize; existing templates match at native scale"
+    }
+  ]
+}

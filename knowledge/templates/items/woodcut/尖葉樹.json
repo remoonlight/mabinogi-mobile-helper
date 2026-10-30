@@ -1,0 +1,13 @@
+{
+  "id": "item_woodcut_尖葉樹",
+  "label": "尖葉樹",
+  "file": "尖葉樹.png",
+  "rel_dir": "knowledge/templates/items/woodcut",
+  "need_ui": "请打开「伐木」详情右栏，套住「尖葉樹」",
+  "client_px": {
+    "x": 1083,
+    "y": 1031,
+    "w": 97,
+    "h": 106
+  }
+}

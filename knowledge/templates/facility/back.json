@@ -1,0 +1,13 @@
+{
+  "id": "facility_back",
+  "label": "左上返回",
+  "file": "back.png",
+  "rel_dir": "knowledge/templates/facility",
+  "need_ui": "请打开任一加工设施页，套住左上 ←（此页无顶栏 X）",
+  "client_px": {
+    "x": 20,
+    "y": 17,
+    "w": 80,
+    "h": 80
+  }
+}

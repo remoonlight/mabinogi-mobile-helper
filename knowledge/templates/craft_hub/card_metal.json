@@ -1,0 +1,13 @@
+{
+  "id": "craft_card_metal",
+  "label": "金屬卡",
+  "file": "card_metal.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "加工档可见六卡时，套住金屬",
+  "client_px": {
+    "x": 300,
+    "y": 136,
+    "w": 238,
+    "h": 239
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "file": "title_cloth_20261020.png",
+  "source_original": "logs/life_verify_20261001/firefly_card_20261020_debug_claim_wait.png",
+  "source_frame": "tests/fixtures/process_stance/cloth_title_20261020.png",
+  "source_sha256": "56d410734d2796d662a5069f803695031b8538bae4b3a16dc1d0aa6acb52577a",
+  "source_dimensions": [
+    1920,
+    1440
+  ],
+  "game_frame_crop": [
+    0,
+    0,
+    1920,
+    1440
+  ],
+  "crop_client_px": [
+    24,
+    20,
+    190,
+    76
+  ],
+  "transform": "exact lossless client crop; no resize",
+  "coordinate_source": "2026-10-20 debug watch35228 p2 cloth recipe. Inspected full standalone 布料加工 title; OCR calibration box only; no shared 加工 suffix identity.",
+  "template_sha256": "a9f7234adec3e628b3f83055da13f9ca80f51b1eaa0d9143dd57f913d3edf1e9"
+}

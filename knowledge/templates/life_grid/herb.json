@@ -1,0 +1,13 @@
+{
+  "id": "herb",
+  "label": "採集藥草",
+  "file": "herb.png",
+  "rel_dir": "knowledge/templates/life_grid",
+  "need_ui": "生活技能大格仍开着，套住「採集藥草」格",
+  "client_px": {
+    "x": 900,
+    "y": 197,
+    "w": 86,
+    "h": 87
+  }
+}

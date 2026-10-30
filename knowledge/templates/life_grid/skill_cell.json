@@ -1,0 +1,13 @@
+{
+  "id": "life_grid_skill_cell",
+  "label": "技能大格",
+  "file": "skill_cell.png",
+  "rel_dir": "knowledge/templates/life_grid",
+  "need_ui": "生活技能大格仍开着，套住任意一个技能格（伐木/采矿等，22 格共用详情）",
+  "client_px": {
+    "x": 283,
+    "y": 202,
+    "w": 80,
+    "h": 80
+  }
+}

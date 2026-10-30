@@ -1,0 +1,37 @@
+{
+  "schema": "ui_perception_profile.v1",
+  "locale": "zh-Hant",
+  "updated": "2026-08-23",
+  "rank": "background_ok first, then accuracy, then p95_ms",
+  "note": "采图/OCR 须能后台工作。MSS/DXcam 不算后台合格。回退：PrintWindow + RapidOCR v5 + 灰度模板。",
+  "primary": {
+    "capture": "bitblt",
+    "capture_fallback": "printwindow",
+    "ocr": "rapid_v5+up2",
+    "ocr_fallback": "rapid_v5+clahe"
+  },
+  "rollback": {
+    "capture": "bitblt_then_printwindow",
+    "ocr": "rapid_v5_up2_then_clahe",
+    "match": "gray_ccoeff_normed"
+  },
+  "offline_ocr_ranked": [
+    {"name": "rapid_v5+up2", "accuracy": 1.0, "p95_ms_mean": 221},
+    {"name": "rapid_v5+clahe", "accuracy": 1.0, "p95_ms_mean": 240},
+    {"name": "rapid_v5+none", "accuracy": 1.0, "p95_ms_mean": 748},
+    {"name": "rapid_legacy", "accuracy": 0.0, "p95_ms_mean": 159}
+  ],
+  "live_capture_background": {
+    "at": "2026-08-23T09:08:11",
+    "foreground": false,
+    "client": [1920, 1440],
+    "ranked": [
+      {"name": "gdi_bitblt", "background_ok": true, "accuracy": 0.9981, "p95_ms": 17.868},
+      {"name": "printwindow", "background_ok": true, "accuracy": 1.0, "p95_ms": 35.808},
+      {"name": "dxcam_dxgi_reuse", "background_ok": false, "accuracy": 0.7031, "p95_ms": 1.034},
+      {"name": "mss_client", "background_ok": false, "accuracy": 0.6334, "p95_ms": 25.453}
+    ],
+    "winner": "gdi_bitblt",
+    "note": "未前台。DXcam/MSS 截到桌面不是游戏，后台不合格。BitBlt 相对 PW 准确率 0.998。"
+  }
+}

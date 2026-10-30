@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_insect_光群",
+  "label": "光群",
+  "file": "光群.png",
+  "rel_dir": "knowledge/templates/gather_skill/insect",
+  "need_ui": "角色-生活技能-昆蟲採集 右栏列表，不要点寻找附近，套住图标+物名「光群」",
+  "client_px": {
+    "x": 1082,
+    "y": 883,
+    "w": 205,
+    "h": 111
+  },
+  "role": "page_anchor"
+}

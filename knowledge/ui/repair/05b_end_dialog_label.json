@@ -1,0 +1,43 @@
+{
+  "template": "knowledge/ui/repair/05b_end_dialog_label.png",
+  "source": "tests/fixtures/repair/nerys_repair_done_end.png",
+  "source_sha256": "5041d4a5ea0c0d539b076a42ae041f25a80b546a305e4aead2e0602d570f9246",
+  "source_size": [
+    1912,
+    1442
+  ],
+  "crop_box": [
+    1072,
+    1323,
+    1197,
+    1358
+  ],
+  "roi": [
+    0.45,
+    0.68,
+    0.55,
+    0.32
+  ],
+  "threshold": 0.88,
+  "min_margin": 0.05,
+  "coordinate_source": "Complete 結束對話 label in the original repair result frame; no translucent button background.",
+  "template_variants": [
+    {
+      "template": "knowledge/ui/repair/05c_end_dialog_label_1920.png",
+      "source": "tests/fixtures/repair/nerys_end_20261017.png",
+      "source_sha256": "263a8ff34925d292404d55579ff142a46728a624afe52741db0b902932eb5df6",
+      "template_sha256": "42aa4445a4752c5eac9eb50644f5ba29142fd9b0c2d8a73f38dd295367e5ef7b",
+      "source_size": [
+        1920,
+        1440
+      ],
+      "crop_box": [
+        1077,
+        1321,
+        1202,
+        1356
+      ],
+      "coordinate_source": "Native game_frame p72 repair-complete frame; complete 結束對話 text only, no inferred coordinates."
+    }
+  ]
+}

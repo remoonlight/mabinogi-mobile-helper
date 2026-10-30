@@ -1,0 +1,1150 @@
+{
+  "schema": "ui_transition_graph.v1",
+  "updated": "2026-08-26",
+  "scope": "product_core",
+  "notes": "只读核心界面关系图。未采证边 evidence.status=unverified，不可当作可操作路径。禁止边显式列出。enough 永不因本图为真。人手采证边 trigger.who=user_manual；状态栏统一流程（生活备料/10h、一键修理、栏上切换验收）可点的边 trigger.who=agent。本模块只读校验图，不发键鼠。",
+  "nodes": [
+    {
+      "id": "craft_item_recipe",
+      "name": "制作-道具-配方",
+      "need_ui": "当前製作父窗与CraftingPanel就绪栈、完整秘藥标题、材料图标、道具标题及返回图共同确认；禁止点被盖住的加工Tab",
+      "signals": {"menu_open": true}
+    },
+    {
+      "id": "craft_items",
+      "name": "制作-道具",
+      "need_ui": "当前CraftingFacility与父CraftingHub就绪栈、道具标题及左上返回图同时确认；左侧加工Tab被覆盖",
+      "signals": {"menu_open": true}
+    },
+    {
+      "id": "stack:CashShopUIState",
+      "name": "商城",
+      "need_ui": "商城实例已识别；只允许关闭页面",
+      "signals": {"menu_open": true}
+    },
+    {
+      "id": "main_hud",
+      "name": "主界面",
+      "need_ui": "清主界面：menu=0 inv=0 dlg=0；勿停菜单/背包/对话/製作/地圖",
+      "signals": {
+        "menu_open": false,
+        "inventory_open": false,
+        "dialog_active": false,
+        "map_open": false,
+        "profile_open": false
+      }
+    },
+    {
+      "id": "system_menu",
+      "name": "系统菜单",
+      "need_ui": "已开菜单：可见角色/背包/製作等；menu=1；勿停製作壳或背包",
+      "signals": {
+        "menu_open": true,
+        "inventory_open": false,
+        "dialog_active": false
+      }
+    },
+    {
+      "id": "inventory",
+      "name": "背包",
+      "need_ui": "背包已开：inv=1 且 menu=1；可见背包界面",
+      "signals": {
+        "inventory_open": true,
+        "menu_open": true
+      }
+    },
+    {
+      "id": "item_info",
+      "name": "物品详情",
+      "need_ui": "物品详情已开；可返回背包",
+      "signals": {
+        "inventory_open": true,
+        "menu_open": true
+      }
+    },
+    {
+      "id": "obtain_method",
+      "name": "获得方法",
+      "need_ui": "获得方法页已开；可返回物品详情",
+      "signals": {
+        "inventory_open": true,
+        "menu_open": true
+      }
+    },
+    {
+      "id": "dialog_skip",
+      "name": "对话跳过",
+      "need_ui": "对话跳过层已开；可关闭并离开对话",
+      "signals": {
+        "dialog_active": true
+      }
+    },
+    {
+      "id": "map_dunbarton",
+      "name": "杜巴顿区域地图",
+      "need_ui": "已开杜巴顿区域地图（可见地图画布）；人物界面须关",
+      "signals": {
+        "map_open": true,
+        "menu_open": true,
+        "profile_open": false
+      }
+    },
+    {
+      "id": "map_dunbarton_nerys",
+      "name": "杜巴顿地图·奈丽丝头像已定位",
+      "need_ui": "已开杜巴顿区域地图，且奈丽丝头像模板命中；不使用文字 OCR",
+      "signals": {
+        "map_open": true,
+        "menu_open": true,
+        "profile_open": false,
+        "nerys_avatar_visible": true
+      }
+    },
+    {
+      "id": "profile",
+      "name": "人物界面",
+      "need_ui": "已开人物界面；地圖关；勿停对话/製作",
+      "signals": {
+        "profile_open": true,
+        "menu_open": true,
+        "map_open": false
+      }
+    },
+    {
+      "id": "life_grid",
+      "name": "生活技能大格",
+      "need_ui": "人物界面→生活技能列表：可见伐木/采矿/药草等",
+      "signals": {
+        "profile_open": true,
+        "menu_open": true
+      }
+    },
+    {
+      "id": "gather_skill",
+      "name": "技能列表",
+      "need_ui": "生活技能一门的右栏列表；退一次回到大格，勿关角色壳",
+      "signals": {
+        "profile_open": true,
+        "menu_open": true
+      }
+    },
+    {
+      "id": "gather_detail",
+      "name": "技能详情页",
+      "need_ui": "生活技能详情：可见目标物与找附近；勿停主界面",
+      "signals": {
+        "profile_open": true,
+        "menu_open": true
+      }
+    },
+    {
+      "id": "craft_shell",
+      "name": "製作·分页待确认",
+      "need_ui": "製作壳已独立确认，分页未知；仅按当前画面定位切页或关闭，不能当作加工页",
+      "signals": {"menu_open": true}
+    },
+    {
+      "id": "craft_hub",
+      "name": "製作·加工枢纽",
+      "need_ui": "已开製作界面·加工档（可见金屬等六卡）；勿停菜单根",
+      "signals": {
+        "menu_open": true,
+        "inventory_open": false,
+        "dialog_active": false,
+        "map_open": false
+      }
+    },
+    {
+      "id": "craft_quick",
+      "name": "製作·快速制作",
+      "need_ui": "制作壳，快速制作档（非加工六卡）",
+      "signals": {
+        "menu_open": true
+      }
+    },
+    {
+      "id": "craft_make",
+      "name": "製作·制作",
+      "need_ui": "制作壳，制作档（非加工六卡）",
+      "signals": {
+        "menu_open": true
+      }
+    },
+    {
+      "id": "craft_alchemy",
+      "name": "製作·炼金术",
+      "need_ui": "制作壳，炼金术档（非加工六卡）",
+      "signals": {
+        "menu_open": true
+      }
+    },
+    {
+      "id": "facility",
+      "name": "加工设施页",
+      "need_ui": "设施子页：左上←可见；左下四圆；无顶栏 X",
+      "signals": {
+        "menu_open": true
+      }
+    },
+    {
+      "id": "facility_recipe",
+      "name": "设施配方页",
+      "need_ui": "已点开配方，可见前往加工或加工；切页验收不点这两钮",
+      "signals": {
+        "menu_open": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "craft_item_recipe_back_craft_items",
+      "from": "craft_item_recipe",
+      "to": "craft_items",
+      "kind": "allowed",
+      "trigger": {"type": "visible_button", "label": "返回", "who": "agent"},
+      "evidence": {
+        "status": "unverified", "params_ok": true, "icon_ok": true,
+        "paths": ["tests/fixtures/insect_obtain/firefly_recipe_return_20261021.png"],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "craft_items_back_craft_make",
+      "from": "craft_items",
+      "to": "craft_make",
+      "kind": "allowed",
+      "trigger": {"type": "visible_button", "label": "返回", "who": "agent"},
+      "evidence": {
+        "status": "unverified", "params_ok": false, "icon_ok": true,
+        "paths": ["tests/fixtures/process_stance/craft_process_tab_failed_20261014.png"],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "craft_shell_tab_craft_hub",
+      "from": "craft_shell",
+      "to": "craft_hub",
+      "kind": "allowed",
+      "trigger": {"type": "visible_button", "label": "加工", "who": "agent"},
+      "evidence": {"status": "unverified", "params_ok": false, "icon_ok": false, "paths": []}
+    },
+    {
+      "id": "craft_shell_tab_craft_make",
+      "from": "craft_shell",
+      "to": "craft_make",
+      "kind": "allowed",
+      "trigger": {"type": "visible_button", "label": "制作", "who": "agent"},
+      "evidence": {"status": "unverified", "params_ok": false, "icon_ok": false, "paths": []}
+    },
+    {
+      "id": "craft_shell_x_main_hud",
+      "from": "craft_shell",
+      "to": "main_hud",
+      "kind": "allowed",
+      "trigger": {"type": "visible_button", "label": "右上 X", "who": "agent"},
+      "evidence": {"status": "unverified", "params_ok": false, "icon_ok": false, "paths": []}
+    },
+    {
+      "id": "cash_shop_close_main_hud",
+      "from": "stack:CashShopUIState",
+      "to": "main_hud",
+      "kind": "allowed",
+      "trigger": {"type": "visible_button", "label": "关闭商城", "who": "agent"},
+      "preconditions": ["商城 UI 栈已识别，右上关闭图标匹配"],
+      "evidence": {"status": "verified", "params_ok": true, "icon_ok": true,
+        "paths": ["logs/life_tests/20260913T094933_aeb5e4c7"]}
+    },
+    {
+      "id": "main_hud_avatar_profile",
+      "from": "main_hud",
+      "to": "profile",
+      "kind": "forbidden",
+      "trigger": {
+        "type": "visible_button",
+        "label": "头像",
+        "who": "user_manual"
+      },
+      "reason": "人物须系统菜单点角色进入；禁止主界面头像直跳人物页",
+      "evidence": {
+        "status": "forbidden",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "profile_close_main_hud",
+      "from": "profile",
+      "to": "main_hud",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "关闭/X",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "人物界面已开"
+      ],
+      "back_control": {
+        "label": "头像",
+        "to": "profile"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/profile_close_main_hud"
+        ]
+      }
+    },
+    {
+      "id": "profile_life_tab_life_grid",
+      "from": "profile",
+      "to": "life_grid",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "生活技能 Tab",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "人物界面已开"
+      ],
+      "back_control": {
+        "label": "右上 X",
+        "to": "main_hud"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/profile_life_tab_life_grid"
+        ]
+      }
+    },
+    {
+      "id": "life_grid_skill_gather_detail",
+      "from": "life_grid",
+      "to": "gather_skill",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "技能大格",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "生活技能大格可见；点击后打开技能物品列表，尚未选择具体物品"
+      ],
+      "back_control": {
+        "label": "关闭详情",
+        "to": "life_grid"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/life_grid_skill_gather_detail"
+        ]
+      }
+    },
+    {
+      "id": "gather_detail_close_life_grid",
+      "from": "gather_detail",
+      "to": "life_grid",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "关闭详情",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "技能详情已开"
+      ],
+      "back_control": {
+        "label": "技能大格",
+        "to": "gather_detail"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/gather_detail_close_life_grid"
+        ]
+      }
+    },
+    {
+      "id": "gather_skill_item_gather_detail",
+      "from": "gather_skill",
+      "to": "gather_detail",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "物名",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "技能列表已开；点列表物名进入物品详情，不点寻找附近"
+      ],
+      "back_control": {
+        "label": "关闭详情",
+        "to": "life_grid"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "gather_skill_item_item_info",
+      "from": "gather_skill",
+      "to": "item_info",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "物名",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "技能列表已开；点物名进入物品详情，再点获得方法；不点寻找附近"
+      ],
+      "back_control": {
+        "label": "关闭/X",
+        "to": "gather_skill"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "gather_detail_open_obtain_method",
+      "from": "gather_detail",
+      "to": "obtain_method",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "获得方法",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "技能物品详情已开；点获得方法，不点寻找附近"
+      ],
+      "back_control": {
+        "label": "关闭/X",
+        "to": "gather_detail"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "gather_skill_close_life_grid",
+      "from": "gather_skill",
+      "to": "life_grid",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "关闭列表",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "技能列表已开"
+      ],
+      "back_control": {
+        "label": "技能大格",
+        "to": "gather_skill"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/gather_detail_close_life_grid"
+        ]
+      }
+    },
+    {
+      "id": "life_grid_close_main_hud",
+      "from": "life_grid",
+      "to": "main_hud",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "关闭/X",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "生活技能大格已开"
+      ],
+      "back_control": {
+        "label": "生活技能 Tab",
+        "to": "life_grid"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260826T035452Z/life_grid_close_main_hud"
+        ]
+      }
+    },
+    {
+      "id": "main_hud_craft_craft_hub",
+      "from": "main_hud",
+      "to": "craft_hub",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "製作",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "须已在主界面",
+        "勿用热键 K"
+      ],
+      "back_control": {
+        "label": "右上 X",
+        "to": "main_hud"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "main_hud_menu_system_menu",
+      "from": "main_hud",
+      "to": "system_menu",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "菜单",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "须已在主界面"
+      ],
+      "back_control": {
+        "label": "右上 X",
+        "to": "main_hud"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/main_hud_menu_system_menu"
+        ]
+      }
+    },
+    {
+      "id": "system_menu_craft_craft_hub",
+      "from": "system_menu",
+      "to": "craft_hub",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "製作",
+        "who": "user_manual",
+        "locator": {
+          "roi": [0.80, 0.12, 0.16, 0.32]
+        }
+      },
+      "preconditions": [
+        "菜单已开则复用，勿先 Esc 关掉"
+      ],
+      "back_control": {
+        "label": "右上 X",
+        "to": "main_hud"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "craft_alchemy_tab_craft_hub",
+      "from": "craft_alchemy",
+      "to": "craft_hub",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "加工",
+        "who": "agent"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "craft_make_tab_craft_hub",
+      "from": "craft_make",
+      "to": "craft_hub",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "加工",
+        "who": "agent"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "craft_hub_tab_craft_quick",
+      "from": "craft_hub",
+      "to": "craft_quick",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "快速制作",
+        "who": "user_manual"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "craft_hub_tab_craft_make",
+      "from": "craft_hub",
+      "to": "craft_make",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "制作",
+        "who": "user_manual"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "craft_hub_tab_craft_alchemy",
+      "from": "craft_hub",
+      "to": "craft_alchemy",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "炼金术",
+        "who": "user_manual"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "craft_quick_tab_craft_hub",
+      "from": "craft_quick",
+      "to": "craft_hub",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "加工",
+        "who": "agent"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "system_menu_bag_inventory",
+      "from": "system_menu",
+      "to": "inventory",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "背包",
+        "who": "user_manual",
+        "locator": {
+          "roi": [0.72, 0.12, 0.20, 0.28],
+          "source": "logs/life_verify_20261001/life_followup_20261001T205619/fault_game.png",
+          "note": "旧ROI底部截断59x70背包模板；新图命中0.981，中心(1446,465)，不改阈值"
+        }
+      },
+      "preconditions": [
+        "菜单已开"
+      ],
+      "back_control": {
+        "label": "关闭背包",
+        "to": "main_hud"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/system_menu_bag_inventory"
+        ]
+      }
+    },
+    {
+      "id": "system_menu_role_profile",
+      "from": "system_menu",
+      "to": "profile",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "角色",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "菜单已开"
+      ],
+      "back_control": {
+        "label": "关闭/X",
+        "to": "main_hud"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/system_menu_role_profile"
+        ]
+      }
+    },
+    {
+      "id": "system_menu_x_main_hud",
+      "from": "system_menu",
+      "to": "main_hud",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "右上 X",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "菜单已开"
+      ],
+      "back_control": {
+        "label": "菜单",
+        "to": "system_menu"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T132802Z/system_menu_x_main_hud"
+        ]
+      }
+    },
+    {
+      "id": "main_hud_bag_inventory",
+      "from": "main_hud",
+      "to": "inventory",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "背包",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "须已在主界面",
+        "干净主界面：menu=0 inv=0 dlg=0 stp=0"
+      ],
+      "back_control": {
+        "label": "关闭背包",
+        "to": "main_hud"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/main_hud_bag_inventory",
+          "knowledge/captures/transitions/20260824T144211Z/main_hud_bag_inventory",
+          "knowledge/captures/transitions/20260826Tbag/main_hud_bag_inventory"
+        ],
+        "notes": "20260826Tbag clean HUD pair_ok; 144211Z miss was dlg=1 overlay"
+      }
+    },
+    {
+      "id": "inventory_close_main_hud",
+      "from": "inventory",
+      "to": "main_hud",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "关闭背包",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "背包已开"
+      ],
+      "back_control": {
+        "label": "背包",
+        "to": "inventory"
+      },
+      "evidence": {
+        "status": "verified",
+        "params_ok": true,
+        "icon_ok": true,
+        "paths": [
+          "knowledge/captures/transitions/20260824T092325Z/inventory_close_main_hud"
+        ]
+      }
+    },
+    {
+      "id": "main_hud_map_dunbarton",
+      "from": "main_hud",
+      "to": "map_dunbarton",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "地圖",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "须已在杜巴顿主界面"
+      ],
+      "back_control": {
+        "label": "右上 X",
+        "to": "main_hud"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "map_dunbarton_x_main_hud",
+      "from": "map_dunbarton",
+      "to": "main_hud",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "右上 X",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "杜巴顿区域地图已开"
+      ],
+      "back_control": {
+        "label": "地圖",
+        "to": "map_dunbarton"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "craft_hub_card_facility",
+      "from": "craft_hub",
+      "to": "facility",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "六卡正式名",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "加工 Tab 六卡可见",
+        "点正式名勿点等级行"
+      ],
+      "back_control": {
+        "label": "左上 ←",
+        "to": "craft_hub"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "facility_open_recipe",
+      "from": "facility",
+      "to": "facility_recipe",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "配方名",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "设施页已开；点配方名进入配方页，不点加工或前往加工"
+      ],
+      "back_control": {
+        "label": "左上 ←",
+        "to": "craft_hub"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "facility_back_craft_hub",
+      "from": "facility",
+      "to": "craft_hub",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "左上 ←",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "设施页已开；此层无顶栏 X"
+      ],
+      "back_control": {
+        "label": "六卡正式名",
+        "to": "facility"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "craft_hub_x_main_hud",
+      "from": "craft_hub",
+      "to": "main_hud",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "右上 X",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "在製作顶层；设施页须先 ←"
+      ],
+      "back_control": {
+        "label": "製作",
+        "to": "craft_hub"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "map_dunbarton_nerys_avatar",
+      "from": "map_dunbarton",
+      "to": "map_dunbarton_nerys",
+      "kind": "allowed",
+      "trigger": {
+        "type": "readonly_detection",
+        "label": "奈丽丝头像",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "须已打开杜巴顿区域地图",
+        "仅以头像/模板定位；不使用文本 OCR"
+      ],
+      "back_control": {
+        "label": "右上 X",
+        "to": "main_hud"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "facility_avatar_profile_forbidden",
+      "from": "facility",
+      "to": "profile",
+      "kind": "forbidden",
+      "trigger": {
+        "type": "visible_button",
+        "label": "头像",
+        "who": "user_manual"
+      },
+      "reason": "加工页开着禁止直跳人物/采集；须设施←→枢纽→顶层X→主界面后再点头像",
+      "evidence": {
+        "status": "forbidden",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "facility_avatar_gather_forbidden",
+      "from": "facility",
+      "to": "gather_detail",
+      "kind": "forbidden",
+      "trigger": {
+        "type": "visible_button",
+        "label": "头像",
+        "who": "user_manual"
+      },
+      "reason": "加工页禁止直跳技能详情采集",
+      "evidence": {
+        "status": "forbidden",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "craft_hub_avatar_profile_forbidden",
+      "from": "craft_hub",
+      "to": "profile",
+      "kind": "forbidden",
+      "trigger": {
+        "type": "visible_button",
+        "label": "头像",
+        "who": "user_manual"
+      },
+      "reason": "製作枢纽开着禁止直跳采集；须先右上 X 回主界面",
+      "evidence": {
+        "status": "forbidden",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "dialog_skip_close_main_hud",
+      "from": "dialog_skip",
+      "to": "main_hud",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "关闭/离开对话",
+        "who": "user_manual"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "item_info_close_gather_skill",
+      "from": "item_info",
+      "to": "gather_skill",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "关闭/X",
+        "who": "user_manual"
+      },
+      "preconditions": [
+        "技能列表点开的物品详情；关卡回到列表，不点寻找附近"
+      ],
+      "back_control": {
+        "label": "物名",
+        "to": "item_info"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": [],
+        "needs_capture": true
+      }
+    },
+    {
+      "id": "item_info_back_inventory",
+      "from": "item_info",
+      "to": "inventory",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "返回",
+        "who": "user_manual"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "obtain_method_back_item_info",
+      "from": "obtain_method",
+      "to": "item_info",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "返回",
+        "who": "user_manual"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    },
+    {
+      "id": "item_info_open_obtain_method",
+      "from": "item_info",
+      "to": "obtain_method",
+      "kind": "allowed",
+      "trigger": {
+        "type": "visible_button",
+        "label": "获得方法",
+        "who": "user_manual"
+      },
+      "evidence": {
+        "status": "unverified",
+        "params_ok": false,
+        "icon_ok": false,
+        "paths": []
+      }
+    }
+  ]
+}

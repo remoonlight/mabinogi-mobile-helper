@@ -1,0 +1,22 @@
+{
+  "id": "process_medicine_增幅蘑菇汁液",
+  "name": "增幅蘑菇汁液",
+  "label": "增幅蘑菇汁液",
+  "file": "增幅蘑菇汁液.png",
+  "rel_dir": "knowledge/templates/process/medicine",
+  "source_frame": "tests/fixtures/process_stance/medicine_standalone.png",
+  "source_sha256": "668b50043de7177791982e9b257b20dfe1011a7aa9cbd4a0ee5ccbcc190b9618",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "crop_client_px": [
+    1610,
+    1035,
+    184,
+    32
+  ],
+  "transform": "exact crop; no resize",
+  "coordinate_source": "inspected original game_frame recipe label bounds",
+  "template_sha256": "cee1def0b6d70ee5cd9b449d7e0f8ce0cc1316088ad9c70dfbb5f7c22278ddf1"
+}

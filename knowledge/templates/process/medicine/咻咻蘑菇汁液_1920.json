@@ -1,0 +1,24 @@
+{
+  "source_original": "logs/life_fail_shots/鐐瑰捇鍜昏槕鑿囨眮娑瞋20261011T095305Z.png",
+  "source_frame": "tests/fixtures/process_stance/medicine_list_20261011.png",
+  "source_sha256": "65fe707bb3ef9147920e05fb022afbc55d71b0697eb8bff52b779acfb03882f3",
+  "source_size": [
+    1920,
+    1440
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1440
+  ],
+  "template_sha256": "544092ea20f4ee5c54fb441eae94164209710ed53a20a620fea033f290cb5f5c",
+  "crop_client_px": [
+    1190,
+    450,
+    165,
+    35
+  ],
+  "transform": "exact crop; no resize",
+  "coordinate_source": "retained failure game_frame full recipe label bounds"
+}

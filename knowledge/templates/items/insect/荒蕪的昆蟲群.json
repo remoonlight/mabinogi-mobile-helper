@@ -1,0 +1,24 @@
+{
+  "id": "item_insect_荒蕪的昆蟲群",
+  "label": "荒蕪的昆蟲群",
+  "file": "荒蕪的昆蟲群.png",
+  "rel_dir": "knowledge/templates/items/insect",
+  "min_level": 20,
+  "status": "ready",
+  "client_px": {
+    "x": 1083,
+    "y": 1288,
+    "w": 92,
+    "h": 87
+  },
+  "source_frame": "tests/fixtures/process_stance/insect_list_updated_20261005.png",
+  "source_sha256": "e932810692f738515fc78a1fe4d895e610e015a80a36fbc017f06b6ca8b5ca93",
+  "template_sha256": "80effabb29f544da8108bbc21797620b3725d22ae15e1f2a4978f7567691a6ae",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "transform": "exact crop; no resize/registration transform",
+  "coordinate_source": "current full game_frame icon bounds; original inspected before cropping",
+  "evidence": "logs/soybean_20261003/training_20261005_insect.json"
+}

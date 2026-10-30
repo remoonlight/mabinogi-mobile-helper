@@ -1,0 +1,13 @@
+{
+  "id": "gather_detail_help",
+  "label": "问号帮助",
+  "file": "help.png",
+  "rel_dir": "knowledge/templates/gather_detail",
+  "need_ui": "技能详情页，套住问号/说明按钮",
+  "client_px": {
+    "x": 825,
+    "y": 786,
+    "w": 36,
+    "h": 34
+  }
+}

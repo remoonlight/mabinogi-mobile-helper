@@ -1,0 +1,15 @@
+{
+  "id": "process_metal_鋼錠",
+  "label": "鋼錠",
+  "file": "鋼錠.png",
+  "rel_dir": "knowledge/templates/process/metal",
+  "need_ui": "请打开金屬加工设施页，列表可见目标行时套住该行（左侧列表，不是详情右栏）：鋼錠",
+  "client_px": {
+    "x": 1246,
+    "y": 328,
+    "w": 61,
+    "h": 127
+  },
+  "pending_review": false,
+  "locate_src": "ocr_cht"
+}

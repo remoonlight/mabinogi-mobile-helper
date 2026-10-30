@@ -1,0 +1,13 @@
+{
+  "id": "item_herb_躲躲花",
+  "label": "躲躲花",
+  "file": "躲躲花.png",
+  "rel_dir": "knowledge/templates/items/herb",
+  "need_ui": "请打开「采集药草」详情右栏，套住「躲躲花」",
+  "client_px": {
+    "x": 1083,
+    "y": 1148,
+    "w": 95,
+    "h": 98
+  }
+}

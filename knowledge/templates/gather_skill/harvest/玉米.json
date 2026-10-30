@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_harvest_玉米",
+  "label": "玉米",
+  "file": "玉米.png",
+  "rel_dir": "knowledge/templates/gather_skill/harvest",
+  "need_ui": "角色-生活技能-收割 右栏列表，不要点寻找附近，套住图标+物名「玉米」",
+  "client_px": {
+    "x": 1085,
+    "y": 1032,
+    "w": 201,
+    "h": 107
+  },
+  "role": "page_anchor"
+}

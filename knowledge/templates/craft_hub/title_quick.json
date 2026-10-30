@@ -1,0 +1,7 @@
+{
+  "id": "craft_title_quick",
+  "label": "制作-快速制作 顶栏图标",
+  "file": "title_quick.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "client_px": { "x": 185, "y": 20, "w": 80, "h": 80 }
+}

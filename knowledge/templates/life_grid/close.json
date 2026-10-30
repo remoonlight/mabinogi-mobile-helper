@@ -1,0 +1,13 @@
+{
+  "id": "life_grid_close",
+  "label": "关闭人物面板（整页）",
+  "file": "close.png",
+  "rel_dir": "knowledge/templates/life_grid",
+  "need_ui": "请打开生活技能大格，套住关闭",
+  "client_px": {
+    "x": 1822,
+    "y": 17,
+    "w": 80,
+    "h": 80
+  }
+}

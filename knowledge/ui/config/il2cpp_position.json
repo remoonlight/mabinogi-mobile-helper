@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "process": "MabinogiMobile.exe",
+  "module": "GameAssembly.dll",
+  "dump_note": "Il2CppDumper Metadata/IL2CPP 31；script.json Address=RVA",
+  "primary": "map_component",
+  "sources": {
+    "map_component": {
+      "typeinfo_rva": "0x107DA3F0",
+      "xy_offset": "0x10",
+      "layout": "xy_ff",
+      "note": "MapComponent.PlayerPosition Vector2 — 地图用权威二维"
+    },
+    "transform_xz": {
+      "typeinfo_rva": "0x1071DAC8",
+      "xyz_offset": "0x10",
+      "layout": "xz_fff",
+      "note": "ControlObjectTransform.Position3D → 水平面取 X,Z（Y 为高度）"
+    },
+    "inaccurate": {
+      "typeinfo_rva": "0x10718158",
+      "xy_offset": "0x10",
+      "has_offset": "0x1C",
+      "layout": "xy_ff",
+      "note": "ControlObjectLocationInaccurateUpTo1m ±1m，仅回退"
+    }
+  },
+  "typeinfo_rva": {
+    "SystemContainers": "0x10600E78",
+    "MapComponent": "0x107DA3F0",
+    "ControlObjectTransformComponent": "0x1071DAC8",
+    "ControlObjectLocationInaccurateUpTo1mComponent": "0x10718158"
+  },
+  "offsets": {
+    "SystemContainers.MapComponent": "0x2DB8",
+    "SystemContainers.ControlObjectTransformComponent": "0x2968",
+    "SystemContainers.ControlObjectLocationInaccurateUpTo1mComponent": "0x2930",
+    "MapComponent.PlayerPosition": "0x10",
+    "ControlObjectTransform.Position3D": "0x10",
+    "ControlObjectLocation.location": "0x10",
+    "ControlObjectLocation.hasControlObject": "0x1C"
+  },
+  "strategy": "inaccurate_agree_then_ref_then_move_sample",
+  "note": "只读；主路径 MapComponent；多实例：剔原点→跟 inaccurate 对齐→上一帧→移动采样；禁止离原点最近。状态栏 allow_scan=False 后台定位。冻结见 ui_mode_findings/RESULT_coord_ok_2026-07-30.md"
+}

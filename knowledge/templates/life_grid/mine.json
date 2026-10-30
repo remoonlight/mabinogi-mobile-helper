@@ -1,0 +1,13 @@
+{
+  "id": "mine",
+  "label": "採礦",
+  "file": "mine.png",
+  "rel_dir": "knowledge/templates/life_grid",
+  "need_ui": "生活技能大格仍开着，套住「採礦」格",
+  "client_px": {
+    "x": 695,
+    "y": 197,
+    "w": 84,
+    "h": 92
+  }
+}

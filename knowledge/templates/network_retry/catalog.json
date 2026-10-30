@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "source": "tests/fixtures/game_stop/network_retry_user_20261027.png",
+  "source_sha256": "b63e23d8bc70d5ca11a27b13efc92b7b6e3d664345875242c06a697146075e76",
+  "client_crop_xyxy": [
+    4,
+    25,
+    740,
+    577
+  ],
+  "source_size": [
+    736,
+    552
+  ],
+  "coordinate_source": "User screenshot; client excludes title bar and borders; button center from retained green control",
+  "threshold": 0.94,
+  "wait_s": 5.0,
+  "click_xy": [
+    432,
+    497
+  ],
+  "anchors": [
+    {
+      "file": "title.png",
+      "crop_xyxy": [
+        299,
+        332,
+        437,
+        354
+      ],
+      "sha256": "562b42709f1d5ed7beeb9bb970820c5a22f0d1c8b6ebf69c3da504bfe18f5ed6"
+    },
+    {
+      "file": "button.png",
+      "crop_xyxy": [
+        370,
+        478,
+        495,
+        515
+      ],
+      "sha256": "2672c9acfd58a9e0eddc69d6db6a000741e79bd47aeaf829d8881f46778e9bb0"
+    }
+  ]
+}

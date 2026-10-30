@@ -1,0 +1,15 @@
+{
+  "id": "process_metal_鐵錠_iron_ore",
+  "label": "鐵錠(鐵礦石)",
+  "file": "鐵錠_iron_ore.png",
+  "rel_dir": "knowledge/templates/process/metal",
+  "need_ui": "套住「鐵錠(鐵礦石)」：鐵錠(鐵礦石)",
+  "client_px": {
+    "x": 999,
+    "y": 344,
+    "w": 142,
+    "h": 109
+  },
+  "pending_review": false,
+  "locate_src": "ocr_cht"
+}

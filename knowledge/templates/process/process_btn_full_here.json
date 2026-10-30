@@ -1,0 +1,19 @@
+{
+  "id": "process_btn_full_here",
+  "label": "加工",
+  "file": "process_btn_full_here.png",
+  "rel_dir": "knowledge/templates/process",
+  "need_ui": "明细已开：材料已齐、角色已在加工设施前，套住行动钮（多半是「加工」）",
+  "client_px": {
+    "x": 1453,
+    "y": 1331,
+    "w": 79,
+    "h": 45
+  },
+  "pending_review": false,
+  "variant_id": "process_btn_full_here",
+  "at_facility": true,
+  "materials_ok": true,
+  "locate_src": "ocr_cht",
+  "note": "人眼: 按钮文案为加工；分类器未给 variant"
+}

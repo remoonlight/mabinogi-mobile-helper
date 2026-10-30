@@ -1,0 +1,13 @@
+{
+  "id": "craft_card_food",
+  "label": "食材卡",
+  "file": "card_food.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "套住食材",
+  "client_px": {
+    "x": 712,
+    "y": 710,
+    "w": 236,
+    "h": 253
+  }
+}

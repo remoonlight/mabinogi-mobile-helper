@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "note": "Explicit verified client/configuration pairs only. Evidence and validation limits are retained per build; no automatic enrolment from installed files or a partial audit. Unknown or changed files/configuration remain refused.",
+  "builds": [
+    {
+      "id": "tw-20260930-1675c213",
+      "files": {
+        "GameAssembly.dll": "1675c2131534d0ab2fc053af8a2e394d326ba7d22eff0019734be96b1808678f",
+        "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+        "global-metadata.dat": "3f6827a41d26ab50ef0051b881cb2c6dcab0c12aab5e95cc7da0071fae63a847"
+      },
+      "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
+      "evidence": "logs/life_verify_20261001/memory_restore_20261019_acceptance.json",
+      "validation_scope": "method-B current readonly memory/HUD baseline; no business-input acceptance"
+    }
+  ]
+}

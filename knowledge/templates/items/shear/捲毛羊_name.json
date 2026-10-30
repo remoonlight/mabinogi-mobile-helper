@@ -1,0 +1,17 @@
+{
+  "source_frame": "tests/fixtures/process_stance/shear_list_updated_20261005.png",
+  "source_sha256": "45c35bc93f3559d2ce336b659a148d87cf91730f1b2201f003dcb298f1d4517b",
+  "source_to_client": [
+    0,
+    0,
+    1912,
+    1442
+  ],
+  "crop_client_px": [
+    1199,
+    1063,
+    124,
+    43
+  ],
+  "template_sha256": "026538d37e4d6efe04fc73c7c3f1ec1c3854d51d3b78335e6a4109fd6c135a50"
+}

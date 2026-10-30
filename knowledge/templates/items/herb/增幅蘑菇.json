@@ -1,0 +1,47 @@
+{
+  "id": "item_herb_增幅蘑菇",
+  "label": "增幅蘑菇",
+  "file": "增幅蘑菇.png",
+  "rel_dir": "knowledge/templates/items/herb",
+  "min_level": 25,
+  "status": "ready",
+  "client_px": {
+    "x": 1082,
+    "y": 1298,
+    "w": 96,
+    "h": 79
+  },
+  "source_frame": "tests/fixtures/process_stance/herb_list_updated_20261006.png",
+  "source_sha256": "e3c715ae108f63f2ad1f17648cfa4e248e7932f5d4ae7afdb4482ecd3eb5c52f",
+  "template_sha256": "42628840f515170b8c880206dcf85fa9edf8709f8c61bb28efcc9c3953e21f0e",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "source_window": "tests/fixtures/process_stance/herb_list_updated_20261006_window.png",
+  "source_window_sha256": "8d30521569a89f9cf6b69db88bc33b6f8d25bac7b8ac87357a020cdc82da03ec",
+  "source_window_dimensions": [
+    1916,
+    1502
+  ],
+  "client_from_window_px": [
+    2,
+    58,
+    1912,
+    1442
+  ],
+  "transform": "window -> client crop [2,58,1912,1442] -> exact icon crop; no resize",
+  "coordinate_source": "user supplied 2026-10-06 full window; inspected unlocked Lv.25 row; dimensions agree with game_frame",
+  "evidence": "user attachment codex-clipboard-f4a06544-a1e1-4228-b194-eead818a227d.png; offline registration, no game input",
+  "prior_gray_source_frame": "tests/fixtures/process_stance/herb_list_updated_20261005.png",
+  "registration_refinement": {
+    "initial_crop_px": [
+      1082,
+      1298,
+      96,
+      100
+    ],
+    "reason": "initial 100px crop included empty row background below icon and reached protected list edge; retain source icon through row 78, remove background only; no threshold or page guard change",
+    "foreground_last_row_in_initial_crop": 78
+  }
+}

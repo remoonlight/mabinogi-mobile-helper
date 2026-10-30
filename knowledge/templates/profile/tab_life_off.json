@@ -1,0 +1,13 @@
+{
+  "id": "profile_tab_life_off",
+  "label": "角色-生活技能Tab灰态",
+  "file": "tab_life_off.png",
+  "rel_dir": "knowledge/templates/profile",
+  "need_ui": "人物界面开着，该 Tab 未选中。仅辅助确认角色壳，禁止单独定当前 Tab",
+  "client_px": {
+    "x": 56,
+    "y": 751,
+    "w": 80,
+    "h": 80
+  }
+}

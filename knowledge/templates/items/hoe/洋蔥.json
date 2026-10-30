@@ -1,0 +1,13 @@
+{
+  "id": "item_hoe_洋蔥",
+  "label": "洋蔥",
+  "file": "洋蔥.png",
+  "rel_dir": "knowledge/templates/items/hoe",
+  "need_ui": "请打开「锄地」详情右栏，套住「洋蔥」",
+  "client_px": {
+    "x": 1082,
+    "y": 1040,
+    "w": 96,
+    "h": 96
+  }
+}

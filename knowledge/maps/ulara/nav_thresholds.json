@@ -1,0 +1,9 @@
+{
+  "N_ulara": 100,
+  "N_town": 120,
+  "min_match_score_ulara": 0.35,
+  "min_match_score_town": 0.25,
+  "min_overview_canvas_score": 0.60,
+  "min_overview_patch_score": 0.65,
+  "note": "town：先图鉴定位拖近再 OCR；N_town=120。ulara png/json 已对齐。"
+}

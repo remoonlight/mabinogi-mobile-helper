@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "role": "long_term_detect_operate_frame",
+  "design_resolution": [
+    1920,
+    1440
+  ],
+  "hwnd": 134968,
+  "title": "瑪奇 Mobile",
+  "screen": {
+    "left": 1129,
+    "top": 264,
+    "width": 1920,
+    "height": 1440
+  },
+  "scale": [
+    1.0,
+    1.0
+  ],
+  "updated": "2026-10-30T16:17:23",
+  "note": "识别截屏与点击均相对此客户区；标定坐标按 design_resolution 缩放"
+}

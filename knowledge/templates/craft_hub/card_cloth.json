@@ -1,0 +1,13 @@
+{
+  "id": "craft_card_cloth",
+  "label": "布料卡",
+  "file": "card_cloth.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "套住布料",
+  "client_px": {
+    "x": 1539,
+    "y": 129,
+    "w": 236,
+    "h": 246
+  }
+}

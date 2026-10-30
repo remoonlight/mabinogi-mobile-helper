@@ -1,0 +1,14 @@
+{
+  "id": "craft_tab_process_on",
+  "label": "加工·选中(青)",
+  "file": "tab_process_on.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "製作已开；先点「加工」让这一栏变青、其它变灰；红框只套这一栏图标+栏名（不要套到右边内容）；加工若有红点仍整套；不要点六卡、不要进设施。套住「加工」选中(青)",
+  "client_px": {
+    "x": 56,
+    "y": 611,
+    "w": 86,
+    "h": 125
+  },
+  "role": "tab_on"
+}

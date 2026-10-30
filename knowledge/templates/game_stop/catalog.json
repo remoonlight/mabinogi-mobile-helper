@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "source": "logs/life_verify_20261001/crafting_items_20261014_1791932153041927900.png",
+  "source_sha256": "f65d170f2f166f48786a997a4501fb542c52029ea9612314e3f9158b114649a3",
+  "source_size": [
+    1920,
+    1440
+  ],
+  "threshold": 0.88,
+  "dialogs": [
+    {
+      "id": "runtime",
+      "label": "遊戲已執行過久，請重新啟動遊戲",
+      "anchors": [
+        {
+          "file": "runtime_title.png",
+          "crop": [
+            838,
+            82,
+            1080,
+            154
+          ],
+          "sha256": "3187c05cfba07c5100ac4cfac31acc1e26fac1f8f3adb6a8720594a84e6f4a1e"
+        },
+        {
+          "file": "runtime_button.png",
+          "crop": [
+            926,
+            210,
+            994,
+            244
+          ],
+          "sha256": "88c69c4bf767322c014bccddf9d087f497408d9f83fa1731ede1ee857c945ae2"
+        }
+      ]
+    },
+    {
+      "id": "disconnect",
+      "label": "與遊戲伺服器的連線已中斷",
+      "anchors": [
+        {
+          "file": "disconnect_title.png",
+          "crop": [
+            712,
+            558,
+            1202,
+            602
+          ],
+          "sha256": "02b27eaa479d7ee7cba3b854c773b415c0a5c90520d8eaffb5b2467a4f5a12d6"
+        },
+        {
+          "file": "disconnect_button.png",
+          "crop": [
+            928,
+            836,
+            996,
+            872
+          ],
+          "sha256": "b30ca77b5719785bae4e6ab07dd8b2e82140039e8b63510af4f925e2154399c3"
+        }
+      ]
+    }
+  ]
+}

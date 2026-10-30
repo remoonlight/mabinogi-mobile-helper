@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "ulara_breadcrumb": {
+    "design_resolution": [1912, 1442],
+    "client_xy": [116, 59],
+    "source_frame": "tests/fixtures/process_stance/cloud_region_map_20261007.png",
+    "source_sha256": "fa1b9b4619d399f009f3bf6c1806eb78c06de1d2644665d758a06d0d7bbee197",
+    "coordinate_source": "center of registered ulara_breadcrumb_label client crop [88,38,56,42]",
+    "authorization": "2026-10-09 user: current interface parameters identify map, then click this fixed position"
+  }
+}

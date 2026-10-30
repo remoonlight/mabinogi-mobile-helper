@@ -1,0 +1,15 @@
+{
+  "id": "item_fish_舊釣魚場",
+  "label": "舊釣魚場",
+  "file": "舊釣魚場.png",
+  "rel_dir": "knowledge/templates/items/fish",
+  "need_ui": "请打开「钓鱼」详情右栏，套住「舊釣魚場」",
+  "status": "deferred_level_gray",
+  "defer_reason": "等级未到，列表图标为灰色；解锁后 method B 重采彩色图再验",
+  "client_px": {
+    "x": 1086,
+    "y": 1292,
+    "w": 90,
+    "h": 92
+  }
+}

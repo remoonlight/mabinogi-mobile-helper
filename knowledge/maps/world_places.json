@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "coord_space": "MapComponent.PlayerPosition + ChannelSheetId",
+  "note": "世界坐标地名表；用 world_place_pin 站桩标定。与 ulara/places.json 的 nx/ny 不是同一套。",
+  "updated": "2026-07-29T17:06:43",
+  "places": [
+    {
+      "name": "杜巴頓奈麗絲附近",
+      "channel_sheet_id": 75,
+      "display_name": "杜巴頓",
+      "x": 17,
+      "y": -19,
+      "x_raw": 17.386,
+      "y_raw": -19.45,
+      "tags": [
+        "repair"
+      ],
+      "note": "compound_arrive_2026-07-29",
+      "pinned_at": "2026-07-29T12:41:02",
+      "source": "map_component"
+    },
+    {
+      "name": "冰霜峽谷礦脈附近",
+      "channel_sheet_id": 75,
+      "display_name": "冰霜峽谷",
+      "x": 507,
+      "y": 363,
+      "x_raw": 506.678,
+      "y_raw": 362.59,
+      "tags": [
+        "gather"
+      ],
+      "note": "miner_vein_live_2026-07-29",
+      "pinned_at": "2026-07-29T17:06:43",
+      "source": "map_component"
+    }
+  ]
+}

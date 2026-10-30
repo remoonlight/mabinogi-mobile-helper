@@ -1,0 +1,410 @@
+{
+  "version": 2,
+  "updated": "2026-10-06",
+  "rule": "详情物先匹配右栏图标模板；失败则繁体 OCR 认图标右侧物名。缺 png 拒启。",
+  "template_root": "knowledge/templates/items",
+  "skills": [
+    {
+      "id": "woodcut",
+      "ui_label": "伐木",
+      "mem_names": [
+        "伐木"
+      ],
+      "tiers": [
+        {
+          "min_level": 1,
+          "max_level": null,
+          "items": [
+            {
+              "name": "樹木",
+              "template": "knowledge/templates/items/woodcut/樹木.png"
+            },
+            {
+              "name": "尖葉樹",
+              "template": "knowledge/templates/items/woodcut/尖葉樹.png"
+            },
+            {
+              "name": "粗壮樹",
+              "template": "knowledge/templates/items/woodcut/粗壮樹.png"
+            },
+            {
+              "name": "成材樹",
+              "template": "knowledge/templates/items/woodcut/成材樹.png"
+            },
+            {
+              "name": "甲胄樹",
+              "template": "knowledge/templates/items/woodcut/甲胄樹.png"
+            }
+          ]
+        },
+        {
+          "min_level": 25,
+          "max_level": null,
+          "items": [
+            {
+              "name": "幽暮樹",
+              "template": "knowledge/templates/items/woodcut/幽暮樹.png",
+              "status": "ready"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mine",
+      "ui_label": "采矿",
+      "mem_names": [
+        "採礦",
+        "采矿"
+      ],
+      "tiers": [
+        {
+          "min_level": 1,
+          "max_level": null,
+          "items": [
+            {
+              "name": "礦脈",
+              "template": "knowledge/templates/items/mine/礦脈.png"
+            },
+            {
+              "name": "鐵礦脈",
+              "template": "knowledge/templates/items/mine/鐵礦脈.png"
+            },
+            {
+              "name": "冰",
+              "template": "knowledge/templates/items/mine/冰.png"
+            },
+            {
+              "name": "煤炭礦脈",
+              "template": "knowledge/templates/items/mine/煤炭礦脈.png"
+            },
+            {
+              "name": "銅礦脈",
+              "template": "knowledge/templates/items/mine/銅礦脈.png"
+            },
+            {
+              "name": "白銅礦脈",
+              "template": "knowledge/templates/items/mine/白銅礦脈.png"
+            }
+          ]
+        },
+        {
+          "min_level": 25,
+          "max_level": null,
+          "items": [
+            {
+              "name": "銀礦脈",
+              "template": "knowledge/templates/items/mine/銀礦脈.png",
+              "status": "ready"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "herb",
+      "ui_label": "采集药草",
+      "mem_names": [
+        "採集藥草",
+        "采集药草"
+      ],
+      "tiers": [
+        {
+          "min_level": 1,
+          "max_level": null,
+          "items": [
+            {
+              "name": "藥草",
+              "template": "knowledge/templates/items/herb/藥草.png"
+            },
+            {
+              "name": "箭花",
+              "template": "knowledge/templates/items/herb/箭花.png"
+            },
+            {
+              "name": "魔力藥草",
+              "template": "knowledge/templates/items/herb/魔力藥草.png"
+            },
+            {
+              "name": "血紅藥草",
+              "template": "knowledge/templates/items/herb/血紅藥草.png"
+            },
+            {
+              "name": "新芽蘑菇",
+              "template": "knowledge/templates/items/herb/新芽蘑菇.png"
+            },
+            {
+              "name": "壯壯蘑菇",
+              "template": "knowledge/templates/items/herb/壯壯蘑菇.png"
+            },
+            {
+              "name": "毅力草",
+              "template": "knowledge/templates/items/herb/毅力草.png"
+            },
+            {
+              "name": "咻咻蘑菇",
+              "template": "knowledge/templates/items/herb/咻咻蘑菇.png"
+            },
+            {
+              "name": "躲躲花",
+              "template": "knowledge/templates/items/herb/躲躲花.png"
+            },
+            {
+              "name": "淨淨蘑菇",
+              "template": "knowledge/templates/items/herb/淨淨蘑菇.png"
+            }
+          ]
+        },
+        {
+          "min_level": 20,
+          "max_level": null,
+          "items": [
+            {
+              "name": "傷痕花",
+              "template": "knowledge/templates/items/herb/傷痕花.png",
+              "status": "ready"
+            }
+          ]
+        },
+        {
+          "min_level": 25,
+          "max_level": null,
+          "items": [
+            {
+              "name": "增幅蘑菇",
+              "template": "knowledge/templates/items/herb/增幅蘑菇.png",
+              "status": "ready"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shear",
+      "ui_label": "剪羊毛",
+      "mem_names": [
+        "剪羊毛"
+      ],
+      "tiers": [
+        {
+          "min_level": 1,
+          "max_level": null,
+          "items": [
+            {
+              "name": "羊",
+              "template": "knowledge/templates/items/shear/羊.png"
+            },
+            {
+              "name": "捲毛羊",
+              "template": "knowledge/templates/items/shear/捲毛羊.png"
+            }
+          ]
+        },
+        {
+          "min_level": 25,
+          "max_level": null,
+          "items": [
+            {
+              "name": "烏雲羊",
+              "template": "knowledge/templates/items/shear/烏雲羊.png",
+              "status": "ready"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harvest",
+      "ui_label": "收割",
+      "mem_names": [
+        "收割"
+      ],
+      "tiers": [
+        {
+          "min_level": 1,
+          "max_level": null,
+          "items": [
+            {
+              "name": "小麥",
+              "template": "knowledge/templates/items/harvest/小麥.png"
+            },
+            {
+              "name": "玉米",
+              "template": "knowledge/templates/items/harvest/玉米.png"
+            }
+          ]
+        },
+        {
+          "min_level": 10,
+          "max_level": null,
+          "items": [
+            {
+              "name": "黃豆",
+              "template": "knowledge/templates/items/harvest/黃豆.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hoe",
+      "ui_label": "锄地",
+      "mem_names": [
+        "鋤地",
+        "锄地"
+      ],
+      "tiers": [
+        {
+          "min_level": 1,
+          "max_level": null,
+          "items": [
+            {
+              "name": "馬鈴薯",
+              "template": "knowledge/templates/items/hoe/馬鈴薯.png"
+            },
+            {
+              "name": "洋蔥",
+              "template": "knowledge/templates/items/hoe/洋蔥.png"
+            },
+            {
+              "name": "貝類",
+              "template": "knowledge/templates/items/hoe/貝類.png"
+            }
+          ]
+        },
+        {
+          "min_level": 10,
+          "max_level": null,
+          "items": [
+            {
+              "name": "防風草",
+              "template": "knowledge/templates/items/hoe/防風草.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "insect",
+      "ui_label": "昆虫采集",
+      "mem_names": [
+        "昆蟲採集",
+        "昆虫采集"
+      ],
+      "tiers": [
+        {
+          "min_level": 1,
+          "max_level": null,
+          "items": [
+            {
+              "name": "光群",
+              "template": "knowledge/templates/items/insect/光群.png"
+            },
+            {
+              "name": "雪原光群",
+              "template": "knowledge/templates/items/insect/雪原光群.png"
+            },
+            {
+              "name": "寧靜的光群",
+              "template": "knowledge/templates/items/insect/寧靜的光群.png"
+            },
+            {
+              "name": "溫暖的光群",
+              "template": "knowledge/templates/items/insect/溫暖的光群.png"
+            },
+            {
+              "name": "冰冷的光群",
+              "template": "knowledge/templates/items/insect/冰冷的光群.png"
+            }
+          ]
+        },
+        {
+          "min_level": 20,
+          "max_level": null,
+          "items": [
+            {
+              "name": "荒蕪的昆蟲群",
+              "template": "knowledge/templates/items/insect/荒蕪的昆蟲群.png",
+              "status": "ready"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "ui_label": "日常採集",
+      "mem_names": [
+        "日常採集",
+        "日常采集"
+      ],
+      "tiers": [
+        {
+          "min_level": 1,
+          "max_level": null,
+          "items": [
+            {
+              "name": "巢穴",
+              "template": "knowledge/templates/items/daily/巢穴.png"
+            },
+            {
+              "name": "蜘蛛網",
+              "template": "knowledge/templates/items/daily/蜘蛛網.png"
+            },
+            {
+              "name": "水井",
+              "template": "knowledge/templates/items/daily/水井.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fish",
+      "ui_label": "钓鱼",
+      "mem_names": [
+        "釣魚",
+        "钓鱼"
+      ],
+      "tiers": [
+        {
+          "min_level": 1,
+          "max_level": null,
+          "items": [
+            {
+              "name": "小釣魚場",
+              "template": "knowledge/templates/items/fish/小釣魚場.png"
+            },
+            {
+              "name": "南側城牆釣魚場",
+              "template": "knowledge/templates/items/fish/南側城牆釣魚場.png"
+            },
+            {
+              "name": "東側城牆釣魚場",
+              "template": "knowledge/templates/items/fish/東側城牆釣魚場.png"
+            },
+            {
+              "name": "海濱釣魚場",
+              "template": "knowledge/templates/items/fish/海濱釣魚場.png"
+            },
+            {
+              "name": "舊釣魚場",
+              "template": "knowledge/templates/items/fish/舊釣魚場.png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tier_schema_example": {
+    "min_level": 1,
+    "max_level": null,
+    "items": [
+      {
+        "name": "入門物名",
+        "template": "knowledge/templates/items/<skill_id>/<名>.png"
+      }
+    ]
+  },
+  "notes": "原详情物 40 张已重采（含日常蜘蛛網）；2026-10-03 按用户要求收割训练改黃豆、鋤地改防風草，方法 B 实采补入两项目标的图标及列表锚，原图均标示 Lv.10。图模板失败用繁体 OCR 认右侧文字。找附近仍可用文字 OCR。"
+}

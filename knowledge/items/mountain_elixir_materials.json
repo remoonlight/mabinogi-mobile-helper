@@ -1,0 +1,424 @@
+{
+  "schema": "mountain_elixir_materials.v1",
+  "target_id": 1197217502,
+  "target": "高級混合強化秘藥(山崩)",
+  "target_count": 30,
+  "source": "readonly current IL2CPP recipe cache, consumable IDs resolved from same-PID earlier snapshot",
+  "recipes_observed_at": "2026-10-06T05:26:53.916831+00:00",
+  "consumable_names_observed_at": "2026-10-06T03:15:55.975637+00:00",
+  "game_pid": 47832,
+  "watch_pid_at_capture": 70260,
+  "raw_recipe_evidence": "logs/soybean_20261003/mountain_20261006_recipe_snapshot.json",
+  "raw_name_evidence": "logs/shop_value_20261006/expanded_snapshot.json",
+  "assumptions": [
+    "starting ingredient inventory is zero",
+    "normal successful batch yields; no critical bonus or failure",
+    "aggregate shared ingredient demand before rounding batches",
+    "expand potion crafting and herb processing only; magic stones/shards/reagents remain stock ingredients",
+    "zero-stock evaluation; runtime necessary-items view deducts actual inventory"
+  ],
+  "steps": [
+    {
+      "recipe_id": 1197217502,
+      "result_id": 1197217502,
+      "name": "高級混合強化秘藥(山崩)",
+      "kind": "CraftingRecipe",
+      "facility_level": 4,
+      "output_n": 2,
+      "ingredients": [
+        {
+          "id": 297847065,
+          "name": "高級強擊強化秘藥",
+          "amount": 3
+        },
+        {
+          "id": 1590592632,
+          "name": "高級連擊強化秘藥",
+          "amount": 3
+        },
+        {
+          "id": 456275118,
+          "name": "強化秘藥乳化劑",
+          "amount": 10
+        },
+        {
+          "id": 141159521,
+          "name": "生命的魔力石",
+          "amount": 25
+        },
+        {
+          "id": 679734366,
+          "name": "憤怒的碎片",
+          "amount": 60
+        }
+      ],
+      "source_address": "0x21233bb6cc0",
+      "needed": 30,
+      "batches": 15,
+      "produced": 30,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 1590592632,
+      "result_id": 1590592632,
+      "name": "高級連擊強化秘藥",
+      "kind": "CraftingRecipe",
+      "facility_level": 4,
+      "output_n": 3,
+      "ingredients": [
+        {
+          "id": 476273610,
+          "name": "連擊強化秘藥",
+          "amount": 5
+        },
+        {
+          "id": 826686065,
+          "name": "增幅蘑菇汁液",
+          "amount": 5
+        },
+        {
+          "id": 2122271456,
+          "name": "礦山的魔力石",
+          "amount": 6
+        },
+        {
+          "id": 1421471816,
+          "name": "鍊金術碎屑",
+          "amount": 20
+        }
+      ],
+      "source_address": "0x21233bb6ee0",
+      "needed": 45,
+      "batches": 15,
+      "produced": 45,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 476273610,
+      "result_id": 476273610,
+      "name": "連擊強化秘藥",
+      "kind": "CraftingRecipe",
+      "facility_level": 3,
+      "output_n": 3,
+      "ingredients": [
+        {
+          "id": 621689079,
+          "name": "箭花",
+          "amount": 10
+        },
+        {
+          "id": 393824971,
+          "name": "淨淨蘑菇汁液",
+          "amount": 3
+        },
+        {
+          "id": 910144521,
+          "name": "滴答螢火蟲",
+          "amount": 10
+        },
+        {
+          "id": 1421471816,
+          "name": "鍊金術碎屑",
+          "amount": 10
+        }
+      ],
+      "source_address": "0x21233bb1770",
+      "needed": 75,
+      "batches": 25,
+      "produced": 75,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 297847065,
+      "result_id": 297847065,
+      "name": "高級強擊強化秘藥",
+      "kind": "CraftingRecipe",
+      "facility_level": 4,
+      "output_n": 3,
+      "ingredients": [
+        {
+          "id": 836306853,
+          "name": "強擊強化秘藥",
+          "amount": 5
+        },
+        {
+          "id": 826686065,
+          "name": "增幅蘑菇汁液",
+          "amount": 5
+        },
+        {
+          "id": 2122271456,
+          "name": "礦山的魔力石",
+          "amount": 6
+        },
+        {
+          "id": 1421471816,
+          "name": "鍊金術碎屑",
+          "amount": 20
+        }
+      ],
+      "source_address": "0x21233bb1000",
+      "needed": 45,
+      "batches": 15,
+      "produced": 45,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 826686065,
+      "result_id": 826686065,
+      "name": "增幅蘑菇汁液",
+      "kind": "Altering",
+      "facility_level": 4,
+      "output_n": 5,
+      "ingredients": [
+        {
+          "id": 1125390553,
+          "name": "增幅蘑菇孢子",
+          "amount": 10
+        },
+        {
+          "id": 1027664724,
+          "name": "咻咻蘑菇汁液",
+          "amount": 10
+        }
+      ],
+      "source_address": "0x212334941a0",
+      "needed": 150,
+      "batches": 30,
+      "produced": 150,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 1027664724,
+      "result_id": 1027664724,
+      "name": "咻咻蘑菇汁液",
+      "kind": "Altering",
+      "facility_level": 2,
+      "output_n": 5,
+      "ingredients": [
+        {
+          "id": 403020325,
+          "name": "咻咻蘑菇孢子",
+          "amount": 10
+        },
+        {
+          "id": 1837785241,
+          "name": "裝水的瓶子",
+          "amount": 1
+        }
+      ],
+      "source_address": "0x21233494b60",
+      "needed": 300,
+      "batches": 60,
+      "produced": 300,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 403020325,
+      "result_id": 403020325,
+      "name": "咻咻蘑菇孢子",
+      "kind": "Altering",
+      "facility_level": 2,
+      "output_n": 15,
+      "ingredients": [
+        {
+          "id": 615758160,
+          "name": "咻咻蘑菇",
+          "amount": 30
+        },
+        {
+          "id": 1934593251,
+          "name": "紙",
+          "amount": 3
+        }
+      ],
+      "source_address": "0x21233494c30",
+      "needed": 600,
+      "batches": 40,
+      "produced": 600,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 1125390553,
+      "result_id": 1125390553,
+      "name": "增幅蘑菇孢子",
+      "kind": "Altering",
+      "facility_level": 4,
+      "output_n": 15,
+      "ingredients": [
+        {
+          "id": 457735307,
+          "name": "增幅蘑菇",
+          "amount": 30
+        },
+        {
+          "id": 1934593251,
+          "name": "紙",
+          "amount": 3
+        }
+      ],
+      "source_address": "0x21233494270",
+      "needed": 300,
+      "batches": 20,
+      "produced": 300,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 836306853,
+      "result_id": 836306853,
+      "name": "強擊強化秘藥",
+      "kind": "CraftingRecipe",
+      "facility_level": 3,
+      "output_n": 3,
+      "ingredients": [
+        {
+          "id": 537514193,
+          "name": "血紅藥草",
+          "amount": 10
+        },
+        {
+          "id": 393824971,
+          "name": "淨淨蘑菇汁液",
+          "amount": 3
+        },
+        {
+          "id": 1365845276,
+          "name": "獨角仙",
+          "amount": 10
+        },
+        {
+          "id": 1421471816,
+          "name": "鍊金術碎屑",
+          "amount": 10
+        }
+      ],
+      "source_address": "0x21233bb1880",
+      "needed": 75,
+      "batches": 25,
+      "produced": 75,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 393824971,
+      "result_id": 393824971,
+      "name": "淨淨蘑菇汁液",
+      "kind": "Altering",
+      "facility_level": 3,
+      "output_n": 5,
+      "ingredients": [
+        {
+          "id": 1345278556,
+          "name": "淨淨蘑菇孢子",
+          "amount": 10
+        },
+        {
+          "id": 1837785241,
+          "name": "裝水的瓶子",
+          "amount": 1
+        }
+      ],
+      "source_address": "0x212090455b0",
+      "needed": 150,
+      "batches": 30,
+      "produced": 150,
+      "leftover": 0
+    },
+    {
+      "recipe_id": 1345278556,
+      "result_id": 1345278556,
+      "name": "淨淨蘑菇孢子",
+      "kind": "Altering",
+      "facility_level": 3,
+      "output_n": 15,
+      "ingredients": [
+        {
+          "id": 1526680639,
+          "name": "淨淨蘑菇",
+          "amount": 30
+        },
+        {
+          "id": 1934593251,
+          "name": "紙",
+          "amount": 3
+        }
+      ],
+      "source_address": "0x21233494750",
+      "needed": 300,
+      "batches": 20,
+      "produced": 300,
+      "leftover": 0
+    }
+  ],
+  "base_materials": [
+    {
+      "id": 456275118,
+      "name": "強化秘藥乳化劑",
+      "amount": 150
+    },
+    {
+      "id": 141159521,
+      "name": "生命的魔力石",
+      "amount": 375
+    },
+    {
+      "id": 679734366,
+      "name": "憤怒的碎片",
+      "amount": 900
+    },
+    {
+      "id": 2122271456,
+      "name": "礦山的魔力石",
+      "amount": 180
+    },
+    {
+      "id": 1421471816,
+      "name": "鍊金術碎屑",
+      "amount": 1100
+    },
+    {
+      "id": 621689079,
+      "name": "箭花",
+      "amount": 250
+    },
+    {
+      "id": 910144521,
+      "name": "滴答螢火蟲",
+      "amount": 250
+    },
+    {
+      "id": 1837785241,
+      "name": "裝水的瓶子",
+      "amount": 90
+    },
+    {
+      "id": 615758160,
+      "name": "咻咻蘑菇",
+      "amount": 1200
+    },
+    {
+      "id": 1934593251,
+      "name": "紙",
+      "amount": 240
+    },
+    {
+      "id": 457735307,
+      "name": "增幅蘑菇",
+      "amount": 600
+    },
+    {
+      "id": 537514193,
+      "name": "血紅藥草",
+      "amount": 250
+    },
+    {
+      "id": 1365845276,
+      "name": "獨角仙",
+      "amount": 250
+    },
+    {
+      "id": 1526680639,
+      "name": "淨淨蘑菇",
+      "amount": 600
+    }
+  ]
+}

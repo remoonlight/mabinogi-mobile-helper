@@ -1,0 +1,13 @@
+{
+  "id": "craft_card_wood",
+  "label": "木材卡",
+  "file": "card_wood.png",
+  "rel_dir": "knowledge/templates/craft_hub",
+  "need_ui": "套住木材",
+  "client_px": {
+    "x": 709,
+    "y": 139,
+    "w": 238,
+    "h": 237
+  }
+}

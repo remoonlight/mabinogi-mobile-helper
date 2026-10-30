@@ -1,0 +1,14 @@
+{
+  "id": "gather_skill_daily_巢穴",
+  "label": "巢穴",
+  "file": "巢穴.png",
+  "rel_dir": "knowledge/templates/gather_skill/daily",
+  "need_ui": "角色-生活技能-日常採集右栏：图标+物名首字",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1082,
+    "y": 779,
+    "w": 198,
+    "h": 87
+  }
+}

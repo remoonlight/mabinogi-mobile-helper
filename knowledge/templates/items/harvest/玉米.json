@@ -1,0 +1,13 @@
+{
+  "id": "item_harvest_玉米",
+  "label": "玉米",
+  "file": "玉米.png",
+  "rel_dir": "knowledge/templates/items/harvest",
+  "need_ui": "请打开「收割」详情右栏，套住「玉米」",
+  "client_px": {
+    "x": 1081,
+    "y": 1040,
+    "w": 100,
+    "h": 97
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "source": "tests/fixtures/process_stance/bankor_town_map.png",
+  "source_sha256": "3cf2c598651a57237761fd58449b6b7b53daf563cd80e8beb213a3cbef3c2649",
+  "source_size": [
+    1912,
+    1442
+  ],
+  "roi": [
+    0.08,
+    0.1,
+    0.8,
+    0.78
+  ],
+  "threshold": 0.88,
+  "min_margin": 0.03,
+  "max_translation_delta": 8,
+  "patches": [
+    {
+      "template": "knowledge/templates/map/bankor_town_gate.png",
+      "crop_box": [
+        406,
+        206,
+        805,
+        367
+      ],
+      "source_origin": [
+        406,
+        206
+      ]
+    },
+    {
+      "template": "knowledge/templates/map/bankor_town_roof.png",
+      "crop_box": [
+        600,
+        600,
+        830,
+        760
+      ],
+      "source_origin": [
+        600,
+        600
+      ]
+    }
+  ]
+}

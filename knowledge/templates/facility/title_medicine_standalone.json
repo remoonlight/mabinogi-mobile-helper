@@ -1,0 +1,17 @@
+{
+  "source_frame": "tests/fixtures/process_stance/medicine_standalone.png",
+  "source_sha256": "668b50043de7177791982e9b257b20dfe1011a7aa9cbd4a0ee5ccbcc190b9618",
+  "source_dimensions": [
+    1912,
+    1442
+  ],
+  "crop_client_px": [
+    30,
+    32,
+    174,
+    49
+  ],
+  "transform": "exact crop; no resize",
+  "coordinate_source": "inspected complete medicine title on preserved game_frame",
+  "template_sha256": "dba43720d8760a2e6f7f4b5b4da53681ec17b4ac14f3a513153c336f372a5737"
+}

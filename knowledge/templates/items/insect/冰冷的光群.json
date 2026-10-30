@@ -1,0 +1,13 @@
+{
+  "id": "item_insect_冰冷的光群",
+  "label": "冰冷的光群",
+  "file": "冰冷的光群.png",
+  "rel_dir": "knowledge/templates/items/insect",
+  "need_ui": "请打开「昆虫采集」详情右栏，套住「冰冷的光群」",
+  "client_px": {
+    "x": 1082,
+    "y": 1287,
+    "w": 97,
+    "h": 97
+  }
+}

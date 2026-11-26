@@ -17,10 +17,10 @@ from mm_assist.platform.window import WindowInfo
 FIX = Path(__file__).parent / 'fixtures/map_memory'
 
 
-def observation():
-    evidence = json.loads((FIX/'world_bankor_20261014.json').read_text('utf-8'))
+def observation(place='world_bankor_20261014'):
+    evidence = json.loads((FIX/f'{place}.json').read_text('utf-8'))
     ui = evidence['ui']
-    frame = cv2.imdecode(np.fromfile(FIX/'world_bankor_20261014.png', np.uint8), 1)
+    frame = cv2.imdecode(np.fromfile(FIX/f'{place}.png', np.uint8), 1)
     snap = ui_stack.UiStackSnap(names=ui['ui_stack_names'], ready=True,
         map_identity=tuple(ui['map_identity']), map_view=ui['map_view'], sampled_ts=time.time())
     return frame, snap
@@ -35,11 +35,25 @@ def test_retained_world_pixels_localize_with_existing_geometry_gates():
     assert result.score >= .70 and .54 < result.zoom < .55
 
 
-def test_loaded_world_resource_reaches_independent_localization_without_reclick(monkeypatch):
-    frame, snap = observation()
+def test_emain_failure_frame_localizes_against_updated_atlas():
+    from mm_assist.nav import map_localize
+
+    frame = cv2.imdecode(np.fromfile(FIX/'world_emain_failure_20261126.png', np.uint8), 1)
+    atlas, _ = map_localize.load_continent_atlas(maps.maps_root(AppConfig()))
+    result = map_localize.localize_viewport_zoom_search(frame, atlas, min_score=.35)
+    assert result.ok and result.note.startswith('partial_features SIFT')
+    assert result.score >= .70 and .54 < result.zoom < .55
+    assert result.match_x == pytest.approx(-48.4, abs=3)
+    assert result.match_y == pytest.approx(57.2, abs=3)
+
+
+@pytest.mark.parametrize('place', ['world_bankor_20261014', 'world_emain_20261126'])
+def test_loaded_world_resource_reaches_independent_localization_without_reclick(monkeypatch, place):
+    frame, snap = observation(place)
     win = WindowInfo(0, 'offline', 0, 0, frame.shape[1], frame.shape[0])
     monkeypatch.setattr(ui_stack, 'shared_ui_stack_reader',
         lambda: SimpleNamespace(read=lambda **kw: replace(snap, sampled_ts=time.time())))
+    assert maps._current_map_parameters(frame, win) == 'map_continent'
     monkeypatch.setattr(maps, '_grab_map_frame', lambda *a, **kw: (win, frame))
     monkeypatch.setattr(maps, 'snap', lambda *a, **kw: (win, frame, [], None))
     monkeypatch.setattr(maps, '_click', lambda *a, **kw: pytest.fail('world is already loaded; no ascent'))
@@ -70,11 +84,17 @@ def test_world_proof_rejects_invalid_or_changing_memory(monkeypatch, fault):
 
 
 @pytest.mark.parametrize('boundary', ['sample', 'drag'])
-def test_resource_change_during_localization_stops_before_input(monkeypatch, boundary):
+@pytest.mark.parametrize('replacement', ['town', 'registered_world'])
+def test_resource_change_during_localization_stops_before_input(monkeypatch, boundary, replacement):
     frame, snap = observation()
     changed = False
     def read(**kw):
-        fact = snap.map_view if not changed else {**snap.map_view, 'resource_name':'Bankor', 'map_type':2}
+        fact = snap.map_view
+        if changed:
+            if replacement == 'town':
+                fact = {**fact, 'resource_name': 'Bankor', 'map_type': 2}
+            else:
+                fact = {**fact, 'resource_name': 'WorldMap@v2'}
         return replace(snap, map_view=fact, sampled_ts=time.time())
     monkeypatch.setattr(ui_stack, 'shared_ui_stack_reader', lambda: SimpleNamespace(read=read))
     win = WindowInfo(0, 'offline', 0, 0, frame.shape[1], frame.shape[0])

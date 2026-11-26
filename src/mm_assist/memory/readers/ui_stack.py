@@ -38,6 +38,7 @@ _SCAN_FAIL_MIN_S = 1.2
 _SCAN_FAIL_MAX_S = 8.0
 _SCAN_WALL_S = 2.0
 _SCAN_MAX_HITS = 48
+_ULARA_WORLD_RESOURCES = frozenset({"WorldMap@v1_5", "WorldMap@v2"})
 
 
 def selected_map_view(fact: Any) -> dict[str, Any] | None:
@@ -52,7 +53,7 @@ def selected_map_view(fact: Any) -> dict[str, Any] | None:
     key = {1: "world", 2: "town", 3: "dungeon"}.get(kind)
     title = re.sub(r"<[^>]*>", "", str((titles or {}).get(key, ""))).strip() if isinstance(titles, dict) else ""
     node = "map"
-    if kind == 1 and resource == "WorldMap@v1_5" and title == "歐拉大陸":
+    if kind == 1 and resource in _ULARA_WORLD_RESOURCES and title == "歐拉大陸":
         node = "map_continent"
     elif kind == 2 and resource == "Dunbarton" and title == "杜巴頓":
         node = "map_dunbarton"

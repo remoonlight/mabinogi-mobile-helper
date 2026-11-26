@@ -130,6 +130,7 @@ class UiWhere:
     stack_ready: bool = False
     cost_ms: dict[str, float] = field(default_factory=dict)
     stack_sampled_ts: float = 0.0
+    map_resource: str = ""
 
     @property
     def known(self) -> bool:
@@ -1020,7 +1021,8 @@ def resolve_navigation(frame: Any = None, *, reader: Any = None) -> UiWhere:
                    cost_ms={"stack_before": round((t1-t0)*1000, 1), "recognize": round((t2-t1)*1000, 1),
                             "stack_after": round((t3-t2)*1000, 1)},
                    stack_sampled_ts=min(float(getattr(before, "sampled_ts", 0.0)),
-                                        float(getattr(after, "sampled_ts", 0.0))))
+                                        float(getattr(after, "sampled_ts", 0.0))),
+                   map_resource=(rec.get("map_view") or {}).get("resource_name", ""))
 
 
 def resolve_ui_node(

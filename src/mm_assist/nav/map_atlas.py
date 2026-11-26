@@ -12,7 +12,7 @@ import re
 import time
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 import cv2
 import numpy as np
@@ -24,6 +24,9 @@ from mm_assist.perception.list_ocr import box_center_norm, normalize_text
 from mm_assist.perception.ocr import OcrLine, ocr_image
 from mm_assist.nav.compat import AbortRequested, GuardError, check_abort, in_production_mode, in_test_mode, prefer_visible_clicks, prepare_grabber, production_click_method, timed_action
 from mm_assist.platform.window import WindowInfo, focus_window, is_foreground, refresh_window
+
+if TYPE_CHECKING:
+    from mm_assist.life_execute.ui_logic import UiWhere
 
 log = logging.getLogger(__name__)
 
@@ -1985,7 +1988,7 @@ def _title_has_secondary_place(lines: list[OcrLine], win: WindowInfo) -> bool:
     return title_has_secondary_place(lines, win)
 
 
-def _current_map_parameters(frame: np.ndarray | None, win: WindowInfo) -> str | None:
+def _current_map_observation(frame: np.ndarray | None, win: WindowInfo) -> UiWhere | None:
     """Read fresh page parameters, without promoting the map to any tier."""
     from mm_assist.life_execute.ui_logic import resolve_navigation
 
@@ -1999,10 +2002,15 @@ def _current_map_parameters(frame: np.ndarray | None, win: WindowInfo) -> str | 
         if (not where.stack_ready or where.node not in {'map', 'map_continent', 'map_dunbarton'}
                 or not math.isfinite(age) or not -.5 <= age <= 3):
             return None
-        return where.node
+        return where
     except Exception as exc:
         log.debug('current map parameters unavailable: %s', exc)
         return None
+
+
+def _current_map_parameters(frame: np.ndarray | None, win: WindowInfo) -> str | None:
+    where = _current_map_observation(frame, win)
+    return where.node if where is not None else None
 
 
 def _click_ulara_breadcrumb(lines: list[OcrLine], win: WindowInfo, *, frame=None) -> bool:
@@ -4786,16 +4794,20 @@ def continent_pixel_enter_dubarton(
                 min_score=float(thresholds['min_overview_canvas_score']),
                 min_patch_score=float(thresholds['min_overview_patch_score']))
 
+        def current_world_resource(frame: np.ndarray | None) -> str:
+            where = _current_map_observation(frame, win)
+            return where.map_resource if where and where.node == 'map_continent' else ''
+
         if known_town_canvas_matches(img):
             lv = "town"
         # The already-open fast path intentionally has no OCR lines. Terrain
         # evidence must not depend on text having identified a tier first.
         canvas_proven = proven_canvas(img)
-        world_map_proven = _current_map_parameters(img, win) == 'map_continent'
+        world_resource = current_world_resource(img)
         # 已在歐拉总图则禁止再点标题（实机会连点歐拉大陆、从不拖杜巴頓）
         from mm_assist.perception.map_header import cloud_region_visible
         region_header = cloud_region_visible(img)
-        if world_map_proven or canvas_proven or (not region_header and (is_continent_overview(lines, win) or lv == "continent")):
+        if world_resource or canvas_proven or (not region_header and (is_continent_overview(lines, win) or lv == "continent")):
             log.info("continent: already overview (lv=%s) skip 歐拉 click, seek %s", lv, target_canon)
             lv = "continent"
         else:
@@ -4807,8 +4819,8 @@ def continent_pixel_enter_dubarton(
             # a city chip can remain after town -> continent has already worked.
             win, img = _grab_map_frame(cfg, win, settle_s=0.04)
             canvas_proven = proven_canvas(img)
-            world_map_proven = _current_map_parameters(img, win) == 'map_continent'
-            if world_map_proven or canvas_proven:
+            world_resource = current_world_resource(img)
+            if world_resource or canvas_proven:
                 lv = "continent"
             # A verified town -> region transition may need one more ascent.
             # Remaining on the same detail page is failure, not a retry budget.
@@ -4823,8 +4835,8 @@ def continent_pixel_enter_dubarton(
                 b = _blob(lines)
                 win, img = _grab_map_frame(cfg, win, settle_s=0.04)
                 canvas_proven = proven_canvas(img)
-                world_map_proven = _current_map_parameters(img, win) == 'map_continent'
-                if world_map_proven or canvas_proven:
+                world_resource = current_world_resource(img)
+                if world_resource or canvas_proven:
                     lv = "continent"
 
         def _top_title_texts() -> list[str]:
@@ -4837,7 +4849,7 @@ def continent_pixel_enter_dubarton(
 
         def _still_region_detail() -> bool:
             """斜杠面包屑或 lv=region 且非总图 → 仍是地区详图（禁 ulara 图鉴）。"""
-            if world_map_proven or canvas_proven:
+            if world_resource or canvas_proven:
                 return False
             if cloud_region_visible(img):
                 return True
@@ -4931,7 +4943,7 @@ def continent_pixel_enter_dubarton(
             # 图鉴匹配只要像素，禁止每步全屏 OCR
             win, img = _grab_map_frame(cfg, win, settle_s=0.04)
             assert img is not None
-            if world_map_proven and _current_map_parameters(img, win) != 'map_continent':
+            if world_resource and current_world_resource(img) != world_resource:
                 raise GuardError('当前大陆地图资源已变化，停止图鉴定位')
             return img
 
@@ -4945,7 +4957,7 @@ def continent_pixel_enter_dubarton(
 
         def _drag_fn(dx: int, dy: int) -> None:
             nonlocal win, img
-            if world_map_proven and _current_map_parameters(img, win) != 'map_continent':
+            if world_resource and current_world_resource(img) != world_resource:
                 raise GuardError('当前大陆地图资源已变化，停止拖图')
             _drag_map(win, dx=int(dx), dy=int(dy), force_method=drag_method)
             # 拖完停稳再 localize

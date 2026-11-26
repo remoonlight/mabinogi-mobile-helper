@@ -440,5 +440,21 @@
       0,
       256
     ]
+  },
+  "emain_20261126": {
+    "resource": "WorldMap@v2",
+    "source": "tests/fixtures/map_memory/world_emain_20261126.png",
+    "source_sha256": "2eb1903729ed2ce0d87730a7e4945a719e34b430f7ff2c1b132eafc67b9594ce",
+    "source_bounds_xyxy": [225, 168, 1325, 1160],
+    "excluded_player_overlay_xyxy": [808, 560, 1030, 818],
+    "source_to_atlas": [[0.5449, 0, -87.59], [0, 0.5449, -13.6638]],
+    "registration_bounds_xyxy": [1230, 365, 1910, 1180],
+    "registration_matches": 398,
+    "registration_inliers": 340,
+    "registration_residual_p95_px": 0.56,
+    "blend_feather_px": 9,
+    "baseline_atlas_sha256": "e8e66b0cd7f133377da75d3c1c0ec32ab9d47c915f4869e7ed8adf321e3cabe0",
+    "atlas_sha256": "ecdd2bed614ec1dea74c8be683875240260eba430eacb303cc235eb530e38ff4",
+    "validation_frame": "tests/fixtures/map_memory/world_emain_failure_20261126.png"
   }
 }

@@ -17,7 +17,7 @@ FACILITY_TARGET: dict[FacilityId, str] = {
     "cloth": "高級布料",
     "medicine": "淨淨蘑菇汁液",
 }
-SLOT_CAP = 5
+SLOT_CAP = 5  # 旧快照及未传容量的调用沿用原口径。
 CLAIM_DONE_MIN = 3
 FACILITY_SCAN_INTERVAL_S = 600.0
 PLAN_CAP = 10
@@ -29,6 +29,11 @@ CYCLE_SIZES: dict[str, int] = {
 }
 SNAPSHOT_TTL_S = 600.0
 DURABILITY_REPAIR_BELOW = 1.0
+
+
+def facility_slot_cap(caps: dict[FacilityId, int] | None, facility: FacilityId) -> int | None:
+    """旧调用未传容量时沿用原值。实时读数缺项时，容量未知。"""
+    return SLOT_CAP if caps is None else caps.get(facility)
 
 
 @dataclass(frozen=True)
@@ -66,6 +71,7 @@ class LifeSnapshot:
     error: str = ""
     taken_at: float = 0.0
     evidence: dict = field(default_factory=dict)
+    facility_slot_caps: dict[FacilityId, int] | None = None
 
 
 @dataclass(frozen=True)

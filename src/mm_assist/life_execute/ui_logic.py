@@ -26,7 +26,6 @@ from mm_assist.memory.readers.ui_stack import (
 )
 from mm_assist.perception.state_ui import parse_ui_param_bit, read_state_ui, state_ui_path
 
-# 与 knowledge/ui/reports/ui_transition_review.md 页面表一致
 KNOWN_NODES = (
     "main_hud",
     "system_menu",

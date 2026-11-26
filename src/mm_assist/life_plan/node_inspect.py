@@ -1614,6 +1614,14 @@ def refine_inspect_node(frame: Any, category: Any = None, *, sn: str = "") -> st
     _inspect_sn.set(str(sn or ""))
     if frame is None:
         return ""
+    if sn in {"fine:facility_detail", "item_info", "obtain_method"}:
+        from mm_assist.perception import sap_sense
+
+        if sn == "obtain_method":
+            if sap_sense.locate(frame, 'obtain_title') and sap_sense.locate(frame, 'obtain_item_title'):
+                return sap_sense.OBTAIN_PAGE
+        elif sap_sense.locate(frame, 'card_title') and sap_sense.locate(frame, 'obtain_link'):
+            return sap_sense.CARD_PAGE
     steps = _refine_steps(sn)
     hub = False
     if _hub_stack_sn(sn):
@@ -1628,6 +1636,11 @@ def refine_inspect_node(frame: Any, category: Any = None, *, sn: str = "") -> st
     if "facility_recipe" in steps and not hub:
         kind = _facility_kind_node(frame)
         fid = _facility_fid(kind)
+        if fid == 'wood' and sn == 'fine:facility_recipe':
+            from mm_assist.perception import sap_sense
+
+            if sap_sense.locate(frame, 'recipe_title'):
+                return sap_sense.RECIPE_PAGE
         rec = _detect_facility_recipe(frame, fid) if fid else ""
         if fid and rec:
             return f"facility:{fid}:{rec}"
@@ -3131,6 +3144,8 @@ def attach_node_inspect(
         "held": None,
         "hud_streak": 0,
         "mark_xy": None,
+        "memory_key": None,
+        "memory_revision": 0,
     }
 
     def _hide() -> None:
@@ -3155,10 +3170,12 @@ def attach_node_inspect(
             return
         state["inflight"] = True
         state["kick"] = False
-        threading.Thread(target=_work, name="node-inspect", daemon=True).start()
+        threading.Thread(target=_work, args=(state["memory_revision"],),
+                         name="node-inspect", daemon=True).start()
 
     def _apply(payload: dict[str, Any]) -> None:
-        state["inflight"] = False
+        if _stopped():
+            return
         held, streak = hold_inspect_payload(
             state.get("held") if isinstance(state.get("held"), dict) else None,
             payload,
@@ -3263,16 +3280,23 @@ def attach_node_inspect(
                 )
             except Exception:
                 _hide()
+    def _finish_work(payload: dict[str, Any], memory_revision: int) -> None:
+        # Only the worker's completion releases its slot. Memory display updates
+        # can arrive during slow image work and must not start another worker.
+        state["inflight"] = False
+        if _stopped():
+            return
+        if memory_revision == state["memory_revision"]:
+            _apply(payload)
         if state["kick"]:
             _start_work()
 
-    def _work() -> None:
-        from mm_assist.life_plan.snapshot import heavy_read_lock
+    def _work(memory_revision: int) -> None:
+        # Reads published state plus pixels only. Slow capture/template/OCR work
+        # must not occupy the memory lock needed for current feed stock.
+        _work_body(memory_revision)
 
-        with heavy_read_lock:
-            _work_body()
-
-    def _work_body() -> None:
+    def _work_body(memory_revision: int) -> None:
         spot = state["spot"]
         if spot == empty:
             spot = ""
@@ -3333,7 +3357,7 @@ def attach_node_inspect(
             state["inflight"] = False
             return
         try:
-            post_ui('inspect', _apply, payload)
+            post_ui('inspect', _finish_work, payload, memory_revision)
         except Exception:
             state["inflight"] = False
 
@@ -3378,6 +3402,11 @@ def attach_node_inspect(
         profile_mem = bool(_profile_node_from_view(ms))
         map_mem = bool(_map_node_from_view(ms))
         craft_mem = bool(_craft_node_from_view(ms))
+        memory_key = (sn, ready, tuple(names),
+                      bool(getattr(ms, "ui_stack_empty_ok", False)), stp_i)
+        if memory_key != state["memory_key"]:
+            state["memory_key"] = memory_key
+            state["memory_revision"] += 1
         held_n = str(state.get("node") or "")
         if not (profile_mem or map_mem or craft_mem) and not mem_should_apply_stack(sn, held_n, inflight=bool(state["inflight"])):
             return

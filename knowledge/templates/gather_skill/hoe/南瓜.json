@@ -1,0 +1,29 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_hoe_bottom_1795611091.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/hoe_list.png",
+  "source_sha256": "2ebc627f2d559e8198f6e8d425fc64b56108204d7a21e95cad5639d695ca5353",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "gather_skill_hoe_南瓜",
+  "label": "南瓜",
+  "file": "南瓜.png",
+  "rel_dir": "knowledge/templates/gather_skill/hoe",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 195,
+    "h": 83
+  },
+  "template_sha256": "684102b663eaef1efc0ca1ac6f78f71dba6a61330dc4ef58e7a0fef7c04bd518"
+}

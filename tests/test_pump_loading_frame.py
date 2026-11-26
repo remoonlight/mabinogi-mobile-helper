@@ -95,7 +95,8 @@ def test_recognized_npc_goodbye_reaches_real_prepare_and_closes_before_dispatch(
         return frames[0]
     monkeypatch.setattr('mm_assist.platform.capture.grab_client', lambda _: grab())
     monkeypatch.setattr(ui_logic, 'resolve_navigation',
-        lambda _: ui_logic.UiWhere('main_hud', 0, 0, 0, 'fixture', stack_ready=True))
+        lambda _: ui_logic.UiWhere('main_hud', 0, 0, 0, 'fixture', stack_ready=True,
+                                   stack_sampled_ts=__import__('time').time()))
     clicks = []
     dispatched = []
     def click(x, y):
@@ -119,7 +120,7 @@ def test_recognized_npc_goodbye_reaches_real_prepare_and_closes_before_dispatch(
     bar_ui.pump_life_once(None, SimpleNamespace(hwnd=7))
     assert dispatched == [item]
     assert len(clicks) == (2 if entry_menu else 1)
-    assert 700 < clicks[-1][0] < 1210 and 100 < clicks[-1][1] < 335
+    assert clicks[-1] == (round(goodbye.shape[1] * .5), round(goodbye.shape[0] * .5))
     if entry_menu:
         assert 1100 < clicks[0][0] < 1180 and 1310 < clicks[0][1] < 1380
     gates.reset_stage_gates_for_tests()

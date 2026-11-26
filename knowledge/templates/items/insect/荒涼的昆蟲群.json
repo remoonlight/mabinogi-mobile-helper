@@ -1,0 +1,40 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_insect_bottom_1795611388.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/insect_list.png",
+  "source_sha256": "28a16e4ee7e3afce87d938231484843388242923e6d58995c172e0cdf124d925",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "item_insect_荒涼的昆蟲群",
+  "label": "荒涼的昆蟲群",
+  "file": "荒涼的昆蟲群.png",
+  "rel_dir": "knowledge/templates/items/insect",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 88,
+    "h": 83
+  },
+  "template_sha256": "5cda04d3c7961ea6c15df762728cc7b82c6644c29cbbe717a52e3308d3433254",
+  "row_name_template": "荒涼的昆蟲群_name.png",
+  "row_name_client_px": {
+    "x": 1205,
+    "y": 1307,
+    "w": 207,
+    "h": 38
+  },
+  "row_name_sha256": "60042d09e1dbbe513fb4860c12f765e25a9dbab5b958fe414b25aa60b56026c6",
+  "min_level": 25,
+  "status": "ready",
+  "image_only": true,
+  "require_white_name": true
+}

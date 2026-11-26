@@ -520,7 +520,7 @@ def test_goodbye_zoom_has_no_repair_entry_icon():
     assert _hud_menu_xy(img) is None
 
 
-def test_wait_hud_after_npc_clicks_recognized_goodbye_once_then_verifies_hud(monkeypatch):
+def test_wait_hud_after_npc_rechecks_and_clicks_center_twice_before_hud(monkeypatch):
     import cv2
     import numpy as np
 
@@ -546,8 +546,8 @@ def test_wait_hud_after_npc_clicks_recognized_goodbye_once_then_verifies_hud(mon
     )
     ok = wait_hud_after_npc_dismiss(click, grab, sleep_fn=lambda *_a, **_k: None)
     assert ok is True
-    assert len(clicks) == 1, '用户要求点画面结束告别；只点已由原图模板识别的气泡'
-    assert 700 < clicks[0][0] < 1210 and 100 < clicks[0][1] < 335
+    assert len(clicks) == 2, '一秒后仍是告别页，允许第二次中央点击'
+    assert clicks[0] == (round(goodbye.shape[1] * .5), round(goodbye.shape[0] * .5))
 
 
 def test_npc_goodbye_visible_on_after_end_dialog():
@@ -605,7 +605,7 @@ def test_goodbye_template_is_primary_and_rejects_other_pages(monkeypatch):
         assert not dialog.npc_goodbye_visible(cv2.imread(str(ROOT / 'tests/fixtures' / rel)))
 
 
-def test_goodbye_click_rejection_or_unchanged_page_never_retries(monkeypatch):
+def test_goodbye_rejection_stops_but_unchanged_page_gets_at_most_two_clicks(monkeypatch):
     import cv2
     from mm_assist.config import ROOT
     from mm_assist.life_execute import repair_dialog as dialog
@@ -615,7 +615,7 @@ def test_goodbye_click_rejection_or_unchanged_page_never_retries(monkeypatch):
         assert not dialog.wait_hud_after_npc_dismiss(
             lambda *xy: clicks.append(xy) or accepted, lambda: img, sleep_fn=lambda _s: None,
         )
-        assert len(clicks) == 1
+        assert len(clicks) == (2 if accepted else 1)
 
 
 def test_leave_dialog_unknown_memory_without_hud_is_not_success(monkeypatch):

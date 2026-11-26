@@ -1,0 +1,40 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_harvest_bottom_1795611037.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/harvest_list.png",
+  "source_sha256": "7659b562de253c77f2157cd1df137ba2768fa409202d27e28496985c953c6476",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "item_harvest_稻米",
+  "label": "稻米",
+  "file": "稻米.png",
+  "rel_dir": "knowledge/templates/items/harvest",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 88,
+    "h": 83
+  },
+  "template_sha256": "620e16b62a8e9ffe71e84fb585196fcebebec8e7b6f7bb3b9af3e9ccdd5febe3",
+  "row_name_template": "稻米_name.png",
+  "row_name_client_px": {
+    "x": 1205,
+    "y": 1307,
+    "w": 76,
+    "h": 38
+  },
+  "row_name_sha256": "d142125166a0e4a3fc6818877df795d7b5540569267eededde73bfbe792a69fc",
+  "min_level": 20,
+  "status": "ready",
+  "image_only": true,
+  "require_white_name": true
+}

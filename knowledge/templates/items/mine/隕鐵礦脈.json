@@ -1,0 +1,40 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_mine_bottom_1795611151.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/mine_list.png",
+  "source_sha256": "55a9f29f7bb0a7deeed2a569bf3f518e0912e021d5263871885324c7a22d0db1",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "item_mine_隕鐵礦脈",
+  "label": "隕鐵礦脈",
+  "file": "隕鐵礦脈.png",
+  "rel_dir": "knowledge/templates/items/mine",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 88,
+    "h": 83
+  },
+  "template_sha256": "b4ab721cf4957ba882fe71c58e7491d0e5ab353bea32ecb1ddd063056d4bc414",
+  "row_name_template": "隕鐵礦脈_name.png",
+  "row_name_client_px": {
+    "x": 1205,
+    "y": 1307,
+    "w": 141,
+    "h": 38
+  },
+  "row_name_sha256": "6dfd006e46dec8abf26b77e1799b6384c7a299a456b7b8ccc5a7371ff760f7b3",
+  "min_level": 30,
+  "status": "ready",
+  "image_only": true,
+  "require_white_name": true
+}

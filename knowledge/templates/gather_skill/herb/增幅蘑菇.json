@@ -1,0 +1,29 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_herb_bottom_1795611349.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/herb_list.png",
+  "source_sha256": "d9128018d7a38750eed8b249c2d3abe25ec32eb5f002798cdb59e74758236d25",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "gather_skill_herb_增幅蘑菇",
+  "label": "增幅蘑菇",
+  "file": "增幅蘑菇.png",
+  "rel_dir": "knowledge/templates/gather_skill/herb",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1086,
+    "y": 996,
+    "w": 260,
+    "h": 83
+  },
+  "template_sha256": "68d1fde0cab600246b5bbc470153c0caba000be31fe468550446c066a2ac0cc8"
+}

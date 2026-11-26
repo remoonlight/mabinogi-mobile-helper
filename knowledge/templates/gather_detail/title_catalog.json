@@ -210,6 +210,214 @@
       ],
       "transform": "identity lossless full-heading crop; no resize or recolor",
       "coordinate_source": "2026-10-28 watch33116 run1793145947.1696117 p1 wrong_gather_detail; inspected complete popup heading above 採集物. Existing .97 threshold and title ROI retained. Old 1919px coal title scores .96242 on this 1920px frame; nearby independently matches .99999."
+    },
+    {
+      "source_original": "logs/life_verify_20261001/training_20261125_silk_cluster_detail_1795611442.png",
+      "source_frame": "tests/fixtures/season1_gather_20261125/daily_detail.png",
+      "source_sha256": "e33e4db2c922862206e60d3ed25f1fdda07e9e7ef351de02550bcbd033672cd4",
+      "source_size": [
+        1920,
+        1431
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1431
+      ],
+      "method": "B",
+      "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+      "name": "蜘蛛絲團",
+      "template": "knowledge/templates/gather_detail/title_蜘蛛絲團.png",
+      "template_sha256": "6aae978b0c083c78699dc4f559a19b559274a57a2172ea47d2736629a6d7afa2",
+      "crop_client_px": [
+        678,
+        410,
+        159,
+        46
+      ]
+    },
+    {
+      "source_original": "logs/life_verify_20261001/training_20261125_lightning_detail_1795611219.png",
+      "source_frame": "tests/fixtures/season1_gather_20261125/woodcut_detail.png",
+      "source_sha256": "aa002964343119604b9a0cc960db7292d1537c197fe97b3dcec65da8853a5776",
+      "source_size": [
+        1920,
+        1431
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1431
+      ],
+      "method": "B",
+      "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+      "name": "雷擊樹",
+      "template": "knowledge/templates/gather_detail/title_雷擊樹.png",
+      "template_sha256": "7b5e22f42865fc60d8af77fb0d3f4de587ee6f80ccd3d6dffa17a6f557ead0b4",
+      "crop_client_px": [
+        678,
+        410,
+        121,
+        46
+      ]
+    },
+    {
+      "source_original": "logs/life_verify_20261001/training_20261125_meteoric_detail_1795611168.png",
+      "source_frame": "tests/fixtures/season1_gather_20261125/mine_detail.png",
+      "source_sha256": "a68e77e36f6ad57b3500c6749aab08da856ac8cb9fa9b09985bf2155a6887083",
+      "source_size": [
+        1920,
+        1431
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1431
+      ],
+      "method": "B",
+      "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+      "name": "隕鐵礦脈",
+      "template": "knowledge/templates/gather_detail/title_隕鐵礦脈.png",
+      "template_sha256": "dd4fc238aa91defde799bb31d5aab6fd59f18a922c136252e84f27e2b3876056",
+      "crop_client_px": [
+        678,
+        410,
+        159,
+        46
+      ]
+    },
+    {
+      "source_original": "logs/life_verify_20261001/training_20261125_soft_mushroom_detail_1795611366.png",
+      "source_frame": "tests/fixtures/season1_gather_20261125/herb_detail.png",
+      "source_sha256": "e26b35a3800a3e95a131ae01cb537d3ef00e9e79d8cf6cd707ce3dcc23a45dcd",
+      "source_size": [
+        1920,
+        1431
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1431
+      ],
+      "method": "B",
+      "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+      "name": "柔柔蘑菇",
+      "template": "knowledge/templates/gather_detail/title_柔柔蘑菇.png",
+      "template_sha256": "90c41988ab48dfaa12a62b3b16d765aa7746941e5279e75331ddd7dcfd397bc3",
+      "crop_client_px": [
+        678,
+        410,
+        159,
+        46
+      ]
+    },
+    {
+      "source_original": "logs/life_verify_20261001/training_20261125_cloud_sheep_detail_1795611310.png",
+      "source_frame": "tests/fixtures/season1_gather_20261125/shear_detail.png",
+      "source_sha256": "4bcd3d46133a4e4920b90b70cb516e03772d027a833e70a94dd37db893922825",
+      "source_size": [
+        1920,
+        1431
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1431
+      ],
+      "method": "B",
+      "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+      "name": "雲絮羊",
+      "template": "knowledge/templates/gather_detail/title_雲絮羊.png",
+      "template_sha256": "945a07b2b9e90862fd0821a06c0826f636e7320f59e340674ca5e5918c7f50c5",
+      "crop_client_px": [
+        678,
+        392,
+        121,
+        46
+      ]
+    },
+    {
+      "source_original": "logs/life_verify_20261001/training_20261125_rice_detail_1795611066.png",
+      "source_frame": "tests/fixtures/season1_gather_20261125/harvest_detail.png",
+      "source_sha256": "2dec0c146065b9f2a70f8b1dc27321eb2e273643aef9e5513c8e332cae037acf",
+      "source_size": [
+        1920,
+        1431
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1431
+      ],
+      "method": "B",
+      "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+      "name": "稻米",
+      "template": "knowledge/templates/gather_detail/title_稻米.png",
+      "template_sha256": "ea4ea87292eba873f4f81f9eb7df33fda01998b24058632777543b3d906a3ec6",
+      "crop_client_px": [
+        678,
+        410,
+        83,
+        46
+      ]
+    },
+    {
+      "source_original": "logs/life_verify_20261001/training_20261125_pumpkin_detail_1795611112.png",
+      "source_frame": "tests/fixtures/season1_gather_20261125/hoe_detail.png",
+      "source_sha256": "9ebad23f91e524bcb4f97c36a1c93d90b83e4d70a838a65c6d3f933ad6b76d1a",
+      "source_size": [
+        1920,
+        1431
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1431
+      ],
+      "method": "B",
+      "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+      "name": "南瓜",
+      "template": "knowledge/templates/gather_detail/title_南瓜.png",
+      "template_sha256": "4d80622a19bd02a95733f2a82addebe93355fe03238740af345ac312eb8a6646",
+      "crop_client_px": [
+        678,
+        410,
+        83,
+        46
+      ]
+    },
+    {
+      "source_original": "logs/life_verify_20261001/training_20261125_bleak_insects_detail_1795611406.png",
+      "source_frame": "tests/fixtures/season1_gather_20261125/insect_detail.png",
+      "source_sha256": "7a9321545feaf3d130ea2991e4a967022d265be9f381cab2a0c423091483682a",
+      "source_size": [
+        1920,
+        1431
+      ],
+      "source_to_client": [
+        0,
+        0,
+        1920,
+        1431
+      ],
+      "method": "B",
+      "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+      "name": "荒涼的昆蟲群",
+      "template": "knowledge/templates/gather_detail/title_荒涼的昆蟲群.png",
+      "template_sha256": "8a98b2b53bfdb5d648aa972c596080bc16c56f27058c888205e97aa80c2f0cc5",
+      "crop_client_px": [
+        678,
+        410,
+        235,
+        46
+      ]
     }
   ]
 }

@@ -30,8 +30,8 @@ def isolated(monkeypatch):
 
 
 def start(monkeypatch, *, mode='skill', existing=False, tracking=False, kind='gather'):
-    current = PlanItem('p1', kind, '採集 蜘蛛網', skill='日常採集',
-                       detail='蜘蛛網', gather_mode=mode)
+    current = PlanItem('p1', kind, '採集 黃豆', skill='收割',
+                       detail='黃豆', gather_mode=mode)
     tail = [replace(current, id='p2'), PlanItem('p3', 'feed', '投料 木材',
                                              facility='wood', recipe='木材')]
     if existing:

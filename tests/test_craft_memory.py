@@ -157,6 +157,10 @@ def test_tab_click_waits_for_target_without_clearing_gate_or_clicking_again(monk
 def craft_memory(monkeypatch):
     """Actual dump offsets, MMList version differs from count, active window backlinks."""
     reader=stack.Il2CppUiStackReader()
+    # This replay retains the pre-update window bytes and all original guards.
+    reader._off.update({'UIStackingPlayer.instance':0x20,'UnityMMMLWindow.closing':0x80,
+        'UnityMMMLWindow.root':0x98,'UnityMMMLWindow.root_id':0xa0,
+        'UnityMMMLWindow.id':0x130,'UnityMMMLWindow.scope':0x1a8})
     reader._h,reader._ga=object(),0x900000
     pointers={0x9000b8:0x910000,0x910050:0x10000,0x10018:0x20000,0x20010:0x30000,
         0x30020:0x40000,0x40020:0x50000,0x50048:0x60000,0x500c8:0x80000,

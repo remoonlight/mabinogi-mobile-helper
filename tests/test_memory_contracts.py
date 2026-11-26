@@ -89,6 +89,7 @@ def test_snapshot_rejects_changed_process_and_keeps_component_timings(monkeypatc
     monkeypatch.setattr(snapshot, 'read_identity', lambda *a: next(identity), raising=False)
     monkeypatch.setattr(snapshot, 'read_consumable_counts', lambda *a: {'羊毛': 12})
     monkeypatch.setattr(snapshot, 'read_facility_queues', lambda *a: {})
+    monkeypatch.setattr(snapshot, 'read_facility_slot_caps', lambda *a: None)
     snap = snapshot.take_snapshot(include_tools=False)
     assert not snap.ok and snap.error == 'process_binding_changed'
     assert snap.items == {} and snap.evidence['components']['items']['elapsed_s'] >= 0
@@ -312,6 +313,7 @@ def test_snapshot_keeps_successful_root_provenance_and_final_rechecks(monkeypatc
             return {'羊毛': 12}
     monkeypatch.setattr(snapshot, 'read_consumable_counts', items)
     monkeypatch.setattr(snapshot, 'read_facility_queues', lambda *a: {})
+    monkeypatch.setattr(snapshot, 'read_facility_slot_caps', lambda *a: None)
     snap = snapshot.take_snapshot(include_tools=False)
     assert snap.ok and snap.evidence['roots'][0]['instance'] == 0x10000
     def queues(*a):

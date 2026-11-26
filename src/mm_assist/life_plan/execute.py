@@ -20,6 +20,7 @@ def try_execute(
     cfg: Any = None,
     win: Any = None,
     items: dict[str, int] | None = None,
+    facility_slot_caps: dict | None = None,
     **kwargs: Any,
 ) -> ExecuteResult:
     if item is None:
@@ -97,6 +98,7 @@ def try_execute(
             facility=str(item.facility),
             recipe=str(item.recipe or ""),
             items=items,
+            facility_slot_caps=facility_slot_caps,
             **kwargs,
         )
     return ExecuteResult(ok=False, status=NOT_READY, message=NOT_READY_MSG)

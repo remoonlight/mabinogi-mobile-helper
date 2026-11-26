@@ -398,17 +398,26 @@ def _unsupported_key(item: PlanItem) -> str:
 
 
 def _filter_unsupported(state: LifeController, queue: list[PlanItem]) -> list[PlanItem]:
-    from mm_assist.life_plan.recipes import LIFE_TRAINING_EXCLUDED_SKILLS, fishing_plan
+    from mm_assist.life_plan.recipes import LIFE_TRAINING_LEVEL_CAPS, fishing_plan
 
     uns = state.unsupported
     pinned = (state.pending_action.item_id if state.pending_action is not None
               and state.pending_action.run_started_at == state.life_started_at else '')
     if not pinned and state.gather_pending_run == state.life_started_at:
         pinned = state.gather_pending_id
-    return [item for item in queue if (_unsupported_key(item) not in uns
-            and (item.id == pinned or (not fishing_plan(item)
-                 and not (item.kind == 'gather' and item.gather_mode == 'skill'
-                          and item.skill in LIFE_TRAINING_EXCLUDED_SKILLS))))]
+    levels = {skill.name: skill.level for skill in state.snapshot.skills} if state.snapshot else {}
+    allowed = []
+    for item in queue:
+        if _unsupported_key(item) in uns:
+            continue
+        cap = LIFE_TRAINING_LEVEL_CAPS.get(item.skill)
+        blocked_training = (
+            item.kind == 'gather' and item.gather_mode == 'skill'
+            and cap is not None and levels.get(item.skill, 0) >= cap
+        )
+        if item.id == pinned or not (fishing_plan(item) or blocked_training):
+            allowed.append(item)
+    return allowed
 
 
 def _apply_current_after_queue(state: LifeController, *, now: float | None = None) -> None:
@@ -538,6 +547,8 @@ def _top_up(state: LifeController, snap: LifeSnapshot) -> None:
         if len(state.queue) >= PLAN_CAP:
             break
         g = target or training_item(snap, counts)
+        if g is None:
+            break
         if (_unsupported_key(g) in state.unsupported
                 or _plan_key(g) in state.skipped_plan_keys):
             if target is not None:

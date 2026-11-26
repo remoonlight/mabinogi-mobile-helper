@@ -486,7 +486,13 @@ def locate_skill_item(
         label_path = path.parent / meta['row_name_template']
         label = match_template(frame, label_path, roi=ITEM_LIST_ROI,
                                threshold=0.97, min_margin=0.02)
-        if label is not None and icon_fully_in_item_list(frame, label):
+        # Correlation also matches the dimmed list behind a detail popup.
+        # These registered targets require visible white name pixels.
+        visible_label = label is not None
+        if visible_label and meta.get('require_white_name'):
+            pixels = frame[label.y:label.y + label.h, label.x:label.x + label.w]
+            visible_label = bool(np.count_nonzero(np.all(pixels >= 200, axis=2)) >= 8)
+        if visible_label and icon_fully_in_item_list(frame, label):
             h, w = frame.shape[:2]
             row_roi = (ITEM_LIST_ROI[0], max(0, label.y - 35) / h,
                        0.10, min(h - max(0, label.y - 35), label.h + 70) / h)
@@ -498,7 +504,7 @@ def locate_skill_item(
         if meta.get('image_only'):
             anchors = _image_row_anchors(frame, sid, root=root)
             target = next((hit for name, hit in anchors if name == item), None)
-            if target is not None:
+            if target is not None and (visible_label or not meta.get('require_white_name')):
                 return {'ok': True, 'src': 'template+row_anchor', 'name': item,
                         'skill_id': sid, 'click_client': [target.cx, target.cy]}
             visible = [name for name, _ in anchors]

@@ -1,9 +1,4 @@
-"""界面切换方法 A 验收 harness。
-
-不是 gather/craft runner。enough 永不因本模块为真。
-graph verified 须 promote --i-confirmed。
-实机点击须 MM_TRANSITION_ACCEPT=1 且 MM_LIVE_BENCHMARK=1。
-"""
+"""界面切换的计划、方法 A 验收与证据登记。"""
 
 from __future__ import annotations
 

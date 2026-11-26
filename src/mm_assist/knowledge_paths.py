@@ -32,7 +32,4 @@ TRANSITION_GRAPH_JSON = ui_contract("ui_transition_graph.json")
 TRANSITION_ACCEPT_JSON = ui_contract("transition_accept_manifest.json")
 HUD_ENTRY_JSON = ui_contract("main_hud_entry_capture.json")
 GATHER_TIERS_JSON = ui_config("living_skill_gather_tiers.json")
-TRANSITION_REVIEW = REPORTS / "ui_transition_review.md"
 HUD_ENTRY_REVIEW = REPORTS / "main_hud_entry_review.md"
-PERCEPTION_BENCHMARK = REPORTS / "ui_perception_benchmark.md"
-MEMORY_BENCHMARK = REPORTS / "memory_acquisition_benchmark.md"

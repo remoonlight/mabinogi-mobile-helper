@@ -1,0 +1,40 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_shear_bottom_1795611236.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/shear_list.png",
+  "source_sha256": "bdc2916a0826af6835080ed6c573e2c9c7a4b339647f3f2aece4bd11c126c456",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "item_shear_雲絮羊",
+  "label": "雲絮羊",
+  "file": "雲絮羊.png",
+  "rel_dir": "knowledge/templates/items/shear",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 88,
+    "h": 83
+  },
+  "template_sha256": "6cf0d36b43c3379735e4ac9f60e15584f12a134287723124b87a23224f661682",
+  "row_name_template": "雲絮羊_name.png",
+  "row_name_client_px": {
+    "x": 1205,
+    "y": 1307,
+    "w": 109,
+    "h": 38
+  },
+  "row_name_sha256": "19d048595f905a040342d3d8243a282490d7ce8f60005fa0b15cbdee515324ab",
+  "min_level": 30,
+  "status": "ready",
+  "image_only": true,
+  "require_white_name": true
+}

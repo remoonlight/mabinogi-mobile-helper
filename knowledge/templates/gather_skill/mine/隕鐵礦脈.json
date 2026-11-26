@@ -1,0 +1,29 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_mine_bottom_1795611151.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/mine_list.png",
+  "source_sha256": "55a9f29f7bb0a7deeed2a569bf3f518e0912e021d5263871885324c7a22d0db1",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "gather_skill_mine_隕鐵礦脈",
+  "label": "隕鐵礦脈",
+  "file": "隕鐵礦脈.png",
+  "rel_dir": "knowledge/templates/gather_skill/mine",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 260,
+    "h": 83
+  },
+  "template_sha256": "b06fac8073777dc0d5dcfec9dafffb34b909dbdd0dd9834912e401a3218e84e0"
+}

@@ -9,7 +9,7 @@ import pytest
 
 from mm_assist.config import ROOT
 from mm_assist.life_plan import planner, controller
-from mm_assist.life_plan.recipes import SKILL_GATHER
+from mm_assist.life_plan.recipes import LIFE_TRAINING_LEVEL_CAPS, SKILL_GATHER
 from mm_assist.life_plan.types import LifeSnapshot, PlanItem, SkillGrowth, ExecuteResult
 from mm_assist.perception.item_sense import items_for_skill, locate_skill_item
 
@@ -34,13 +34,15 @@ def snap():
 
 
 @pytest.mark.parametrize('skill,detail', [
+    ('日常採集', '蜘蛛網'),
     ('伐木', '甲胄樹'), ('伐木', '幽暮樹'),
     ('剪羊毛', '捲毛羊'), ('剪羊毛', '烏雲羊'),
     ('採礦', '白銅礦脈'), ('採礦', '銀礦脈'),
     ('採集藥草', '淨淨蘑菇'), ('採集藥草', '傷痕花'), ('採集藥草', '增幅蘑菇'),
+    ('昆蟲採集', '冰冷的光群'), ('昆蟲採集', '荒蕪的昆蟲群'),
 ])
-def test_excluded_automatic_training_even_as_held_lowest_skill(skill, detail):
-    s = replace(snap(), skills=(SkillGrowth(skill, 26, 0),))
+def test_capped_training_even_as_held_target_with_priority(skill, detail):
+    s = at_cap(skill)
     held = replace(WOODCUT, skill=skill, detail=detail, recipe=detail)
     counts = {name: 10 for name, _ in SKILL_GATHER if name != skill}
     assert planner.training_item(s, counts).skill != skill
@@ -48,8 +50,13 @@ def test_excluded_automatic_training_even_as_held_lowest_skill(skill, detail):
     assert len(plan) == 10 and all(p.skill != skill for p in plan)
 
 
+def at_cap(skill):
+    return replace(snap(), skills=(SkillGrowth(skill, LIFE_TRAINING_LEVEL_CAPS[skill], 0),))
+
+
 @pytest.mark.parametrize('operation', ['refresh', 'top_up', 'resume'])
 @pytest.mark.parametrize('skill,detail,material_name,material_detail', [
+    ('日常採集', '蜘蛛網', '裝水的瓶子', '水井'),
     ('伐木', '甲胄樹', '原木', '樹木'),
     ('伐木', '幽暮樹', '高級原木', '成材樹'),
     ('剪羊毛', '捲毛羊', '羊毛', '羊'),
@@ -59,8 +66,10 @@ def test_excluded_automatic_training_even_as_held_lowest_skill(skill, detail):
     ('採集藥草', '淨淨蘑菇', '淨淨蘑菇', '淨淨蘑菇'),
     ('採集藥草', '傷痕花', '箭花', '箭花'),
     ('採集藥草', '增幅蘑菇', '增幅蘑菇', '增幅蘑菇'),
+    ('昆蟲採集', '冰冷的光群', '滴答螢火蟲', '獲得方法'),
+    ('昆蟲採集', '荒蕪的昆蟲群', '獨角仙', '獲得方法'),
 ])
-def test_unissued_training_filtered_but_material_gather_kept(
+def test_unissued_capped_training_filtered_but_material_gather_kept(
         operation, skill, detail, material_name, material_detail):
     controller.start_life(snapshot=snap(), now=1000)
     state = controller._STATE
@@ -70,11 +79,13 @@ def test_unissued_training_filtered_but_material_gather_kept(
     keep = state.queue[0]
     state.queue = [training, material, keep]
     state.current = training
+    capped = at_cap(skill)
+    state.snapshot = capped
     if operation == 'refresh':
         state.replan_requested = True
-        controller._rebuild_waiting(state, snap())
+        controller._rebuild_waiting(state, capped)
     elif operation == 'top_up':
-        controller._top_up(state, snap())
+        controller._top_up(state, capped)
     else:
         controller.pause_life()
         controller.resume_life(now=1001)
@@ -85,8 +96,10 @@ def test_unissued_training_filtered_but_material_gather_kept(
 
 @pytest.mark.parametrize('pending_kind', ['action', 'legacy_gather'])
 @pytest.mark.parametrize('skill,detail', [
+    ('日常採集', '蜘蛛網'),
     ('伐木', '甲胄樹'), ('剪羊毛', '捲毛羊'),
     ('採礦', '銀礦脈'), ('採集藥草', '增幅蘑菇'),
+    ('昆蟲採集', '冰冷的光群'), ('昆蟲採集', '荒蕪的昆蟲群'),
 ])
 def test_issued_training_remains_pinned_without_extending_batch(monkeypatch, pending_kind, skill, detail):
     controller.start_life(snapshot=snap(), now=1000)
@@ -98,12 +111,14 @@ def test_issued_training_remains_pinned_without_extending_batch(monkeypatch, pen
         controller.wait_action_completion(item.id, 1000, ExecuteResult(True, 'done'), actions_complete=True)
     else:
         controller.mark_gather_pending(item.id, 1000, saw_busy=True)
+    capped = at_cap(skill)
+    state.snapshot = capped
     controller.pause_life()
     st = controller.resume_life(now=1001)
     assert st.current.id == item.id
     assert [p.id for p in st.queue] == [item.id]
     # A refill must not duplicate the protected, already-issued training target.
-    controller._top_up(state, snap())
+    controller._top_up(state, capped)
     assert [p.id for p in state.queue if p.skill == skill] == [item.id]
     st = controller.acknowledge_done(item.id, now=1002)
     assert all(p.skill != skill for p in st.queue)
@@ -183,24 +198,16 @@ READY = [
 def test_upgrade_levels_unknown_baseline_and_live_precondition(skill, sid, name, level):
     from mm_assist.life_plan.live_test import scenarios, precondition
     counts = {s: 1 for s, _ in SKILL_GATHER if s != skill}
-    base = dict(SKILL_GATHER)[skill]
     candidate = PlanItem('new', 'gather', name, skill=skill, detail=name,
                          recipe=name, gather_mode='skill')
     for known in (None, level - 1, level):
         s = replace(snap(), skills=() if known is None else (SkillGrowth(skill, known, 0),))
-        expected = name if known == level else base
-        if name == '增幅蘑菇' and known == 24:
-            expected = '傷痕花'
-        if skill in {'伐木', '採礦', '採集藥草', '剪羊毛'}:
-            assert planner.training_item(s, counts).skill != skill
-        else:
-            assert planner.training_item(s, counts).detail == expected
+        automatic = planner.training_item(s, counts)
+        assert automatic.skill == skill
         assert planner.training_target_allowed(candidate, s) == (known == level)
         planned = planner.plan_life(s, training_counts=counts, training_target=candidate)
-        if skill in {'伐木', '採礦', '採集藥草', '剪羊毛'}:
-            assert all(p.skill != skill for p in planned)
-        else:
-            assert all(p.detail == expected for p in planned)
+        expected = name if known == level else automatic.detail
+        assert len(planned) == 10 and all((p.skill, p.detail) == (skill, expected) for p in planned)
         assert f'train:{name}' in scenarios()
         assert precondition(scenarios()[f'train:{name}'], s) == (
             '' if known == level else 'training_level_unverified')
@@ -257,7 +264,7 @@ def test_existing_items_still_locate_on_new_list_frames(sid, name):
     assert out['ok'] and out['name'] == name
 
 
-def test_mining_standalone_keeps_silver_level_gate_without_automatic_training():
+def test_mining_silver_level_gate_in_standalone_and_automatic_training():
     from mm_assist.life_plan.live_test import scenarios, precondition
 
     counts = {s: 1 for s, _ in SKILL_GATHER if s != '採礦'}
@@ -266,12 +273,14 @@ def test_mining_standalone_keeps_silver_level_gate_without_automatic_training():
         assert precondition(scenarios()['train:銀礦脈'], s) == (
             '' if level >= 25 else 'training_level_unverified')
         assert precondition(scenarios()['train:白銅礦脈'], s) == ''
-        assert planner.training_item(s, counts).skill != '採礦'
-        assert all(p.skill != '採礦' for p in planner.plan_life(s, training_counts=counts))
+        expected = '銀礦脈' if level >= 25 else '白銅礦脈'
+        assert planner.training_item(s, counts).detail == expected
+        assert all(p.skill == '採礦' and p.detail == expected
+                   for p in planner.plan_life(s, training_counts=counts))
 
 
 @pytest.mark.parametrize('initial_level', [24, 25])
-def test_mining_level_change_preserves_eligible_batch_without_silver_training(initial_level):
+def test_mining_level_change_preserves_batch_and_promotes_next_batch(initial_level):
     def mining_snap(level):
         return replace(snap(), skills=tuple(
             SkillGrowth(skill, level if skill == '採礦' else 30, 0)
@@ -280,7 +289,7 @@ def test_mining_level_change_preserves_eligible_batch_without_silver_training(in
     for item in list(controller._STATE.queue)[:7]:
         controller.acknowledge_done(item.id, now=1001)
     state = controller._STATE
-    assert all(p.skill != '採礦' for p in state.queue)
+    assert all(p.skill == '採礦' for p in state.queue)
     remaining_target = state.queue[0].detail
     remaining_ids = [p.id for p in state.queue]
     fresh = mining_snap(26)
@@ -290,14 +299,14 @@ def test_mining_level_change_preserves_eligible_batch_without_silver_training(in
     assert all(p.detail == remaining_target for p in state.queue)
     # A new start selects a fresh batch rather than replacing remaining actions.
     new = controller.start_life(snapshot=fresh, now=1002)
-    assert len(new.queue) == 10 and all(p.skill != '採礦' for p in new.queue)
+    assert len(new.queue) == 10 and all(p.skill == '採礦' and p.detail == '銀礦脈' for p in new.queue)
 
 
 @pytest.mark.parametrize('level,expected', [
     (None, '淨淨蘑菇'), (19, '淨淨蘑菇'), (20, '傷痕花'),
     (24, '傷痕花'), (25, '增幅蘑菇'), (26, '增幅蘑菇'),
 ])
-def test_herb_standalone_keeps_tier_gates_without_automatic_training(level, expected):
+def test_herb_tier_gates_in_standalone_and_automatic_training(level, expected):
     from mm_assist.life_plan.live_test import scenarios, precondition
 
     counts = {s: 1 for s, _ in SKILL_GATHER if s != '採集藥草'}
@@ -306,12 +315,13 @@ def test_herb_standalone_keeps_tier_gates_without_automatic_training(level, expe
     for detail, threshold in [('傷痕花', 20), ('增幅蘑菇', 25)]:
         assert precondition(scenarios()[f'train:{detail}'], s) == (
             '' if level is not None and level >= threshold else 'training_level_unverified')
-    assert planner.training_item(s, counts).skill != '採集藥草'
-    assert all(p.skill != '採集藥草' for p in planner.plan_life(s, training_counts=counts))
+    assert planner.training_item(s, counts).detail == expected
+    assert all(p.skill == '採集藥草' and p.detail == expected
+               for p in planner.plan_life(s, training_counts=counts))
 
 
 @pytest.mark.parametrize('initial_level', [19, 24, 25])
-def test_herb_level_change_preserves_eligible_batch_without_herb_training(initial_level):
+def test_herb_level_change_preserves_batch_and_promotes_next_batch(initial_level):
     def herb_snap(level):
         return replace(snap(), skills=tuple(
             SkillGrowth(skill, level if skill == '採集藥草' else 30, 0)
@@ -320,7 +330,7 @@ def test_herb_level_change_preserves_eligible_batch_without_herb_training(initia
     for item in list(controller._STATE.queue)[:7]:
         controller.acknowledge_done(item.id, now=1001)
     state = controller._STATE
-    assert all(p.skill != '採集藥草' for p in state.queue)
+    assert all(p.skill == '採集藥草' for p in state.queue)
     remaining_target = state.queue[0].detail
     remaining_ids = [p.id for p in state.queue]
     fresh = herb_snap(26)
@@ -329,7 +339,7 @@ def test_herb_level_change_preserves_eligible_batch_without_herb_training(initia
     assert [p.id for p in state.queue] == remaining_ids and len(state.queue) == 3
     assert all(p.detail == remaining_target for p in state.queue)
     new = controller.start_life(snapshot=fresh, now=1002)
-    assert len(new.queue) == 10 and all(p.skill != '採集藥草' for p in new.queue)
+    assert len(new.queue) == 10 and all(p.skill == '採集藥草' and p.detail == '增幅蘑菇' for p in new.queue)
 
 
 @pytest.mark.parametrize('sid,name', [('mine', '銀礦脈'), ('herb', '增幅蘑菇')])
@@ -389,13 +399,15 @@ def test_list_ocr_cache_only_reuses_same_unchanged_frame(monkeypatch, change):
 
 
 @pytest.mark.parametrize('skill,sid,details,materials', [
+    ('日常採集', 'daily', ('蜘蛛網',), (('裝水的瓶子', '水井'),)),
     ('伐木', 'woodcut', ('甲胄樹', '幽暮樹'), (('原木', '樹木'), ('高級原木', '成材樹'))),
     ('剪羊毛', 'shear', ('捲毛羊', '烏雲羊'), (('羊毛', '羊'), ('高級羊毛', '捲毛羊'))),
     ('採礦', 'mine', ('白銅礦脈', '銀礦脈'), (('鐵礦石', '鐵礦脈'), ('煤炭', '煤炭礦脈'))),
     ('採集藥草', 'herb', ('淨淨蘑菇', '傷痕花', '增幅蘑菇'),
      (('淨淨蘑菇', '淨淨蘑菇'), ('增幅蘑菇', '增幅蘑菇'), ('箭花', '箭花'))),
+    ('昆蟲採集', 'insect', ('冰冷的光群', '荒蕪的昆蟲群'), ()),
 ])
-def test_catalog_and_standalone_training_retained_without_automatic_training(
+def test_catalog_standalone_training_and_material_routes_retained(
         monkeypatch, skill, sid, details, materials):
     from mm_assist.life_plan.execute import try_execute
     from mm_assist.life_plan.live_test import scenarios, precondition
@@ -404,7 +416,7 @@ def test_catalog_and_standalone_training_retained_without_automatic_training(
     assert (ROOT/f'knowledge/templates/items/{sid}/{details[-1]}.png').is_file()
     skills = tuple(SkillGrowth(name, 26 if name == skill else 30, 0) for name, _ in SKILL_GATHER)
     plan = planner.plan_life(replace(snap(), skills=skills))
-    assert plan and all(p.skill != skill for p in plan)
+    assert plan and all(p.skill == skill for p in plan)
     calls = []
     monkeypatch.setattr('mm_assist.life_execute.skill_nearby.execute_skill_nearby',
                         lambda *a, **k: calls.append(k) or ExecuteResult(True, 'done'))
@@ -417,7 +429,7 @@ def test_catalog_and_standalone_training_retained_without_automatic_training(
         assert try_execute(item).ok
         assert (calls[-1]['skill_id'], calls[-1]['item_name']) == (sid, detail)
     for material, detail in materials:
-        assert try_execute(scenarios()[f'gather:{material}']).ok
+        assert try_execute(scenarios()[f'gather:{material}'], items={'空瓶': 1}).ok
         assert (calls[-1]['skill_id'], calls[-1]['item_name']) == (sid, detail)
 
 

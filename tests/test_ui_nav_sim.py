@@ -1042,44 +1042,10 @@ def test_ensure_node_does_not_click_clipped_row(monkeypatch):
     assert r.status == "clipped_row"
 
 
-def test_ensure_sap_item_info_from_inventory_not_skill_list(monkeypatch):
-    from mm_assist.life_execute.ui_logic import UiWhere
-
-    page = {"n": "inventory"}
-    ids: list[str] = []
-    clicks: list[tuple[int, int]] = []
-    monkeypatch.setattr("mm_assist.life_plan.node_inspect.locate_spot", lambda *a, **k: (11, 12))
-
-    def locate(edge, *a, **k):
-        eid = str(edge.get("id") or "")
-        ids.append(eid)
-        if eid == "inventory_item_item_info" and str(k.get("item_name") or "") == "樹液":
-            return (11, 12)
-        if eid == "gather_skill_item_item_info":
-            return (99, 99)
-        return (1, 1)
-
-    def do_click(x, y):
-        clicks.append((x, y))
-        if page["n"] == "inventory":
-            page["n"] = "item_info:樹液"
-        return True
-
-    monkeypatch.setattr(ui_nav, "locate_edge", locate)
-    r = ui_nav.ensure_node(
-        "item_info",
-        grab=lambda: object(),
-        click=do_click,
-        sleep_fn=lambda s: None,
-        resolve=lambda _f=None: UiWhere(page["n"], 1, 0, 0, "mem"),
-        skill_id="wood",
-        item_name="樹液",
-    )
-    assert r.ok is True
-    assert clicks == [(11, 12)]
-    assert "gather_skill_item_item_info" not in ids
-    assert ids[0] == "inventory_item_item_info"
-    assert page["n"] == "item_info:樹液"
+def test_sap_route_from_inventory_closes_inventory_even_if_card_visible():
+    hops = ui_nav._sap_hops('inventory', 'item_info', root=None)
+    assert hops and hops[0]['id'] == 'inventory_close_main_hud'
+    assert all(edge['id'] != 'inventory_item_item_info' for edge in hops)
 
 
 def test_sap_hops_from_main_hud_goes_facility_not_bag():
@@ -1092,19 +1058,12 @@ def test_sap_hops_from_main_hud_goes_facility_not_bag():
     assert "craft_hub_card_facility" in ids or any("craft" in i for i in ids)
 
 
-def test_sap_hops_inventory_without_card_skips_guess_click(monkeypatch):
-    monkeypatch.setattr("mm_assist.life_plan.node_inspect.locate_spot", lambda *a, **k: None)
-    hops = ui_nav._sap_hops("inventory", "item_info", root=None, frame=object())
-    assert hops
-    assert hops[0].get("id") != "inventory_item_item_info"
-
-
-def test_sap_hops_wood_facility_opens_high_wood_then_recipe_clicks_sap():
+def test_sap_hops_only_open_material_on_softwood_recipe():
     hops = ui_nav._sap_hops("facility:wood", "item_info", root=None)
-    assert hops[0]["id"] == "facility_open_recipe"
-    assert (hops[0].get("trigger") or {}).get("label") == "高級木材"
-    hops2 = ui_nav._sap_hops("facility:wood:高級木材", "item_info", root=None)
-    assert hops2[0]["id"] == "facility_item_item_info"
+    assert hops[0]["id"] == "sap_recipe_choice"
+    assert (hops[0].get("trigger") or {}).get("label") == "柔軟木材"
+    assert ui_nav._sap_hops('facility:wood:高級木材', 'item_info', root=None)[0]['id'] == 'facility_back_craft_hub'
+    assert ui_nav._sap_hops('facility:wood:柔軟木材', 'item_info', root=None)[0]['id'] == 'sap_ingredient'
 
 
 def test_ensure_facility_wood_from_confirmed_wrong_generic_x_closes_to_hud(monkeypatch):

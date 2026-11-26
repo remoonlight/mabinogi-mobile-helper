@@ -6,19 +6,19 @@
   "primary": "map_component",
   "sources": {
     "map_component": {
-      "typeinfo_rva": "0x107DA3F0",
+      "typeinfo_rva": "0x8c79458",
       "xy_offset": "0x10",
       "layout": "xy_ff",
       "note": "MapComponent.PlayerPosition Vector2 — 地图用权威二维"
     },
     "transform_xz": {
-      "typeinfo_rva": "0x1071DAC8",
+      "typeinfo_rva": "0x8bd4128",
       "xyz_offset": "0x10",
       "layout": "xz_fff",
       "note": "ControlObjectTransform.Position3D → 水平面取 X,Z（Y 为高度）"
     },
     "inaccurate": {
-      "typeinfo_rva": "0x10718158",
+      "typeinfo_rva": "0x8bcfcb8",
       "xy_offset": "0x10",
       "has_offset": "0x1C",
       "layout": "xy_ff",
@@ -26,15 +26,15 @@
     }
   },
   "typeinfo_rva": {
-    "SystemContainers": "0x10600E78",
-    "MapComponent": "0x107DA3F0",
-    "ControlObjectTransformComponent": "0x1071DAC8",
-    "ControlObjectLocationInaccurateUpTo1mComponent": "0x10718158"
+    "SystemContainers": "0x11bc76b8",
+    "MapComponent": "0x11d0c188",
+    "ControlObjectTransformComponent": "0x11c07e10",
+    "ControlObjectLocationInaccurateUpTo1mComponent": "0x11c01f48"
   },
   "offsets": {
-    "SystemContainers.MapComponent": "0x2DB8",
-    "SystemContainers.ControlObjectTransformComponent": "0x2968",
-    "SystemContainers.ControlObjectLocationInaccurateUpTo1mComponent": "0x2930",
+    "SystemContainers.MapComponent": "0x30c8",
+    "SystemContainers.ControlObjectTransformComponent": "0x2c08",
+    "SystemContainers.ControlObjectLocationInaccurateUpTo1mComponent": "0x2bd0",
     "MapComponent.PlayerPosition": "0x10",
     "ControlObjectTransform.Position3D": "0x10",
     "ControlObjectLocation.location": "0x10",

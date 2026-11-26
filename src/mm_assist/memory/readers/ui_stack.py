@@ -1022,7 +1022,13 @@ class Il2CppUiStackReader:
                 fact["resource_name"] = read_il2cpp_string(h, resource, max_chars=128) if resource else None
                 fact["titles"] = {}
                 for key, field in (("world", "TitleWorldText"), ("town", "TitleTownText"), ("dungeon", "TitleDungeonText")):
-                    text = link(slot, "MapButtonUISlot." + field, "UIText")
+                    if "MarqueeTextLabelSlot.SourceText" in off:
+                        label_field = {"world": "WorldMapMarqueeLabel", "town": "TownMapMarqueeLabel",
+                                       "dungeon": "DungeonMapMarqueeLabel"}[key]
+                        label = link(slot, "MapButtonUISlot." + label_field, "MarqueeTextLabelSlot")
+                        text = link(label, "MarqueeTextLabelSlot.SourceText", "UIText")
+                    else:
+                        text = link(slot, "MapButtonUISlot." + field, "UIText")
                     raw = read_ptr(h, text + off["UIText.rawText"])
                     fact["titles"][key] = read_il2cpp_string(h, raw, max_chars=128) if raw else ""
                 if any(v is None for k, v in fact.items() if k != "titles") or not selected_map_view(fact):

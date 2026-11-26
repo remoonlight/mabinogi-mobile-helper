@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import logging
 import time
+from contextvars import ContextVar
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +28,7 @@ from mm_assist.tool_repair import (
 )
 
 log = logging.getLogger(__name__)
+_GOODBYE_ESCAPE_AT = ContextVar('npc_goodbye_escape_at', default=0.0)
 
 POST_CLICK_UI_WAIT_S = 1.0
 FOCUS_BEFORE_CLICK_S = 1.0
@@ -362,39 +364,67 @@ def locate_npc_goodbye_click(frame) -> tuple[int, int] | None:
         return None
     try:
         spec = json.loads((ROOT / 'knowledge/ui/repair/06_goodbye.json').read_text(encoding='utf-8'))
-        hit = match_template(frame, ROOT / spec['template'], roi=tuple(spec['roi']),
-                             threshold=spec['threshold'], min_margin=spec['min_margin'])
-        if hit is None:
+        templates = [spec['template']] + [v['template'] for v in spec.get('template_variants', [])]
+        if not any(match_template(frame, ROOT / template, roi=tuple(spec['roi']),
+                    threshold=spec['threshold'], min_margin=spec['min_margin']) is not None
+                   for template in templates):
             return None
-        nx, ny = spec['click_in_template']
-        return round(hit.x + hit.w * nx), round(hit.y + hit.h * ny)
+        nx, ny = spec['click_in_client']
+        h, w = frame.shape[:2]
+        return round(w * nx), round(h * ny)
     except Exception:
         return None
 
 
 def wait_hud_after_npc_dismiss(click, grab, sleep_fn=None, *, timeout_s=6.0,
-                              verify_hud=None) -> bool:
-    """识别告别气泡后只点一次；独立 HUD 返回才完成。"""
+                              verify_hud=None, continuous=False, cancelled=None,
+                              win=None) -> bool:
+    """告别页中央点按→等一秒验页；两次后脱困，再认页循环。"""
     sleeper = sleep_fn or time.sleep
     grabber = grab
     if grabber is None:
         return False
     clicked = False
+    engaged = False
+    after_escape = _GOODBYE_ESCAPE_AT.get()
+    recovering = bool(after_escape)
+    failure_saved = False
     final_read = False
     from mm_assist.safety.autofarm_gates import apply_stage_verify, stage_click
     stage = 'npc_goodbye_dismiss'
     deadline = time.monotonic() + max(0.0, timeout_s)
-    for attempt in range(25):
-        if op_cancelled():
+    def stopped():
+        from mm_assist.safety.input import check_abort
+        from mm_assist.safety.lease import current_lease, in_test_mode
+        check_abort()
+        lease = current_lease() if in_test_mode() else None
+        return (op_cancelled() or (in_test_mode() and (lease is None or not lease.alive()))
+                or (cancelled is not None and cancelled()))
+
+    def wait(seconds):
+        # Keep pause/F8 responsive during the mandatory post-click second.
+        remaining = seconds
+        while remaining > 1e-8:
+            if stopped():
+                return False
+            step = min(.1, remaining)
+            sleeper(step)
+            remaining -= step
+        return not stopped()
+
+    attempt = -1
+    while True:
+        attempt += 1
+        if stopped():
             return False
-        if attempt == 24 or time.monotonic() >= deadline:
+        if not (continuous and engaged) and (attempt >= 24 or time.monotonic() >= deadline):
             if not clicked or final_read:
                 return False
             # An in-budget dispatch can consume the remaining time. Observe
             # its result once, without authorizing another input or wait loop.
             final_read = True
         last = grabber()
-        if op_cancelled():
+        if stopped():
             return False
         if last is None:
             if final_read:
@@ -408,27 +438,100 @@ def wait_hud_after_npc_dismiss(click, grab, sleep_fn=None, *, timeout_s=6.0,
             continue
         if _hud_menu_xy(last) is not None:
             verified = verify_hud is None or verify_hud(last)
-            if op_cancelled():
+            if stopped():
                 return False
             if verified:
                 apply_stage_verify(stage, True)
                 apply_stage_verify('npc_end_dialog', True)
+                _GOODBYE_ESCAPE_AT.set(0.0)
                 return True
         if final_read:
             return False
-        if not clicked:
-            xy = locate_npc_goodbye_click(last)
-            if xy is not None:
-                if op_cancelled() or time.monotonic() >= deadline:
+        xy = locate_npc_goodbye_click(last)
+        if xy is not None:
+            engaged = True
+        if recovering:
+            # A new cycle is authorized only by a newly observed goodbye and
+            # a current, post-Esc dialog stack. Unknown/late reads retain both
+            # the two clicks and the already dispatched escape.
+            if xy is not None and after_escape:
+                from mm_assist.life_execute.ui_logic import resolve_navigation
+                where = resolve_navigation(last)
+                stamp = float(where.stack_sampled_ts or 0)
+                if stopped():
                     return False
-                if not stage_click(stage, click, *xy):
-                    return False
-                clicked = True
+                if (where.node == 'dialog' and where.stack_ready
+                        and after_escape < stamp <= time.time()
+                        and time.time() - stamp <= 3 and time.time() - after_escape >= 2):
+                    apply_stage_verify(stage, True)
+                    _GOODBYE_ESCAPE_AT.set(0.0)
+                    recovering, after_escape, clicked = False, 0.0, False
+                    from mm_assist.life_plan.execution_records import phase
+                    phase('关闭NPC告别：脱困后重新认页，继续中央点击')
+                    continue
+            from mm_assist.life_execute.ui_recover import recover_once
+            from mm_assist.safety.input import _FOREGROUND_INPUT_WINDOW
+            def dispatched(stamp):
+                nonlocal after_escape
+                after_escape = stamp
+                _GOODBYE_ESCAPE_AT.set(stamp)
+            # Navigation supplies the game via its existing input scope. With
+            # no target context the original recovery refuses; never send a
+            # desktop/global Esc as a fallback.
+            recovery_win = win if win is not None else _FOREGROUND_INPUT_WINDOW.get()
+            result = recover_once('npc_goodbye_unverified', win=recovery_win, grab=grabber,
+                sleep_fn=sleeper, cancelled=stopped, after_input_at=after_escape,
+                on_dispatch=dispatched)
+            if stopped():
+                return False
+            after_escape = float(result.get('sent_at') or after_escape)
+            _GOODBYE_ESCAPE_AT.set(after_escape)
+            if not result.get('ok') and not result.get('waiting') and not after_escape:
+                return False
+            if not wait(.25):
+                return False
+            continue
+        if xy is not None:
+            if stopped() or (not continuous and time.monotonic() >= deadline):
+                return False
+            sent = stage_click(stage, click, *xy)
+            if sent is None:
+                if continuous:
+                    if not failure_saved:
+                        # Preserve the second failed click's original frame
+                        # before recovery. Evidence errors never change input.
+                        from mm_assist.life_plan.anomalies import cache_fail_shot, log_life_anomaly
+                        from mm_assist.life_plan.controller import get_controller
+                        try:
+                            shot = cache_fail_shot(win, frame=last, tag='npc_goodbye_cycle')
+                            state = get_controller()
+                            item = state.current
+                            log_life_anomaly(plan_title=item.title if item else '',
+                                plan_id=item.id if item else '', tag='npc_goodbye_cycle',
+                                extra=f'两次中央点击后仍未关闭；坐标={xy}；原图={shot}',
+                                run_started_at=state.life_started_at)
+                        except Exception:
+                            pass
+                        failure_saved = True
+                    from mm_assist.life_plan.execution_records import phase
+                    phase('关闭NPC告别：两次中央点击未关闭，执行脱困')
+                    recovering = True
+                    continue
+                return False
+            if not sent:
+                return False
+            clicked = True
+            from mm_assist.life_plan.execution_records import phase
+            phase('关闭NPC告别：已点客户区中央，等一秒后验页', kind='page_wait')
+            if not wait(1.0):
+                return False
+            continue
         sleeper(0.25)
     return False
 
 
-def dismiss_world_npc_menu(click, frame, *, grab=None, sleep_fn=None) -> bool:
+def dismiss_world_npc_menu(click, frame, *, grab=None, sleep_fn=None,
+                           continuous=False, cancelled=None, verify_hud=None) -> bool:
     """栈认成主界面时，奈麗絲六钮仍盖住菜单。点結束對話，不点铁砧。"""
     if op_cancelled() or grab is None or not npc_end_dialog_visible(frame):
         return False
@@ -439,7 +542,9 @@ def dismiss_world_npc_menu(click, frame, *, grab=None, sleep_fn=None) -> bool:
 
     if not stage_click('npc_end_dialog', click, hit.cx, hit.cy):
         return False
-    return wait_hud_after_npc_dismiss(click, grab, sleep_fn=sleep_fn)
+    return wait_hud_after_npc_dismiss(click, grab, sleep_fn=sleep_fn,
+                                    continuous=continuous, cancelled=cancelled,
+                                    verify_hud=verify_hud)
 
 
 def click_repair_entry_via_neighbors(
@@ -647,7 +752,8 @@ def _click_equipped_ocr(
     return needle
 
 
-def _wait_leave_dialog(cfg: AppConfig, win: WindowInfo, *, timeout_s: float = 6.0, away_clicks: int = 3) -> tuple[WindowInfo, bool]:
+def _wait_leave_dialog(cfg: AppConfig, win: WindowInfo, *, timeout_s: float = 6.0,
+                       away_clicks: int = 3, continuous: bool = False) -> tuple[WindowInfo, bool]:
     from mm_assist.life_execute.ui_logic import resolve_navigation
 
     def grab():
@@ -683,8 +789,10 @@ def _wait_leave_dialog(cfg: AppConfig, win: WindowInfo, *, timeout_s: float = 6.
                 and where.stack_ready and -.5 <= age <= 3)
 
     _ = away_clicks  # Compatibility only: no blind clicks or repeated end action.
+    from mm_assist.life_execute.ui_act import pump_aborted
     left = wait_hud_after_npc_dismiss(click, grab, timeout_s=timeout_s,
-                                    verify_hud=verified_hud)
+                                    verify_hud=verified_hud, continuous=continuous,
+                                    win=win, cancelled=pump_aborted)
     return win, left
 
 
@@ -902,7 +1010,7 @@ def _repair_dialog_chain_once(
         out["error"] = "结束对话完整文字未确认或输入未发出"
         return win, out
 
-    win, left = _wait_leave_dialog(cfg, win, timeout_s=6.0, away_clicks=3)
+    win, left = _wait_leave_dialog(cfg, win, timeout_s=6.0, continuous=True)
     out["dlg_left"] = left
     if not left:
         out["ok"] = False

@@ -1,0 +1,29 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_daily_bottom_1795611425.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/daily_list.png",
+  "source_sha256": "2f1196c30633b3eaffa149ea0241be1d262aaf7c9aba8af313e045163fa3e025",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "gather_skill_daily_蜘蛛絲團",
+  "label": "蜘蛛絲團",
+  "file": "蜘蛛絲團.png",
+  "rel_dir": "knowledge/templates/gather_skill/daily",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 260,
+    "h": 83
+  },
+  "template_sha256": "e4afdf26f4246da0bb1f44a216dd34de60e65f9d346d742413805a2982d0d5e8"
+}

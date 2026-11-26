@@ -1,0 +1,178 @@
+{
+  "recipe_choice": {
+    "file": "recipe_choice.png",
+    "roi": [
+      0.39,
+      0.14,
+      0.55,
+      0.62
+    ],
+    "source": "tests/fixtures/process_stance/sap_softwood_20261126/list.png",
+    "source_sha256": "f998d038498ac8e5ca9d16dd9e774b5b625c59da59878f248f3f5a173930caf9",
+    "png_sha256": "6546b54cd5fa9a5b86cff9f1f0a1bbee676fd9fe25d997dd5aeaf619a8c6749f",
+    "source_client_size": [
+      1920,
+      1431
+    ],
+    "crop_px": [
+      1639,
+      422,
+      100,
+      29
+    ]
+  },
+  "recipe_title": {
+    "file": "recipe_title.png",
+    "roi": [
+      0.6,
+      0.46,
+      0.23,
+      0.11
+    ],
+    "source": "tests/fixtures/process_stance/sap_softwood_20261126/recipe.png",
+    "source_sha256": "3604aba8ecbf1a275e948b1a0067e6373d26d92286f3762de28683d7f904a8c0",
+    "png_sha256": "bb6e856d9d6c0ac72f6cb5bb8451d930870454bbeb417d2f6a970e5c458797ac",
+    "source_client_size": [
+      1920,
+      1431
+    ],
+    "crop_px": [
+      1234,
+      712,
+      137,
+      38
+    ]
+  },
+  "ingredient": {
+    "file": "ingredient.png",
+    "roi": [
+      0.55,
+      0.71,
+      0.42,
+      0.09
+    ],
+    "source": "tests/fixtures/process_stance/sap_softwood_20261126/recipe.png",
+    "source_sha256": "3604aba8ecbf1a275e948b1a0067e6373d26d92286f3762de28683d7f904a8c0",
+    "png_sha256": "6c07e51e3e40445f1fa0366de6f3dc96e3162c775c40247b71147c034a9f7d75",
+    "source_client_size": [
+      1920,
+      1431
+    ],
+    "crop_px": [
+      1584,
+      1037,
+      43,
+      57
+    ]
+  },
+  "card_title": {
+    "file": "card_title.png",
+    "roi": [
+      0.31,
+      0.33,
+      0.19,
+      0.1
+    ],
+    "source": "tests/fixtures/process_stance/sap_softwood_20261126/card.png",
+    "source_sha256": "9b8f741eeb1fe0aaa5052df95a490204ea4e852bd0425c38a55f2f255da397c2",
+    "png_sha256": "2bf7af042638c2ba05bf40430566131cd8dd0d3e043d2aaa7724ebb7ea9d502f",
+    "source_client_size": [
+      1920,
+      1431
+    ],
+    "crop_px": [
+      679,
+      517,
+      83,
+      43
+    ]
+  },
+  "obtain_link": {
+    "file": "obtain_link.png",
+    "roi": [
+      0.31,
+      0.57,
+      0.23,
+      0.11
+    ],
+    "source": "tests/fixtures/process_stance/sap_softwood_20261126/card.png",
+    "source_sha256": "9b8f741eeb1fe0aaa5052df95a490204ea4e852bd0425c38a55f2f255da397c2",
+    "png_sha256": "7078142ef6f3b70fcb09bbe1066713fbdfa1244181fd0c7df88703418e5143bd",
+    "source_client_size": [
+      1920,
+      1431
+    ],
+    "crop_px": [
+      680,
+      877,
+      132,
+      38
+    ]
+  },
+  "obtain_title": {
+    "file": "obtain_title.png",
+    "roi": [
+      0.52,
+      0.11,
+      0.32,
+      0.08
+    ],
+    "source": "tests/fixtures/process_stance/sap_softwood_20261126/obtain.png",
+    "source_sha256": "4d1faea67cffd7987d9c2549331354736577c23bcc5a01dd0ba9a53e25133e42",
+    "png_sha256": "dc567d1c141b3d33856ef0f04b8d685dba39892bf0512c859681a8e198931dc1",
+    "source_client_size": [
+      1920,
+      1431
+    ],
+    "crop_px": [
+      1062,
+      186,
+      129,
+      37
+    ]
+  },
+  "obtain_item_title": {
+    "file": "obtain_item_title.png",
+    "roi": [
+      0.31,
+      0.33,
+      0.19,
+      0.1
+    ],
+    "source": "tests/fixtures/process_stance/sap_softwood_20261126/obtain.png",
+    "source_sha256": "4d1faea67cffd7987d9c2549331354736577c23bcc5a01dd0ba9a53e25133e42",
+    "png_sha256": "d98faceaf0a1d0117cb235ada8663e78c523454d7529300456876d53d9739c9f",
+    "source_client_size": [
+      1920,
+      1431
+    ],
+    "crop_px": [
+      679,
+      517,
+      83,
+      43
+    ]
+  },
+  "woodcut": {
+    "file": "woodcut.png",
+    "roi": [
+      0.54,
+      0.2,
+      0.25,
+      0.075
+    ],
+    "source": "tests/fixtures/process_stance/sap_softwood_20261126/obtain.png",
+    "source_sha256": "4d1faea67cffd7987d9c2549331354736577c23bcc5a01dd0ba9a53e25133e42",
+    "png_sha256": "bdef7a53caa5b8f39f1dc364bd61c3d47593d24fa40c8308b0086f64496bbb4b",
+    "source_client_size": [
+      1920,
+      1431
+    ],
+    "crop_px": [
+      1103,
+      323,
+      131,
+      42
+    ]
+  }
+}

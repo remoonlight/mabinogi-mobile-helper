@@ -133,6 +133,8 @@ def test_exhaustion_refresh_uses_real_snapshot_readers_in_one_handle(monkeypatch
     queues = {'metal': (), 'wood': (), 'medicine': (),
               'cloth': (QueueSlot('布料', False, remain_s=40),)}
     monkeypatch.setattr(snapshot, 'read_facility_queues', reader('facilities', queues))
+    caps = {'metal': 5, 'wood': 5, 'cloth': 6, 'medicine': 4}
+    monkeypatch.setattr(snapshot, 'read_facility_slot_caps', reader('facility_slot_caps', caps))
     monkeypatch.setattr(snapshot, 'read_living_skills', reader('skills', [
         {'name': '採礦', 'level': 20, 'exp': 1}]))
     monkeypatch.setattr(controller, 'take_snapshot', snapshot.take_snapshot)
@@ -140,9 +142,11 @@ def test_exhaustion_refresh_uses_real_snapshot_readers_in_one_handle(monkeypatch
         done = controller.tick_facility_progress(now=1001)
         assert done.snapshot.items == {'羊毛': 40} and done.snapshot.tools == tools
         assert done.snapshot.facilities == queues
+        assert done.snapshot.facility_slot_caps == caps
         assert facility_sim.peek_facility_sim().slots['cloth'] == queues['cloth']
         assert done.snapshot.skills[0].name == '採礦'
-        assert calls == [(name, handle) for name in ['items', 'tools', 'facilities', 'skills', 'close']]
+        assert calls == [(name, handle) for name in
+                         ['items', 'tools', 'facilities', 'facility_slot_caps', 'skills', 'close']]
         assert any(item.kind == 'repair' for item in done.queue)
     finally:
         with snapshot._SCAN_LOCK:

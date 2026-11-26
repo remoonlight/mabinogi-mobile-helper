@@ -1,0 +1,40 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_hoe_bottom_1795611091.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/hoe_list.png",
+  "source_sha256": "2ebc627f2d559e8198f6e8d425fc64b56108204d7a21e95cad5639d695ca5353",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "item_hoe_南瓜",
+  "label": "南瓜",
+  "file": "南瓜.png",
+  "rel_dir": "knowledge/templates/items/hoe",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 88,
+    "h": 83
+  },
+  "template_sha256": "84d983e604e0fcce1309587b7c64429aa9ab6979d3ed4f1201835c093b098a9e",
+  "row_name_template": "南瓜_name.png",
+  "row_name_client_px": {
+    "x": 1205,
+    "y": 1307,
+    "w": 76,
+    "h": 38
+  },
+  "row_name_sha256": "0d63c98739e307dc9c526c164cfa0f647813cbedb6bcfb61b4db873a72736e1a",
+  "min_level": 20,
+  "status": "ready",
+  "image_only": true,
+  "require_white_name": true
+}

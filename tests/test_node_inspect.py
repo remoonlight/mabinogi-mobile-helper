@@ -1904,15 +1904,15 @@ def test_gather_skill_spots_are_complete():
 
     herb = spots_for_node("gather_skill:herb")
     assert herb == items_for_skill("herb")
-    # 用户新增傷痕花、增幅蘑菇；保留原十项并验证新增目录。
-    assert len(herb) == 12
-    assert {'傷痕花', '增幅蘑菇'} <= set(herb)
+    # 台服 S1 新增柔柔蘑菇，保留原有十二项。
+    assert len(herb) == 13
+    assert {'傷痕花', '增幅蘑菇', '柔柔蘑菇'} <= set(herb)
     assert "淨淨蘑菇" in herb
     insect = spots_for_node("gather_skill:insect")
     assert insect == items_for_skill("insect")
-    assert "冰冷的光群" in insect
+    assert {"冰冷的光群", "荒蕪的昆蟲群", "荒涼的昆蟲群"} <= set(insect)
     daily = spots_for_node("gather_skill:daily")
-    assert daily == ("巢穴", "蜘蛛網", "水", "水井")
+    assert daily == ("巢穴", "蜘蛛網", "水", "水井", "蜘蛛絲團")
 
 
 def test_detect_gather_skill_picks_peak(monkeypatch):

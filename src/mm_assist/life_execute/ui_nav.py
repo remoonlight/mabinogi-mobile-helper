@@ -223,7 +223,7 @@ def clear_edge_memo_if_arrived(node: str) -> None:
     dead = [
         eid
         for eid, (expect, _ts) in list(_EDGE_MEMO.items())
-        if _page_eq(str(expect), g) or str(expect) == str(node)
+        if (node == expect if ':' in expect else _page_eq(str(expect), g))
     ]
     for eid in dead:
         _EDGE_MEMO.pop(eid, None)
@@ -424,6 +424,10 @@ def locate_edge(
             return int(xy[0]), int(xy[1])
         _LAST_ITEM_MISS = hit if isinstance(hit, dict) else None
         return None
+    if edge.get('sap_control'):
+        from mm_assist.perception import sap_sense
+
+        return sap_sense.locate(frame, edge['sap_control'], root=root)
     if eid == "inventory_item_item_info" or (frm == "inventory" and to == "item_info"):
         from mm_assist.life_plan.node_inspect import locate_spot
 
@@ -507,72 +511,34 @@ def _is_sap_nav(item_name: str) -> bool:
     return fold_zh(item_name) == fold_zh("樹液")
 
 
-def _sap_item_edge(frm: str) -> dict[str, Any]:
-    return {
-        "id": "facility_item_item_info" if frm != "inventory" else "inventory_item_item_info",
-        "from": frm,
-        "to": "item_info",
-        "trigger": {"type": "visible_button", "label": "樹液"},
-    }
-
-
-def _sap_recipe_edge() -> dict[str, Any]:
-    return {
-        "id": "facility_open_recipe",
-        "from": "facility",
-        "to": "facility_recipe",
-        "trigger": {"type": "visible_button", "label": "高級木材"},
-    }
-
-
-def _sap_hops(
-    node: str,
-    target: str,
-    *,
-    root: Path | None,
-    frame: Any | None = None,
-) -> list[dict[str, Any]] | None:
-    """樹液第1次：菜单→製作→加工→木材→高級木材→樹液卡。仅背包已能 locate 才走物品。"""
-    from mm_assist.life_execute.ui_logic import facility_id_of
+def _sap_hops(node: str, target: str, *, root: Path | None) -> list[dict[str, Any]] | None:
+    from mm_assist.perception import sap_sense
 
     g = graph_node(node)
     t = graph_node(target)
-    if t not in {"item_info", "obtain_method"}:
-        return None
-    if t == "obtain_method" and g == "item_info" and "樹液" in str(node):
-        return path_edges(node, "obtain_method", root=root)
-    if t == "item_info" and g == "obtain_method":
-        return path_edges(node, "item_info", root=root)
-    if g == "item_info" and "樹液" not in str(node):
-        return path_edges(node, "life_grid", root=root) or path_edges(node, "craft_hub", root=root)
-    if g == "item_info":
-        return []
-    if g in {"gather_skill", "gather_detail"}:
-        return path_edges(node, "life_grid", root=root)
-    if g in {"life_grid", "profile"}:
-        return path_edges(node, "main_hud", root=root)
-    if g == "inventory":
-        xy = None
-        if frame is not None:
-            from mm_assist.life_plan.node_inspect import locate_spot
-
-            xy = locate_spot("inventory", "樹液", frame, root=root)
-        if xy is not None:
-            return [_sap_item_edge("inventory")]
-        return path_edges(node, "facility", root=root)
-    fid = facility_id_of(node)
-    if g == "facility_recipe":
-        if fid and fid != "wood":
-            return path_edges(node, "craft_hub", root=root)
-        if "高級木材" in str(node) or not fid or fid == "wood":
-            return [_sap_item_edge(g)]
-        return path_edges(node, "craft_hub", root=root)
-    if g == "facility":
-        if fid and fid != "wood":
-            return path_edges(node, "craft_hub", root=root)
-        return [_sap_recipe_edge()]
-    hops = path_edges(node, "facility", root=root)
-    return hops
+    if g == 'obtain_method':
+        return path_edges(node, 'item_info', root=root)
+    if g == 'item_info':
+        if t == 'obtain_method' and node == sap_sense.CARD_PAGE:
+            control, expect, label = 'obtain_link', sap_sense.OBTAIN_PAGE, '獲得方法'
+        else:
+            return path_edges(node, 'life_grid', root=root)
+    elif g == 'facility_recipe':
+        if node == sap_sense.RECIPE_PAGE and t != 'facility_recipe':
+            control, expect, label = 'ingredient', sap_sense.CARD_PAGE, '樹液'
+        else:
+            return path_edges(node, 'craft_hub', root=root)
+    elif node == 'facility:wood':
+        control, expect, label = 'recipe_choice', sap_sense.RECIPE_PAGE, sap_sense.RECIPE
+    elif g == 'facility':
+        return path_edges(node, 'craft_hub', root=root)
+    elif g in {'gather_skill', 'gather_detail'}:
+        return path_edges(node, 'life_grid', root=root)
+    else:
+        return path_edges(node, 'facility', root=root)
+    return [{'id': f'sap_{control}', 'from': g, 'to': graph_node(expect),
+             'sap_control': control, 'exact_destination': expect,
+             'trigger': {'type': 'visible_button', 'label': label}}]
 
 
 def _production_item_list_drag(x0: int, y0: int, x1: int, y1: int) -> None:
@@ -635,7 +601,7 @@ def _verify_late_edges(where: Any, *, frame_started_at: float) -> None:
     for stage, (eid, expect, sent_at) in list(_PENDING_EDGES.items()):
         if frame_started_at <= sent_at or sampled <= sent_at:
             continue
-        if graph_node(node) == graph_node(expect):
+        if (node == expect if ':' in expect else graph_node(node) == graph_node(expect)):
             _mark_arrived(stage)
             _EDGE_MEMO.pop(eid, None)
 
@@ -681,7 +647,10 @@ def ensure_node(
     sleeper = sleep_fn or __import__("time").sleep
     resolver = resolve or resolve_navigation
     from mm_assist.perception.item_sense import GATHER_SKILL_IDS, fold_zh
+    from mm_assist.perception import sap_sense
 
+    sap_route = ((_is_sap_nav(item_name) and graph_node(target) in {'item_info', 'obtain_method'})
+                 or (facility == 'wood' and item_name == sap_sense.RECIPE and graph_node(target) == 'facility_recipe'))
     if _is_sap_nav(item_name):
         if skill_id and skill_id not in GATHER_SKILL_IDS:
             if not facility:
@@ -847,6 +816,18 @@ def ensure_node(
                 status="wrong_page",
                 message="点製作进了货币页，不是加工六卡",
             )
+        exact = edge.get('exact_destination')
+        if exact:
+            pending = _PENDING_EDGES.get(stage)
+            sampled = float(getattr(after_where, 'stack_sampled_ts', 0) or 0)
+            if (nxt_node != exact or not getattr(after_where, 'stack_ready', False)
+                    or not pending or sampled <= pending[2]):
+                return True
+            _mark_arrived(stage)
+            _EDGE_MEMO.pop(str(edge.get('id') or ''), None)
+            if _at_dest(nxt_node, after, after_where):
+                return ExecuteResult(True, 'at_node', target)
+            return None
         if _at_dest(nxt_node, after, after_where):
             _mark_arrived(stage)
             clear_edge_memo_if_arrived(nxt_node)
@@ -909,7 +890,7 @@ def ensure_node(
         _ = label
         elapsed = 0.0
         _prog("等新页")
-        if sleep_fn is None and resolve is not None:
+        if sleep_fn is None and resolve is not None and not edge.get('exact_destination'):
             from mm_assist.life_execute.ui_logic import wait_ui_params_refresh
 
             if not wait_ui_params_refresh(
@@ -1098,7 +1079,7 @@ def ensure_node(
                 # The stage reservation survives an ambiguous dispatch error.
                 # Keep its destination too, so later independent evidence can
                 # verify it without another click.
-                note_edge_clicked(eid, str(edge.get('to') or ''), stage=stage)
+                note_edge_clicked(eid, str(edge.get('exact_destination') or edge.get('to') or ''), stage=stage)
             raise
         if sent is None:
             return ExecuteResult(False,"need_verify",f"{stage}已点两次，需先验画面")
@@ -1108,7 +1089,7 @@ def ensure_node(
                 return hit
             return ExecuteResult(ok=False, status="click_yield", message=f"{label}未点出")
         if eid:
-            note_edge_clicked(eid, str(edge.get("to") or ""), stage=stage)
+            note_edge_clicked(eid, str(edge.get('exact_destination') or edge.get('to') or ''), stage=stage)
         return verify_arrived(edge, node, stage, label, before_where)
 
     last_stage = ""
@@ -1279,8 +1260,8 @@ def ensure_node(
                 )
         elif node == "overlay" and graph_node(target) not in {"overlay", "main_hud"}:
             hops = path_edges("overlay", "main_hud", root=root)
-        elif _is_sap_nav(item_name) and graph_node(target) in {"item_info", "obtain_method"}:
-            hops = _sap_hops(src, target, root=root, frame=frame)
+        elif sap_route:
+            hops = _sap_hops(src, target, root=root)
         elif graph_node(target) == "inventory":
             gsrc = graph_node(src)
             if gsrc in {"facility", "facility_recipe"}:

@@ -143,16 +143,15 @@ def test_repair_recovery_uses_same_isolated_capture_as_map_navigation(recovery, 
     assert result.status == 'recovery_wait' and seen == [(cfg, win)]
 
 
-def test_unverified_sent_escape_times_out_to_pause_without_refunding_input(recovery):
+def test_unverified_sent_escape_keeps_running_without_refunding_input(recovery):
     clock, queue, events, state = recovery
     state['sent'] = True
     bar_ui.pump_life_once(None, None)
     clock[0] += 60
     bar_ui.pump_life_once(None, None)
     st = controller.get_controller()
-    assert st.paused and st.current == queue[0]
+    assert st.running and not st.paused and st.current == queue[0]
     assert bar_ui._RECOVERY_COUNT == 1 and bar_ui._RECOVERY_AFTER == 1001
-    controller.resume_life()
     bar_ui.pump_life_once(None, None)
     assert events.count('esc') == 1 and events.count('execute') == 1
 
@@ -181,7 +180,7 @@ def test_post_dispatch_observation_exception_is_bounded_without_new_escape(recov
     monkeypatch.setattr('mm_assist.life_execute.ui_recover.recover_once', broken)
     clock[0] += 60
     bar_ui.pump_life_once(None, None)
-    assert controller.get_controller().paused
+    assert controller.get_controller().running and not controller.get_controller().paused
     assert controller.get_controller().current == queue[0]
     assert events.count('esc') == 1 and bar_ui._RECOVERY_COUNT == 1
 

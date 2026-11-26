@@ -6,35 +6,35 @@
 
   "typeinfo_rva": {
 
-    "SystemContainers": "0x10600E78",
+    "SystemContainers": "0x11bc76b8",
 
-    "Equipment": "0x10780820",
+    "Equipment": "0x11c6fad8",
 
-    "EquipmentTool": "0x107D0A58",
+    "EquipmentTool": "0x11cc4d48",
 
-    "EquipmentSlotComponent": "0x107BCDA0",
+    "EquipmentSlotComponent": "0x11cafb58",
 
-    "EquipmentToolInventoryComponent": "0x107D36F0",
+    "EquipmentToolInventoryComponent": "0x11cc7cd0",
 
-    "EquipmentInventoryComponent": "0x1079F228",
+    "EquipmentInventoryComponent": "0x11c905b0",
 
-    "EquipmentSheetData": "0x107BAFE8",
+    "EquipmentSheetData": "0x11cadba8",
 
-    "EquipmentToolSheetData": "0x107D6878",
+    "EquipmentToolSheetData": "0x11ccb198",
 
-    "MagicEffectSheetData": "0x1079C0A8",
+    "MagicEffectSheetData": "0x11cc9c88",
 
-    "SocketableSheetData": "0x107C3FA0",
+    "SocketableSheetData": "0x11da5700",
 
-    "RuneSheetData": "0x1088B9E8",
+    "RuneSheetData": "0x11ae6198",
 
-    "JewelSheetData": "0x106590C8",
+    "JewelSheetData": "0x11b70f28",
 
-    "RuneOptionSheetData": "0x1087FE48",
+    "RuneOptionSheetData": "0x11ad8f98",
 
-    "MagicEffectRuneParameterSheetData": "0x1079ACD8",
+    "MagicEffectRuneParameterSheetData": "0x11cc8768",
 
-    "MagicEffectJewelParameterSheetData": "0x10798F28",
+    "MagicEffectJewelParameterSheetData": "0x11cc67b8",
 
     "ConstParameter": "0x7B0A2B8",
 
@@ -42,15 +42,15 @@
 
     "RuneTableParameter": "0x794A020",
 
-    "ClientActionParameter_ModifyParameter": "0x105ACC60"
+    "ClientActionParameter_ModifyParameter": "0x11dea480"
 
   },
 
   "offsets": {
 
-    "SystemContainers.EquipmentSlotComponent": "0x2C60",
+    "SystemContainers.EquipmentSlotComponent": "0x2db8",
 
-    "SystemContainers.EquipmentToolInventoryComponent": "0x2C70",
+    "SystemContainers.EquipmentToolInventoryComponent": "0x2dc8",
 
     "EquipmentSlotComponent.equipmentSlots": "0x10",
 
@@ -98,7 +98,7 @@
 
     "Equipment.IsJunked": "0x189",
 
-    "Equipment.IsLocked": "0x18A",
+    "Equipment.IsLocked": "0x18b",
 
     "Equipment.sheetData": "0x190",
 

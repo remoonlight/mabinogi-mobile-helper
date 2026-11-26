@@ -2,9 +2,9 @@
   "version": 1,
   "note": "按钮触发框只读扫描：ButtonControl / Tweening* → Graphic → RectTransform",
   "typeinfo_rva": {
-    "ButtonControl": "0x7a12980",
-    "TweeningButtonControl": "0x7acd2a8",
-    "TweeningToggleButtonControl": "0x7acd980"
+    "ButtonControl": "0x11d0d148",
+    "TweeningButtonControl": "0x11d8f280",
+    "TweeningToggleButtonControl": "0x11d8fd10"
   },
   "offsets": {
     "ButtonControl.uiSlot": "0x38",

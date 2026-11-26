@@ -39,6 +39,7 @@ _DOTNET_UNIX_TICKS = 621355968000000000
 _CATALOG: dict[int, str] | None = None
 _CATALOG_FT: dict[int, int] | None = None
 _COMPONENTS: dict[tuple[int, str], int] = {}
+_MAX_QUEUE_LIST = 32
 
 
 def _cfg() -> dict[str, Any]:
@@ -142,17 +143,6 @@ def progress_from_ticks(
     return ratio, remain
 
 
-def clamp_slot_cap(raw: int | None) -> int:
-    """容量只认 1–8；读不到/越界 fail-closed 为 SLOT_CAP，不猜回 4。"""
-    try:
-        v = int(raw) if raw is not None else 0
-    except (TypeError, ValueError):
-        return int(SLOT_CAP)
-    if 1 <= v <= 8:
-        return v
-    return int(SLOT_CAP)
-
-
 def pick_latest_slots(
     recs: list[tuple[int, QueueSlot]], *, cap: int = SLOT_CAP
 ) -> tuple[QueueSlot, ...]:
@@ -174,16 +164,6 @@ def _empty() -> dict[FacilityId, tuple[QueueSlot, ...]]:
     return {fac: () for fac in FACILITY_ORDER}
 
 
-def _empty_caps() -> dict[FacilityId, int]:
-    return {fac: int(SLOT_CAP) for fac in FACILITY_ORDER}
-
-
-def _fac_cap(caps: dict[FacilityId, int] | None, fac: FacilityId) -> int:
-    if not caps:
-        return int(SLOT_CAP)
-    return clamp_slot_cap(caps.get(fac))
-
-
 def _dict_offs(off: dict[str, int]) -> dict[str, int]:
     return {
         "count": off["MMDictionary.count"],
@@ -194,13 +174,11 @@ def _dict_offs(off: dict[str, int]) -> dict[str, int]:
     }
 
 
-def _read_ptr_list(
-    hproc, list_ptr: int, offs: dict[str, int], *, cap: int = SLOT_CAP
-) -> list[int] | None:
+def _read_ptr_list(hproc, list_ptr: int, offs: dict[str, int]) -> list[int] | None:
     if not list_ptr:
         return None
     size = read_u32(hproc, list_ptr + offs["MMList._size"])
-    if size is None or size > 32:
+    if size is None or size > _MAX_QUEUE_LIST:
         return None
     if size == 0:
         return []
@@ -210,10 +188,9 @@ def _read_ptr_list(
     n_arr = int(read_u32(hproc, items + offs["Il2CppArray.max_length"]) or 0)
     if n_arr < size:
         return None
-    n = min(int(size), cap)
     vec = items + offs["Il2CppArray.vector"]
     out: list[int] = []
-    for i in range(n):
+    for i in range(size):
         p = read_ptr(hproc, vec + i * 8)
         if p and p > 0x10000:
             out.append(int(p))
@@ -268,8 +245,6 @@ def _read_status_queues(
     hproc,
     infos: int,
     off: dict[str, int],
-    *,
-    caps: dict[FacilityId, int] | None = None,
 ) -> dict[FacilityId, tuple[QueueSlot, ...]]:
     cur = _empty()
     count = read_u32(hproc, infos + off["MMDictionary.count"])
@@ -284,33 +259,28 @@ def _read_status_queues(
         fac = _KEY_TO_FACILITY.get(int(key))
         if fac is None:
             continue
-        cap = _fac_cap(caps, fac)
         slots: list[QueueSlot] = []
-        queues = _read_ptr_list(hproc, lst, off, cap=cap)
+        queues = _read_ptr_list(hproc, lst, off)
         if queues is None:
             return {}
         for q in queues:
             works = _read_ptr_list(
-                hproc, read_ptr(hproc, q + off["AlteringWorkStatusQueue.workQueue"]), off, cap=cap
+                hproc, read_ptr(hproc, q + off["AlteringWorkStatusQueue.workQueue"]), off
             )
-            if works is None:
+            if works is None or len(slots) + len(works) > _MAX_QUEUE_LIST:
                 return {}
             for work in works:
                 slot = _work_to_slot(hproc, work, off)
-                if slot is not None:
-                    slots.append(slot)
-                else:
+                if slot is None:
                     return {}
-                if len(slots) >= cap:
-                    break
-            if len(slots) >= cap:
-                break
-        cur[fac] = tuple(slots[:cap])
+                slots.append(slot)
+        cur[fac] = tuple(slots)
     return cur
 
 
 def _scan_slot_cap_dict(
     hproc,
+    pid: int,
     cfg: dict[str, Any],
     ga: int,
     off: dict[str, int],
@@ -324,56 +294,88 @@ def _scan_slot_cap_dict(
     klass = resolve_klass(hproc, ga, rva)
     if not klass:
         return {}
-    hits = scan_klass_objects(hproc, klass, max_hits=16, max_wall_s=4.0)
-    if not hits:
-        return {}
-    found: dict[FacilityId, int] = {}
     dict_offs = _dict_offs(off)
     field_off = off.get(field)
     if field_off is None:
         return {}
-    for comp in hits:
-        dptr = read_ptr(hproc, comp + int(field_off))
+
+    def decode(comp: int) -> dict[FacilityId, int]:
+        if read_ptr(hproc, comp) != klass:
+            return {}
+        addr = comp + field_off
+        dptr = read_ptr(hproc, addr)
         if not dptr:
-            continue
-        for key, val in iter_key_int_pairs(hproc, int(dptr), dict_offs):
-            fac = _KEY_TO_FACILITY.get(int(key))
-            if fac is None:
-                continue
-            found[fac] = int(val)
-    return found
+            return {}
+        count_addr = dptr + dict_offs['count']
+        count = read_u32(hproc, count_addr)
+        if count is None or not 1 <= count <= 6:
+            return {}
+        pairs = dict(iter_key_int_pairs(hproc, dptr, dict_offs))
+        if (len(pairs) != count or dict(iter_key_int_pairs(hproc, dptr, dict_offs)) != pairs
+                or read_u32(hproc, count_addr) != count or read_ptr(hproc, addr) != dptr):
+            return {}
+        return {fac: pairs[key] for key, fac in _KEY_TO_FACILITY.items()
+                if key in pairs and 1 <= pairs[key] <= 8}
+
+    def verify(comp: int, expected: dict[FacilityId, int] | None = None) -> dict[FacilityId, int]:
+        with root_observation('facility_slot_caps', hproc, comp, (0, field_off), accepted=False) as root:
+            caps = decode(comp)
+            root.accepted = bool(caps) and (expected is None or caps == expected)
+            return caps if root.accepted else {}
+
+    hinted = load_hint(hproc, pid, typeinfo_key, klass)
+    if hinted:
+        caps = verify(hinted)
+        if caps:
+            return caps
+
+    candidates: dict[int, dict[FacilityId, int]] = {}
+
+    def valid(_name: str, comp: int) -> bool:
+        caps = decode(comp)
+        if caps:
+            candidates[comp] = caps
+        return bool(caps)
+
+    hits = scan_klass_objects(hproc, klass, max_hits=4, max_wall_s=4.0, hit_filter=valid)
+    if not hits:
+        return {}
+    comp = hits[0]
+    expected = candidates[comp]
+    if any(candidates[hit] != expected for hit in hits[1:]):
+        return {}
+    caps = verify(comp, expected)
+    if len(caps) == len(FACILITY_ORDER):
+        save_hint(pid, typeinfo_key, comp)
+    return caps
 
 
-def read_facility_slot_caps(hproc, pid: int) -> dict[FacilityId, int]:
+def read_facility_slot_caps(hproc, pid: int) -> dict[FacilityId, int] | None:
     """优先 queueCapacities，其次 FacilitySlotCapacities；只覆盖四类加工。"""
-    out = _empty_caps()
     cfg = _cfg()
     ga = module_base(pid, str(cfg.get("module") or "GameAssembly.dll"))
     if not ga:
-        return out
+        return None
     off = {k: parse_int(v) for k, v in cfg["offsets"].items()}
     primary = _scan_slot_cap_dict(
-        hproc,
+        hproc, pid,
         cfg,
         int(ga),
         off,
         typeinfo_key="AlteringFacilityQueueComponent",
         field="AlteringFacilityQueueComponent.queueCapacities",
     )
+    if len(primary) == len(FACILITY_ORDER):
+        return primary
     secondary = _scan_slot_cap_dict(
-        hproc,
+        hproc, pid,
         cfg,
         int(ga),
         off,
         typeinfo_key="FacilityComponent",
         field="FacilityComponent.FacilitySlotCapacities",
     )
-    for fac in FACILITY_ORDER:
-        if fac in primary:
-            out[fac] = clamp_slot_cap(primary[fac])
-        elif fac in secondary:
-            out[fac] = clamp_slot_cap(secondary[fac])
-    return out
+    return {**secondary, **primary} or None
 
 
 def read_facility_queues(

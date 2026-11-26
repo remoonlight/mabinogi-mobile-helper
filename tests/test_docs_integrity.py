@@ -10,7 +10,7 @@ from mm_assist import knowledge_paths as kp
 
 MD_LINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 AUTHORITY = [
-    ROOT / "docs" / "README.md",
+    ROOT / "README.md",
     ROOT / "docs" / "PRODUCT.md",
     ROOT / "docs" / "STATUS.md",
     ROOT / "docs" / "TESTING.md",
@@ -68,8 +68,8 @@ def test_knowledge_paths_exist():
 
 def test_markdown_repo_links_resolve():
     broken: list[str] = []
-    roots = [ROOT / "docs", ROOT / "knowledge", ROOT / ".cursor", ROOT / ".cursor"]
-    files: list[Path] = []
+    roots = [ROOT / "docs", ROOT / "knowledge", ROOT / ".cursor"]
+    files = list(ROOT.glob("*.md"))
     for base in roots:
         if base.is_dir():
             files.extend(p for p in base.rglob("*.md") if ".venv" not in p.parts)

@@ -1,0 +1,40 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_woodcut_bottom_1795611188.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/woodcut_list.png",
+  "source_sha256": "eb488623688b0de5c3f9ae4bfe54e38cefdd4391f8cdbcb1a74f90bb8657047f",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "item_woodcut_雷擊樹",
+  "label": "雷擊樹",
+  "file": "雷擊樹.png",
+  "rel_dir": "knowledge/templates/items/woodcut",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 88,
+    "h": 83
+  },
+  "template_sha256": "ae94227a2a56400e3edbb3af01a01fe6a6d38ea31032d5f1d20176cbcd1987eb",
+  "row_name_template": "雷擊樹_name.png",
+  "row_name_client_px": {
+    "x": 1205,
+    "y": 1307,
+    "w": 109,
+    "h": 38
+  },
+  "row_name_sha256": "2fa04cb2aa65b6ac9df1b81e268883deb910f9a70673ed0e269600c528e1bacb",
+  "min_level": 30,
+  "status": "ready",
+  "image_only": true,
+  "require_white_name": true
+}

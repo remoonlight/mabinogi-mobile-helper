@@ -2,12 +2,40 @@ from __future__ import annotations
 
 from types import SimpleNamespace
 
+import pytest
+
 from mm_assist.jobs.state_watch import (
     format_job_content,
     format_job_status,
     format_mem_panel,
     format_warm_progress,
 )
+
+
+@pytest.mark.parametrize('reason,label', [
+    ('client_build_unregistered', '版本待驗證'),
+    ('configuration_changed', '讀取配置已變更，請核對版本'),
+    ('client_session_changed', '讀取配置已變更，請重開狀態欄'),
+    ('client_build_hashing', '正在核對遊戲版本…'),
+])
+@pytest.mark.parametrize('wrapped', [False, True])
+def test_version_rejection_reaches_statusbar_without_becoming_open_failure(reason, label, wrapped):
+    from mm_assist.perception.scene import SceneSnapshot
+
+    snap = SceneSnapshot(mem_status=('open_failed:' if wrapped else '') + reason)
+    panel = format_mem_panel(snap)
+    assert label in panel
+    assert '无法打开进程' not in panel
+    assert snap.to_dict()['mem_status_label'] == label
+    assert 'stp=—' in panel
+
+
+def test_real_open_failure_remains_distinct_from_version_rejection():
+    from mm_assist.perception.scene import SceneSnapshot
+
+    snap = SceneSnapshot(mem_status='open_failed:[Errno 5] OpenProcess read-only failed')
+    assert '无法打开进程' in format_mem_panel(snap)
+    assert snap.mem_status == 'open_failed:[Errno 5] OpenProcess read-only failed'
 
 
 def test_format_job_content_is_short_and_named():

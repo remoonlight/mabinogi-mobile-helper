@@ -31,6 +31,25 @@ def test_status_queue_follows_work_list_pointer_and_allows_verified_empty(monkey
     assert fq._read_status_queues(None, 1, off) == {}  # 未读懂不等于空队列。
 
 
+def test_status_queue_preserves_sixth_slot_even_without_capacity(monkeypatch):
+    off = {k: int(v, 0) for k, v in fq._cfg()['offsets'].items()}
+    monkeypatch.setattr(fq, 'iter_key_ptr_pairs', lambda *a: [(0, 10), (1, 20), (2, 30), (4, 40)])
+    work_array = 0x20000
+    words = {1 + off['MMDictionary.count']: 4, 100 + off['MMList._size']: 6,
+             work_array + off['Il2CppArray.max_length']: 8}
+    works = [0x30000 + i * 0x100 for i in range(6)]
+    ptrs = {100 + off['MMList._items']: work_array,
+            **{work_array + off['Il2CppArray.vector'] + i * 8: work for i, work in enumerate(works)}}
+    read_list = fq._read_ptr_list
+    monkeypatch.setattr(fq, 'read_u32', lambda h, a: words.get(a))
+    monkeypatch.setattr(fq, 'read_ptr', lambda h, a: 100 if a == 200 + off['AlteringWorkStatusQueue.workQueue'] else ptrs.get(a))
+    monkeypatch.setattr(fq, '_read_ptr_list', lambda h, p, o, **kw:
+                        {10: [200], 20: [], 30: [], 40: []}[p] if p != 100 else read_list(h, p, o, **kw))
+    monkeypatch.setattr(fq, '_work_to_slot', lambda h, p, o: QueueSlot('鋼錠', p == works[-1]))
+    metal = fq._read_status_queues(None, 1, off)['metal']
+    assert len(metal) == 6 and metal[-1].done
+
+
 def test_facility_cache_rereads_membership_without_rescanning(monkeypatch):
     monkeypatch.setattr(fq, "_COMPONENTS", {})
     monkeypatch.setattr(fq, "module_base", lambda *a: 1)

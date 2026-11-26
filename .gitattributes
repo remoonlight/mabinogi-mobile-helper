@@ -1,2 +1,20 @@
 # Preserve the exact bytes used by the registered memory configuration digest.
+knowledge/ui/config/il2cpp_button_hits.json text eol=crlf
+knowledge/ui/config/il2cpp_client_builds.json text eol=crlf
+knowledge/ui/config/il2cpp_consumable.json text eol=lf
+knowledge/ui/config/il2cpp_craft_recipe.json text eol=crlf
+knowledge/ui/config/il2cpp_dye_palette.json text eol=crlf
+knowledge/ui/config/il2cpp_equip.json text eol=crlf
+knowledge/ui/config/il2cpp_facility.json text eol=crlf
+knowledge/ui/config/il2cpp_facility_ui.json text eol=lf
+knowledge/ui/config/il2cpp_living_skill.json text eol=lf
+knowledge/ui/config/il2cpp_position.json text eol=crlf
+knowledge/ui/config/il2cpp_scene.json text eol=crlf
+knowledge/ui/config/il2cpp_socketable.json text eol=crlf
+knowledge/ui/config/il2cpp_ui_priority.json text eol=crlf
+knowledge/ui/config/il2cpp_ui_stack.json text eol=crlf
 knowledge/ui/config/il2cpp_layout_checks.json text eol=lf
+knowledge/ui/config/il2cpp_exchange.json text eol=lf
+knowledge/ui/config/il2cpp_input_hook.json text eol=lf
+knowledge/ui/config/il2cpp_inventory_weight.json text eol=lf
+knowledge/ui/config/il2cpp_market_item_name.json text eol=lf

@@ -1,0 +1,40 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_daily_bottom_1795611425.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/daily_list.png",
+  "source_sha256": "2f1196c30633b3eaffa149ea0241be1d262aaf7c9aba8af313e045163fa3e025",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "item_daily_蜘蛛絲團",
+  "label": "蜘蛛絲團",
+  "file": "蜘蛛絲團.png",
+  "rel_dir": "knowledge/templates/items/daily",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 88,
+    "h": 83
+  },
+  "template_sha256": "89acf7e09089ea53b94eea94b997ea208a142ccd709e30506313384c15ca71f1",
+  "row_name_template": "蜘蛛絲團_name.png",
+  "row_name_client_px": {
+    "x": 1205,
+    "y": 1307,
+    "w": 141,
+    "h": 38
+  },
+  "row_name_sha256": "07d60380eb07e041b7c1201fa79361418c394982ee700502533a0cedffafdea1",
+  "min_level": 20,
+  "status": "ready",
+  "image_only": true,
+  "require_white_name": true
+}

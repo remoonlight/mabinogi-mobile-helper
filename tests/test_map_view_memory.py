@@ -38,6 +38,12 @@ def test_generic_map_enum_never_identifies_a_specific_region():
 @pytest.fixture
 def mapped(memory,monkeypatch):
     reader,ptrs,values,names = memory
+    # Retained 2026-10-13 layout; current configuration follows the newer client.
+    reader._off.update({'GameStageEntityComponents.CurrentViewingMapUIComponent':0x6a8,
+        'MapImageUI.MapModel.Meta':0x70,'MapButtonUI.UISlot':0x40,
+        'MapButtonUISlot.TitleWorldText':0x58,'MapButtonUISlot.TitleTownText':0x60,
+        'MapButtonUISlot.TitleDungeonText':0x68})
+    reader._off.pop('MarqueeTextLabelSlot.SourceText', None)
     ptrs.update({0x50010:0xb0000,0xb0010:0xc0000,0xc0018:0xd0000,
         0xd06a8:0xe0000,0x50040:0xf0000,0xf0070:0x110000,
         0x110010:0x120000,0x50058:0x130000,0x130040:0x140000,
@@ -52,6 +58,50 @@ def mapped(memory,monkeypatch):
         0x190000:'<noheight><size=24>杜巴頓</size></noheight>',0x1a0000:''}
     monkeypatch.setattr(stack,'read_il2cpp_string',lambda h,p,**kw:strings.get(p))
     return reader,ptrs,values,names,strings
+
+
+@pytest.fixture
+def marquee(mapped):
+    reader,ptrs,values,names,strings = mapped
+    reader._off.update({'GameStageEntityComponents.CurrentViewingMapUIComponent':0x6c0,
+        'MapImageUI.MapModel.Meta':0x78,'MapButtonUI.UISlot':0x38,
+        'MapButtonUISlot.WorldMapMarqueeLabel':0x38,'MapButtonUISlot.TownMapMarqueeLabel':0x40,
+        'MapButtonUISlot.DungeonMapMarqueeLabel':0x48,'MarqueeTextLabelSlot.SourceText':0x48})
+    for address in (0x140058,0x140060,0x140068):
+        ptrs.pop(address, None)
+    for old,new in [(0xd06a8,0xd06c0),(0xf0070,0xf0078),(0x130040,0x130038)]:
+        ptrs[new] = ptrs.pop(old)
+    for offset, label, text in [(0x38,0x210000,0x150000),(0x40,0x220000,0x160000),(0x48,0x230000,0x170000)]:
+        ptrs[0x140000+offset], ptrs[label+0x48] = label, text
+        names[label] = 'MarqueeTextLabelSlot'
+    return mapped
+
+
+def test_current_marquee_map_title_preserves_independent_resource_identity(marquee):
+    reader,*_ = marquee
+    fact = reader._active_map_view(0x10000,(0x50000,0x60000,0x70000))
+    assert fact['resource_name'] == 'WorldMap@v1_5'
+    assert stack.selected_map_view(fact)['node'] == 'map_continent'
+    assert '杜巴頓' in fact['titles']['town']
+
+
+@pytest.mark.parametrize('fault', ['missing_label','wrong_label','missing_text','wrong_text','changed_label'])
+def test_current_marquee_map_title_rejects_missing_wrong_or_changing_links(marquee,monkeypatch,fault):
+    reader,ptrs,values,names,strings = marquee
+    if fault == 'missing_label': ptrs[0x140038] = 0
+    if fault == 'wrong_label': names[0x210000] = 'OtherSlot'
+    if fault == 'missing_text': ptrs[0x210048] = 0
+    if fault == 'wrong_text': names[0x150000] = 'OtherText'
+    if fault == 'changed_label':
+        original = stack.read_ptr
+        calls = [0]
+        def changed(h,p):
+            if p == 0x140038:
+                calls[0] += 1
+                if calls[0] > 1: return 0
+            return original(h,p)
+        monkeypatch.setattr(stack,'read_ptr',changed)
+    assert reader._active_map_view(0x10000,(0x50000,0x60000,0x70000)) is None
 
 
 def test_map_view_reads_active_association_and_resource(mapped):

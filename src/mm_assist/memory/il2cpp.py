@@ -99,23 +99,31 @@ _UI_MEMORY_REQUESTS = 0
 
 
 @contextmanager
-def ui_memory_read_slot(*, timeout_s: float = 0.25):
-    """Bounded direct reads preempt cooperative scans without spawning readers."""
+def ui_memory_read_request():
+    """Announce before outer locks; do not acquire the heap lock out of order."""
     global _UI_MEMORY_REQUESTS
     with _UI_MEMORY_REQUEST_LOCK:
         _UI_MEMORY_REQUESTS += 1
         _UI_MEMORY_READ_PENDING.set()
-    acquired = False
     try:
-        acquired = _HEAP_READ_LOCK.acquire(timeout=max(0.0, timeout_s))
-        yield acquired
+        yield
     finally:
-        if acquired:
-            _HEAP_READ_LOCK.release()
         with _UI_MEMORY_REQUEST_LOCK:
             _UI_MEMORY_REQUESTS -= 1
             if not _UI_MEMORY_REQUESTS:
                 _UI_MEMORY_READ_PENDING.clear()
+
+
+@contextmanager
+def ui_memory_read_slot(*, timeout_s: float = 0.25):
+    """Bounded direct reads preempt cooperative scans without spawning readers."""
+    with ui_memory_read_request():
+        acquired = _HEAP_READ_LOCK.acquire(timeout=max(0.0, timeout_s))
+        try:
+            yield acquired
+        finally:
+            if acquired:
+                _HEAP_READ_LOCK.release()
 
 
 def _hot_key(hproc) -> int:

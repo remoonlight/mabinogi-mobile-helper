@@ -17,5 +17,4 @@ paths:
 
 read_only_only: true
 
-# 测试阶段保留未走完的已发动作计划；后续运行按用户要求切换为 skip。
 incomplete_plan_policy: pause

@@ -87,7 +87,7 @@ def test_last_in_budget_goodbye_gets_one_readonly_post_input_verification(exit_s
     assert len(s.clicks) == 1 and s.clicks[0][0] < 106
     assert [page for page, _ in s.grabs] == ['goodbye', 'hud']
     assert s.reads == 2  # Real resolve_navigation pairs the current stack.
-    assert 106 < s.clock < 107
+    assert 107 < s.clock < 108  # Includes the newly required one-second wait.
     assert gates._stage_counts['npc_goodbye_dismiss'] == 0
     assert gates._stage_counts['npc_end_dialog'] == 0
 

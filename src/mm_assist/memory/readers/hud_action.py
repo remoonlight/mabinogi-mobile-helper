@@ -4,7 +4,7 @@
   HudActionUIComponent.IsVisible@0x42
   BasicHudActionButtonControl.baseControl@0x18 → BaseHudActionButtonControl
     .IsVisible@0x28 · .Button@0x38 → ButtonControl → Graphic → RectTransform local@+0xB8
-  BasicHudActionButtonControl.ControlKeyId@0x38（ControlKeysSheetId.Id）
+  BasicHudActionButtonControl.ControlKeyId@0x40（ControlKeysSheetId.Id）
 
 配置复用：
   knowledge/ui/config/il2cpp_ui_priority.json（TypeInfo）
@@ -36,16 +36,16 @@ from mm_assist.memory.process import close_handle, find_game_pid, open_process, 
 OFF_HA_UI_IS_VISIBLE = 0x42
 OFF_HA_UI_IS_TWEENING = 0x43
 OFF_HA_UI_NEED_UPDATE = 0x44
-OFF_HA_UI_COOLDOWN = 0x68  # float
+OFF_HA_UI_COOLDOWN = 0x70  # float; 2026-11-04 field schema
 
 OFF_BASIC_BASE_CONTROL = 0x18
 OFF_BASIC_ICON_CONTROL = 0x20
-OFF_BASIC_CONTROL_KEY_ID = 0x38  # ControlKeysSheetId.Id (int)
+OFF_BASIC_CONTROL_KEY_ID = 0x40  # ControlKeysSheetId.Id; follows RootObject@0x38
 
 OFF_BASE_IS_VISIBLE = 0x28
 OFF_BASE_BUTTON = 0x38
 
-# 与 Basic 同布局的其它行动钮（dump 字段一致：base@0x18 · key@0x38）
+# 与 Basic 同布局的其它行动钮（2026-11-04：base@0x18 · key@0x40）
 BUTTON_CONTROL_KINDS = (
     "BasicHudActionButtonControl",
     "CombatHudActionButtonControl",

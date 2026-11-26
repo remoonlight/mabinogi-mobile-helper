@@ -58,7 +58,7 @@ KNOWN_FIELDS: dict[str, list[tuple[str, int, str]]] = {
         ("IsNeedUpdate", 0x44, "bool"),
     ],
     "BasicHudActionButtonControl": [
-        ("ControlKeyId", 0x38, "u32"),
+        ("ControlKeyId", 0x40, "u32"),
     ],
     "BaseHudActionButtonControl": [
         ("IsVisible", 0x28, "bool"),

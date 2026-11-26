@@ -16,7 +16,7 @@ from typing import Any, Callable
 
 from mm_assist.config import ROOT
 from mm_assist.life_plan.recipes import RECIPES, can_afford
-from mm_assist.life_plan.types import ExecuteResult
+from mm_assist.life_plan.types import ExecuteResult, facility_slot_cap
 from mm_assist.life_plan.execution_records import trace_wait
 
 FACILITY = "medicine"
@@ -188,6 +188,7 @@ def execute_medicine_feed(
         sleep_fn=kwargs.get("sleep_fn"),
         read_stp=kwargs.get("read_stp"),
         facilities=kwargs.get("facilities"),
+        facility_slot_caps=kwargs.get("facility_slot_caps"),
         defer_completion=bool(kwargs.get("defer_completion")),
         on_action_issued=kwargs.get("on_action_issued"),
     )
@@ -258,6 +259,7 @@ def execute_facility_feed(
         sleep_fn=kwargs.get("sleep_fn"),
         read_stp=kwargs.get("read_stp"),
         facilities=kwargs.get("facilities"),
+        facility_slot_caps=kwargs.get("facility_slot_caps"),
         defer_completion=bool(kwargs.get("defer_completion")),
         on_action_issued=kwargs.get("on_action_issued"),
     )
@@ -278,6 +280,7 @@ def _run_process(
     sleep_fn: Callable[[float], None] | None = None,
     read_stp: Callable[[], int | None] | None = None,
     facilities: dict | None = None,
+    facility_slot_caps: dict | None = None,
     defer_completion: bool = False,
     on_action_issued: Callable[[], None] | None = None,
     memory_reader: Callable[[], dict | None] | None = None,
@@ -364,15 +367,17 @@ def _run_process(
         return ExecuteResult(ok=False, status="need_context", message=f"{title}投领需要游戏窗")
 
     if mode == "feed":
-        from mm_assist.life_plan.snapshot import take_snapshot as take_slots
-        from mm_assist.life_plan.types import SLOT_CAP
+        if facilities is None:
+            from mm_assist.life_plan.snapshot import take_snapshot as take_slots
 
-        if facilities is None:
             occ = take_slots()
-            facilities = occ.facilities if occ.ok else None
-        if facilities is None:
+            if occ.ok:
+                facilities = occ.facilities
+                facility_slot_caps = occ.facility_slot_caps
+        cap = facility_slot_cap(facility_slot_caps, fac)
+        if facilities is None or cap is None:
             return ExecuteResult(ok=False, status="facility_unknown", message="槽位读数缺失，不投料")
-        if len(facilities.get(fac) or ()) >= SLOT_CAP:
+        if len(facilities.get(fac) or ()) >= cap:
             return ExecuteResult(ok=False, status="slots_full", message=f"{title}槽已满不投")
 
     armed = do_click is None

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "updated": "2026-10-06",
-  "rule": "详情物先匹配右栏图标模板；失败则繁体 OCR 认图标右侧物名。缺 png 拒启。",
+  "updated": "2026-11-25",
+  "rule": "新登記的最高階目標須命中完整圖標與文字或同行圖，詳情須命中獨立標題；舊項沿用已登記的識別方式。",
   "template_root": "knowledge/templates/items",
   "skills": [
     {
@@ -44,6 +44,17 @@
             {
               "name": "幽暮樹",
               "template": "knowledge/templates/items/woodcut/幽暮樹.png",
+              "status": "ready"
+            }
+          ]
+        },
+        {
+          "min_level": 30,
+          "max_level": null,
+          "items": [
+            {
+              "name": "雷擊樹",
+              "template": "knowledge/templates/items/woodcut/雷擊樹.png",
               "status": "ready"
             }
           ]
@@ -95,6 +106,17 @@
             {
               "name": "銀礦脈",
               "template": "knowledge/templates/items/mine/銀礦脈.png",
+              "status": "ready"
+            }
+          ]
+        },
+        {
+          "min_level": 30,
+          "max_level": null,
+          "items": [
+            {
+              "name": "隕鐵礦脈",
+              "template": "knowledge/templates/items/mine/隕鐵礦脈.png",
               "status": "ready"
             }
           ]
@@ -176,6 +198,17 @@
               "status": "ready"
             }
           ]
+        },
+        {
+          "min_level": 30,
+          "max_level": null,
+          "items": [
+            {
+              "name": "柔柔蘑菇",
+              "template": "knowledge/templates/items/herb/柔柔蘑菇.png",
+              "status": "ready"
+            }
+          ]
         }
       ]
     },
@@ -210,6 +243,17 @@
               "status": "ready"
             }
           ]
+        },
+        {
+          "min_level": 30,
+          "max_level": null,
+          "items": [
+            {
+              "name": "雲絮羊",
+              "template": "knowledge/templates/items/shear/雲絮羊.png",
+              "status": "ready"
+            }
+          ]
         }
       ]
     },
@@ -241,6 +285,17 @@
             {
               "name": "黃豆",
               "template": "knowledge/templates/items/harvest/黃豆.png"
+            }
+          ]
+        },
+        {
+          "min_level": 20,
+          "max_level": null,
+          "items": [
+            {
+              "name": "稻米",
+              "template": "knowledge/templates/items/harvest/稻米.png",
+              "status": "ready"
             }
           ]
         }
@@ -279,6 +334,17 @@
             {
               "name": "防風草",
               "template": "knowledge/templates/items/hoe/防風草.png"
+            }
+          ]
+        },
+        {
+          "min_level": 20,
+          "max_level": null,
+          "items": [
+            {
+              "name": "南瓜",
+              "template": "knowledge/templates/items/hoe/南瓜.png",
+              "status": "ready"
             }
           ]
         }
@@ -328,6 +394,17 @@
               "status": "ready"
             }
           ]
+        },
+        {
+          "min_level": 25,
+          "max_level": null,
+          "items": [
+            {
+              "name": "荒涼的昆蟲群",
+              "template": "knowledge/templates/items/insect/荒涼的昆蟲群.png",
+              "status": "ready"
+            }
+          ]
         }
       ]
     },
@@ -354,6 +431,17 @@
             {
               "name": "水井",
               "template": "knowledge/templates/items/daily/水井.png"
+            }
+          ]
+        },
+        {
+          "min_level": 20,
+          "max_level": null,
+          "items": [
+            {
+              "name": "蜘蛛絲團",
+              "template": "knowledge/templates/items/daily/蜘蛛絲團.png",
+              "status": "ready"
             }
           ]
         }
@@ -406,5 +494,5 @@
       }
     ]
   },
-  "notes": "原详情物 40 张已重采（含日常蜘蛛網）；2026-10-03 按用户要求收割训练改黃豆、鋤地改防風草，方法 B 实采补入两项目标的图标及列表锚，原图均标示 Lv.10。图模板失败用繁体 OCR 认右侧文字。找附近仍可用文字 OCR。"
+  "notes": "台服 S1 八門最高階訓練項按方法 B 原圖登記，門檻取遊戲右欄與詳情頁。釣魚保留資料觀察。"
 }

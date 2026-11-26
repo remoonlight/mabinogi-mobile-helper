@@ -5,18 +5,18 @@
     1920,
     1440
   ],
-  "hwnd": 134968,
+  "hwnd": 264030,
   "title": "瑪奇 Mobile",
   "screen": {
-    "left": 1129,
-    "top": 264,
+    "left": 1039,
+    "top": 318,
     "width": 1920,
-    "height": 1440
+    "height": 1431
   },
   "scale": [
     1.0,
-    1.0
+    0.9938
   ],
-  "updated": "2026-10-30T16:17:23",
+  "updated": "2026-11-26T15:50:28",
   "note": "识别截屏与点击均相对此客户区；标定坐标按 design_resolution 缩放"
 }

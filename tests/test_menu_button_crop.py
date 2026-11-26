@@ -107,7 +107,7 @@ def test_gather_anchor_pngs_on_disk():
         png = ROOT / spec.rel_dir / spec.filename
         assert png.is_file(), png
     daily = ROOT / "knowledge" / "templates" / "gather_skill" / "daily"
-    assert {p.stem for p in daily.glob("*.png")} == {"巢穴", "蜘蛛網", "水井"}
+    assert {p.stem for p in daily.glob("*.png")} == {"巢穴", "蜘蛛網", "水井", "蜘蛛絲團"}
     for sid in GATHER_SKILL_IDS:
         folder = ROOT / "knowledge" / "templates" / "gather_skill" / sid
         assert len(tuple(folder.glob("*.png"))) >= 2

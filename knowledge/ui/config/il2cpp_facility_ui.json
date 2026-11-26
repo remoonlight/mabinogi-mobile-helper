@@ -1,7 +1,7 @@
 {
   "version": 1,
   "semantic_model": {
-    "typeinfo_rva": "0x1083DA68",
+    "typeinfo_rva": "0x11aa5ae0",
     "note": "Name IDs are process-local. Resolve every root attribute via current UniqueStringErinn permanentStrings; validate class, table, index, name/type schema and all sampled bytes. dump.cs UniqueStringErinn/Name fields; current Name.ToString@15542D0 jumps BC4EC00 and its RIP load resolves TypeInfo@1083DA68. Retained disassembly and 20 resolved strings: logs/life_verify_20261001/name_table_code_readonly_20261014.json and facility_name_table_readonly_20261014.json. Unknown/new client fails closed; no guessed numeric translation.",
     "schema": [["uiTitle",6],["backButtonClick",8],["canGoBack",1],["scrollToRecipeIndex",6],["currencyGroup",7],["filterButtonGroup",7],["onSearchButtonClicked",8],["isSearchApplied",1],["currentFacilityName",6],["facilityDescription",6],["facilityImagePath",6],["isUpgradeVisible",1],["isUpgradable",1],["isGetAll",1],["upgradeButton",7],["moveToFacilityButton",7],["isMoveToFacilityVisible",1],["getAllButton",7],["processingQueue",7],["itemRecipeList",7]]
   },
@@ -11,7 +11,7 @@
     "NameTable.next_index": "0x8", "NameTable.strings": "0x10",
     "UIAPI.Stacking": "0x50", "Stacking.players": "0x18",
     "MMList.items": "0x10", "MMList.version": "0x18", "MMList.size": "0x1C",
-    "Array.length": "0x18", "Array.data": "0x20", "Player.instance": "0x20",
+    "Array.length": "0x18", "Array.data": "0x20", "Player.instance": "0x28",
     "Facility.base_handle": "0x28", "Facility.type": "0x50", "Facility.vm": "0x58",
     "Facility.vmc": "0x60", "Facility.handle": "0x68", "VMC.handle": "0x18",
     "Crafting.handle": "0x50", "Crafting.hub": "0x48", "CraftingVMC.hub": "0x20",
@@ -22,8 +22,8 @@
     "Handle.service": "0x58", "Handle.vm": "0x60", "Handle.active": "0x68",
     "Service.windows": "0x50", "Service.screen": "0x68",
     "Dict.keys": "0x10", "Dict.values": "0x18", "Dict.count": "0x34",
-    "Window.closing": "0x80", "Window.root": "0x98", "Window.root_id": "0xA0",
-    "Window.id": "0x130", "Window.elements": "0x140", "Window.scope": "0x1A8",
+    "Window.closing": "0x88", "Window.root": "0xa0", "Window.root_id": "0xa8",
+    "Window.id": "0x138", "Window.elements": "0x148", "Window.scope": "0x1b0",
     "Scope.destroyed": "0x20", "Element.window": "0x20", "Element.id": "0x34",
     "Element.parent": "0x38", "Element.layout": "0x48", "Element.dirty": "0x58",
     "Element.disposed": "0x59", "Text.raw": "0x70", "Text.text": "0x80",

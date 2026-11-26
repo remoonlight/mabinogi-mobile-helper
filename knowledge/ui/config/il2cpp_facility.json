@@ -3,14 +3,14 @@
   "module": "GameAssembly.dll",
     "note": "加工进度主链 AlteringComponent.EntireAlteringStatusData → WorkStatus.startAt/endAt（ProgressRatio 为计算属性，内存无单独百分比字段）。队列元组只有 WorkId+done。FacilityType 0金属 1木材 2布料 3皮革 4药品 5食材。RVA 来自 dump.cs / script.json。关菜单仍可读。LIVE 未对拍不得宣称 C2。容量字典 int 值 stride 4。",
   "typeinfo_rva": {
-    "FacilityComponent": "0x108A7D60",
-    "AlteringFacilityQueueComponent": "0x10690E48",
-    "AlteringComponent": "0x1068F598",
-    "AlteringWorkStatus": "0x1069AC48"
+    "FacilityComponent": "0x11d8eb70",
+    "AlteringFacilityQueueComponent": "0x11ae12c0",
+    "AlteringComponent": "0x11adf880",
+    "AlteringWorkStatus": "0x11aebac0"
   },
   "offsets": {
     "FacilityComponent.FacilityState": "0x10",
-    "FacilityComponent.FacilitySlotCapacities": "0x18",
+    "FacilityComponent.FacilitySlotCapacities": "0x20",
     "AlteringFacilityQueueComponent.queueCapacities": "0x28",
     "AlteringFacilityQueueComponent.currentQueueInfos": "0x38",
     "AlteringComponent.EntireAlteringStatusData": "0x10",

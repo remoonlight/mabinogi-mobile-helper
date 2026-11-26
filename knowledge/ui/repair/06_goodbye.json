@@ -8,7 +8,17 @@
   ],
   "threshold": 0.85,
   "min_margin": 0.05,
-  "click_in_template": [
+  "template_variants": [
+    {
+      "template": "knowledge/ui/repair/06b_goodbye_20261108.png",
+      "source": "tests/fixtures/repair/goodbye_stuck_20261108.png",
+      "source_sha256": "ffcbbfde3955b570b1b1a9f285270e3105cacd6fcd1cf73052face598aaa8f05",
+      "template_sha256": "23eac6720d14a68c6d80878b848c6401b7347f243b281c91eb501d464391d605",
+      "source_size": [1920, 1440],
+      "crop_box": [705, 101, 1210, 334]
+    }
+  ],
+  "click_in_client": [
     0.5,
     0.5
   ],
@@ -24,5 +34,5 @@
     1210,
     334
   ],
-  "coordinate_source": "Original Nerys goodbye bubble; click inside the matched bubble body."
+  "coordinate_source": "2026-11-08 user instruction: after independently recognizing the NPC goodbye, click the center of the current game_frame client."
 }

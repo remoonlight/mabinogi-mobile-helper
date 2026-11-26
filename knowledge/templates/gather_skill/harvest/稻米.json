@@ -1,0 +1,29 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_harvest_bottom_1795611037.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/harvest_list.png",
+  "source_sha256": "7659b562de253c77f2157cd1df137ba2768fa409202d27e28496985c953c6476",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "gather_skill_harvest_稻米",
+  "label": "稻米",
+  "file": "稻米.png",
+  "rel_dir": "knowledge/templates/gather_skill/harvest",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1086,
+    "y": 1283,
+    "w": 195,
+    "h": 83
+  },
+  "template_sha256": "9a5f066dab6b897cef70eebe69de7f835e61f70ab3c72f91a2723bada722dd8a"
+}

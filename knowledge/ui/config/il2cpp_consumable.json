@@ -1,22 +1,22 @@
 {
   "module": "GameAssembly.dll",
   "typeinfo_rva": {
-    "ConsumableInventoryComponent": "0x106ED8A8",
-    "ConsumableStack": "0x106F45F8",
-    "ConsumableSheetData": "0x106F2828",
-    "SystemContainers": "0x10600E78"
+    "ConsumableInventoryComponent": "0x11bd2a48",
+    "ConsumableStack": "0x11bd9d60",
+    "ConsumableSheetData": "0x11bd7e08",
+    "SystemContainers": "0x11bc76b8"
   },
   "offsets": {
-    "SystemContainers.ConsumableInventoryComponent": "0x2A08",
+    "SystemContainers.ConsumableInventoryComponent": "0x2b50",
     "ConsumableInventoryComponent.ConsumableStacks": "0x10",
     "ConsumableInventoryComponent.ConsumableStacksInAccountStorage": "0x18",
     "ConsumableInventoryComponent.ConsumableStacksInCharacterStorage": "0x20",
     "ConsumableStack.Id": "0x10",
     "ConsumableStack.Key": "0x18",
-    "ConsumableStack.SheetData": "0x98",
-    "ConsumableStack.Count": "0xB0",
-    "ConsumableStack.IsJunked": "0xB8",
-    "ConsumableStack.IsLocked": "0xB9",
+    "ConsumableStack.SheetData": "0xa0",
+    "ConsumableStack.Count": "0xb8",
+    "ConsumableStack.IsJunked": "0xc0",
+    "ConsumableStack.IsLocked": "0xc2",
     "ConsumableStackKey.sheetId": "0x0",
     "ConsumableStackKey.canTrade": "0x10",
     "ConsumableStackKey.canTradeCount": "0x14",

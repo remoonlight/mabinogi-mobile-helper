@@ -167,6 +167,10 @@ MEM_STATUS_LABELS: dict[str, str] = {
     "il2cpp_failed": "IL2CPP 读坐标失败",
     "value_out_of_range": "数值异常",
     "open_failed": "无法打开进程",
+    "client_build_unregistered": "版本待驗證",
+    "configuration_changed": "讀取配置已變更，請核對版本",
+    "client_session_changed": "讀取配置已變更，請重開狀態欄",
+    "client_build_hashing": "正在核對遊戲版本…",
     "closed": "已关闭",
 }
 
@@ -704,8 +708,9 @@ class SceneSnapshot:
 
     @property
     def mem_status_label(self) -> str:
-        if self.mem_status.startswith("open_failed"):
-            return MEM_STATUS_LABELS["open_failed"]
+        if self.mem_status.startswith("open_failed:"):
+            reason = self.mem_status.removeprefix("open_failed:")
+            return MEM_STATUS_LABELS.get(reason, MEM_STATUS_LABELS["open_failed"])
         return MEM_STATUS_LABELS.get(self.mem_status, self.mem_status)
 
     @property

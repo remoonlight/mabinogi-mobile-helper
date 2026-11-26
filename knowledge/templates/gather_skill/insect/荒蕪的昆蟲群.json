@@ -1,0 +1,29 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_insect_bottom_1795611388.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/insect_list.png",
+  "source_sha256": "28a16e4ee7e3afce87d938231484843388242923e6d58995c172e0cdf124d925",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "gather_skill_insect_荒蕪的昆蟲群",
+  "label": "荒蕪的昆蟲群",
+  "file": "荒蕪的昆蟲群.png",
+  "rel_dir": "knowledge/templates/gather_skill/insect",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1086,
+    "y": 1139,
+    "w": 326,
+    "h": 83
+  },
+  "template_sha256": "a1da4fb1a93d4a293c6e80bf142a7d5d1a0252a249a0e2f739bf4c2bfd3207d5"
+}

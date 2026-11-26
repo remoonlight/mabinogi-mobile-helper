@@ -6,8 +6,8 @@ from unittest.mock import patch
 import pytest
 
 from mm_assist.life_plan.types import SLOT_CAP, QueueSlot
+from mm_assist.memory.readers import facility_queue as fq
 from mm_assist.memory.readers.facility_queue import (
-    clamp_slot_cap,
     pick_latest_slots,
     progress_from_ticks,
     resolve_sheet_name,
@@ -111,15 +111,31 @@ def test_pick_latest_slots_six_recs_keeps_five():
     assert [round(float(s.progress_ratio or 0), 1) for s in slots] == [0.1, 0.2, 0.3, 0.4, 0.5]
 
 
-def test_clamp_slot_cap_fail_closed_five():
-    assert clamp_slot_cap(5) == 5
-    assert clamp_slot_cap(1) == 1
-    assert clamp_slot_cap(8) == 8
-    assert clamp_slot_cap(0) == SLOT_CAP
-    assert clamp_slot_cap(9) == SLOT_CAP
-    assert clamp_slot_cap(None) == SLOT_CAP
-    assert clamp_slot_cap(-1) == SLOT_CAP
-    assert SLOT_CAP == 5
+def test_read_slot_caps_accepts_current_six_and_leaves_invalid_capacity_unknown(monkeypatch):
+    cfg = fq._cfg()
+    queue_class = int(cfg['typeinfo_rva']['AlteringFacilityQueueComponent'], 0)
+    reads = {0x3000: [(0, 6), (1, 1), (2, 8), (4, 5)]}
+    hints = {}
+    scans = []
+    monkeypatch.setattr(fq, 'module_base', lambda *a: 1)
+    monkeypatch.setattr(fq, 'resolve_klass', lambda h, ga, rva: rva)
+    monkeypatch.setattr(fq, 'load_hint', lambda h, pid, kind, klass: hints.get(kind))
+    monkeypatch.setattr(fq, 'save_hint', lambda pid, kind, obj: hints.update({kind: obj}))
+    monkeypatch.setattr(fq, 'read_ptr', lambda h, a: {0x1000: queue_class, 0x1028: 0x3000}.get(a))
+    monkeypatch.setattr(fq, 'read_u32', lambda h, a: len(reads[0x3000]) if a == 0x3034 else None)
+    monkeypatch.setattr(fq, 'iter_key_int_pairs', lambda h, p, o: iter(reads[p]))
+
+    def scan(h, klass, *, hit_filter, **kwargs):
+        scans.append(klass)
+        return [0x1000] if hit_filter('_', 0x1000) else []
+
+    monkeypatch.setattr(fq, 'scan_klass_objects', scan)
+    assert fq.read_facility_slot_caps(None, 7) == {'metal': 6, 'wood': 1, 'cloth': 8, 'medicine': 5}
+    assert scans == [queue_class]
+    reads[0x3000] = [(0, 5), (1, 0), (2, 9), (4, -1)]
+    assert fq.read_facility_slot_caps(None, 7) == {'metal': 5}
+    reads[0x3000] = [(0, 5), (0, 6)]  # 重复键拒绝，不取最后一份。
+    assert fq.read_facility_slot_caps(None, 7) is None
 
 
 def test_iter_key_int_pairs_reads_i32_stride4():

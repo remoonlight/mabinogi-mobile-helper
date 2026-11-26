@@ -15,7 +15,7 @@ from mm_assist.memory.process import close_handle, find_game_pid, open_process, 
 from mm_assist.memory.evidence import ReadEvidence, bind_evidence
 from mm_assist.memory.readers.consumable import read_consumable_counts
 from mm_assist.memory.readers.equip_tools import read_equipped_tools
-from mm_assist.memory.readers.facility_queue import read_facility_queues
+from mm_assist.memory.readers.facility_queue import read_facility_queues, read_facility_slot_caps
 from mm_assist.memory.readers.living_skill import read_living_skills
 from mm_assist.memory.component_hints import prepare_hints
 
@@ -35,16 +35,22 @@ class ItemsReadBusy(RuntimeError):
 
 def refresh_items(*, budget_s: float = 0.25) -> dict[str, int] | None:
     """Paired current stock only; no full snapshot, heap fallback or worker."""
-    from mm_assist.memory.il2cpp import ui_memory_read_slot
+    from mm_assist.memory.il2cpp import ui_memory_read_request, ui_memory_read_slot
     from mm_assist.memory.readers.consumable import read_consumable_counts as read_items
     deadline = time.monotonic() + max(0.0, budget_s)
     remaining = lambda: max(0.0, deadline-time.monotonic())
     try:
         with ExitStack() as cleanup:
-            for name, lock in (('snapshot', _SCAN_LOCK), ('heavy', heavy_read_lock)):
-                if not lock.acquire(timeout=remaining()):
-                    raise ItemsReadBusy(name)
-                cleanup.callback(lock.release)
+            if not _SCAN_LOCK.acquire(timeout=remaining()):
+                raise ItemsReadBusy('snapshot')
+            cleanup.callback(_SCAN_LOCK.release)
+            # A watch tick can own heavy_read_lock while awaiting a heap scan.
+            # Yield only background scans, after any full snapshot has finished.
+            # Preserve snapshot -> heavy -> heap; never acquire heap first.
+            cleanup.enter_context(ui_memory_read_request())
+            if not heavy_read_lock.acquire(timeout=remaining()):
+                raise ItemsReadBusy('heavy')
+            cleanup.callback(heavy_read_lock.release)
             with ui_memory_read_slot(timeout_s=remaining()) as acquired:
                 if not acquired or not remaining():
                     raise ItemsReadBusy('memory')
@@ -113,6 +119,7 @@ def _snapshot_body(ts: float, *, include_tools: bool = True, include_skills: boo
             return fail("consumable_unreadable")
         if queues is None:
             return fail("facility_unreadable")
+        slot_caps = read("facility_slot_caps", read_facility_slot_caps)
         # 工具耐久读不到不挡必要物品 / 开 10h；十分钟扫仍可补 tools。
         err = ""
         if tools is None:
@@ -141,6 +148,7 @@ def _snapshot_body(ts: float, *, include_tools: bool = True, include_skills: boo
             error=err,
             taken_at=ts,
             evidence=evidence.to_dict(),
+            facility_slot_caps=slot_caps or {},
         )
     except Exception as exc:
         from mm_assist.memory.client_build import BuildRejected

@@ -1,0 +1,29 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_woodcut_bottom_1795611188.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/woodcut_list.png",
+  "source_sha256": "eb488623688b0de5c3f9ae4bfe54e38cefdd4391f8cdbcb1a74f90bb8657047f",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "gather_skill_woodcut_成材樹",
+  "label": "成材樹",
+  "file": "成材樹.png",
+  "rel_dir": "knowledge/templates/gather_skill/woodcut",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1086,
+    "y": 852,
+    "w": 228,
+    "h": 83
+  },
+  "template_sha256": "1c7479156989b60c7581ed2c826b3f69ccbe3a5b31c771b5d4ebde94f3570df2"
+}

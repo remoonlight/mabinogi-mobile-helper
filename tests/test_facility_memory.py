@@ -177,7 +177,8 @@ def arena(row,monkeypatch):
         addr=string(item['name']);pointer(name_array+off['Array.data']+item['name_id']*8,addr)
         name_strings[item['name']]=addr
     monkeypatch.setattr(mod,'read_mem',read)
-    monkeypatch.setattr(mod,'resolve_klass',lambda h,ga,rva:name_class if rva==0x1083DA68 else api)
+    semantic_rva=int(mod._config()['semantic_model']['typeinfo_rva'],0)
+    monkeypatch.setattr(mod,'resolve_klass',lambda h,ga,rva:name_class if rva==semantic_rva else api)
     return mod,read,put,field,off,{'ui':ui,'window':window,'players':players,'attrs':ar,'scope':scope,'inst':inst,
         'name_class':name_class,'name_static':name_static,'name_array':name_array,'name_strings':name_strings},calls
 

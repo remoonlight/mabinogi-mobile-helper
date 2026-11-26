@@ -126,7 +126,7 @@ def test_tracking_training_failure_checks_tools_and_preserves_failed_item(monkey
 def test_failure_tools_late_result_cannot_change_paused_or_new_run(monkeypatch, interruption):
     from mm_assist.life_plan import snapshot
     from mm_assist.life_plan.types import ToolDurability
-    item = PlanItem('p1', 'gather', '练采集', skill='日常採集', detail='蜘蛛網', gather_mode='skill')
+    item = PlanItem('p1', 'gather', '练采集', skill='收割', detail='黃豆', gather_mode='skill')
     monkeypatch.setattr(controller, 'plan_life', lambda *a, **k: [item])
     initial = LifeSnapshot(ok=True, tools=(ToolDurability('原工具', 10),))
     controller.start_life(snapshot=initial, now=1000)

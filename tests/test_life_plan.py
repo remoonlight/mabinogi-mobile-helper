@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import threading
 import time
+from dataclasses import replace
 
 from mm_assist.life_plan.bar_ui import (
     format_life_panel,
@@ -99,6 +100,35 @@ def test_plan_caps_at_ten_and_feeds_five():
     from mm_assist.life_plan.recipes import SKILL_GATHER
     assert all(p.detail in WIRED_GATHER_DETAILS for p in rest if p.gather_mode == 'process_mat')
     assert all((p.skill, p.detail) in SKILL_GATHER for p in rest if p.gather_mode == 'skill')
+
+
+def test_sixth_slot_flows_from_start_to_plan_and_status():
+    snap = replace(
+        _snap({'鋼錠': 30, '銅礦石': 200, '煤炭': 80},
+              metal=(QueueSlot('合金鋼錠', False),) * 5),
+        facility_slot_caps={'metal': 6, 'cloth': 4},
+    )
+    reset_controller_for_tests()
+    try:
+        empty_metal = start_life(snapshot=replace(snap, facilities={'metal': ()}), now=1)
+        assert sum(p.kind == 'feed' and p.facility == 'metal' for p in empty_metal.queue) == 6
+        state = start_life(snapshot=snap, now=2)
+        feeds = [p for p in state.queue if p.kind == 'feed']
+        assert [(p.facility, p.recipe) for p in feeds] == [('metal', '合金鋼錠')]
+        rows = format_life_process_block(state).splitlines()
+        assert rows[1].split('：')[1].split() == ['2', '2', '2', '2', '2', '—']
+        assert rows[3].split('：')[1].split() == ['—'] * 4
+        assert not any(p.kind == 'feed' and p.facility == 'metal'
+                       for p in plan_life(snap, reserved_feeds={'合金鋼錠': 1}))
+        full = replace(snap, facilities={'metal': (QueueSlot('合金鋼錠', False),) * 6})
+        assert not any(p.kind == 'feed' and p.facility == 'metal' for p in plan_life(full))
+        from mm_assist.life_plan.live_test import precondition
+
+        assert precondition(feeds[0], snap) == ''
+        assert precondition(feeds[0], full) == 'slots_full'
+        assert precondition(feeds[0], replace(snap, facility_slot_caps={})) == 'facility_unknown'
+    finally:
+        reset_controller_for_tests()
 
 
 def test_repair_is_first_when_durability_below_one():
@@ -220,11 +250,10 @@ def test_gather_titles_use_material_not_shared_tree():
     assert wood.recipe == "原木"
 
 
-def test_gather_click_yield_sap_two_tiers():
+def test_gather_click_yield_uses_measured_estimates():
     from mm_assist.life_plan.recipes import gather_click_yield
 
-    assert gather_click_yield("樹液", sap_done=0) == 4
-    assert gather_click_yield("樹液", sap_done=1) == 10
+    assert gather_click_yield("樹液") is None
     assert gather_click_yield("淨淨蘑菇") == 40
     assert gather_click_yield("裝水的瓶子") == 2
 

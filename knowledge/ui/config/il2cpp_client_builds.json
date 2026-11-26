@@ -12,6 +12,39 @@
       "config_sha256": "0eaba08ae9b4732cb5727047a297bb7f4f61c7fed14719ab22e6e1e59b9a5956",
       "evidence": "logs/life_verify_20261001/memory_restore_20261019_acceptance.json",
       "validation_scope": "method-B current readonly memory/HUD baseline; no business-input acceptance"
+    },
+    {
+      "id": "tw-20261104-43044565",
+      "files": {
+        "GameAssembly.dll": "4304456511f58cb543169434908f46726845d2ab2ec33668170b47a4de02a549",
+        "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+        "global-metadata.dat": "2d98c3b1f8adc6d3e5455ac24b10a3374dc2401dc1d0a6749b336f44d841f6b4"
+      },
+      "config_sha256": "a033d51ef13191df92153727ab904391c1aed7b061ea9c3fd6db6acc7726e707",
+      "evidence": "logs/life_verify_20261001/statusbar_20261104_acceptance.json",
+      "validation_scope": "current readonly HUD baseline, inventory/tools/facility/skills; no business input acceptance"
+    },
+    {
+      "id": "tw-20261118-680b919f",
+      "files": {
+        "GameAssembly.dll": "680b919f19a0fb2d2be39f06d63542b9728244f3a0fcd7a5e728c4dc1cf59e85",
+        "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+        "global-metadata.dat": "6ad3cc2961699e329885f47675e8e1e34b462ab8f4dbadb56e0f5acac4331852"
+      },
+      "config_sha256": "c0375ed668f60d4e3dbd8197958a2081d666d046bd848bb19e2149bbd7e92df2",
+      "evidence": "logs/life_verify_20261001/statusbar_20261118_layout_pair.json",
+      "validation_scope": "Method B: current HUD and required read-only layout pairing. Business input untested."
+    },
+    {
+      "id": "tw-20261125-acfcc855",
+      "files": {
+        "GameAssembly.dll": "acfcc855e2e1c50236c712a16bc177ee0b6263f0b04e968cfadc313e0c05afca",
+        "UnityPlayer.dll": "e969642866c2195f16a0bd0e52ff8ffe87cad5b213fda9a62ca1564970e2fa26",
+        "global-metadata.dat": "a02b838050139e5982bc9a958ddee90c0869c9b021de1a39d9af1062c8763265"
+      },
+      "config_sha256": "4588b1c0543f1bd47480d47f54c13df6f7735dd612a57d90f7538239295b6713",
+      "evidence": "logs/life_verify_20261001/statusbar_20261125_layout_pair.json",
+      "validation_scope": "Method B: 248 offline fields, 95 exact TypeInfo entries, 67 initialized runtime types and 139 matching runtime fields. Current page pairing recorded in acceptance; no business input acceptance."
     }
   ]
 }

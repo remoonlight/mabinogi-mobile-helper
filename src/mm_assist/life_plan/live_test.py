@@ -14,7 +14,7 @@ from typing import Callable
 
 from mm_assist.config import ROOT
 from mm_assist.life_plan.recipes import GATHER_NODE, RECIPES, RETIRED_ITEMS, SKILL_GATHER, TRAINING_UPGRADES, can_afford
-from mm_assist.life_plan.types import ExecuteResult, LifeSnapshot, PlanItem, SkillGrowth, SLOT_CAP
+from mm_assist.life_plan.types import ExecuteResult, LifeSnapshot, PlanItem, SkillGrowth, facility_slot_cap
 from mm_assist.perception.item_sense import fold_zh
 
 GATHER_VERIFY_S = 90.0
@@ -137,7 +137,10 @@ def precondition(item: PlanItem, snap: LifeSnapshot) -> str:
             return 'training_level_unverified'
     slots = snap.facilities.get(item.facility, ())
     if item.kind == "feed":
-        if len(slots) >= SLOT_CAP:
+        cap = facility_slot_cap(snap.facility_slot_caps, item.facility)
+        if cap is None:
+            return "facility_unknown"
+        if len(slots) >= cap:
             return "slots_full"
         if not can_afford(item.recipe, snap.items):
             return "no_mats"
@@ -739,7 +742,8 @@ def run_scenario(cfg, win, scenario: str, on_hint=lambda _: None) -> dict:
         else:
             with bounded_test_lease(hwnd=win.hwnd, intent=item.title, lease_s=60):
                 result = try_execute(item, cfg=cfg, win=win, items=before.items,
-                                 facilities=before.facilities, on_progress=progress)
+                                 facilities=before.facilities, on_progress=progress,
+                                 facility_slot_caps=before.facility_slot_caps)
         evidence.note("after")
         evidence.capture("after")
         if navigation_only:

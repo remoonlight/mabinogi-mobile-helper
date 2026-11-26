@@ -725,6 +725,12 @@ def prepare_to(
 
     resolver = resolve if resolve is not None else _resolver
 
+    def npc_returned_hud(frame):
+        where = resolver(frame)
+        stamp = float(where.stack_sampled_ts or 0)
+        return (where.node == 'main_hud' and where.stack_ready
+                and 0 <= time.time() - stamp <= 3)
+
     def _prog(msg: str) -> None:
         if on_progress:
             on_progress(msg)
@@ -758,14 +764,18 @@ def prepare_to(
                 if allow_dialog and npc_end_dialog_visible(fr0):
                     return ExecuteResult(True, 'at_node', 'dialog')
                 if not allow_dialog and npc_end_dialog_visible(fr0):
-                    if not dismiss_world_npc_menu(click, fr0, grab=grab, sleep_fn=sleeper):
+                    if not dismiss_world_npc_menu(click, fr0, grab=grab, sleep_fn=sleeper,
+                                                   continuous=True, cancelled=pump_aborted,
+                                                   verify_hud=npc_returned_hud):
                         return (_cancel_res() if pump_aborted() else
                                 ExecuteResult(False, 'npc_end_dialog_unverified', '結束對話后未确认主界面，不点其它入口'))
                     _prog("关闭NPC对话")
                 elif npc_goodbye_visible(fr0):
                     # Repair may continue in an entry dialog, but a goodbye
                     # must be dismissed before it can start map navigation.
-                    if not wait_hud_after_npc_dismiss(click, grab, sleep_fn=sleeper):
+                    if not wait_hud_after_npc_dismiss(click, grab, sleep_fn=sleeper,
+                                                     continuous=True, cancelled=pump_aborted,
+                                                     verify_hud=npc_returned_hud):
                         return (_cancel_res() if pump_aborted() else
                                 ExecuteResult(False, 'npc_goodbye_unverified', '告别画面未关闭，不点其它入口'))
                     _prog("关闭NPC告别")

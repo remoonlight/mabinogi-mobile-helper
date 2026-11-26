@@ -1,0 +1,29 @@
+{
+  "source_original": "logs/life_verify_20261001/training_20261125_herb_bottom_1795611349.png",
+  "source_frame": "tests/fixtures/season1_gather_20261125/herb_list.png",
+  "source_sha256": "d9128018d7a38750eed8b249c2d3abe25ec32eb5f002798cdb59e74758236d25",
+  "source_size": [
+    1920,
+    1431
+  ],
+  "source_to_client": [
+    0,
+    0,
+    1920,
+    1431
+  ],
+  "method": "B",
+  "coordinate_source": "2026-11-25 台服 game_frame 原尺寸裁剪",
+  "id": "gather_skill_herb_傷痕花",
+  "label": "傷痕花",
+  "file": "傷痕花.png",
+  "rel_dir": "knowledge/templates/gather_skill/herb",
+  "role": "page_anchor",
+  "client_px": {
+    "x": 1086,
+    "y": 852,
+    "w": 228,
+    "h": 83
+  },
+  "template_sha256": "09a738854c4d6967a3d236ba04b6f2c0449fed84f1533a9ba0e56fec26ad543b"
+}

@@ -7,7 +7,7 @@ import time
 
 from mm_assist.life_plan.controller import LifeController
 from mm_assist.life_plan import execution_records
-from mm_assist.life_plan.types import FACILITY_ORDER, PLAN_CAP, SLOT_CAP, QueueSlot
+from mm_assist.life_plan.types import FACILITY_ORDER, PLAN_CAP, QueueSlot, facility_slot_cap
 
 _FACILITY_ZH = {
     "metal": "金属",
@@ -152,6 +152,7 @@ def format_process_status(
     ok: bool,
     last_scan_at: float,
     slots: dict[str, tuple[QueueSlot, ...]] | None = None,
+    slot_caps: dict[str, int] | None = None,
 ) -> str:
     """每格 1=完成 / 2=加工或排队 / —=空。不读百分比。"""
     if not ok:
@@ -161,10 +162,12 @@ def format_process_status(
     lines = ["加工状态："]
     data = slots or {}
     for fac in FACILITY_ORDER:
-        rows = list(data.get(fac) or ())[:SLOT_CAP]
-        codes = ["1" if s.done else "2" for s in rows]
-        while len(codes) < SLOT_CAP:
-            codes.append("—")
+        cap = facility_slot_cap(slot_caps, fac)
+        codes = ["1" if s.done else "2" for s in data.get(fac) or ()]
+        if cap is None:
+            codes.append("容量待確認")
+        else:
+            codes.extend(["—"] * (cap - len(codes)))
         lines.append(f"{_FACILITY_ZH[fac]}：{' '.join(codes)}")
     return "\n".join(lines)
 
@@ -334,13 +337,14 @@ def format_life_plan_block(state: LifeController) -> str:
 
 
 def format_life_process_block(state: LifeController) -> str:
-    _ = state
     from mm_assist.life_plan.facility_sim import peek_facility_sim
 
     peek = peek_facility_sim()
     if not peek.ok and peek.error == "mem_pending":
         return "加工状态：扫描中（等待本次读取完成）"
-    return format_process_status(ok=peek.ok, last_scan_at=peek.last_scan_at, slots=peek.slots)
+    caps = state.snapshot.facility_slot_caps if state.snapshot is not None else None
+    return format_process_status(ok=peek.ok, last_scan_at=peek.last_scan_at, slots=peek.slots,
+                                 slot_caps=caps)
 
 
 def format_life_needs_block(state: LifeController) -> str:
@@ -612,6 +616,7 @@ def pump_life_once(cfg, win, *, initial_result=None) -> None:
         r = _execute_with_recovery(try_execute, item, initial_result=page_failure,
                         cfg=cfg, win=win, items=execution_items(st),
                         facilities=st.snapshot.facilities, on_progress=progress,
+                        facility_slot_caps=st.snapshot.facility_slot_caps,
                         defer_completion=True, on_action_issued=issued)
         if watch.check():
             r = ExecuteResult(False, REPAIR_REQUIRED,
@@ -799,13 +804,13 @@ def _execute_with_recovery(execute, item, *, initial_result=None, **kwargs):
                         tag='recovery_page_timeout', stage=result.status, extra=message,
                         run_started_at=run_at)
                     if _RECOVERY_AFTER:
-                        # An issued Esc still lacks independent verification.
-                        # Preserve its budget and current plan for safe resume.
-                        from mm_assist.life_plan.controller import pause_life
-                        pause_life(run_started_at=run_at, item_id=item.id)
-                        set_current_action('已暂停：已发脱困动作未能验页；' + message,
+                        # Ordinary preparation continues observing this exact
+                        # input; a recognition timeout cannot pause the run or
+                        # refund the Esc. Manual stops remain authoritative.
+                        _RECOVERY_WAIT_SINCE = now
+                        set_current_action('等待已发脱困动作验页，继续生活备料；' + message,
                                            run_started_at=run_at)
-                        return ExecuteResult(False, 'cancel', message)
+                        return ExecuteResult(False, 'recovery_wait', message)
                     _RECOVERY_FAILURE = None
                     _RECOVERY_WAIT_SINCE = None
                     return ExecuteResult(False, 'recovery_page_timeout', message)

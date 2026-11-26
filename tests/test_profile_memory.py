@@ -46,6 +46,7 @@ def test_unverified_profile_fact_keeps_visual_path(updates):
 
 def test_active_profile_field_reads_mutable_vm_not_opening_parameter(monkeypatch):
     reader = stack.Il2CppUiStackReader()
+    reader._off['UIStackingPlayer.instance'] = 0x20  # Retained historical bytes.
     reader._h = object()
     reader._ga = 0x90000
     # Actual MMList uses version@18 and size@1c, not System.List._size@18.
@@ -131,6 +132,7 @@ def test_current_memory_tab_wins_over_retained_inspect(monkeypatch, old_node, ol
 
 def test_read_mutation_and_duplicate_active_profiles_are_unknown(monkeypatch):
     reader = stack.Il2CppUiStackReader()
+    reader._off['UIStackingPlayer.instance'] = 0x20  # Retained historical bytes.
     reader._h, reader._ga = object(), 0x90000
     ptrs = {0x900b8: 0xa0000, 0xa0050: 0x10000, 0x10018: 0x20000,
             0x20010: 0x30000, 0x30020: 0x40000, 0x40020: 0x50000, 0x50068: 0x60000}

@@ -84,9 +84,9 @@ def iter_key_int_pairs(
     vvec = vals + offs["arr_vec"]
     n = min(count, klen, vlen, _MAX)
     for i in range(n):
-        key = int(read_u32(hproc, kvec + i * 4) or 0)
+        key = read_u32(hproc, kvec + i * 4)
         val = _read_i32(hproc, vvec + i * 4)
-        if val is None:
+        if key is None or val is None:
             continue
         if 0 <= key <= 5 and 0 <= int(val) <= 32:
             yield key, int(val)

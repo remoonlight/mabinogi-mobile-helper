@@ -370,8 +370,6 @@ _DEFAULT = {
         "ChannelSheetData.Id": 0x10,
         "ChannelSheetData.NexonServiceLogDisplayName": 0x18,
         "ChannelSheetData.GameSpace": 0x30,
-        "ChannelSheetData.MapImagePath": 0x40,
-        "ChannelSheetData.MapBackgroundImagePath": 0x48,
         "GameSpaceSheetData.DisplayName": 0x18,
         "GameSpaceAPI.CurrentGameSpaceSheetId": 0x10,
         "GameSpaceAPI.CurrentGameSpaceSheetData": 0x18,
@@ -412,6 +410,8 @@ def load_config(path: Path | None = None) -> dict[str, Any]:
         cfg["typeinfo_rva"][k] = parse_int(v)
     for k, v in (raw.get("offsets") or {}).items():
         cfg["offsets"][k] = parse_int(v)
+    if isinstance(raw.get('framework_type_tokens'), dict):
+        cfg['framework_type_tokens'] = raw['framework_type_tokens']
     return cfg
 
 
@@ -1307,6 +1307,14 @@ class Il2CppSceneReader:
         wall = max(0.5, float(max_wall_s))
         t0 = time.perf_counter()
         seeded = self._apply_warm_seeds(klasses)
+        # An old saved place name must not suppress current root discovery.
+        if 'GameSpaceAPI' in klasses:
+            fixed = self._framework_gamespace_api()
+            if fixed and self._gamespace_seed_ok(fixed):
+                klasses['GameSpaceAPI'] = self._klasses['GameSpaceAPI']
+                if not self._objs.get('GameSpaceAPI'):
+                    seeded += 1
+                self._objs['GameSpaceAPI'] = [fixed]
         _prog()
         missing = {n: wanted[n] for n in klasses if not self._objs.get(n)}
         res: dict[str, list[int]] = {n: list(self._objs.get(n) or []) for n in klasses}
@@ -1566,6 +1574,59 @@ class Il2CppSceneReader:
         except Exception as exc:
             log.debug("warm seed save: %s", exc)
 
+    def _framework_gamespace_api(self) -> int:
+        """Resolve the current framework singleton with stable, typed links only."""
+        h, ga = self._h, self._ga
+        rva = self._cfg.get('typeinfo_rva', {}).get('FrameworkSingleton')
+        required = ('Il2CppClass.static_fields', 'FrameworkSingleton.static.instance',
+                    'FrameworkSingleton.GameSpaceAPI')
+        if not h or not ga or not rva or any(k not in self._cfg['offsets'] for k in required):
+            return 0
+        try:
+            def matches(key, actual):
+                known = self._klasses.get(key)
+                if known == actual:
+                    return True
+                spec = self._cfg.get('framework_type_tokens', {}).get(key, {})
+                token = spec.get('token')
+                if not token or known != parse_int(token) or parse_int(token) >> 29 != 1:
+                    return False
+                from mm_assist.memory.readers.ui_stack import read_c_string
+                return (read_c_string(h, read_ptr(h, actual + 0x10) or 0) == spec.get('name')
+                        and read_c_string(h, read_ptr(h, actual + 0x18) or 0) == spec.get('namespace'))
+            klass = resolve_klass(h, ga, parse_int(rva))
+            if not klass:
+                return 0
+            sf = read_ptr(h, klass + self._off(required[0]))
+            root = read_ptr(h, sf + self._off(required[1])) if sf else 0
+            if not root or read_ptr(h, root) != klass:
+                return 0
+            api = read_ptr(h, root + self._off(required[2]))
+            api_class = read_ptr(h, api) if api else 0
+            if not api_class or not matches('GameSpaceAPI', api_class):
+                return 0
+            data_off = self._off('GameSpaceAPI.CurrentGameSpaceSheetData')
+            data = read_ptr(h, api + data_off)
+            data_class = read_ptr(h, data) if data else 0
+            if not data_class or not matches('GameSpaceSheetData', data_class):
+                return 0
+            if not self._read_display_from_gamespace(data):
+                return 0
+            if (self._h != h or self._ga != ga or self._closed
+                    or read_ptr(h, klass + self._off(required[0])) != sf
+                    or read_ptr(h, sf + self._off(required[1])) != root
+                    or read_ptr(h, root) != klass
+                    or read_ptr(h, root + self._off(required[2])) != api
+                    or read_ptr(h, api) != api_class
+                    or read_ptr(h, api + data_off) != data
+                    or read_ptr(h, data) != data_class):
+                return 0
+            self._klasses['GameSpaceAPI'] = api_class
+            self._klasses['GameSpaceSheetData'] = data_class
+            return int(api)
+        except (OSError, TypeError, ValueError):
+            return 0
+
     def _prime_gamespace_api(
         self, *, rescan: bool = True, max_wall_s: float | None = 1.0
     ) -> None:
@@ -1586,8 +1647,9 @@ class Il2CppSceneReader:
                 return True
             return False
 
-        candidates = list(self._objs.get("GameSpaceAPI") or [])
-        if rescan or not candidates:
+        fixed = self._framework_gamespace_api()
+        candidates = [fixed] if fixed else list(self._objs.get("GameSpaceAPI") or [])
+        if not fixed and (rescan or not candidates):
             candidates = scan_klass_objects(
                 self._h,
                 api_klass,

@@ -106,6 +106,7 @@ def test_feed_skips_when_slots_full(monkeypatch):
         ok = True
         items = {"鐵錠": 16, "煤炭": 16}
         facilities = {"metal": tuple(QueueSlot("鋼錠", False) for _ in range(5))}
+        facility_slot_caps = {'metal': 5}
 
     monkeypatch.setattr("mm_assist.life_plan.snapshot.take_snapshot", lambda **k: Snap())
     r = execute_facility_feed(
@@ -117,6 +118,27 @@ def test_feed_skips_when_slots_full(monkeypatch):
     )
     assert r.ok is False
     assert r.status == "slots_full"
+
+
+@pytest.mark.parametrize('used, caps, expected', [
+    (5, {'medicine': 6}, 'error'),
+    (6, {'medicine': 6}, 'slots_full'),
+    (5, {}, 'facility_unknown'),
+])
+def test_medicine_feed_checks_reported_capacity_before_opening_facility(used, caps, expected):
+    from mm_assist.life_plan.types import QueueSlot
+
+    def grab():
+        raise RuntimeError('reached facility navigation')
+
+    result = execute_medicine_feed(
+        recipe='淨淨蘑菇汁液', items={'淨淨蘑菇孢子': 20, '裝水的瓶子': 2},
+        facilities={'medicine': (QueueSlot('淨淨蘑菇汁液', False),) * used},
+        facility_slot_caps=caps, grab=grab, do_click=lambda *a: pytest.fail('unexpected click'),
+    )
+    assert result.status == expected
+    if expected == 'error':
+        assert result.message == 'reached facility navigation'
 
 
 def test_pump_skips_slots_full(monkeypatch):
@@ -1125,6 +1147,7 @@ def test_medicine_feed_facade_preserves_guards_and_forwards_options(
         ok = snap_ok
         items = {"淨淨蘑菇孢子": 1, "裝水的瓶子": 0}
         facilities = snap_facilities
+        facility_slot_caps = {'medicine': SLOT_CAP}
 
     def take(**_k):
         snaps.append(1)

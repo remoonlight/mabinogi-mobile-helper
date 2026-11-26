@@ -85,18 +85,10 @@ FILL_FROM: dict[str, tuple[str, int]] = {"裝水的瓶子": ("空瓶", 1)}
 
 # 计划器按「点一次」估件数（人物采集连采口径，不是玩法调参）
 GATHER_CLICK_YIELD: dict[str, int] = {"淨淨蘑菇": 40, "裝水的瓶子": 2}
-# 樹液：加工详情首次 4，之后背包详情 10。不进上表，以免和人物采集档混用。
-_SAP_YIELD_FIRST = 4
-_SAP_YIELD_BAG = 10
 
 
-def gather_click_yield(mat: str, *, sap_done: int = 0) -> int | None:
-    if mat == "樹液":
-        return _SAP_YIELD_FIRST if int(sap_done) <= 0 else _SAP_YIELD_BAG
-    n = GATHER_CLICK_YIELD.get(mat)
-    if n is None:
-        return None
-    return int(n)
+def gather_click_yield(mat: str) -> int | None:
+    return GATHER_CLICK_YIELD.get(mat)
 
 # 汁液链上非采集料：人买，不进 GATHER_NODE
 BUY_MATS: frozenset[str] = frozenset({"紙", "空瓶"})
@@ -105,27 +97,32 @@ BUY_MATS: frozenset[str] = frozenset({"紙", "空瓶"})
 WIRED_GATHER_DETAILS: frozenset[str] = frozenset(d for _m, (_s, d) in GATHER_NODE.items())
 
 SKILL_GATHER: tuple[tuple[str, str], ...] = (
+    ("收割", "黃豆"),
+    ("鋤地", "防風草"),
     ("日常採集", "蜘蛛網"),
     ("伐木", "甲胄樹"),
     ("採礦", "白銅礦脈"),
     ("採集藥草", "淨淨蘑菇"),
     ("剪羊毛", "捲毛羊"),
     ("昆蟲採集", "冰冷的光群"),
-    ("收割", "黃豆"),
-    ("鋤地", "防風草"),
 )
 
-# 生活备料只轮换其余四类；完整目录仍供独立单场景与补料使用。
-LIFE_TRAINING_EXCLUDED_SKILLS = frozenset({'伐木', '採礦', '採集藥草', '剪羊毛'})
-LIFE_TRAINING_GATHER = tuple(pair for pair in SKILL_GATHER if pair[0] not in LIFE_TRAINING_EXCLUDED_SKILLS)
+# 台服 S1 上限见 life_caps_20261125_105607.json。釣魚不在计划目录。
+LIFE_TRAINING_GATHER = SKILL_GATHER
+LIFE_TRAINING_LEVEL_CAPS = {
+    skill: 30 if skill == '日常採集' else 35 for skill, _ in LIFE_TRAINING_GATHER
+}
 
 # 新目录中的升级目标；灰色未解锁原图不作为可执行模板。
 TRAINING_UPGRADES: dict[str, tuple[tuple[int, str], ...]] = {
-    '伐木': ((25, '幽暮樹'),),
-    '採礦': ((25, '銀礦脈'),),
-    '採集藥草': ((20, '傷痕花'), (25, '增幅蘑菇')),
-    '剪羊毛': ((25, '烏雲羊'),),
-    '昆蟲採集': ((20, '荒蕪的昆蟲群'),),
+    '日常採集': ((20, '蜘蛛絲團'),),
+    '伐木': ((25, '幽暮樹'), (30, '雷擊樹')),
+    '採礦': ((25, '銀礦脈'), (30, '隕鐵礦脈')),
+    '採集藥草': ((20, '傷痕花'), (25, '增幅蘑菇'), (30, '柔柔蘑菇')),
+    '剪羊毛': ((25, '烏雲羊'), (30, '雲絮羊')),
+    '昆蟲採集': ((20, '荒蕪的昆蟲群'), (25, '荒涼的昆蟲群')),
+    '收割': ((20, '稻米'),),
+    '鋤地': ((20, '南瓜'),),
 }
 
 

@@ -81,12 +81,12 @@ def test_full_facilities_train_one_target_for_the_whole_batch():
 
 
 def test_balanced_training_prefers_low_level_within_round_without_starvation():
-    skills = tuple(SkillGrowth(skill, 1 if skill == '昆蟲採集' else 20, 0) for skill, _ in LIFE_TRAINING_GATHER)
+    skills = tuple(SkillGrowth(skill, 1 if skill == '收割' else 20, 0) for skill, _ in LIFE_TRAINING_GATHER)
     plan = planner.plan_life(snap(TARGETS, skills=skills))
-    assert plan[0].skill == '昆蟲採集'
-    assert all(p.skill == '昆蟲採集' and p.detail == '冰冷的光群' for p in plan)
-    later = planner.plan_life(snap(TARGETS, skills=skills), training_counts={'昆蟲採集': 1})
-    assert later[0].skill != '昆蟲採集'
+    assert plan[0].skill == '收割'
+    assert all(p.skill == '收割' and p.detail == '黃豆' for p in plan)
+    later = planner.plan_life(snap(TARGETS, skills=skills), training_counts={'收割': 1})
+    assert later[0].skill != '收割'
     assert len({(p.skill, p.detail) for p in later}) == 1
 
 
@@ -112,7 +112,7 @@ def test_crop_training_preserves_batch_on_refresh(monkeypatch, skill, detail):
     assert all(p.detail == detail for p in st.queue)
 
 
-def test_four_training_batches_use_new_crop_targets(monkeypatch):
+def test_two_training_batches_use_new_crop_targets(monkeypatch):
     monkeypatch.setattr(controller, 'take_snapshot', lambda **k: replace(snap(TARGETS), taken_at=k['now']))
     st = controller.start_life(snapshot=snap(TARGETS), now=1000)
     harvest_details = []
@@ -130,7 +130,7 @@ def test_four_training_batches_use_new_crop_targets(monkeypatch):
     assert hoe_details == ['防風草'] * 10
 
 
-def test_controller_finishes_same_target_batch_then_rotates_all_four(monkeypatch):
+def test_controller_finishes_same_target_batch_then_rotates_eight_skills(monkeypatch):
     monkeypatch.setattr(controller, 'take_snapshot', lambda **k: replace(snap(TARGETS), taken_at=k['now']))
     st = controller.start_life(snapshot=snap(TARGETS), now=1000)
     seen = []
@@ -146,12 +146,8 @@ def test_controller_finishes_same_target_batch_then_rotates_all_four(monkeypatch
                 assert [p.id for p in st.queue] == [p.id for p in original[n + 1:]]
         assert st.current is None and st.refresh_requested
         st = controller.tick_facility_progress(now=1011 + batch * 10)
-    assert set(seen) == {'日常採集', '昆蟲採集', '收割', '鋤地'}
-    assert set(seen) == {skill for skill, _ in LIFE_TRAINING_GATHER}
-    assert '伐木' not in seen
-    assert '剪羊毛' not in seen
-    assert '採礦' not in seen
-    assert '採集藥草' not in seen
+    assert set(seen) == {'日常採集', '伐木', '採礦', '採集藥草', '剪羊毛', '收割', '鋤地', '昆蟲採集'}
+    assert len(seen) == 8 and '釣魚' not in seen
 
 
 def test_mid_batch_refresh_preserves_target_remaining_count_and_feed_priority(monkeypatch):
@@ -187,18 +183,19 @@ def test_failed_training_continues_same_batch_then_uses_one_other_target(monkeyp
 
 
 def test_new_start_discards_previous_batch_target():
-    controller.start_life(snapshot=snap(TARGETS), now=1000)
-    fresh = snap(TARGETS, skills=(SkillGrowth('日常採集', 30, 0), SkillGrowth('昆蟲採集', 1, 0)))
+    original = controller.start_life(snapshot=snap(TARGETS), now=1000)
+    assert all(p.skill == '收割' for p in original.queue)
+    fresh = snap(TARGETS, skills=(SkillGrowth('收割', 30, 0), SkillGrowth('鋤地', 1, 0)))
     st = controller.start_life(snapshot=fresh, now=2000)
-    assert all(p.skill == '昆蟲採集' for p in st.queue)
+    assert all(p.skill == '鋤地' for p in st.queue)
 
 
 def test_material_completion_defers_one_refresh_until_training_batch_finishes(monkeypatch):
     st = controller.start_life(snapshot=snap({'原木': 50}), now=1000)
     # Finish this boundary with the real supply/training controller, without input.
     mat = PlanItem('p50', 'gather', '采集 樹液', recipe='樹液', gather_mode='process_mat')
-    training = PlanItem('p51', 'gather', '练采集 蜘蛛網', skill='日常採集',
-                        detail='蜘蛛網', recipe='蜘蛛網', gather_mode='skill')
+    training = PlanItem('p51', 'gather', '练采集 黃豆', skill='收割',
+                        detail='黃豆', recipe='黃豆', gather_mode='skill')
     controller._STATE.queue = [mat, training]
     controller._STATE.current = mat
     controller.acknowledge_done(mat.id, now=1001)

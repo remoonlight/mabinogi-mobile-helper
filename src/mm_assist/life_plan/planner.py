@@ -13,6 +13,7 @@ from mm_assist.life_plan.recipes import (
     LEGACY_QUEUE_OUTPUTS,
     SKILL_GATHER,
     LIFE_TRAINING_GATHER,
+    LIFE_TRAINING_LEVEL_CAPS,
     TRAINING_UPGRADES,
     WIRED_GATHER_DETAILS,
     explode_needs,
@@ -28,11 +29,11 @@ from mm_assist.life_plan.types import (
     FACILITY_ORDER,
     FACILITY_TARGET,
     PLAN_CAP,
-    SLOT_CAP,
     TARGETS,
     FacilityId,
     LifeSnapshot,
     PlanItem,
+    facility_slot_cap,
 )
 
 _FAC_ZH = {"metal": "金屬", "wood": "木材", "cloth": "布料", "medicine": "藥品"}
@@ -109,11 +110,13 @@ def _slot_free(
     extra_free: dict[str, int] | None = None,
     extra_occ: dict[str, int] | None = None,
 ) -> int:
-    slots = snap.facilities.get(fac, ()) or ()
-    occupied = min(SLOT_CAP, len(tuple(slots)))
+    cap = facility_slot_cap(snap.facility_slot_caps, fac)
+    if cap is None:
+        return 0
+    occupied = len(snap.facilities.get(fac) or ())
     extra = int((extra_free or {}).get(fac, 0) or 0)
     planned = int((extra_occ or {}).get(fac, 0) or 0)
-    return max(0, SLOT_CAP - occupied + extra - planned)
+    return max(0, cap - occupied + extra - planned)
 
 
 def _slot_material_needs(fac: FacilityId, free: int, available: dict[str, int],
@@ -139,7 +142,7 @@ def _slot_material_needs(fac: FacilityId, free: int, available: dict[str, int],
     return {}
 
 
-def _gather_process(needs: dict[str, int], *, sap_done: int = 0) -> PlanItem | None:
+def _gather_process(needs: dict[str, int]) -> PlanItem | None:
     if not needs:
         return None
     mat = max(needs, key=lambda k: needs[k])
@@ -147,7 +150,7 @@ def _gather_process(needs: dict[str, int], *, sap_done: int = 0) -> PlanItem | N
     if not node:
         return None
     skill, detail = node
-    yield_n = gather_click_yield(mat, sap_done=sap_done)
+    yield_n = gather_click_yield(mat)
     extra = f"（按{yield_n}/次）" if yield_n else ""
     return PlanItem(
         id="",
@@ -161,12 +164,16 @@ def _gather_process(needs: dict[str, int], *, sap_done: int = 0) -> PlanItem | N
     )
 
 
-def training_item(snap: LifeSnapshot, counts: dict[str, int] | None = None) -> PlanItem:
+def training_item(snap: LifeSnapshot, counts: dict[str, int] | None = None) -> PlanItem | None:
     """Each eligible skill gets a turn; fresh lower levels break round ties."""
     counts = counts or {}
     levels = {s.name: s.level for s in snap.skills}
-    skill, detail = min(LIFE_TRAINING_GATHER, key=lambda pair: (
-        counts.get(pair[0], 0), levels.get(pair[0], 99), LIFE_TRAINING_GATHER.index(pair)))
+    eligible = [pair for pair in LIFE_TRAINING_GATHER
+                if levels.get(pair[0], 0) < LIFE_TRAINING_LEVEL_CAPS[pair[0]]]
+    if not eligible:
+        return None
+    skill, detail = min(eligible, key=lambda pair: (
+        counts.get(pair[0], 0), levels.get(pair[0], 99)))
     _, detail = max((tier for tier in TRAINING_UPGRADES.get(skill, ())
                      if levels.get(skill, 0) >= tier[0]),
                     key=lambda tier: tier[0], default=(0, detail))
@@ -176,12 +183,12 @@ def training_item(snap: LifeSnapshot, counts: dict[str, int] | None = None) -> P
 
 
 def training_target_allowed(item: PlanItem, snap: LifeSnapshot, *, automatic: bool = False) -> bool:
-    if automatic and item.skill not in {skill for skill, _ in LIFE_TRAINING_GATHER}:
+    level = next((s.level for s in snap.skills if s.name == item.skill), 0)
+    if automatic and level >= LIFE_TRAINING_LEVEL_CAPS.get(item.skill, 0):
         return False
     pair = (item.skill, item.detail)
     if pair in SKILL_GATHER:
         return True
-    level = next((s.level for s in snap.skills if s.name == item.skill), 0)
     return any(item.detail == detail and level >= threshold
                for threshold, detail in TRAINING_UPGRADES.get(item.skill, ()))
 
@@ -348,7 +355,7 @@ def plan_life(
     training = (training_target if training_target is not None
                 and training_target_allowed(training_target, snap, automatic=True)
                 else training_item(snap, training_counts))
-    while len(items) < PLAN_CAP:
+    while training is not None and len(items) < PLAN_CAP:
         push(training)
     return group_gather_items(items[:PLAN_CAP])
 
